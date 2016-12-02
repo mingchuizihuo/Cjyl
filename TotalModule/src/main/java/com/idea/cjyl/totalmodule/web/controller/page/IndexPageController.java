@@ -13,5 +13,6 @@ public class IndexPageController {
     @RequestMapping("/index")
     public String index(){
         return "/serveNav";
+
     }
 }
