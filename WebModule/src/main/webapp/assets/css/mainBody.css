@@ -12,12 +12,28 @@ li,ol{
     min-width: 1400px;
     min-height: 755px;
 }
+
 #main-head{
     width: 100%;
-    height: 10%;
-    background-color: #2b3949;
+    height: 95px;
     float: left;
+    position: relative;
 }
+#main-head .top_bg{
+    height:95px;
+    width:100%;
+    min-width:1230px;
+    border-bottom: 1px solid #a1a1a1;
+}
+#main-head .lo-user{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:95px;
+}
+
+
 #center-flex{
     width: 100%;
     float: left;
@@ -25,31 +41,49 @@ li,ol{
     display: flex;
 }
 #center-flex #main-side{
-    height: 100%;
+    height: calc(100% + 35px);
     width: 12%;
     min-width: 190px;
-    background-color: #1d2531;
     overflow:auto;
+    position:relative;
 }
+#center-flex #main-side #sideList{
+    position:absolute;
+    top:40px;
+    left:0px;
+}
+
 #center-flex #main-show{
     height: 100%;
     width: 88%;
     overflow: auto;
 }
 #main-foot{
-    height: 4%;
-    width: 100%;
-    float: left;
-    min-height: 37px;
-    background-color: #2b3949;
+    height: 35px;
+    width: 88%;
+    float: right;
+    min-height:35px;
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
-#backSpially{
-    position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px;z-index: -1;
+#main-foot img{
+    width:100%;
+    height:100%;
 }
+#main-foot h4{
+    position: absolute;
+    width:100%;
+    display: block;
+    top:0px;
+    left:0px;
+    text-align: center;
+    font-size: 14px;
+}
+
+
 /*页面头部*/
 /*banner*/
 .head-banner {
@@ -67,11 +101,19 @@ li,ol{
     align-items: center;
     float: left;
 }
-#main-head #logo img {
+#main-head #logo .one {
     margin-top:29px;
-    margin-left: 15px;
+    margin-left: 30px;
     width:160px;
 }
+#main-head #logo .two {
+    margin-top:29px;
+    margin-left:60px;
+    width:394px;
+    height:36px;
+}
+
+
 
 #main-head #user-status {
     height: 100%;
@@ -79,15 +121,17 @@ li,ol{
     align-items: center;
     float: right;
     margin-right: 30px;
-    color:#C3C1C4;
+    color:#ffffff;
 }
 #user-status b {
     transition: .3s;
-    color: #C3C1C4;
+    color: #ffffff;
     cursor: pointer;
+
 }
 #user-status b:hover {
-    color: #ff743d;
+    color: #656C7E;
+
 }
 
 #user-status a {
@@ -95,13 +139,13 @@ li,ol{
     border: 0px;
     transition: .5s;
     cursor: pointer;
-    color: #C3C1C4;
+    color: #ffffff;
     transition: .5s;
     text-decoration: none;
 }
 
 #user-status a:hover {
-    color: #ff743d;
+    color: #656c7e;
 }
 /*页面侧边栏*/
 /*side*/
@@ -116,54 +160,26 @@ li,ol{
 .accordion .link {
     cursor: pointer;
     display: block;
-    padding: 15px 15px 15px 42px;
+    padding: 15px 40px;
     color: #fff;
-    font-size: 14px;
-    border-bottom: 1px solid #CCC;
+    font-size: 16px;
+    text-align: left;
     position: relative;
     -webkit-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
-    background:#222c3c;
+}
+
+.accordion .link:hover {
+    background: #656c7e;
+}
+
+.accordion .link:focus{
+    color:#f8ff30;
 }
 
 .accordion li:last-child .link {
     border-bottom: 0;
-}
-
-.accordion li i {
-    position: absolute;
-    top: 16px;
-    left: 12px;
-    font-size: 18px;
-    -webkit-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-    color:#f25237;
-    opacity: 0.5;
-}
-
-.accordion li i.glyphicon-chevron-up {
-    right: 12px;
-    left: auto;
-    font-size: 16px;
-}
-
-
-.accordion li.open .link {
-    color: #fff;
-}
-
-.accordion li.open i {
-    color: #f25237;
-    opacity: 1;
-}
-
-.accordion li.open i.glyphicon-chevron-up {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    transform: rotate(180deg);
 }
 
 .submenu {
@@ -173,7 +189,8 @@ li,ol{
 }
 
 .submenu li {
-    border-bottom: 1px solid #4b4a5e;
+    border-bottom: 1px solid #656c7e;
+
 }
 
 .submenu a {
@@ -185,10 +202,11 @@ li,ol{
     -webkit-transition: all 0.25s ease;
     -o-transition: all 0.25s ease;
     transition: all 0.25s ease;
+    background: #444956;
 }
 
 .submenu a:hover {
-    background: #222c3c;
+    background: #656c7e;
     color: #FFF;
     cursor:pointer;
 }
@@ -196,17 +214,38 @@ li,ol{
 .back-color{
     background-color: #222c3c;
 }
+
 /*主题内容*/
 #main-show .main-module {
     padding-left: 1%;
     padding-top: 1%;
 }
 
+/*背景*/
+.right-bg{
+    position: relative; top: 0px; left: 0px; bottom: 0px; right: 0px;z-index: -1;
+}
+.right-bg .bg{
+    width:100%;
+    height:100%;
+}
+
+.right-bg .qiu{
+    position:absolute;
+    margin: auto;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+}
+
+
+
 #main-show .serve-banner {
     width: 96%;
     height: 55px;
     margin: 20px 2%;
-    background-color: #EDE8EC;
+
 }
 #main-show #now-position{
     width: 96%; margin: 35px 0px -20px 2%; height: 30px; font-size: 15px;color:#C3C1C4;

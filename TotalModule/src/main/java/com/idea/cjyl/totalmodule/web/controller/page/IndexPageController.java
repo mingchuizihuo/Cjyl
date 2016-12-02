@@ -12,6 +12,6 @@ public class IndexPageController {
 
     @RequestMapping("/index")
     public String index(){
-        return "backstage/serveNav";
+        return "/serveNav";
     }
 }

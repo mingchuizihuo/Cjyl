@@ -7,5 +7,5 @@ import com.idea.cjyl.totalmodule.web.domain.pojo.Mansion;
 import com.idea.cjyl.totalmodule.web.domain.pojo.MansionExample;
 public interface MansionService extends GenericService<Mansion,Long,MansionExample>{
 
-
+    public void insert(Mansion mansion,int floorNum,int roomNum,int bedNum,Long loginId);
 }

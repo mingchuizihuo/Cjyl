@@ -14,27 +14,22 @@
 
     http://www.springframework.org/schema/aop
     http://www.springframework.org/schema/aop/spring-aop.xsd
-    ">
+ ">
+    <!--扫描Service-->
 
-    <context:component-scan base-package="com.idea.cjyl.totalmodule.web.service"/>
+    <context:component-scan base-package="com.idea.cjyl.totalmodule.web"/>
 
     <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="locations">
             <list>
-                <value>classpath*:/application.properties</value>
+                <value>classpath*:application.properties</value>
             </list>
         </property>
     </bean>
 
 
-    <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
-        <property name="converters">
 
-            <set>
-                <bean class="com.idea.cjyl.core.util.DateConverter" />
-            </set>
-        </property>
-    </bean>
+
 
 
     <!-- dataSource 配置 -->
@@ -77,10 +72,10 @@
         <!-- 自动扫描entity目录, 省掉Configuration.xml里的手工配置 -->
         <!--configLocation属性指定mybatis的核心配置文件 -->
         <property name="configLocation" value="classpath:sqlMapConfig.xml"></property>
-        <property name="mapperLocations" value="classpath*:com/idea/cjyl/**/web/mapper/**/*.xml" />
+        <property name="mapperLocations" value="classpath*:com/idea/cjyl/totalmodule/web/mapper/**/*.xml" />
     </bean>
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.idea.cjyl.*.web.dao" />
+        <property name="basePackage" value="com.idea.cjyl.totalmodule.*.web.dao" />
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
     </bean>
     <!-- 对dataSource 数据源进行事务管理 -->
@@ -113,7 +108,6 @@
 
     <!-- 启用对事务注解的支持 -->
     <tx:annotation-driven transaction-manager="transactionManager"/>
-
 
 
 </beans>

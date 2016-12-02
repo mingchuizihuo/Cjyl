@@ -10,7 +10,7 @@
     </listener>
     <display-name>nursing</display-name>
     <welcome-file-list>
-        <welcome-file>rest/page/login</welcome-file>
+        <welcome-file>rest/page/index</welcome-file>
     </welcome-file-list>
 
     <!-- Spring -->

@@ -440,7 +440,6 @@ function findAllDetails(id) {
             $("#checkPeoPle1").text(data.checkPeoPle);
             $("#checkDate1").text(data.checkDate);
 
-
     })
 }
 function makeUpdate() {
