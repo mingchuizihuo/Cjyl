@@ -1,0 +1,37 @@
+/*服务模块*/
+/*平铺显示*/
+.servePicture{
+    float: left; width: 100px; text-align: center;padding-top: 45px; margin-left: 20px;
+}
+
+.add input{
+    width: 200px;
+    height: 25px;
+    border: 1px solid #E7E7E7;
+}
+
+/*静态页面css*/
+.box{float:left;background:#fff;width:31%;height:200px;margin: 0px 1% 15px 1%;border-radius: 2px;position: relative;min-width: 450px; transition: .5s;}
+.box:hover{box-shadow: 0px 0px 5px 2px #ff743d;}
+.box ul{padding-top:20px;}
+.box .box-left{margin-right:20px;margin-left:20px;}
+.box .box-left img{width:100px;height:100px;margin-top:25px;}
+.box .box-con{margin-right:20px;}
+.box .box-con ul li span{float: right;}
+.box .box-con ul li{height:18%;}
+.box .box-right ul li{height:18%;}
+.box i{
+    position:absolute;right:20px;top:15px;cursor:pointer;font-size:18px;color:#ff743d;
+}
+button{outline:none !important;position:absolute;right:5px;bottom: 5px;}
+.btn1-style{width:100px;height:30px;background:#374862;border:0px; text-shadow:none;padding:0px; margin: 0px 5px 5px 0px ;}
+.btn1-style:hover{border:0px;background: #ff743d
+}
+.btn1-style:focus{background:#FF743D}
+.btn2-style,.btn3-style{width:100px;height:30px;background:#2B3949;color:#ffffff;border:0px; text-shadow:none;padding:0px;}
+.btn2-style:hover,.btn3-style:hover{border:0px;background:#FF743D;color:#fff;}
+.btn3-style{margin-right:120px;}
+
+/*表格*/
+.add td{text-align: left;}
+.add input{margin-left:20px;}

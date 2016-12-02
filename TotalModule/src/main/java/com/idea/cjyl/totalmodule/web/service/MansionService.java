@@ -1,0 +1,11 @@
+package com.idea.cjyl.totalmodule.web.service;
+
+import com.idea.cjyl.core.generic.GenericServiceLevel;
+import com.idea.cjyl.core.generic.GenericService;
+
+import com.idea.cjyl.totalmodule.web.domain.pojo.Mansion;
+import com.idea.cjyl.totalmodule.web.domain.pojo.MansionExample;
+public interface MansionService extends GenericService<Mansion,Long,MansionExample>{
+
+
+}

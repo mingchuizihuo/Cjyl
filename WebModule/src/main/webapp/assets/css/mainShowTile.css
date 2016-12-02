@@ -1,0 +1,73 @@
+
+.main-module .main-modules {
+    height: 200px;
+    width: 31%;
+    margin: 0px 1% 15px 1%;
+    background-color: #EDE8EC;
+    border-radius: 2px;
+    float: left;
+    position: relative;
+    min-width: 420px;
+    transition: .3s;
+}
+.main-modules:hover{
+    box-shadow: 0px 0px 5px 2px #ff743d;
+}
+.main-modules i {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #ff743d;
+}
+
+.main-modules img{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+.main-modules #zuo-font {
+    height: 100%;
+    width: 35%;
+    padding-top: 25px;
+    float: left;
+    white-space: nowrap;
+
+}
+
+ .main-modules #zuo-font li {
+    height: 22%;
+    align-items: center;
+    display: flex;
+    padding-left: 15px;
+}
+
+.main-modules ul li span {
+    margin-left: 10px;
+}
+
+.main-modules #you-font1 {
+    height: 100%;
+    float: left;
+    width: 15%;
+    padding-top: 35px;
+    margin-left: 20px;
+}
+.main-modules #you-font1 li{
+    height: 35px;
+}
+.main-modules #you-font2 {
+    height: 100%;
+    float: left;
+    width: 18%;
+    word-wrap: break-word;
+    padding-top: 35px;
+    margin-left: 20px;
+}
+.main-modules #you-font2 li{
+    height: 35px;
+}
+.servePicture{
+    float: left; width: 100px; text-align: center;padding-top: 45px; margin-left: 20px;
+}

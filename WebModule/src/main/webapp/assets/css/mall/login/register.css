@@ -1,0 +1,126 @@
+
+body .po img{ width:100%;height:100%;position:absolute;z-index:-1;min-width: 1230px;}
+body .bgc{width:100%;background-color: rgba(34, 44, 60, 0.3);height:600px;}
+
+.progress-bar li{
+    height: 50px;
+    width: 20%;
+    float: left;
+    border-bottom: 3px solid #a0a3a3;
+}
+
+.border-black{
+    border-bottom: 3px solid #ff743d !important;
+}
+.progress-bar{
+    height: 150px;
+}
+.progress-bar li .title-num{
+    width: 25px; height: 25px; border-radius: 50px; color: #ffffff; background-color: #ff743d; text-align: center; font-size: 18px; line-height: 25px; margin: 20px auto auto 60px; float: left;
+}
+.progress-bar li .title-font{
+    height:25px; margin: 20px auto auto 30px; float: left;font-size: 18px;color: #ff743d;
+}
+.progress-bar li .title-num-n{
+    background-color: #a0a3a3!important;
+}
+.progress-bar li .title-font-n{
+    color: #a0a3a3!important;
+}
+.register-mail table{
+    margin: 0px auto;
+}
+.register-mail table td{
+    width: 80px;
+    height: 65px;
+    font-size: 18px;
+    color:#fff;
+}
+.register-mail table input[type="text"],input[type="password"]{
+        width: 300px; height: 40px; padding-left: 15px; font-size: 18px;
+}
+.register-mail table input[type="button"]{
+    width: 100px; height: 35px; border-radius: 5px; color:#ffffff; border: 0px; cursor: pointer; transition: .5s;
+}
+
+.register-mail table input[type="button"]{
+    width: 100px; height: 35px; border-radius: 5px; color:#ffffff; border: 0px; cursor: pointer; transition: .5s;
+}
+.register-mail table .btn{background: #2b3949;}
+.register-mail table .btn:hover{background: #ff743d;}
+
+.register-mail #three{
+    display: none;margin: 0px auto;text-align: center;
+}
+.register-mail #three input[type="button"]{
+    width: 100px; height: 35px; background-color: #1d2531; border-radius: 5px; color:#ffffff; border: 0px; cursor: pointer; transition: .5s; margin-top: 20px;
+}
+.register-mail #three .register-okimg{
+    width: 350px; height: 200px; background-color: #E8E8E8;margin: 0px auto;  line-height: 50px;  border-radius: 5px; font-size: 40px;
+}
+.btn-none{
+    pointer-events: none; background-color:#a0a3a3;
+}
+.btn-auto{
+    pointer-events: auto; background-color: #1d2531;
+}
+.btn-auto:hover{
+    pointer-events: auto; background-color: #ff743d;
+}
+.font-yan{
+    white-space: nowrap; position: absolute; margin-top: -12px; margin-left: 5px; transition: .5s;
+}
+/*验证*/
+#drag{
+    position: relative;
+    background-color: #e8e8e8;
+    width: 300px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+}
+#drag .handler{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 40px;
+    height: 32px;
+    border: 1px solid #ccc;
+    cursor: move;
+}
+#drag .drag_bg{
+    background-color: #7ac23c;
+    height: 34px;
+    width: 0px;
+}
+#drag .drag_text{
+    position: absolute;
+    top: 0px;
+    width: 300px;
+    color: #666666;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -o-user-select:none;
+    -ms-user-select:none;
+}
+.yanzheng{
+    white-space: nowrap;
+    color: #ff4b01;
+}
+#nameyan{
+    transition: .5s;
+    opacity: 0;
+}
+#qiehuanzhuce{
+    color: #555555;
+    transition: .5s;
+    font-size: 15px;
+    white-space: nowrap;
+    text-align: left;
+    width: 300px;
+    display: block;
+}
+#qiehuanzhuce:hover{
+    color: #ff4b01;
+}

@@ -1,0 +1,17 @@
+
+.clear{clear: both;}
+.box{width:200px;height:200px;margin:10% auto;}
+.box .btn-style1{width:200px;background:#2B3949;border:0px;border-radius: 5%; transition: all .5s;}
+.box .btn-style1:hover{background: #ff743d;}
+.box .btn-style1:focus{border:0px;outline: none;box-shadow: none;}
+
+
+
+
+.one{ float: left;width:100px;border:2px #dddddd solid;margin-right:10px;margin-top:10px;border-radius: 5px;transition: all .5s; cursor: pointer;}
+.theme{border:2px #FF743D solid;}
+.one:hover{box-shadow:0px 0px 10px #FF743D;border-radius:5px ;}
+.one .tu{width:96px;height:100px;background:#ddd;border-radius: 3px 3px 0px 0px;padding:5px;}
+.one .tu img{width: 100%; height: 100%;}
+.one h4{width:100px;color:#333;font-size:12px;text-align: center;}
+
