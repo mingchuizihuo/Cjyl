@@ -11,6 +11,11 @@ $(function () {
         $(".submenu li").parents(".submenu").children("li").removeClass("back-color");
         $(this).addClass("back-color").siblings().removeClass("back-color");
     })
+    $("#sideList div").click(function () {
+        $("#sideList div").parents("li").children(".link").removeClass("yellow");
+        $(this).addClass("yellow").siblings().removeClass("yellow");
+    })
+
 })
 
 function sideUrl(url) {

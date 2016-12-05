@@ -9,6 +9,8 @@
 
     <meta charset="utf-8"/>
     <title>承嘉智慧养老中心</title>
+
+
 </head>
 <script>
     var domainUrl = '${domainUrl}' + "/rest";
@@ -48,7 +50,7 @@
                 <li>
                     <div class="link">老人管理</div>
                     <ul class="submenu">
-                        <li><a onclick="sideUrl('/')">老人信息</a></li>
+                        <li><a onclick="sideUrl('/oldman/oldman')">老人信息</a></li>
                         <li><a onclick="sideUrl('/')">特殊服务</a></li>
                         <li><a onclick="sideUrl('/')">护理记录</a></li>
 
@@ -99,7 +101,12 @@
                 <li>
 
                 </li>
+
+                    </ul>
+
             </ul>
+            <#--功能弹出-->
+
         </div>
     <#--页面主体-->
         <div id="main-show">
@@ -109,7 +116,6 @@
                 <img src="${domainUrl}/assets/images/backstage/qiu.png" class="qiu" >
             </div>
         </div>
-
 </div>
 <#--页面尾部-->
     <div id="main-foot">
@@ -118,7 +124,6 @@
     </div>
 </div>
 
-
 <script src="${domainUrl}/assets/js/jQuery-2.1.4/jquery-2.1.4.min.js"></script>
 <script src="${domainUrl}/assets/js/bootstrap/bootstrap.min.js"></script>
 <script src="${domainUrl}/assets/js/common.js"></script>
@@ -126,6 +131,8 @@
 <script src="${domainUrl}/assets/js/OutJs/page/page.js"></script>
 <script src="${domainUrl}/assets/js/OutJs/date/jquery.date_input.pack.js"></script>
 <script src="${domainUrl}/assets/js/OutJs/date/Week.js"></script>
+<!--功能按钮效果弹出-->
+
 
 </body>
 </html>

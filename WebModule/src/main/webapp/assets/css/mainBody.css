@@ -43,7 +43,6 @@ li,ol{
 #center-flex #main-side{
     height: calc(100% + 35px);
     width: 12%;
-    min-width: 190px;
     overflow:auto;
     position:relative;
 }
@@ -169,7 +168,10 @@ li,ol{
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
-
+/*字体颜色*/
+.yellow{
+    color: #f8ff30!important;
+}
 .accordion .link:hover {
     background: #656c7e;
 }
@@ -202,7 +204,6 @@ li,ol{
     -webkit-transition: all 0.25s ease;
     -o-transition: all 0.25s ease;
     transition: all 0.25s ease;
-    background: #444956;
 }
 
 .submenu a:hover {
@@ -212,7 +213,8 @@ li,ol{
 }
 
 .back-color{
-    background-color: #222c3c;
+    background-color: #656c7e;
+    color:#fff;
 }
 
 /*主题内容*/
