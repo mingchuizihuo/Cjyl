@@ -168,6 +168,10 @@ li,ol{
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
+.accordion .link  img{margin-left:6px;}
+
+
+
 /*字体颜色*/
 .yellow{
     color: #f8ff30!important;
@@ -188,6 +192,10 @@ li,ol{
     display: none;
     background: #374862;
     font-size: 14px;
+}
+
+.submenu img{
+    margin-right:5px;
 }
 
 .submenu li {
@@ -240,90 +248,7 @@ li,ol{
     top:0;
     bottom:0;
 }
-
-
-
-#main-show .serve-banner {
-    width: 96%;
-    height: 55px;
-    margin: 20px 2%;
-
-}
-#main-show #now-position{
-    width: 96%; margin: 35px 0px -20px 2%; height: 30px; font-size: 15px;color:#C3C1C4;
-}
-#main-show #now-position span{
-    color: #C3C1C4;
-}
-#main-show .serve-banner an {
-    height: 55px;
-    float: right;
-    display: flex;
-    align-items: center;
+.xialaimg{
+    display: none;
 }
 
-#main-show .serve-banner  input[type="button"] {
-    height: 30px;
-    width: 100px;
-    background-color: #2B3949;
-    border: 0px;
-    color: #fff;
-    border-radius: 5px;
-    margin-right: 15px;
-    transition: .5s;
-}
-
-#main-show .serve-banner  input[type="button"]:hover {
-    background-color: #ff743d;
-}
-/*添加窗口*/
-.add {
-    margin: 20px auto;
-    font-size: 14px;
-}
-
-.add td {
-    width: 120px;
-    height: 40px;
-    text-align: center;
-}
-
-.add input[type="text"] {
-    width: 200px;
-    height: 25px;
-    border: 1px solid #E7E7E7;
-}
-
-.add textarea {
-    width: 200px;
-    height: 80px;
-    resize: none;
-    margin-top: 7px;
-}
-
-.add select {
-    width: 200px;
-    height: 25px;
-    border: 1px solid #E7E7E7;
-}
-
-/*图片上传样式*/
-#box{
-    position: absolute;
-    margin: 0px auto;
-    left:0;
-    right:0;
-    transition: .3s;
-    z-index: 9999;
-    top: 30%;
-}
-/*serveBanner 时间样式*/
-#date-input{
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-#date-input date {
-    margin-left: 15px;
-    margin-right: 15px;
-}

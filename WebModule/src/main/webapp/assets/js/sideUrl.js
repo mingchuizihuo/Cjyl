@@ -7,15 +7,19 @@ var limit = 9;
 var findAllNum = 1;
 //侧边栏样式
 $(function () {
+    $(".submenu").find("img").hide();
     $(".submenu li").click(function () {
         $(".submenu li").parents(".submenu").children("li").removeClass("back-color");
         $(this).addClass("back-color").siblings().removeClass("back-color");
+        $(".submenu li").find("img").hide();
+        $(this).find("img").show();
     })
     $("#sideList div").click(function () {
         $("#sideList div").parents("li").children(".link").removeClass("yellow");
         $(this).addClass("yellow").siblings().removeClass("yellow");
+        $("#sideList div").parents("li").children(".link").children(".xialaImg").hide();
+        $(this).children(".xialaImg").show();
     })
-
 })
 
 function sideUrl(url) {
@@ -48,67 +52,5 @@ function startSideUrl(url) {
         success: function (data) {
             $("#main-show").html(data);
         }
-    });
-}
-/*上传图片显示*/
-function uploadShow(id) {
-    $(".parentFileBox").remove();
-    $("#aaaa").show();
-    $("#box").show();
-    $('#test').diyUpload({
-        url:domainUrl+'/uploads',
-        success:function( data ) {
-            console.info( data );
-        },
-        error:function( err ) {
-            console.info( err );
-        }
-    });
-    $("#box").css("background-color","#ffffff").css("width","530px").css("min-height","30px").css("padding-bottom","20px").css("border-radius","3px");
-    var html='<input type="button" value="确认添加" onclick="upload('+id+')">'
-    $("#test").append(html);
-    $("#aaaa").click(function () {
-        $("#aaaa").hide();
-        $("#box").hide();
-    });
-}
-//表格/平铺显示
-function tableTileShow(tile,html) {
-    //平铺显示
-    $("#tileShow").click(function () {
-        findAllNum = 2;
-        $(".main-module").html(tile);
-        $(this).hide();
-        $("#tableShow").show();
-    })
-    //表格显示
-    $("#tableShow").click(function () {
-        findAllNum = 1;
-        $(".main-module").html(html);
-        $(this).hide();
-        $("#tileShow").show();
-    })
-}
-
-/*上传图片显示*/
-function uploadShow(id) {
-    $(".parentFileBox").remove();
-    $("#aaaa").show();
-    $("#box").show();
-    $('#test').diyUpload({
-        url:domainUrl+'/uploads',
-        success:function( data ) {
-            console.info( data );
-        },
-        error:function( err ) {
-            console.info( err );
-        }
-    });
-    $("#box").css("background-color","#ffffff").css("width","530px").css("min-height","30px").css("padding-bottom","20px").css("border-radius","3px");
-    var html='<input type="button" value="确认添加" onclick="upload('+id+')">'
-    $("#test").append(html);
-    $("#aaaa").click(function () {
-        $("#aaaa").hide();
-        $("#box").hide();
     });
 }

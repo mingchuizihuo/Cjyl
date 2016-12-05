@@ -1,3 +1,36 @@
+
+/*包含查询的列表样式*/
+
+/*通用样式*/
+li{list-style: none;color: #fff;}
+a{text-decoration: none;}
+a:hover{text-decoration: none;}
+a:focus{text-decoration: none;}
+.button:focus{outline: none;box-shadow: none;}
+
+/*通用按钮样式*/
+.btn-style{width:128px;height:38px;background: linear-gradient(#465782,#1f2b45);border-radius: 4px;border: 0px;color:#fff;font-size:16px;margin-top:10px;line-height: 38px;}
+.btn-style:hover{background: linear-gradient(#6072a2,#313f62);}
+.btn-style:focus{background:#1172c9;}
+.btn-style i{margin-right:6px;margin-top:5px;}
+.btn-style img{margin-right:6px;margin-top:-3px;}
+
+
 /*主体部分*/
-.overall{position:relative;width:100%;height:100%;top:0px;left:0px;padding:2%;background-size:100%;}
+.overall{position:relative;width:100%;height:100%;top:0px;left:0px;padding:2%;background-size:100%;min-width: 1440px;}
+
+/*路径导航*/
+.path{}
+.path ul{}
+.path ul .txt_color{color:#f8ff30;text-decoration: underline;}
+.path ul li{font-size:14px;float: left;margin:0 5px;}
+.path ul li a{color:#fff;font-size:14px;}
+.path ul li a:hover{color:#f8ff30;}
+
+/*查询导航*/
+.query{width:100%;height:60px;border:1px #656c7e solid; padding-right:10px;}
+.query ul{}
+.query ul li{float: left;font-size: 16px;padding:20px;}
+.query ul li input{margin-left:5px;color:#333;}
+
 

@@ -6,7 +6,6 @@
     <link href="${domainUrl}/assets/css/OutCss/page/page.css" rel="stylesheet">
     <link href="${domainUrl}/assets/css/OutCss/date/jquery.data_input.pack.css" rel="stylesheet">
 
-
     <meta charset="utf-8"/>
     <title>承嘉智慧养老中心</title>
 
@@ -42,68 +41,63 @@
             <img src="${domainUrl}/assets/images/backstage/l.png" style="width:100%;height:100%;">
             <ul id="sideList" class="accordion">
                 <li>
-                    <div class="link">入住管理</div>
+                    <div class="link">入住管理<xialaimg class="xialaImg"><img src="${domainUrl}/assets/images/backstage/xiala.png" ></xialaimg></div>
                     <ul class="submenu">
-                        <li><a onclick="sideUrl('')">入住登记</a></li>
+                        <li><a onclick="sideUrl('')"><img src="${domainUrl}/assets/images/backstage/dian.png" >入住登记</a></li>
                     </ul>
                 </li>
                 <li>
-                    <div class="link">老人管理</div>
+                    <div class="link">老人管理<xialaimg class="xialaImg"><img src="${domainUrl}/assets/images/backstage/xiala.png" ></xialaimg></div>
                     <ul class="submenu">
-                        <li><a onclick="sideUrl('/oldman/oldman')">老人信息</a></li>
-                        <li><a onclick="sideUrl('/')">特殊服务</a></li>
-                        <li><a onclick="sideUrl('/')">护理记录</a></li>
+                        <li><a onclick="sideUrl('/oldman/oldman')"><img src="${domainUrl}/assets/images/backstage/dian.png" >老人信息</a></li>
+                        <li><a onclick="sideUrl('/')"><img src="${domainUrl}/assets/images/backstage/dian.png" >特殊服务</a></li>
+                        <li><a onclick="sideUrl('/')"><img src="${domainUrl}/assets/images/backstage/dian.png" >护理记录</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="link">订单管理<xialaimg class="xialaImg"><img src="${domainUrl}/assets/images/backstage/xiala.png" ></xialaimg></div>
+                    <ul class="submenu">
+                        <li><a onclick="sideUrl('/')"><img src="${domainUrl}/assets/images/backstage/dian.png" >费用结算</a></li>
+                        <li><a onclick="sideUrl('/')"><img src="${domainUrl}/assets/images/backstage/dian.png" >收费清单</a></li>
+                        <li><a onclick="sideUrl('/')"><img src="${domainUrl}/assets/images/backstage/dian.png" >欠费记录</a></li>
+                        <li><a onclick="sideUrl('/')"><img src="${domainUrl}/assets/images/backstage/dian.png" >明细查询</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="link">员工管理<xialaimg class="xialaImg"><img src="${domainUrl}/assets/images/backstage/xiala.png" ></xialaimg></div>
+                    <ul class="submenu">
+                        <li><a onclick="sideUrl('/')"><img src="${domainUrl}/assets/images/backstage/dian.png" >员工信息</a></li>
+                        <li><a onclick="sideUrl('/')"><img src="${domainUrl}/assets/images/backstage/dian.png" >员工请假</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="link">资料管理<xialaimg class="xialaImg"><img src="${domainUrl}/assets/images/backstage/xiala.png" ></xialaimg></div>
+                    <ul class="submenu">
+                        <li><a onclick="sideUrl('/')"><img src="${domainUrl}/assets/images/backstage/dian.png" >月初始费</a></li>
+                        <li><a onclick="sideUrl('/')"><img src="${domainUrl}/assets/images/backstage/dian.png" >入住初始费</a></li>
+                        <li><a onclick="sideUrl('/')"><img src="${domainUrl}/assets/images/backstage/dian.png" >特殊服务费</a></li>
+                        <li><a onclick="sideUrl('/')"><img src="${domainUrl}/assets/images/backstage/dian.png" >数据字典</a></li>
+                        <li><a onclick="sideUrl('/')"><img src="${domainUrl}/assets/images/backstage/dian.png" >大厦管理</a></li>
+                        <li><a onclick="sideUrl('/')"><img src="${domainUrl}/assets/images/backstage/dian.png" >楼层管理</a></li>
+                        <li><a onclick="sideUrl('/')"><img src="${domainUrl}/assets/images/backstage/dian.png" >房间管理</a></li>
 
                     </ul>
                 </li>
                 <li>
-                    <div class="link">订单管理</div>
-                    <ul class="submenu">
-                        <li><a onclick="sideUrl('/')">费用结算</a></li>
-                        <li><a onclick="sideUrl('/')">收费清单</a></li>
-                        <li><a onclick="sideUrl('/')">欠费记录</a></li>
-                        <li><a onclick="sideUrl('/')">明细查询</a></li>
-
-                    </ul>
-                </li>
-                <li>
-                    <div class="link">员工管理</div>
-                    <ul class="submenu">
-                        <li><a onclick="sideUrl('/')">员工信息</a></li>
-                        <li><a onclick="sideUrl('/')">员工请假</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <div class="link">资料管理</div>
-                    <ul class="submenu">
-                        <li><a onclick="sideUrl('/')">月初始费</a></li>
-                        <li><a onclick="sideUrl('/')">入住初始费</a></li>
-                        <li><a onclick="sideUrl('/')">特殊服务费</a></li>
-                        <li><a onclick="sideUrl('/')">数据字典</a></li>
-                        <li><a onclick="sideUrl('/')">大厦管理</a></li>
-                        <li><a onclick="sideUrl('/')">楼层管理</a></li>
-                        <li><a onclick="sideUrl('/')">房间管理</a></li>
-
-                    </ul>
-                </li>
-                <li>
-                    <div class="link">报表管理</div>
+                    <div class="link">报表管理<xialaimg class="xialaImg"><img src="${domainUrl}/assets/images/backstage/xiala.png" ></xialaimg></div>
                     <ul class="submenu">
                         <li><a onclick="sideUrl('/')"></a></li>
                     </ul>
                 </li>
                 <li>
-                    <div class="link">系统管理</div>
+                    <div class="link">系统管理<xialaimg class="xialaImg"><img src="${domainUrl}/assets/images/backstage/xiala.png" ></xialaimg></div>
                     <ul class="submenu">
-                        <li><a onclick="sideUrl('/')">修改密码</a></li>
+                        <li><a onclick="sideUrl('/')"><img src="${domainUrl}/assets/images/backstage/dian.png" >修改密码</a></li>
                     </ul>
                 </li>
                 <li>
-
                 </li>
-
                     </ul>
-
             </ul>
             <#--功能弹出-->
 
