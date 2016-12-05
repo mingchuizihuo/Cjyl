@@ -17,7 +17,7 @@
  ">
     <!--扫描Service-->
 
-    <context:component-scan base-package="com.idea.cjyl.totalmodule.web"/>
+    <context:component-scan base-package="com.idea.cjyl.totalmodule.web.service.*"/>
 
     <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="locations">
@@ -75,7 +75,7 @@
         <property name="mapperLocations" value="classpath*:com/idea/cjyl/totalmodule/web/mapper/**/*.xml" />
     </bean>
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.idea.cjyl.totalmodule.*.web.dao" />
+        <property name="basePackage" value="com.idea.cjyl.totalmodule.**.web.dao" />
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
     </bean>
     <!-- 对dataSource 数据源进行事务管理 -->
@@ -99,7 +99,7 @@
 
     <!-- 事务 aop 配置 -->
     <aop:config>
-        <aop:pointcut id="serviceMethods" expression="execution(* com.idea.cjyl.*.web.service..*(..))"/>
+        <aop:pointcut id="serviceMethods" expression="execution(* com.idea.cjyl.totalmodule.web.service..*(..))"/>
         <aop:advisor advice-ref="txAdvice" pointcut-ref="serviceMethods"/>
     </aop:config>
 

@@ -87,5 +87,18 @@ public class MansionController extends GenericController {
         parsePageBean(mansionService.findAll(currentPage,limit));
     }
 
+    /**
+     * 获取本机构大楼床位信息
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "findAllVO" , method = RequestMethod.GET)
+    public ResultData findAllVO(){
+        Long loginId = 1l;
+        return ResultData.build().parseList(mansionService.findAllVO(loginId));
+    }
+
+
+
 
 }

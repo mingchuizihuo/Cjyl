@@ -8,11 +8,14 @@ import com.idea.cjyl.totalmodule.web.dao.BedMapper;
 import com.idea.cjyl.totalmodule.web.dao.FloorTierMapper;
 import com.idea.cjyl.totalmodule.web.dao.MansionMapper;
 import com.idea.cjyl.totalmodule.web.dao.RoomMapper;
+import com.idea.cjyl.totalmodule.web.dao.myself.MansionMapperMyself;
 import com.idea.cjyl.totalmodule.web.domain.pojo.*;
+import com.idea.cjyl.totalmodule.web.domain.vo.MansionVO;
 import com.idea.cjyl.totalmodule.web.service.MansionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 
 
 @Service
@@ -20,6 +23,8 @@ import org.springframework.stereotype.Service;
 
        @Autowired
        private MansionMapper mansionDao;
+       @Autowired
+       private MansionMapperMyself mansionMapperMyself;
        @Autowired
        private FloorTierMapper floorTierMapper;
        @Autowired
@@ -53,10 +58,16 @@ import org.springframework.stereotype.Service;
                    bed.setBedNum((byte)(k+1));
                    bed.setOldId(0l);
                    bed.setRoomId(room.getId());
+                   bed.setBedState((byte)1);
                    bedMapper.insert(bed);
                 }
              }
 
           }
        }
+
+   @Override
+   public List<MansionVO> findAllVO(Long loginId) {
+      return mansionMapperMyself.findAllVO(loginId);
+   }
 }
