@@ -1,6 +1,7 @@
 package com.idea.cjyl.totalmodule.web.domain.vo;
 
 import com.idea.cjyl.totalmodule.web.domain.pojo.DataDictionary;
+import com.idea.cjyl.totalmodule.web.globals.AnalysisConstant;
 
 import java.util.Date;
 import java.util.List;
@@ -20,9 +21,9 @@ public class StaffVO {
 
     private Long sex;
 
-    private Date birthday;
+    private String birthday;
 
-    private Date entryDate;
+    private String entryDate;
 
     private Long branch;
 
@@ -47,6 +48,10 @@ public class StaffVO {
     private String marriageStr;
     private String educationStr;
     private String majorStr;
+
+    public StaffVO() {
+        data2String(AnalysisConstant.dataDictionaryList);
+    }
 
     public void data2String(List<DataDictionary> dataDictionaryList){
         for (DataDictionary dataDictionary: dataDictionaryList
@@ -138,19 +143,19 @@ public class StaffVO {
         this.sex = sex;
     }
 
-    public Date getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 
-    public Date getEntryDate() {
+    public String getEntryDate() {
         return entryDate;
     }
 
-    public void setEntryDate(Date entryDate) {
+    public void setEntryDate(String entryDate) {
         this.entryDate = entryDate;
     }
 

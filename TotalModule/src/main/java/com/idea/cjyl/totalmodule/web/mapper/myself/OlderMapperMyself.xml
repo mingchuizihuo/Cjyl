@@ -207,4 +207,11 @@
             order by ${orderByClause}
         </if>
     </select>
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List"/>
+        from older LEFT JOIN month_charge monthcharge ON older.month_charge_id = monthcharge.id
+        WHERE older.id = #{id,jdbcType=BIGINT}
+    </select>
 </mapper>

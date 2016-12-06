@@ -55,6 +55,5 @@
       LEFT JOIN floor_tier floor ON mansion.id = floor.mansion_id
       LEFT JOIN room room ON room.floor_tier_id = floor.id
       LEFT JOIN bed bed ON bed.room_id = room.id
-      order by bed.id
     </select>
 </mapper>

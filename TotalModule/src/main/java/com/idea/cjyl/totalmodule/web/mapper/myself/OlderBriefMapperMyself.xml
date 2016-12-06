@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.idea.cjyl.totalmodule.web.dao.myself.OlderBriefMapperMyself">
 
-    <resultMap id="OlderBriefVO" type="com.idea.cjyl.totalmodule.web.domain.vo.OlderBriefVO">
+    <resultMap id="BaseResultMap" type="com.idea.cjyl.totalmodule.web.domain.vo.OlderBriefVO">
 
 
         <id column="id" property="id" jdbcType="BIGINT"/>
@@ -19,7 +19,7 @@
         <result column="older_state" property="olderState" jdbcType="TINYINT"/>
 
         <result column="older_leave_date" property="olderLeaveDate" jdbcType="VARCHAR"/>
-        <association property="staff" resultMap="StaffOlder" />
+        <association property="staff" resultMap="StaffVOOlder" />
         <association property="mansion" resultMap="MansionOlder" />
         <association property="room" resultMap="RoomOlder" />
         <association property="bed" resultMap="BedOlder" />
@@ -58,8 +58,8 @@
         <result column="name" property="name" jdbcType="VARCHAR" />
         <result column="card_id" property="cardId" jdbcType="VARCHAR" />
         <result column="sex" property="sex" jdbcType="BIGINT" />
-        <result column="birthday" property="birthday" jdbcType="TIMESTAMP" />
-        <result column="entry_date" property="entryDate" jdbcType="TIMESTAMP" />
+        <result column="birthday" property="birthday" jdbcType="VARCHAR" />
+        <result column="entry_date" property="entryDate" jdbcType="VARCHAR" />
         <result column="branch" property="branch" jdbcType="BIGINT" />
         <result column="duty" property="duty" jdbcType="BIGINT" />
         <result column="health_state" property="healthState" jdbcType="BIGINT" />
@@ -94,7 +94,7 @@
         older.nation, date_format(older.birthday,'%Y年%m月%d日') birthday, older.take_care_of_oneself,
         older.card_id, older.older_state, date_format(older.older_leave_date,'%Y年%m月%d日') older_leave_date,
         bed.id, bed.organization_login_id, bed.room_id, bed.bed_num, bed.bed_state, bed.old_id,
-        staff.id, staff.organization_login_id, staff.name, staff.card_id, staff.sex, staff.birthday, staff.entry_date, staff.branch, staff.duty,
+        staff.id, staff.organization_login_id, staff.name, staff.card_id, staff.sex, date_format(staff.birthday,'%Y年%m月%d日') birthday, date_format(staff.entry_date,'%Y年%m月%d日') entry_date, staff.branch, staff.duty,
         staff.health_state, staff.tel, staff.marriage, staff.education, staff.major, staff.salary,
         mansion.id,  mansion.organization_login_id,  mansion.name,  mansion.account_for,
         room.id, room.organization_login_id, room.floor_tier_id, room.room_num, room.room_type,
@@ -104,24 +104,7 @@
 
         ciic.id, ciic.organization_login_id, ciic.item, ciic.is_refund, ciic.money, ciic.account_for
     </sql>
-    <select id="findAllVO" resultMap="BaseResultMap" parameterType="java.lang.Long">
 
-        SELECT
-        <include refid="Base_Column_List"></include>
-
-        FROM older older
-        LEFT JOIN staff staff JOIN ON older.staff_id = staff.id
-        LEFT JOIN month_charge month_charge JOIN ON older.month_charge_id = month_charge.id
-        LEFT JOIN older_initial_fee  JOIN ON older.id = older_initial_fee.old_id
-        LEFT JOIN check_in_init_cost JOIN ON check_in_init_cost.id = older_initial_fee.check_in_init_cost_id
-
-        LEFT JOIN bed bed JOIN ON bed.old_id = older.id
-        LEFT JOIN room room JOIN ON room.id = bed.room_id
-        LEFT JOIN floor_tier JOIN ON floor_tier.id = room.floor_tier_id
-        LEFT JOIN mansion mansion JOIN mansion.id = floor_tier.mansion_id
-
-
-    </select>
 
 
     <sql id="Example_Where_Clause">
@@ -157,6 +140,22 @@
 
 
 
+    <select id="findAllVO" resultMap="BaseResultMap" parameterType="java.lang.Long">
+
+        SELECT
+        <include refid="Base_Column_List"></include>
+        FROM older
+        LEFT JOIN staff staff ON older.staff_id = staff.id
+        LEFT JOIN month_charge month_charge ON older.month_charge_id = month_charge.id
+        LEFT JOIN older_initial_fee ON older.id = older_initial_fee.old_id
+        LEFT JOIN check_in_init_cost ciic ON ciic.id = older_initial_fee.check_in_init_cost_id
+        LEFT JOIN bed bed ON bed.old_id = older.id
+        LEFT JOIN room room ON room.id = bed.room_id
+        LEFT JOIN floor_tier ON floor_tier.id = room.floor_tier_id
+        LEFT JOIN mansion mansion ON mansion.id = floor_tier.mansion_id
+
+
+    </select>
 
     <select id="findVOByExaple" resultMap="BaseResultMap"
             parameterType="com.idea.cjyl.totalmodule.web.domain.pojo.OlderExample">
@@ -167,7 +166,15 @@
             distinct
         </if>
         <include refid="Base_Column_List"/>
-        from older LEFT JOIN month_charge monthcharge ON older.month_charge_id = monthcharge.id
+        FROM older
+        LEFT JOIN staff staff ON older.staff_id = staff.id
+        LEFT JOIN month_charge month_charge ON older.month_charge_id = month_charge.id
+        LEFT JOIN older_initial_fee ON older.id = older_initial_fee.old_id
+        LEFT JOIN check_in_init_cost ciic ON ciic.id = older_initial_fee.check_in_init_cost_id
+        LEFT JOIN bed bed ON bed.old_id = older.id
+        LEFT JOIN room room ON room.id = bed.room_id
+        LEFT JOIN floor_tier ON floor_tier.id = room.floor_tier_id
+        LEFT JOIN mansion mansion ON mansion.id = floor_tier.mansion_id
         <if test="_parameter != null">
             <include refid="Example_Where_Clause"/>
         </if>

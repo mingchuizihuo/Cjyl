@@ -35,7 +35,17 @@ public class MainsionServiceTest extends AbstractJUnit4SpringContextTests {
     }
     @Test
     public void findAll(){
-
+        List<DataDictionary> dataDictionaries = new ArrayList<>();
+        DataDictionary dataDictionary = new DataDictionary();
+        dataDictionary.setDataName("ceshi");
+        dataDictionary.setDataLevel((byte)1);
+        dataDictionary.setOrganizationLoginId(1L);
+        dataDictionary.setTid(0L);
+        dataDictionary.setId(1L);
+        dataDictionaries.add(dataDictionary);
+        AnalysisConstant.dataDictionaryList = dataDictionaries;
+        OlderVO olderVO = new OlderVO();
+        System.out.println(olderVO.getSexStr());
                 System.out.println(mansionService.findAllVO());
     }
 }

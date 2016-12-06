@@ -13,10 +13,9 @@ public interface OlderMapperMyself extends GenericDao {
 
     /**
      * 查询老人详情
-     * @param loginId
      * @return
      */
-    public List<OlderVO> findAllVO(Long loginId);
+    public List<OlderVO> findAllVO();
 
     /**
      * 通过条件查询老人信息
@@ -24,4 +23,11 @@ public interface OlderMapperMyself extends GenericDao {
      * @return
      */
     public List<OlderVO> findVOByExaple(OlderExample example);
+
+    /**
+     * 通过id查询老人详情
+     * @param id
+     * @return
+     */
+    public OlderVO selectByPrimaryKey(Long id);
 }

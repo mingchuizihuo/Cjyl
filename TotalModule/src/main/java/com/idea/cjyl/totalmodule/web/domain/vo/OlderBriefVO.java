@@ -1,6 +1,7 @@
 package com.idea.cjyl.totalmodule.web.domain.vo;
 
 import com.idea.cjyl.totalmodule.web.domain.pojo.*;
+import com.idea.cjyl.totalmodule.web.globals.AnalysisConstant;
 
 import java.util.List;
 
@@ -29,6 +30,9 @@ public class OlderBriefVO {
     private String olderLeaveDate;//出院日期
 
 
+    public OlderBriefVO() {
+        data2String(AnalysisConstant.dataDictionaryList);
+    }
 
     public void data2String(List<DataDictionary> dataDictionaryList){
         for (DataDictionary dataDictionary: dataDictionaryList

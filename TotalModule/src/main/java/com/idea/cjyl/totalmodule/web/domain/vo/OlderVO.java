@@ -86,6 +86,7 @@ public class OlderVO {
     private Staff staff;//护理人员
 
     public OlderVO() {
+
         data2String(AnalysisConstant.dataDictionaryList);
     }
 

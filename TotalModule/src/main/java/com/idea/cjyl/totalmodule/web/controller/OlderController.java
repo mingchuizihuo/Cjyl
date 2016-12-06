@@ -108,4 +108,74 @@ public class OlderController extends GenericController {
     }
 
 
+    /**
+     * 分页查询所有老人VO
+     * @param currentPage
+     * @param limit
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value="findAllVO",method = RequestMethod.GET)
+    public ResultData findAllVO(Integer currentPage,Integer limit){
+        return ResultData.build().
+                parsePageBean(olderService.findAllVO(currentPage,limit));
+    }
+
+
+    /**\
+     * 根据条件分页查询所有老人VO
+     * @param older 老人信息
+     * @param currentPage
+     * @param limit
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value="findVOByExample",method = RequestMethod.GET)
+    public ResultData findVOByExample(Older older,Integer currentPage,Integer limit){
+        return ResultData.build().
+                parsePageBean(olderService.findVOByExample(older,currentPage,limit));
+    }
+
+
+    /**
+     * 根据id查询老人VO
+     * @param olderId
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value="findVOById",method = RequestMethod.GET)
+    public ResultData findVOById(Long olderId){
+        return ResultData.build().
+                parseBean(olderService.findVOById(olderId));
+    }
+
+
+
+    /**
+     * 分页查询所有老人简要信息VO
+     * @param currentPage
+     * @param limit
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value="findAllBriefVO",method = RequestMethod.GET)
+    public ResultData findAllBriefVO(Integer currentPage,Integer limit){
+        return ResultData.build().
+                parsePageBean(olderService.findAllBriefVO(currentPage,limit));
+    }
+
+
+    /**\
+     * 根据条件分页查询所有老人简要信息VO
+     * @param older 老人信息
+     * @param currentPage
+     * @param limit
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value="findAllBriefVOByExample",method = RequestMethod.GET)
+    public ResultData findAllBriefVOByExample(Older older,Integer currentPage,Integer limit){
+        return ResultData.build().
+                parsePageBean(olderService.findAllBriefVOByExample(older,currentPage,limit));
+    }
 }
