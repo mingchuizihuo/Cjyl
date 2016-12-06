@@ -5,21 +5,21 @@ import com.idea.cjyl.totalmodule.web.domain.pojo.Room;
 import java.util.List;
 
 /**
- * Created by Administrator on 2016/12/2.
+ * Created by Administrator on 2016/12/2.楼层对象
  */
 public class FloorTierVO {
 
-    private Long id;
+    private Long id;//id
 
-    private Long organizationLoginId;
+    private Long organizationLoginId;//登录id
 
-    private Long mansionId;
+    private Long mansionId;//大厦id
 
-    private String floorTier;
+    private String floorTier;//楼层
 
-    private String accountFor;
+    private String accountFor;//说明
 
-    private List<RoomVO> roomList;
+    private List<RoomVO> roomList;//房间集合
 
     @Override
     public String toString() {

@@ -12,8 +12,8 @@ public interface MansionMapperMyself extends GenericDao {
 
     /**
      * 查询大楼详情（包括楼层，房间，床）
-     * @param loginId
+     *
      * @return
      */
-    public List<MansionVO> findAllVO(Long loginId);
+    public List<MansionVO> findAllVO();
 }

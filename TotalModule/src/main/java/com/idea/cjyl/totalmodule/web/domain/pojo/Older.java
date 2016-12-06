@@ -61,6 +61,12 @@ public class Older {
 
     private String abnormalPatterns;
 
+    private Byte olderState;
+
+    private Date olderLeaveDate;
+
+    private Long staffId;
+
     public Long getId() {
         return id;
     }
@@ -291,5 +297,29 @@ public class Older {
 
     public void setAbnormalPatterns(String abnormalPatterns) {
         this.abnormalPatterns = abnormalPatterns == null ? null : abnormalPatterns.trim();
+    }
+
+    public Byte getOlderState() {
+        return olderState;
+    }
+
+    public void setOlderState(Byte olderState) {
+        this.olderState = olderState;
+    }
+
+    public Date getOlderLeaveDate() {
+        return olderLeaveDate;
+    }
+
+    public void setOlderLeaveDate(Date olderLeaveDate) {
+        this.olderLeaveDate = olderLeaveDate;
+    }
+
+    public Long getStaffId() {
+        return staffId;
+    }
+
+    public void setStaffId(Long staffId) {
+        this.staffId = staffId;
     }
 }

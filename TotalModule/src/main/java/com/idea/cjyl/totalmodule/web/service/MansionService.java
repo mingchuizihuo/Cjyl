@@ -13,5 +13,5 @@ public interface MansionService extends GenericService<Mansion,Long,MansionExamp
 
     public void insert(Mansion mansion,int floorNum,int roomNum,int bedNum,Long loginId);
 
-    public List<MansionVO> findAllVO(Long loginId);
+    public List<MansionVO> findAllVO();
 }

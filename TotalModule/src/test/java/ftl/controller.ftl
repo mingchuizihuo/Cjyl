@@ -64,7 +64,27 @@ public class ${className}Controller extends GenericController {
         return ResultData.build();
 
     }
+    /**
+    * 批量删除${chinaName}
+    *
+    * @param ids
+    * @return
+    */
+    @ResponseBody
+    @RequestMapping(value = "dels", method = RequestMethod.POST)
+    public ResultData del(String ids) {
+        try {
+            String[] idsArray = ids.split(",");
+            for (String id : idsArray) {
+                ${className?lower_case}Service.delete(Long.parseLong(id));
+            }
 
+            } catch (Exception e) {
+                return ResultData.build().delError();
+            }
+            return ResultData.build();
+
+    }
     /**
     * 修改${chinaName}
     * @param ${className?lower_case}

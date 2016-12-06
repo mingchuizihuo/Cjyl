@@ -56,7 +56,27 @@ public class MansionController extends GenericController {
         return ResultData.build();
 
     }
+    /**
+    * 批量删除大厦
+    *
+    * @param ids
+    * @return
+    */
+    @ResponseBody
+    @RequestMapping(value = "dels", method = RequestMethod.POST)
+    public ResultData del(String ids) {
+        try {
+            String[] idsArray = ids.split(",");
+            for (String id : idsArray) {
+                mansionService.delete(Long.parseLong(id));
+            }
 
+            } catch (Exception e) {
+                return ResultData.build().delError();
+            }
+            return ResultData.build();
+
+    }
     /**
     * 修改大厦
     * @param mansion
@@ -86,19 +106,17 @@ public class MansionController extends GenericController {
         return ResultData.build().
         parsePageBean(mansionService.findAll(currentPage,limit));
     }
-
     /**
      * 获取本机构大楼床位信息
+     *
      * @return
      */
     @ResponseBody
-    @RequestMapping(value = "findAllVO" , method = RequestMethod.GET)
-    public ResultData findAllVO(){
-        Long loginId = 1l;
-        return ResultData.build().parseList(mansionService.findAllVO(loginId));
+    @RequestMapping(value = "findAllVO", method = RequestMethod.GET)
+    public ResultData findAllVO() {
+
+        return ResultData.build().parseList(mansionService.findAllVO());
     }
-
-
 
 
 }

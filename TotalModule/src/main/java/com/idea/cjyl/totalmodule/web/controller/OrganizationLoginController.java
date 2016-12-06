@@ -2,7 +2,10 @@ package com.idea.cjyl.totalmodule.web.controller;
 
 import com.idea.cjyl.core.common.ResultData;
 import com.idea.cjyl.core.generic.GenericController;
+import com.idea.cjyl.totalmodule.web.domain.pojo.DataDictionary;
 import com.idea.cjyl.totalmodule.web.domain.pojo.OrganizationLogin;
+import com.idea.cjyl.totalmodule.web.globals.AnalysisConstant;
+import com.idea.cjyl.totalmodule.web.service.DataDictionaryService;
 import com.idea.cjyl.totalmodule.web.service.OrganizationLoginService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +22,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class OrganizationLoginController extends GenericController {
     @Autowired
     private OrganizationLoginService organizationloginService;
+
 
     /**
         * 添加登录
@@ -56,7 +60,27 @@ public class OrganizationLoginController extends GenericController {
         return ResultData.build();
 
     }
+    /**
+    * 批量删除登录
+    *
+    * @param ids
+    * @return
+    */
+    @ResponseBody
+    @RequestMapping(value = "dels", method = RequestMethod.POST)
+    public ResultData del(String ids) {
+        try {
+            String[] idsArray = ids.split(",");
+            for (String id : idsArray) {
+                organizationloginService.delete(Long.parseLong(id));
+            }
 
+            } catch (Exception e) {
+                return ResultData.build().delError();
+            }
+            return ResultData.build();
+
+    }
     /**
     * 修改登录
     * @param organizationlogin

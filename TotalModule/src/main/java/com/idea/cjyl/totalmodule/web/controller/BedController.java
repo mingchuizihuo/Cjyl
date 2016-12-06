@@ -56,7 +56,27 @@ public class BedController extends GenericController {
         return ResultData.build();
 
     }
+    /**
+    * 批量删除床
+    *
+    * @param ids
+    * @return
+    */
+    @ResponseBody
+    @RequestMapping(value = "dels", method = RequestMethod.POST)
+    public ResultData del(String ids) {
+        try {
+            String[] idsArray = ids.split(",");
+            for (String id : idsArray) {
+                bedService.delete(Long.parseLong(id));
+            }
 
+            } catch (Exception e) {
+                return ResultData.build().delError();
+            }
+            return ResultData.build();
+
+    }
     /**
     * 修改床
     * @param bed

@@ -1,7 +1,10 @@
 package com.web;
 
 import com.idea.cjyl.totalmodule.web.dao.myself.MansionMapperMyself;
+import com.idea.cjyl.totalmodule.web.domain.pojo.DataDictionary;
 import com.idea.cjyl.totalmodule.web.domain.pojo.Mansion;
+import com.idea.cjyl.totalmodule.web.domain.vo.OlderVO;
+import com.idea.cjyl.totalmodule.web.globals.AnalysisConstant;
 import com.idea.cjyl.totalmodule.web.service.MansionService;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +12,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Administrator on 2016/12/2.
@@ -30,6 +35,7 @@ public class MainsionServiceTest extends AbstractJUnit4SpringContextTests {
     }
     @Test
     public void findAll(){
-        System.out.println(mansionService.findAllVO(1l));
+
+                System.out.println(mansionService.findAllVO());
     }
 }

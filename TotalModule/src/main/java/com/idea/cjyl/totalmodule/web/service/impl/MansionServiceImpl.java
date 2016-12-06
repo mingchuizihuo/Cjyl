@@ -67,7 +67,7 @@ import java.util.List;
        }
 
    @Override
-   public List<MansionVO> findAllVO(Long loginId) {
-      return mansionMapperMyself.findAllVO(loginId);
+   public List<MansionVO> findAllVO() {
+      return mansionMapperMyself.findAllVO();
    }
 }

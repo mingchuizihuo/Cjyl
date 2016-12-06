@@ -1,12 +1,14 @@
 package com.idea.cjyl.totalmodule.web.service.impl;
 
 
+import com.github.pagehelper.Page;
 import com.idea.cjyl.core.generic.GenericDao;
 import com.idea.cjyl.core.generic.GenericServiceImpl;
 
 import com.idea.cjyl.totalmodule.web.dao.OlderMapper;
 import com.idea.cjyl.totalmodule.web.domain.pojo.Older;
 import com.idea.cjyl.totalmodule.web.domain.pojo.OlderExample;
+import com.idea.cjyl.totalmodule.web.domain.vo.OlderVO;
 import com.idea.cjyl.totalmodule.web.service.OlderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,4 +26,18 @@ import org.springframework.stereotype.Service;
        }
 
 
+   @Override
+   public Page<OlderVO> findAllVO(Integer currentPage, Integer limit) {
+      return null;
+   }
+
+   @Override
+   public Page<OlderVO> findVOByExample(Older older, Integer currentPage, Integer limit) {
+      return null;
+   }
+
+   @Override
+   public OlderVO findVOById(Long id) {
+      return null;
+   }
 }

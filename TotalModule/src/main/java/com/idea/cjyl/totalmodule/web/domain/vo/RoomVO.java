@@ -5,21 +5,21 @@ import com.idea.cjyl.totalmodule.web.domain.pojo.Bed;
 import java.util.List;
 
 /**
- * Created by Administrator on 2016/12/2.
+ * Created by Administrator on 2016/12/2.房间
  */
 public class RoomVO {
 
-    private Long id;
+    private Long id;//id
 
-    private Long organizationLoginId;
+    private Long organizationLoginId;//登录id
 
-    private Long floorTierId;
+    private Long floorTierId;//楼层id
 
-    private String roomNum;
+    private String roomNum;//房间号
 
-    private Byte roomType;
+    private Byte roomType;//房间类型4.代表四人间，3代表三人间
 
-    private List<Bed> bedList;
+    private List<Bed> bedList;//床集合
 
     @Override
     public String toString() {

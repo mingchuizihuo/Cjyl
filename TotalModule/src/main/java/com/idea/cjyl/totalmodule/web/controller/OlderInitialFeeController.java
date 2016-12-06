@@ -56,7 +56,27 @@ public class OlderInitialFeeController extends GenericController {
         return ResultData.build();
 
     }
+    /**
+    * 批量删除老人入住初始费用关系
+    *
+    * @param ids
+    * @return
+    */
+    @ResponseBody
+    @RequestMapping(value = "dels", method = RequestMethod.POST)
+    public ResultData del(String ids) {
+        try {
+            String[] idsArray = ids.split(",");
+            for (String id : idsArray) {
+                olderinitialfeeService.delete(Long.parseLong(id));
+            }
 
+            } catch (Exception e) {
+                return ResultData.build().delError();
+            }
+            return ResultData.build();
+
+    }
     /**
     * 修改老人入住初始费用关系
     * @param olderinitialfee

@@ -5,7 +5,6 @@
 <configuration>
     <properties>
         <property name="dialectClass" value="com.idea.cjyl.core.feature.orm.dialect.MySql5Dialect"/>
-        <property name="loginId" value="1"/>
     </properties>
 
     <!-- 配置mybatis的缓存，延迟加载等等一系列属性 -->

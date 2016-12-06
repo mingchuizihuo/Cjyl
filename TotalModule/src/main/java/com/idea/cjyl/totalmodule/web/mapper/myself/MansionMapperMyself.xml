@@ -47,14 +47,14 @@
         bed.id bed_id, bed.organization_login_id  bed_organization_login_id, bed.room_id bed_room_id, bed.bed_num bed_bed_num, bed.bed_state bed_bed_state, bed.old_id bed_old_id
 
     </sql>
-    <select id="findAllVO" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    <select id="findAllVO" resultMap="BaseResultMap" >
 
       SELECT
       <include refid="Base_Column_List" ></include>
-      FROM mansion mansion
+      from mansion
       LEFT JOIN floor_tier floor ON mansion.id = floor.mansion_id
       LEFT JOIN room room ON room.floor_tier_id = floor.id
       LEFT JOIN bed bed ON bed.room_id = room.id
-      where mansion.organization_login_id = #{loginId,jdbcType=BIGINT}
+      order by bed.id
     </select>
 </mapper>

@@ -2014,6 +2014,186 @@ public class OlderExample {
             addCriterion("abnormal_patterns not between", value1, value2, "abnormalPatterns");
             return (Criteria) this;
         }
+
+        public Criteria andOlderStateIsNull() {
+            addCriterion("older_state is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andOlderStateIsNotNull() {
+            addCriterion("older_state is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andOlderStateEqualTo(Byte value) {
+            addCriterion("older_state =", value, "olderState");
+            return (Criteria) this;
+        }
+
+        public Criteria andOlderStateNotEqualTo(Byte value) {
+            addCriterion("older_state <>", value, "olderState");
+            return (Criteria) this;
+        }
+
+        public Criteria andOlderStateGreaterThan(Byte value) {
+            addCriterion("older_state >", value, "olderState");
+            return (Criteria) this;
+        }
+
+        public Criteria andOlderStateGreaterThanOrEqualTo(Byte value) {
+            addCriterion("older_state >=", value, "olderState");
+            return (Criteria) this;
+        }
+
+        public Criteria andOlderStateLessThan(Byte value) {
+            addCriterion("older_state <", value, "olderState");
+            return (Criteria) this;
+        }
+
+        public Criteria andOlderStateLessThanOrEqualTo(Byte value) {
+            addCriterion("older_state <=", value, "olderState");
+            return (Criteria) this;
+        }
+
+        public Criteria andOlderStateIn(List<Byte> values) {
+            addCriterion("older_state in", values, "olderState");
+            return (Criteria) this;
+        }
+
+        public Criteria andOlderStateNotIn(List<Byte> values) {
+            addCriterion("older_state not in", values, "olderState");
+            return (Criteria) this;
+        }
+
+        public Criteria andOlderStateBetween(Byte value1, Byte value2) {
+            addCriterion("older_state between", value1, value2, "olderState");
+            return (Criteria) this;
+        }
+
+        public Criteria andOlderStateNotBetween(Byte value1, Byte value2) {
+            addCriterion("older_state not between", value1, value2, "olderState");
+            return (Criteria) this;
+        }
+
+        public Criteria andOlderLeaveDateIsNull() {
+            addCriterion("older_leave_date is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andOlderLeaveDateIsNotNull() {
+            addCriterion("older_leave_date is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andOlderLeaveDateEqualTo(Date value) {
+            addCriterion("older_leave_date =", value, "olderLeaveDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andOlderLeaveDateNotEqualTo(Date value) {
+            addCriterion("older_leave_date <>", value, "olderLeaveDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andOlderLeaveDateGreaterThan(Date value) {
+            addCriterion("older_leave_date >", value, "olderLeaveDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andOlderLeaveDateGreaterThanOrEqualTo(Date value) {
+            addCriterion("older_leave_date >=", value, "olderLeaveDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andOlderLeaveDateLessThan(Date value) {
+            addCriterion("older_leave_date <", value, "olderLeaveDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andOlderLeaveDateLessThanOrEqualTo(Date value) {
+            addCriterion("older_leave_date <=", value, "olderLeaveDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andOlderLeaveDateIn(List<Date> values) {
+            addCriterion("older_leave_date in", values, "olderLeaveDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andOlderLeaveDateNotIn(List<Date> values) {
+            addCriterion("older_leave_date not in", values, "olderLeaveDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andOlderLeaveDateBetween(Date value1, Date value2) {
+            addCriterion("older_leave_date between", value1, value2, "olderLeaveDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andOlderLeaveDateNotBetween(Date value1, Date value2) {
+            addCriterion("older_leave_date not between", value1, value2, "olderLeaveDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andStaffIdIsNull() {
+            addCriterion("staff_id is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andStaffIdIsNotNull() {
+            addCriterion("staff_id is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andStaffIdEqualTo(Long value) {
+            addCriterion("staff_id =", value, "staffId");
+            return (Criteria) this;
+        }
+
+        public Criteria andStaffIdNotEqualTo(Long value) {
+            addCriterion("staff_id <>", value, "staffId");
+            return (Criteria) this;
+        }
+
+        public Criteria andStaffIdGreaterThan(Long value) {
+            addCriterion("staff_id >", value, "staffId");
+            return (Criteria) this;
+        }
+
+        public Criteria andStaffIdGreaterThanOrEqualTo(Long value) {
+            addCriterion("staff_id >=", value, "staffId");
+            return (Criteria) this;
+        }
+
+        public Criteria andStaffIdLessThan(Long value) {
+            addCriterion("staff_id <", value, "staffId");
+            return (Criteria) this;
+        }
+
+        public Criteria andStaffIdLessThanOrEqualTo(Long value) {
+            addCriterion("staff_id <=", value, "staffId");
+            return (Criteria) this;
+        }
+
+        public Criteria andStaffIdIn(List<Long> values) {
+            addCriterion("staff_id in", values, "staffId");
+            return (Criteria) this;
+        }
+
+        public Criteria andStaffIdNotIn(List<Long> values) {
+            addCriterion("staff_id not in", values, "staffId");
+            return (Criteria) this;
+        }
+
+        public Criteria andStaffIdBetween(Long value1, Long value2) {
+            addCriterion("staff_id between", value1, value2, "staffId");
+            return (Criteria) this;
+        }
+
+        public Criteria andStaffIdNotBetween(Long value1, Long value2) {
+            addCriterion("staff_id not between", value1, value2, "staffId");
+            return (Criteria) this;
+        }
     }
 
     public static class Criteria extends GeneratedCriteria {
