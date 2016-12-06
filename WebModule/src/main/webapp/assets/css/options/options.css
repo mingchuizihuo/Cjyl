@@ -1,0 +1,92 @@
+
+
+.oldman_tab{width:40%;background:#e7e7e7;border:1px #5b5c5c solid;border-radius: 4px;padding:11px 14px 20px 17px;min-width:768px;height:700px;position: absolute;z-index: 10;
+    top:5%;margin-left:20%;}
+
+/*选项卡标题*/
+.oldman_tab h2{font-size:18px;color:#5b5c5c;margin-bottom: 30px;}
+.oldman_tab .nav-tabs ul{width:100%;}
+.oldman_tab .nav-tabs > li{width:20%;}
+.oldman_tab .nav-tabs > li a{ border-bottom: 1px #c3c3c3 solid;margin-right:0px;}
+.oldman_tab .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{ color: #5b5c5c;
+    background:none;
+    border:none;
+    border-bottom: 2px #3dc9a2 solid;  }
+.oldman_tab .nav-tabs a{color:#5b5c5c;border:none;border-bottom: 2px #e7e7e7 solid; }
+.oldman_tab .nav-tabs a:hover{ border:none;border-bottom: 2px #3dc9a2 solid; background:none;}
+
+
+/*选项卡内容*/
+.oldman_tab .tab-content{border-bottom: 1px #c2c2c2 solid;padding:20px;height:500px}
+
+    /*老人信息*/
+.oldman_tab .tab-content .oldman{margin-top:36px;}
+.oldman_tab .tab-content .oldman ul li{float: left;color:#5b5c5c;margin-bottom: 10px;width: 30%;margin-right:3%;font-size: 14px;}
+.oldman_tab .tab-content .oldman ul li .select{font-size:12px; float:right;width:130px;height:28px;border:1px #c3c3c3 solid;border-radius: 0px;}
+.oldman_tab .tab-content .oldman ul li span{float: left;}
+.oldman_tab .tab-content .oldman ul li input{float:right;width:130px;height:28px;border:1px #c3c3c3 solid;}
+
+
+/*亲属信息*/
+.oldman_tab .tab-content .relatives{margin-top:36px;}
+.oldman_tab .tab-content .relatives .box{width:100%;border:1px #c3c3c3 solid;border-radius:5px;padding:15px 25px;}
+.oldman_tab .tab-content .relatives .box ul{width:100%;}
+.oldman_tab .tab-content .relatives .box ul li{float: left;width: 50%;color:#5b5c5c;margin-bottom: 10px;font-size: 14px;}
+.oldman_tab .tab-content .relatives .box ul li .select{font-size:12px; float:right;width:40%;height:28px;border:1px #c3c3c3 solid;border-radius: 0px;margin-right:15%;}
+.oldman_tab .tab-content .relatives .box ul li span{float: left;width:40%;}
+.oldman_tab .tab-content .relatives .box ul li input{float:right;width:40%;height:28px;border:1px #c3c3c3 solid;margin-right:15%;}
+.oldman_tab .tab-content .relatives .box ul li:nth-last-child(2){width: 100%;}
+.oldman_tab .tab-content .relatives .box ul li:nth-last-child(3){width: 100%;}
+.oldman_tab .tab-content .relatives .box ul li:nth-last-child(2) span{width: 20%;}
+.oldman_tab .tab-content .relatives .box ul li:nth-last-child(3) span{width: 20%;}
+.oldman_tab .tab-content .relatives .box ul li:nth-last-child(2) input{margin-right: 7.5%;width:70%}
+.oldman_tab .tab-content .relatives .box ul li:nth-last-child(3) input{margin-right: 7.5%;width:70%}
+
+/*入住初始费*/
+.oldman_tab .tab-content .stayin{margin-top:36px;}
+.oldman_tab .tab-content .stayin .box{width:100%;border:1px #c3c3c3 solid;border-radius:5px;padding:15px 25px;}
+.oldman_tab .tab-content .stayin .box ul{width:100%;}
+.oldman_tab .tab-content .stayin .box ul li{float: left;width: 50%;color:#5b5c5c;margin-bottom: 10px;font-size: 14px;}
+.oldman_tab .tab-content .stayin .box ul li .select{font-size:12px; float:right;width:40%;height:28px;border:1px #c3c3c3 solid;border-radius: 0px;margin-right:15%;}
+.oldman_tab .tab-content .stayin .box ul li span{float: left;width:40%;}
+.oldman_tab .tab-content .stayin .box ul li input{float:right;width:40%;height:28px;border:1px #c3c3c3 solid;margin-right:15%;}
+
+/*缴费情况*/
+.oldman_tab .tab-content .paycost{margin-top:36px;}
+.oldman_tab .tab-content .paycost .box{width:100%;border:1px #c3c3c3 solid;border-radius:5px;padding:15px 25px;}
+.oldman_tab .tab-content .paycost .box ul{width:100%;}
+.oldman_tab .tab-content .paycost .box ul li{float: left;width: 50%;color:#5b5c5c;margin-bottom: 10px;font-size: 14px;}
+.oldman_tab .tab-content .paycost .box ul li .select{font-size:12px; float:right;width:40%;height:28px;border:1px #c3c3c3 solid;border-radius: 0px;margin-right:15%;}
+.oldman_tab .tab-content .paycost .box ul li span{float: left;width:40%;}
+.oldman_tab .tab-content .paycost .box ul li input{float:right;width:40%;height:28px;border:1px #c3c3c3 solid;margin-right:15%;}
+.oldman_tab .tab-content .paycost .box ul li:nth-last-child(2){width: 100%;}
+.oldman_tab .tab-content .paycost .box ul li:nth-last-child(2) span{width: 20%;}
+.oldman_tab .tab-content .paycost .box ul li:nth-last-child(2) input{margin-right: 7.5%;width:70%}
+
+/*护理记录*/
+.oldman_tab .tab-content .nursing{margin-top:36px;}
+.oldman_tab .tab-content .nursing .box{width:100%;border:1px #c3c3c3 solid;border-radius:5px;padding:15px 25px;}
+.oldman_tab .tab-content .nursing .box ul{width:100%;}
+.oldman_tab .tab-content .nursing .box ul li{float: left;width: 30%;color:#5b5c5c;margin-bottom: 10px;font-size: 14px;margin-right: 3%}
+.oldman_tab .tab-content .nursing .box ul li .select{font-size:12px; float:right;width:60%;height:28px;border:1px #c3c3c3 solid;border-radius: 0px;}
+.oldman_tab .tab-content .nursing .box ul li span{float: left;width:40%;}
+.oldman_tab .tab-content .nursing .box ul li input{float:right;width:60%;height:28px;border:1px #c3c3c3 solid;}
+.oldman_tab .tab-content .nursing .box ul li:nth-last-child(2){width: 100%;}
+.oldman_tab .tab-content .nursing .box ul li:nth-last-child(2) span{width: 20%;}
+.oldman_tab .tab-content .nursing .box ul li:nth-last-child(2) input{margin-right:4%;width:70%}
+
+.oldman_tab .bottom{margin-top:20px; display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;}
+.oldman_tab .bottom button{
+    width:85px;
+    height:28px;
+    background:#e6e6e6;
+    border-radius: 5px;
+    border:1px #c2c2c2 solid;
+    outline: none !important;
+   }
+.oldman_tab .bottom button:hover{background:#8fcbdf;border:1px #379bca solid;color:#fff;}
+.oldman_tab .bottom button:focus{background:#379bca;color:#fff;}
+
+

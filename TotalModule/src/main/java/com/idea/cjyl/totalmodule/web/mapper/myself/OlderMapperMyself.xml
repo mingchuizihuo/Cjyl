@@ -53,7 +53,7 @@
         <result column="check_in_date" property="checkInDate" jdbcType="VARCHAR"/>
 
 
-        <result column="nation" property="nation" jdbcType="BIGITN"/>
+        <result column="nation" property="nation" jdbcType="BIGINT"/>
 
         <result column="nation_str" property="nationStr" jdbcType="VARCHAR"/>
         <result column="birthday" property="birthday" jdbcType="VARCHAR"/>

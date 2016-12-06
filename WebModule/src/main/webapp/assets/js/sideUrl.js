@@ -44,6 +44,17 @@ function sideUrl(url) {
         }
     });
 }
+function modalUrl(url) {
+    var urlGet = domainUrl + url;
+    $.ajax({
+        type:"get",
+        url:urlGet,
+        success:function (data) {
+            console.log(data)
+            $(".publicModal").html(data);
+        }
+    })
+}
 function startSideUrl(url) {
     var url = domainUrl+url;
     $.ajax({

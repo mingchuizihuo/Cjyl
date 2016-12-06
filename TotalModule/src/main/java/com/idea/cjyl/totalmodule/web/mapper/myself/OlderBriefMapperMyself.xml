@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.idea.cjyl.totalmodule.web.dao.myself.OlderMapperMyself">
+<mapper namespace="com.idea.cjyl.totalmodule.web.dao.myself.OlderBriefMapperMyself">
 
     <resultMap id="OlderBriefVO" type="com.idea.cjyl.totalmodule.web.domain.vo.OlderBriefVO">
 
@@ -10,7 +10,7 @@
         <result column="check_in_date" property="checkInDate" jdbcType="VARCHAR"/>
 
 
-        <result column="nation" property="nation" jdbcType="BIGITN"/>
+        <result column="nation" property="nation" jdbcType="BIGINT"/>
 
 
         <result column="birthday" property="birthday" jdbcType="VARCHAR"/>
