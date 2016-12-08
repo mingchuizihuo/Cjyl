@@ -58,4 +58,5 @@ public interface GenericDao<Model, PK,ModelExample> {
      */
     int deleteByExample(ModelExample example);
 
+
 }

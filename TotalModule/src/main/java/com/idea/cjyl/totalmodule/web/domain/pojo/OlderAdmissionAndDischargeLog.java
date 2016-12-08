@@ -2,14 +2,14 @@ package com.idea.cjyl.totalmodule.web.domain.pojo;
 
 import java.util.Date;
 
-public class OlderInitialFee {
+public class OlderAdmissionAndDischargeLog {
     private Long id;
 
     private Long organizationLoginId;
 
     private Long olderId;
 
-    private Long checkInInitCostId;
+    private Date admissionDate;
 
     private Long checkInInitCostState;
 
@@ -41,12 +41,12 @@ public class OlderInitialFee {
         this.olderId = olderId;
     }
 
-    public Long getCheckInInitCostId() {
-        return checkInInitCostId;
+    public Date getAdmissionDate() {
+        return admissionDate;
     }
 
-    public void setCheckInInitCostId(Long checkInInitCostId) {
-        this.checkInInitCostId = checkInInitCostId;
+    public void setAdmissionDate(Date admissionDate) {
+        this.admissionDate = admissionDate;
     }
 
     public Long getCheckInInitCostState() {

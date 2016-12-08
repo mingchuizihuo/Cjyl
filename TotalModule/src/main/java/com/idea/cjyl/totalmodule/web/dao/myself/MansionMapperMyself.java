@@ -1,6 +1,7 @@
 package com.idea.cjyl.totalmodule.web.dao.myself;
 
 import com.idea.cjyl.core.generic.GenericDao;
+import com.idea.cjyl.core.generic.GenericDaoMyself;
 import com.idea.cjyl.totalmodule.web.domain.vo.MansionVO;
 
 import java.util.List;
@@ -8,12 +9,7 @@ import java.util.List;
 /**
  * Created by Administrator on 2016/12/2.
  */
-public interface MansionMapperMyself extends GenericDao {
+public interface MansionMapperMyself<MansionVO,Long,MansionExample> extends GenericDaoMyself {
 
-    /**
-     * 查询大楼详情（包括楼层，房间，床）
-     *
-     * @return
-     */
-    public List<MansionVO> findAllVO();
+
 }

@@ -144,7 +144,8 @@
 
         SELECT
         <include refid="Base_Column_List"></include>
-        FROM older
+        from older
+
         LEFT JOIN staff staff ON older.staff_id = staff.id
         LEFT JOIN month_charge month_charge ON older.month_charge_id = month_charge.id
         LEFT JOIN older_initial_fee ON older.id = older_initial_fee.old_id
@@ -166,7 +167,7 @@
             distinct
         </if>
         <include refid="Base_Column_List"/>
-        FROM older
+        from older
         LEFT JOIN staff staff ON older.staff_id = staff.id
         LEFT JOIN month_charge month_charge ON older.month_charge_id = month_charge.id
         LEFT JOIN older_initial_fee ON older.id = older_initial_fee.old_id

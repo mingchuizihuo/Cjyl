@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class OlderNurseLogExample {
+public class OlderAdmissionAndDischargeLogExample {
     protected String orderByClause;
 
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
 
-    public OlderNurseLogExample() {
+    public OlderAdmissionAndDischargeLogExample() {
         oredCriteria = new ArrayList<Criteria>();
     }
 
@@ -285,263 +285,243 @@ public class OlderNurseLogExample {
             return (Criteria) this;
         }
 
-        public Criteria andPhysicalConditionIsNull() {
-            addCriterion("physical_condition is null");
+        public Criteria andAdmissionDateIsNull() {
+            addCriterion("admission_date is null");
             return (Criteria) this;
         }
 
-        public Criteria andPhysicalConditionIsNotNull() {
-            addCriterion("physical_condition is not null");
+        public Criteria andAdmissionDateIsNotNull() {
+            addCriterion("admission_date is not null");
             return (Criteria) this;
         }
 
-        public Criteria andPhysicalConditionEqualTo(String value) {
-            addCriterion("physical_condition =", value, "physicalCondition");
+        public Criteria andAdmissionDateEqualTo(Date value) {
+            addCriterion("admission_date =", value, "admissionDate");
             return (Criteria) this;
         }
 
-        public Criteria andPhysicalConditionNotEqualTo(String value) {
-            addCriterion("physical_condition <>", value, "physicalCondition");
+        public Criteria andAdmissionDateNotEqualTo(Date value) {
+            addCriterion("admission_date <>", value, "admissionDate");
             return (Criteria) this;
         }
 
-        public Criteria andPhysicalConditionGreaterThan(String value) {
-            addCriterion("physical_condition >", value, "physicalCondition");
+        public Criteria andAdmissionDateGreaterThan(Date value) {
+            addCriterion("admission_date >", value, "admissionDate");
             return (Criteria) this;
         }
 
-        public Criteria andPhysicalConditionGreaterThanOrEqualTo(String value) {
-            addCriterion("physical_condition >=", value, "physicalCondition");
+        public Criteria andAdmissionDateGreaterThanOrEqualTo(Date value) {
+            addCriterion("admission_date >=", value, "admissionDate");
             return (Criteria) this;
         }
 
-        public Criteria andPhysicalConditionLessThan(String value) {
-            addCriterion("physical_condition <", value, "physicalCondition");
+        public Criteria andAdmissionDateLessThan(Date value) {
+            addCriterion("admission_date <", value, "admissionDate");
             return (Criteria) this;
         }
 
-        public Criteria andPhysicalConditionLessThanOrEqualTo(String value) {
-            addCriterion("physical_condition <=", value, "physicalCondition");
+        public Criteria andAdmissionDateLessThanOrEqualTo(Date value) {
+            addCriterion("admission_date <=", value, "admissionDate");
             return (Criteria) this;
         }
 
-        public Criteria andPhysicalConditionLike(String value) {
-            addCriterion("physical_condition like", value, "physicalCondition");
+        public Criteria andAdmissionDateIn(List<Date> values) {
+            addCriterion("admission_date in", values, "admissionDate");
             return (Criteria) this;
         }
 
-        public Criteria andPhysicalConditionNotLike(String value) {
-            addCriterion("physical_condition not like", value, "physicalCondition");
+        public Criteria andAdmissionDateNotIn(List<Date> values) {
+            addCriterion("admission_date not in", values, "admissionDate");
             return (Criteria) this;
         }
 
-        public Criteria andPhysicalConditionIn(List<String> values) {
-            addCriterion("physical_condition in", values, "physicalCondition");
+        public Criteria andAdmissionDateBetween(Date value1, Date value2) {
+            addCriterion("admission_date between", value1, value2, "admissionDate");
             return (Criteria) this;
         }
 
-        public Criteria andPhysicalConditionNotIn(List<String> values) {
-            addCriterion("physical_condition not in", values, "physicalCondition");
+        public Criteria andAdmissionDateNotBetween(Date value1, Date value2) {
+            addCriterion("admission_date not between", value1, value2, "admissionDate");
             return (Criteria) this;
         }
 
-        public Criteria andPhysicalConditionBetween(String value1, String value2) {
-            addCriterion("physical_condition between", value1, value2, "physicalCondition");
+        public Criteria andCheckInInitCostStateIsNull() {
+            addCriterion("check_in_init_cost_state is null");
             return (Criteria) this;
         }
 
-        public Criteria andPhysicalConditionNotBetween(String value1, String value2) {
-            addCriterion("physical_condition not between", value1, value2, "physicalCondition");
+        public Criteria andCheckInInitCostStateIsNotNull() {
+            addCriterion("check_in_init_cost_state is not null");
             return (Criteria) this;
         }
 
-        public Criteria andNurseInfoIsNull() {
-            addCriterion("nurse_info is null");
+        public Criteria andCheckInInitCostStateEqualTo(Long value) {
+            addCriterion("check_in_init_cost_state =", value, "checkInInitCostState");
             return (Criteria) this;
         }
 
-        public Criteria andNurseInfoIsNotNull() {
-            addCriterion("nurse_info is not null");
+        public Criteria andCheckInInitCostStateNotEqualTo(Long value) {
+            addCriterion("check_in_init_cost_state <>", value, "checkInInitCostState");
             return (Criteria) this;
         }
 
-        public Criteria andNurseInfoEqualTo(String value) {
-            addCriterion("nurse_info =", value, "nurseInfo");
+        public Criteria andCheckInInitCostStateGreaterThan(Long value) {
+            addCriterion("check_in_init_cost_state >", value, "checkInInitCostState");
             return (Criteria) this;
         }
 
-        public Criteria andNurseInfoNotEqualTo(String value) {
-            addCriterion("nurse_info <>", value, "nurseInfo");
+        public Criteria andCheckInInitCostStateGreaterThanOrEqualTo(Long value) {
+            addCriterion("check_in_init_cost_state >=", value, "checkInInitCostState");
             return (Criteria) this;
         }
 
-        public Criteria andNurseInfoGreaterThan(String value) {
-            addCriterion("nurse_info >", value, "nurseInfo");
+        public Criteria andCheckInInitCostStateLessThan(Long value) {
+            addCriterion("check_in_init_cost_state <", value, "checkInInitCostState");
             return (Criteria) this;
         }
 
-        public Criteria andNurseInfoGreaterThanOrEqualTo(String value) {
-            addCriterion("nurse_info >=", value, "nurseInfo");
+        public Criteria andCheckInInitCostStateLessThanOrEqualTo(Long value) {
+            addCriterion("check_in_init_cost_state <=", value, "checkInInitCostState");
             return (Criteria) this;
         }
 
-        public Criteria andNurseInfoLessThan(String value) {
-            addCriterion("nurse_info <", value, "nurseInfo");
+        public Criteria andCheckInInitCostStateIn(List<Long> values) {
+            addCriterion("check_in_init_cost_state in", values, "checkInInitCostState");
             return (Criteria) this;
         }
 
-        public Criteria andNurseInfoLessThanOrEqualTo(String value) {
-            addCriterion("nurse_info <=", value, "nurseInfo");
+        public Criteria andCheckInInitCostStateNotIn(List<Long> values) {
+            addCriterion("check_in_init_cost_state not in", values, "checkInInitCostState");
             return (Criteria) this;
         }
 
-        public Criteria andNurseInfoLike(String value) {
-            addCriterion("nurse_info like", value, "nurseInfo");
+        public Criteria andCheckInInitCostStateBetween(Long value1, Long value2) {
+            addCriterion("check_in_init_cost_state between", value1, value2, "checkInInitCostState");
             return (Criteria) this;
         }
 
-        public Criteria andNurseInfoNotLike(String value) {
-            addCriterion("nurse_info not like", value, "nurseInfo");
+        public Criteria andCheckInInitCostStateNotBetween(Long value1, Long value2) {
+            addCriterion("check_in_init_cost_state not between", value1, value2, "checkInInitCostState");
             return (Criteria) this;
         }
 
-        public Criteria andNurseInfoIn(List<String> values) {
-            addCriterion("nurse_info in", values, "nurseInfo");
+        public Criteria andInitialFeeDateIsNull() {
+            addCriterion("initial_fee_date is null");
             return (Criteria) this;
         }
 
-        public Criteria andNurseInfoNotIn(List<String> values) {
-            addCriterion("nurse_info not in", values, "nurseInfo");
+        public Criteria andInitialFeeDateIsNotNull() {
+            addCriterion("initial_fee_date is not null");
             return (Criteria) this;
         }
 
-        public Criteria andNurseInfoBetween(String value1, String value2) {
-            addCriterion("nurse_info between", value1, value2, "nurseInfo");
+        public Criteria andInitialFeeDateEqualTo(Date value) {
+            addCriterion("initial_fee_date =", value, "initialFeeDate");
             return (Criteria) this;
         }
 
-        public Criteria andNurseInfoNotBetween(String value1, String value2) {
-            addCriterion("nurse_info not between", value1, value2, "nurseInfo");
+        public Criteria andInitialFeeDateNotEqualTo(Date value) {
+            addCriterion("initial_fee_date <>", value, "initialFeeDate");
             return (Criteria) this;
         }
 
-        public Criteria andNurseDateIsNull() {
-            addCriterion("nurse_date is null");
+        public Criteria andInitialFeeDateGreaterThan(Date value) {
+            addCriterion("initial_fee_date >", value, "initialFeeDate");
             return (Criteria) this;
         }
 
-        public Criteria andNurseDateIsNotNull() {
-            addCriterion("nurse_date is not null");
+        public Criteria andInitialFeeDateGreaterThanOrEqualTo(Date value) {
+            addCriterion("initial_fee_date >=", value, "initialFeeDate");
             return (Criteria) this;
         }
 
-        public Criteria andNurseDateEqualTo(Date value) {
-            addCriterion("nurse_date =", value, "nurseDate");
+        public Criteria andInitialFeeDateLessThan(Date value) {
+            addCriterion("initial_fee_date <", value, "initialFeeDate");
             return (Criteria) this;
         }
 
-        public Criteria andNurseDateNotEqualTo(Date value) {
-            addCriterion("nurse_date <>", value, "nurseDate");
+        public Criteria andInitialFeeDateLessThanOrEqualTo(Date value) {
+            addCriterion("initial_fee_date <=", value, "initialFeeDate");
             return (Criteria) this;
         }
 
-        public Criteria andNurseDateGreaterThan(Date value) {
-            addCriterion("nurse_date >", value, "nurseDate");
+        public Criteria andInitialFeeDateIn(List<Date> values) {
+            addCriterion("initial_fee_date in", values, "initialFeeDate");
             return (Criteria) this;
         }
 
-        public Criteria andNurseDateGreaterThanOrEqualTo(Date value) {
-            addCriterion("nurse_date >=", value, "nurseDate");
+        public Criteria andInitialFeeDateNotIn(List<Date> values) {
+            addCriterion("initial_fee_date not in", values, "initialFeeDate");
             return (Criteria) this;
         }
 
-        public Criteria andNurseDateLessThan(Date value) {
-            addCriterion("nurse_date <", value, "nurseDate");
+        public Criteria andInitialFeeDateBetween(Date value1, Date value2) {
+            addCriterion("initial_fee_date between", value1, value2, "initialFeeDate");
             return (Criteria) this;
         }
 
-        public Criteria andNurseDateLessThanOrEqualTo(Date value) {
-            addCriterion("nurse_date <=", value, "nurseDate");
+        public Criteria andInitialFeeDateNotBetween(Date value1, Date value2) {
+            addCriterion("initial_fee_date not between", value1, value2, "initialFeeDate");
             return (Criteria) this;
         }
 
-        public Criteria andNurseDateIn(List<Date> values) {
-            addCriterion("nurse_date in", values, "nurseDate");
+        public Criteria andCloseAnAccountIsNull() {
+            addCriterion("close_an_account is null");
             return (Criteria) this;
         }
 
-        public Criteria andNurseDateNotIn(List<Date> values) {
-            addCriterion("nurse_date not in", values, "nurseDate");
+        public Criteria andCloseAnAccountIsNotNull() {
+            addCriterion("close_an_account is not null");
             return (Criteria) this;
         }
 
-        public Criteria andNurseDateBetween(Date value1, Date value2) {
-            addCriterion("nurse_date between", value1, value2, "nurseDate");
+        public Criteria andCloseAnAccountEqualTo(Date value) {
+            addCriterion("close_an_account =", value, "closeAnAccount");
             return (Criteria) this;
         }
 
-        public Criteria andNurseDateNotBetween(Date value1, Date value2) {
-            addCriterion("nurse_date not between", value1, value2, "nurseDate");
+        public Criteria andCloseAnAccountNotEqualTo(Date value) {
+            addCriterion("close_an_account <>", value, "closeAnAccount");
             return (Criteria) this;
         }
 
-        public Criteria andStaffIdIsNull() {
-            addCriterion("staff_id is null");
+        public Criteria andCloseAnAccountGreaterThan(Date value) {
+            addCriterion("close_an_account >", value, "closeAnAccount");
             return (Criteria) this;
         }
 
-        public Criteria andStaffIdIsNotNull() {
-            addCriterion("staff_id is not null");
+        public Criteria andCloseAnAccountGreaterThanOrEqualTo(Date value) {
+            addCriterion("close_an_account >=", value, "closeAnAccount");
             return (Criteria) this;
         }
 
-        public Criteria andStaffIdEqualTo(Long value) {
-            addCriterion("staff_id =", value, "staffId");
+        public Criteria andCloseAnAccountLessThan(Date value) {
+            addCriterion("close_an_account <", value, "closeAnAccount");
             return (Criteria) this;
         }
 
-        public Criteria andStaffIdNotEqualTo(Long value) {
-            addCriterion("staff_id <>", value, "staffId");
+        public Criteria andCloseAnAccountLessThanOrEqualTo(Date value) {
+            addCriterion("close_an_account <=", value, "closeAnAccount");
             return (Criteria) this;
         }
 
-        public Criteria andStaffIdGreaterThan(Long value) {
-            addCriterion("staff_id >", value, "staffId");
+        public Criteria andCloseAnAccountIn(List<Date> values) {
+            addCriterion("close_an_account in", values, "closeAnAccount");
             return (Criteria) this;
         }
 
-        public Criteria andStaffIdGreaterThanOrEqualTo(Long value) {
-            addCriterion("staff_id >=", value, "staffId");
+        public Criteria andCloseAnAccountNotIn(List<Date> values) {
+            addCriterion("close_an_account not in", values, "closeAnAccount");
             return (Criteria) this;
         }
 
-        public Criteria andStaffIdLessThan(Long value) {
-            addCriterion("staff_id <", value, "staffId");
+        public Criteria andCloseAnAccountBetween(Date value1, Date value2) {
+            addCriterion("close_an_account between", value1, value2, "closeAnAccount");
             return (Criteria) this;
         }
 
-        public Criteria andStaffIdLessThanOrEqualTo(Long value) {
-            addCriterion("staff_id <=", value, "staffId");
-            return (Criteria) this;
-        }
-
-        public Criteria andStaffIdIn(List<Long> values) {
-            addCriterion("staff_id in", values, "staffId");
-            return (Criteria) this;
-        }
-
-        public Criteria andStaffIdNotIn(List<Long> values) {
-            addCriterion("staff_id not in", values, "staffId");
-            return (Criteria) this;
-        }
-
-        public Criteria andStaffIdBetween(Long value1, Long value2) {
-            addCriterion("staff_id between", value1, value2, "staffId");
-            return (Criteria) this;
-        }
-
-        public Criteria andStaffIdNotBetween(Long value1, Long value2) {
-            addCriterion("staff_id not between", value1, value2, "staffId");
+        public Criteria andCloseAnAccountNotBetween(Date value1, Date value2) {
+            addCriterion("close_an_account not between", value1, value2, "closeAnAccount");
             return (Criteria) this;
         }
     }

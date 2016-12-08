@@ -85,10 +85,6 @@ public class OlderVO {
     private String mindStr;//神志
     private Staff staff;//护理人员
 
-    public OlderVO() {
-
-        data2String(AnalysisConstant.dataDictionaryList);
-    }
 
     public void data2String(List<DataDictionary> dataDictionaryList){
         for (DataDictionary dataDictionary: dataDictionaryList

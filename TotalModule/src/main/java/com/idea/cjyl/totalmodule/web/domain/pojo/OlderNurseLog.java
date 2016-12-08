@@ -7,7 +7,7 @@ public class OlderNurseLog {
 
     private Long organizationLoginId;
 
-    private Long oldId;
+    private Long olderId;
 
     private String physicalCondition;
 
@@ -33,12 +33,12 @@ public class OlderNurseLog {
         this.organizationLoginId = organizationLoginId;
     }
 
-    public Long getOldId() {
-        return oldId;
+    public Long getOlderId() {
+        return olderId;
     }
 
-    public void setOldId(Long oldId) {
-        this.oldId = oldId;
+    public void setOlderId(Long olderId) {
+        this.olderId = olderId;
     }
 
     public String getPhysicalCondition() {

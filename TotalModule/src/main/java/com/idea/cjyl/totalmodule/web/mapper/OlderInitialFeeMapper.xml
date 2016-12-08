@@ -4,7 +4,7 @@
   <resultMap id="BaseResultMap" type="com.idea.cjyl.totalmodule.web.domain.pojo.OlderInitialFee" >
     <id column="id" property="id" jdbcType="BIGINT" />
     <result column="organization_login_id" property="organizationLoginId" jdbcType="BIGINT" />
-    <result column="old_id" property="oldId" jdbcType="BIGINT" />
+    <result column="older_id" property="olderId" jdbcType="BIGINT" />
     <result column="check_in_init_cost_id" property="checkInInitCostId" jdbcType="BIGINT" />
     <result column="check_in_init_cost_state" property="checkInInitCostState" jdbcType="BIGINT" />
     <result column="initial_fee_date" property="initialFeeDate" jdbcType="TIMESTAMP" />
@@ -69,7 +69,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, organization_login_id, old_id, check_in_init_cost_id, check_in_init_cost_state, 
+    id, organization_login_id, older_id, check_in_init_cost_id, check_in_init_cost_state, 
     initial_fee_date, close_an_account
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.idea.cjyl.totalmodule.web.domain.pojo.OlderInitialFeeExample" >
@@ -103,10 +103,10 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.idea.cjyl.totalmodule.web.domain.pojo.OlderInitialFee" useGeneratedKeys="true" keyProperty="id" >
-    insert into older_initial_fee (organization_login_id, old_id, check_in_init_cost_id, 
+    insert into older_initial_fee (organization_login_id, older_id, check_in_init_cost_id, 
       check_in_init_cost_state, initial_fee_date, 
       close_an_account)
-    values (#{organizationLoginId,jdbcType=BIGINT}, #{oldId,jdbcType=BIGINT}, #{checkInInitCostId,jdbcType=BIGINT}, 
+    values (#{organizationLoginId,jdbcType=BIGINT}, #{olderId,jdbcType=BIGINT}, #{checkInInitCostId,jdbcType=BIGINT}, 
       #{checkInInitCostState,jdbcType=BIGINT}, #{initialFeeDate,jdbcType=TIMESTAMP}, 
       #{closeAnAccount,jdbcType=TIMESTAMP})
   </insert>
@@ -116,8 +116,8 @@
       <if test="organizationLoginId != null" >
         organization_login_id,
       </if>
-      <if test="oldId != null" >
-        old_id,
+      <if test="olderId != null" >
+        older_id,
       </if>
       <if test="checkInInitCostId != null" >
         check_in_init_cost_id,
@@ -136,8 +136,8 @@
       <if test="organizationLoginId != null" >
         #{organizationLoginId,jdbcType=BIGINT},
       </if>
-      <if test="oldId != null" >
-        #{oldId,jdbcType=BIGINT},
+      <if test="olderId != null" >
+        #{olderId,jdbcType=BIGINT},
       </if>
       <if test="checkInInitCostId != null" >
         #{checkInInitCostId,jdbcType=BIGINT},
@@ -168,8 +168,8 @@
       <if test="record.organizationLoginId != null" >
         organization_login_id = #{record.organizationLoginId,jdbcType=BIGINT},
       </if>
-      <if test="record.oldId != null" >
-        old_id = #{record.oldId,jdbcType=BIGINT},
+      <if test="record.olderId != null" >
+        older_id = #{record.olderId,jdbcType=BIGINT},
       </if>
       <if test="record.checkInInitCostId != null" >
         check_in_init_cost_id = #{record.checkInInitCostId,jdbcType=BIGINT},
@@ -192,7 +192,7 @@
     update older_initial_fee
     set id = #{record.id,jdbcType=BIGINT},
       organization_login_id = #{record.organizationLoginId,jdbcType=BIGINT},
-      old_id = #{record.oldId,jdbcType=BIGINT},
+      older_id = #{record.olderId,jdbcType=BIGINT},
       check_in_init_cost_id = #{record.checkInInitCostId,jdbcType=BIGINT},
       check_in_init_cost_state = #{record.checkInInitCostState,jdbcType=BIGINT},
       initial_fee_date = #{record.initialFeeDate,jdbcType=TIMESTAMP},
@@ -207,8 +207,8 @@
       <if test="organizationLoginId != null" >
         organization_login_id = #{organizationLoginId,jdbcType=BIGINT},
       </if>
-      <if test="oldId != null" >
-        old_id = #{oldId,jdbcType=BIGINT},
+      <if test="olderId != null" >
+        older_id = #{olderId,jdbcType=BIGINT},
       </if>
       <if test="checkInInitCostId != null" >
         check_in_init_cost_id = #{checkInInitCostId,jdbcType=BIGINT},
@@ -228,7 +228,7 @@
   <update id="updateByPrimaryKey" parameterType="com.idea.cjyl.totalmodule.web.domain.pojo.OlderInitialFee" >
     update older_initial_fee
     set organization_login_id = #{organizationLoginId,jdbcType=BIGINT},
-      old_id = #{oldId,jdbcType=BIGINT},
+      older_id = #{olderId,jdbcType=BIGINT},
       check_in_init_cost_id = #{checkInInitCostId,jdbcType=BIGINT},
       check_in_init_cost_state = #{checkInInitCostState,jdbcType=BIGINT},
       initial_fee_date = #{initialFeeDate,jdbcType=TIMESTAMP},

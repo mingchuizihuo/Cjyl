@@ -7,7 +7,7 @@ public class OlderCost {
 
     private Long organizationLoginId;
 
-    private Long oldId;
+    private Long olderId;
 
     private Long serviceCharge;
 
@@ -35,12 +35,12 @@ public class OlderCost {
         this.organizationLoginId = organizationLoginId;
     }
 
-    public Long getOldId() {
-        return oldId;
+    public Long getOlderId() {
+        return olderId;
     }
 
-    public void setOldId(Long oldId) {
-        this.oldId = oldId;
+    public void setOlderId(Long olderId) {
+        this.olderId = olderId;
     }
 
     public Long getServiceCharge() {

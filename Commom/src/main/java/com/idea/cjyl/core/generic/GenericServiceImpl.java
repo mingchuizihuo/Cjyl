@@ -2,6 +2,7 @@ package com.idea.cjyl.core.generic;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
+import org.springframework.ui.Model;
 
 import java.util.List;
 
@@ -145,7 +146,6 @@ public abstract class GenericServiceImpl<Model, PK,ModelExample> implements Gene
         return list;
 
     }
-
 
 
 

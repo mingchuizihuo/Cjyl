@@ -3,6 +3,7 @@ package com.idea.cjyl.totalmodule.web.controller;
 import com.idea.cjyl.core.common.ResultData;
 import com.idea.cjyl.core.generic.GenericController;
 import com.idea.cjyl.totalmodule.web.domain.pojo.Older;
+import com.idea.cjyl.totalmodule.web.service.OlderBriefService;
 import com.idea.cjyl.totalmodule.web.service.OlderService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class OlderController extends GenericController {
     @Autowired
     private OlderService olderService;
+    @Autowired
+    private OlderBriefService olderBriefService;
 
     /**
         * 添加老人
@@ -133,7 +136,7 @@ public class OlderController extends GenericController {
     @RequestMapping(value="findVOByExample",method = RequestMethod.GET)
     public ResultData findVOByExample(Older older,Integer currentPage,Integer limit){
         return ResultData.build().
-                parsePageBean(olderService.findVOByExample(older,currentPage,limit));
+                parsePageBean(olderService.findVOByExapmle(older,currentPage,limit));
     }
 
 
@@ -146,7 +149,7 @@ public class OlderController extends GenericController {
     @RequestMapping(value="findVOById",method = RequestMethod.GET)
     public ResultData findVOById(Long olderId){
         return ResultData.build().
-                parseBean(olderService.findVOById(olderId));
+                parseBean(olderService.selectVOByPrimaryKey(olderId));
     }
 
 
@@ -161,7 +164,7 @@ public class OlderController extends GenericController {
     @RequestMapping(value="findAllBriefVO",method = RequestMethod.GET)
     public ResultData findAllBriefVO(Integer currentPage,Integer limit){
         return ResultData.build().
-                parsePageBean(olderService.findAllBriefVO(currentPage,limit));
+                parsePageBean(olderBriefService.findAllVO(currentPage,limit));
     }
 
 
@@ -176,6 +179,6 @@ public class OlderController extends GenericController {
     @RequestMapping(value="findAllBriefVOByExample",method = RequestMethod.GET)
     public ResultData findAllBriefVOByExample(Older older,Integer currentPage,Integer limit){
         return ResultData.build().
-                parsePageBean(olderService.findAllBriefVOByExample(older,currentPage,limit));
+                parsePageBean(olderBriefService.findVOByExapmle(older,currentPage,limit));
     }
 }

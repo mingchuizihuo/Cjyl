@@ -58,16 +58,26 @@ public class MybataisLoginIdInterceptor implements Interceptor {
         String prefix=null;
         String fromTable=null;
         String suffix = null;
+
         if(sql.indexOf("SELECT")!=-1 || sql.indexOf("select")!=-1){
-            if(sql.indexOf("from")!=-1){
+            if(sql.indexOf("count(*)")!=-1){
+                if(sql.indexOf("count(*) (")!=-1){
+                    prefix = sql.split("from")[0]+" from "+sql.split("from")[1];
+                    fromTable = sql.split("from")[2].split(" ")[1];
+                    suffix = sql.split("from")[2].substring(fromTable.length()+1);
+                }else{
+                    prefix = sql.split("FROM")[0];
+                    fromTable = sql.split("FROM")[1].split(" ")[1];
+                    suffix = sql.split("FROM")[1].substring(fromTable.length()+1);
+                }
+            }else{
+
                 prefix = sql.split("from")[0];
                 fromTable = sql.split("from")[1].split(" ")[1];
                 suffix = sql.split("from")[1].substring(fromTable.length()+1);
-            }else if(sql.indexOf("FROM")!=-1){
-                prefix = sql.split("FROM")[0];
-                fromTable = sql.split("FROM")[1].split(" ")[1];
-                suffix = sql.split("FROM")[1].substring(fromTable.length()+1);
             }
+
+
 
             fromTable = "from (select * from "+fromTable+" where organization_login_id = 1) "+fromTable+" ";
             return prefix+fromTable+suffix;

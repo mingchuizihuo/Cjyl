@@ -5,6 +5,8 @@ public class OlderKinsfolk {
 
     private Long organizationLoginId;
 
+    private Long olderId;
+
     private String name;
 
     private Long relation;
@@ -33,6 +35,14 @@ public class OlderKinsfolk {
 
     public void setOrganizationLoginId(Long organizationLoginId) {
         this.organizationLoginId = organizationLoginId;
+    }
+
+    public Long getOlderId() {
+        return olderId;
+    }
+
+    public void setOlderId(Long olderId) {
+        this.olderId = olderId;
     }
 
     public String getName() {

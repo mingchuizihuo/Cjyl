@@ -1,6 +1,7 @@
 package com.idea.cjyl.core.generic;
 
 import com.github.pagehelper.Page;
+import org.springframework.ui.Model;
 
 import java.util.List;
 
@@ -70,6 +71,7 @@ public interface GenericService<Model, PK,ModelExample> {
      * @return
      */
     Page<Model> findAll(Integer currentPage, Integer limit);
+
 
 
 }

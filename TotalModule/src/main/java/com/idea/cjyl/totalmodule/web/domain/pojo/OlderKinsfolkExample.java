@@ -224,6 +224,66 @@ public class OlderKinsfolkExample {
             return (Criteria) this;
         }
 
+        public Criteria andOlderIdIsNull() {
+            addCriterion("older_id is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andOlderIdIsNotNull() {
+            addCriterion("older_id is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andOlderIdEqualTo(Long value) {
+            addCriterion("older_id =", value, "olderId");
+            return (Criteria) this;
+        }
+
+        public Criteria andOlderIdNotEqualTo(Long value) {
+            addCriterion("older_id <>", value, "olderId");
+            return (Criteria) this;
+        }
+
+        public Criteria andOlderIdGreaterThan(Long value) {
+            addCriterion("older_id >", value, "olderId");
+            return (Criteria) this;
+        }
+
+        public Criteria andOlderIdGreaterThanOrEqualTo(Long value) {
+            addCriterion("older_id >=", value, "olderId");
+            return (Criteria) this;
+        }
+
+        public Criteria andOlderIdLessThan(Long value) {
+            addCriterion("older_id <", value, "olderId");
+            return (Criteria) this;
+        }
+
+        public Criteria andOlderIdLessThanOrEqualTo(Long value) {
+            addCriterion("older_id <=", value, "olderId");
+            return (Criteria) this;
+        }
+
+        public Criteria andOlderIdIn(List<Long> values) {
+            addCriterion("older_id in", values, "olderId");
+            return (Criteria) this;
+        }
+
+        public Criteria andOlderIdNotIn(List<Long> values) {
+            addCriterion("older_id not in", values, "olderId");
+            return (Criteria) this;
+        }
+
+        public Criteria andOlderIdBetween(Long value1, Long value2) {
+            addCriterion("older_id between", value1, value2, "olderId");
+            return (Criteria) this;
+        }
+
+        public Criteria andOlderIdNotBetween(Long value1, Long value2) {
+            addCriterion("older_id not between", value1, value2, "olderId");
+            return (Criteria) this;
+        }
+
         public Criteria andNameIsNull() {
             addCriterion("name is null");
             return (Criteria) this;

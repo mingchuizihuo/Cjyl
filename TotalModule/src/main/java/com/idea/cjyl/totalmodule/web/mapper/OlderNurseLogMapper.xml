@@ -4,7 +4,7 @@
   <resultMap id="BaseResultMap" type="com.idea.cjyl.totalmodule.web.domain.pojo.OlderNurseLog" >
     <id column="id" property="id" jdbcType="BIGINT" />
     <result column="organization_login_id" property="organizationLoginId" jdbcType="BIGINT" />
-    <result column="old_id" property="oldId" jdbcType="BIGINT" />
+    <result column="older_id" property="olderId" jdbcType="BIGINT" />
     <result column="physical_condition" property="physicalCondition" jdbcType="VARCHAR" />
     <result column="nurse_info" property="nurseInfo" jdbcType="VARCHAR" />
     <result column="nurse_date" property="nurseDate" jdbcType="TIMESTAMP" />
@@ -69,7 +69,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, organization_login_id, old_id, physical_condition, nurse_info, nurse_date, staff_id
+    id, organization_login_id, older_id, physical_condition, nurse_info, nurse_date, 
+    staff_id
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.idea.cjyl.totalmodule.web.domain.pojo.OlderNurseLogExample" >
     select
@@ -102,10 +103,10 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.idea.cjyl.totalmodule.web.domain.pojo.OlderNurseLog" useGeneratedKeys="true" keyProperty="id" >
-    insert into older_nurse_log (organization_login_id, old_id, physical_condition, 
+    insert into older_nurse_log (organization_login_id, older_id, physical_condition, 
       nurse_info, nurse_date, staff_id
       )
-    values (#{organizationLoginId,jdbcType=BIGINT}, #{oldId,jdbcType=BIGINT}, #{physicalCondition,jdbcType=VARCHAR}, 
+    values (#{organizationLoginId,jdbcType=BIGINT}, #{olderId,jdbcType=BIGINT}, #{physicalCondition,jdbcType=VARCHAR}, 
       #{nurseInfo,jdbcType=VARCHAR}, #{nurseDate,jdbcType=TIMESTAMP}, #{staffId,jdbcType=BIGINT}
       )
   </insert>
@@ -115,8 +116,8 @@
       <if test="organizationLoginId != null" >
         organization_login_id,
       </if>
-      <if test="oldId != null" >
-        old_id,
+      <if test="olderId != null" >
+        older_id,
       </if>
       <if test="physicalCondition != null" >
         physical_condition,
@@ -135,8 +136,8 @@
       <if test="organizationLoginId != null" >
         #{organizationLoginId,jdbcType=BIGINT},
       </if>
-      <if test="oldId != null" >
-        #{oldId,jdbcType=BIGINT},
+      <if test="olderId != null" >
+        #{olderId,jdbcType=BIGINT},
       </if>
       <if test="physicalCondition != null" >
         #{physicalCondition,jdbcType=VARCHAR},
@@ -167,8 +168,8 @@
       <if test="record.organizationLoginId != null" >
         organization_login_id = #{record.organizationLoginId,jdbcType=BIGINT},
       </if>
-      <if test="record.oldId != null" >
-        old_id = #{record.oldId,jdbcType=BIGINT},
+      <if test="record.olderId != null" >
+        older_id = #{record.olderId,jdbcType=BIGINT},
       </if>
       <if test="record.physicalCondition != null" >
         physical_condition = #{record.physicalCondition,jdbcType=VARCHAR},
@@ -191,7 +192,7 @@
     update older_nurse_log
     set id = #{record.id,jdbcType=BIGINT},
       organization_login_id = #{record.organizationLoginId,jdbcType=BIGINT},
-      old_id = #{record.oldId,jdbcType=BIGINT},
+      older_id = #{record.olderId,jdbcType=BIGINT},
       physical_condition = #{record.physicalCondition,jdbcType=VARCHAR},
       nurse_info = #{record.nurseInfo,jdbcType=VARCHAR},
       nurse_date = #{record.nurseDate,jdbcType=TIMESTAMP},
@@ -206,8 +207,8 @@
       <if test="organizationLoginId != null" >
         organization_login_id = #{organizationLoginId,jdbcType=BIGINT},
       </if>
-      <if test="oldId != null" >
-        old_id = #{oldId,jdbcType=BIGINT},
+      <if test="olderId != null" >
+        older_id = #{olderId,jdbcType=BIGINT},
       </if>
       <if test="physicalCondition != null" >
         physical_condition = #{physicalCondition,jdbcType=VARCHAR},
@@ -227,7 +228,7 @@
   <update id="updateByPrimaryKey" parameterType="com.idea.cjyl.totalmodule.web.domain.pojo.OlderNurseLog" >
     update older_nurse_log
     set organization_login_id = #{organizationLoginId,jdbcType=BIGINT},
-      old_id = #{oldId,jdbcType=BIGINT},
+      older_id = #{olderId,jdbcType=BIGINT},
       physical_condition = #{physicalCondition,jdbcType=VARCHAR},
       nurse_info = #{nurseInfo,jdbcType=VARCHAR},
       nurse_date = #{nurseDate,jdbcType=TIMESTAMP},
