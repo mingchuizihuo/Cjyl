@@ -3,6 +3,7 @@ package com.idea.cjyl.totalmodule.web.controller;
 import com.idea.cjyl.core.common.ResultData;
 import com.idea.cjyl.core.generic.GenericController;
 import com.idea.cjyl.totalmodule.web.domain.pojo.OlderKinsfolk;
+import com.idea.cjyl.totalmodule.web.domain.pojo.OlderNurseLog;
 import com.idea.cjyl.totalmodule.web.service.OlderKinsfolkService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -106,6 +107,18 @@ public class OlderKinsfolkController extends GenericController {
         return ResultData.build().
         parsePageBean(olderkinsfolkService.findAll(currentPage,limit));
     }
-
+    /**
+     * 通过条件分页查询
+     * @param olderKinsfolk
+     * @param currentPage
+     * @param limit
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value="findByExample",method = RequestMethod.GET)
+    public ResultData findByExample(OlderKinsfolk olderKinsfolk, Integer currentPage, Integer limit){
+        return ResultData.build().
+                parsePageBean(olderkinsfolkService.findVOByExapmle(olderKinsfolk,currentPage,limit));
+    }
 
 }

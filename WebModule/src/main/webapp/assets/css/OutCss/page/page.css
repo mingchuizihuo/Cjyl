@@ -1,5 +1,5 @@
-.tcdPageCode{padding: 15px 2%;text-align: right;color: #ccc; min-width: 1250px; height: 200px; clear: left;}
-.tcdPageCode a{ display: inline-block;color: #000;display: inline-block;height: 25px; font-size: 12px;background-color: #fff;	line-height: 25px;	padding: 0 10px;border: 1px solid #ddd;	margin: 0 2px;border-radius: 4px;vertical-align: middle;}
-.tcdPageCode a:hover{text-decoration: none;background-color: #FF743D; color: #fff;}
-.tcdPageCode span.current{cursor: pointer; display: inline-block;height: 25px;line-height: 25px;padding: 0 10px;margin: 0 2px;color: #fff;background-color: #374862;border-radius: 4px;vertical-align: middle;}
-.tcdPageCode span.disabled{ cursor: pointer;	display: inline-block;height: 25px;line-height: 25px;padding: 0 10px;margin: 0 2px;	color: #bfbfbf;background: #f2f2f2;border: 1px solid #bfbfbf;border-radius: 4px;vertical-align: middle;}
+.tcdPageCode{padding: 15px 2%;text-align: right;color: #fff; min-width: 1250px; height: 200px; clear: left;}
+.tcdPageCode a{ display: inline-block;color: #fff;display: inline-block; font-size: 12px;background-color: rgba(65,81,97,0.5);	line-height: 25px;	padding: 5px 15px;	margin: 0 2px;border-radius: 4px;vertical-align: middle;}
+.tcdPageCode a:hover{text-decoration: none;background-color: #3FD0A7; color: #fff;}
+.tcdPageCode span.current{cursor: pointer; display: inline-block;line-height: 25px;padding: 5px 15px;margin: 0 2px;color: #fff;background-color: #3FD0A7;border-radius: 4px;vertical-align: middle;}
+.tcdPageCode span.disabled{ cursor: pointer; display: inline-block;line-height: 25px;padding: 5px 15px;margin: 0 2px;	color: #fff;background: rgba(65,81,97,0.5);border-radius: 4px;vertical-align: middle;}

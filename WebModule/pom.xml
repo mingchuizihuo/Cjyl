@@ -29,8 +29,8 @@
             <groupId>com.idea</groupId>
             <artifactId>total_module</artifactId>
             <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-            <type>jar</type>
+
+
         </dependency>
     </dependencies>
     <build>

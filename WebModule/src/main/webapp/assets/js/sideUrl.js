@@ -19,9 +19,15 @@ $(function () {
         $(this).addClass("yellow").siblings().removeClass("yellow");
         $("#sideList div").parents("li").children(".link").children(".xialaImg").hide();
         $(this).children(".xialaImg").show();
+    });
+});
+function modalClose() {
+    //弹窗关闭
+    $(".publicModal").show();
+    $(".modalClose").click(function () {
+        $(".publicModal").hide();
     })
-})
-
+}
 function sideUrl(url) {
     var url = domainUrl+url;
     $.ajax({
@@ -44,24 +50,238 @@ function sideUrl(url) {
         }
     });
 }
-function modalUrl(url) {
-    var urlGet = domainUrl + url;
+
+// 入住弹窗
+function modalUrl(floor,room,bed) {
+    var urlGet = domainUrl + "/options/options";
     $.ajax({
         type:"get",
         url:urlGet,
         success:function (data) {
-            console.log(data)
             $(".publicModal").html(data);
+            $("#floor").val(floor);
+            $("#room").val(room);
+            $("#bed").val(bed)
+            modalClose();
         }
     })
 }
-function startSideUrl(url) {
-    var url = domainUrl+url;
+//老人信息弹窗
+function oldUrl(is) {
+    var urlGet = domainUrl + "/options/old";
     $.ajax({
-        type: "get",
-        url: url,
-        success: function (data) {
-            $("#main-show").html(data);
+        type:"get",
+        url:urlGet,
+        success:function (data) {
+            $(".publicModal").html(data);
+            modalClose();
+            if(is == 1){
+                $("#updateIs").hide();
+            }else{
+                $("#addIs").hide();
+            }
         }
-    });
+    })
+}
+//护理记录弹窗
+function nurseUrl(is) {
+    var urlGet = domainUrl + "/options/nurse";
+    $.ajax({
+        type:"get",
+        url:urlGet,
+        success:function (data) {
+            $(".publicModal").html(data);
+            modalClose();
+            if(is == 1){
+                $("#updateIs").hide();
+            }else{
+                $("#addIs").hide();
+            }
+        }
+    })
+}
+//特殊服务弹窗
+function specialUrl(is) {
+    var urlGet = domainUrl + "/options/special";
+    $.ajax({
+        type:"get",
+        url:urlGet,
+        success:function (data) {
+            $(".publicModal").html(data);
+            modalClose();
+            if(is == 1){
+                $("#updateIs").hide();
+            }else{
+                $("#addIs").hide();
+            }
+        }
+    })
+}
+
+
+// 费用结算弹窗
+function tableUrl() {
+    var urlGet = domainUrl + "/options/cost";
+    $.ajax({
+        type:"get",
+        url:urlGet,
+        success:function (data) {
+            $(".publicModal").html(data);
+            modalClose();
+        }
+    })
+}
+// 员工信息弹窗
+function staffInUrl(is) {
+    var urlGet = domainUrl + "/options/staffIn";
+    $.ajax({
+        type:"get",
+        url:urlGet,
+        success:function (data) {
+            $(".publicModal").html(data);
+            modalClose();
+            if(is == 1){
+                $("#updateIs").hide();
+            }else{
+                $("#addIs").hide();
+            }
+        }
+    })
+}
+
+//员工请假弹窗
+function staffReUrl(is) {
+    var urlGet = domainUrl + "/options/staffRe";
+    $.ajax({
+        type:"get",
+        url:urlGet,
+        success:function (data) {
+            $(".publicModal").html(data);
+            modalClose();
+            if(is == 1){
+                $("#updateIs").hide();
+            }else{
+                $("#addIs").hide();
+            }
+        }
+    })
+}
+//月初始费弹窗
+function monthStartUrl(is) {
+    var urlGet = domainUrl + "/options/monthStart";
+    $.ajax({
+        type:"get",
+        url:urlGet,
+        success:function (data) {
+            $(".publicModal").html(data);
+            modalClose();
+            if(is == 1){
+                $("#updateIs").hide();
+            }else{
+                $("#addIs").hide();
+            }
+        }
+    })
+}
+
+//入住初始费弹窗
+function checkInStartUrl(is) {
+    var urlGet = domainUrl + "/options/checkInStart";
+    $.ajax({
+        type:"get",
+        url:urlGet,
+        success:function (data) {
+            $(".publicModal").html(data);
+            modalClose();
+            if(is == 1){
+                $("#updateIs").hide();
+            }else{
+                $("#addIs").hide();
+            }
+        }
+    })
+}
+
+
+//特殊服务费弹窗
+function specialServeUrl(is) {
+    var urlGet = domainUrl + "/options/specialServe";
+    $.ajax({
+        type:"get",
+        url:urlGet,
+        success:function (data) {
+            $(".publicModal").html(data);
+            modalClose();
+            if(is == 1){
+                $("#updateIs").hide();
+            }else{
+                $("#addIs").hide();
+            }
+        }
+    })
+}
+
+//大厦添加费弹窗
+function edificeUrl(is) {
+    var urlGet = domainUrl + "/options/edifice";
+    $.ajax({
+        type:"get",
+        url:urlGet,
+        success:function (data) {
+            $(".publicModal").html(data);
+            modalClose();
+            if(is == 1){
+                $("#updateIs").hide();
+            }else{
+                $("#addIs").hide();
+            }
+        }
+    })
+}
+
+//楼层添加费弹窗
+function storeyUrl(is) {
+    var urlGet = domainUrl + "/options/storey";
+    $.ajax({
+        type:"get",
+        url:urlGet,
+        success:function (data) {
+            $(".publicModal").html(data);
+            modalClose();
+            if(is == 1){
+                $("#updateIs").hide();
+            }else{
+                $("#addIs").hide();
+            }
+        }
+    })
+}
+
+function many() {
+    //全选反选
+    var CheckAll = document.getElementById('All');
+    var tbodyDelId = document.getElementById('tbodyDelId');
+    var CheckBox = tbodyDelId.getElementsByTagName('input');
+    CheckAll.onclick = function () {
+        if ($("#All").is(':checked') == true) {
+            for (i = 0; i < CheckBox.length; i++) {
+                CheckBox[i].checked = true;
+                delId += CheckBox[i].value +",";
+            }
+        } else {
+            for (i = 0; i < CheckBox.length; i++) {
+                CheckBox[i].checked = false;
+                delId ="";
+            }
+        };
+    };
+    //多选单选
+    var obj = document.getElementsByName('del');
+    tbodyDelId.onclick = function () {
+        for(var i=0; i<obj.length; i++){
+            if(obj[i].checked == true){
+                delId+=obj[i].value+','; //如果选中，将value添加到变量s中
+            }
+        }
+    };
 }

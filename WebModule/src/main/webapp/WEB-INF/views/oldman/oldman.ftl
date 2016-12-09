@@ -259,8 +259,7 @@
     </div>
 <#--增删改查按钮-->
     <div class="modify">
-        <button class="pull-left btn-style btn-ma"><img src="${domainUrl}/assets/images/backstage/jia.png">增加</button>
-        <button class="pull-left btn-style btn-ma" onclick="modalUrl('/options/options')"><img src="${domainUrl}/assets/images/backstage/gai.png">修改</button>
+        <button class="pull-left btn-style btn-ma" onclick="oldUrl(1)" ><img src="${domainUrl}/assets/images/backstage/jia.png">增加</button>
         <button class="pull-left btn-style btn-ma"><img src="${domainUrl}/assets/images/backstage/del.png">删除</button>
         <div class="clearfix"></div>
     </div>

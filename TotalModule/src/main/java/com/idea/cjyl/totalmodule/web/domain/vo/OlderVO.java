@@ -22,11 +22,11 @@ public class OlderVO {
 
     private Long sex;
 
-    private Date checkInDate;
+    private String checkInDate;
 
     private String cardId;
 
-    private Date birthday;
+    private String birthday;
 
     private String tel;
 
@@ -73,7 +73,7 @@ public class OlderVO {
     private String abnormalPatterns;
     private Byte olderState;
 
-    private Date olderLeaveDate;
+    private String olderLeaveDate;
 
     private String sexStr;//性别中文
     private MonthCharge monthCharge;//月收费对象
@@ -195,11 +195,11 @@ public class OlderVO {
         this.sex = sex;
     }
 
-    public Date getCheckInDate() {
+    public String getCheckInDate() {
         return checkInDate;
     }
 
-    public void setCheckInDate(Date checkInDate) {
+    public void setCheckInDate(String checkInDate) {
         this.checkInDate = checkInDate;
     }
 
@@ -211,11 +211,11 @@ public class OlderVO {
         this.cardId = cardId;
     }
 
-    public Date getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 
@@ -403,11 +403,11 @@ public class OlderVO {
         this.olderState = olderState;
     }
 
-    public Date getOlderLeaveDate() {
+    public String getOlderLeaveDate() {
         return olderLeaveDate;
     }
 
-    public void setOlderLeaveDate(Date olderLeaveDate) {
+    public void setOlderLeaveDate(String olderLeaveDate) {
         this.olderLeaveDate = olderLeaveDate;
     }
 

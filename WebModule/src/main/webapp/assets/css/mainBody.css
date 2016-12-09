@@ -45,6 +45,7 @@ li,ol{
     width: 12%;
     overflow:auto;
     position:relative;
+    min-width: 175px;
 }
 #center-flex #main-side #sideList{
     position:absolute;
@@ -251,4 +252,6 @@ li,ol{
 .xialaimg{
     display: none;
 }
-
+.publicModal{
+    display: none;
+}

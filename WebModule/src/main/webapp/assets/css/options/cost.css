@@ -1,0 +1,48 @@
+
+.cost{width:40%;height:600px;background:#e7e7e7;border:1px #5b5c5c solid;border-radius: 4px;padding:11px 14px 20px 17px;min-width:768px;position: absolute;z-index: 10;
+    top:5%;margin-left:20%;}
+.cost h2{color:#5b5c5c;font-size: 22px;}
+.cost .cost_l{width:70%;}
+
+/*选项卡标题*/
+.cost .cost_l .nav-tabs ul{width:100%;}
+.cost .cost_l .nav-tabs > li{width:50%;}
+.cost .cost_l .nav-tabs > li a{ border-bottom: 1px #c3c3c3 solid;margin-right:0px;}
+.cost .cost_l .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{ color: #5b5c5c;
+    background:none;
+    border:none;
+    border-bottom: 2px #3dc9a2 solid;  }
+.cost .cost_l .nav-tabs a{color:#5b5c5c;border:none;border-bottom: 2px #e7e7e7 solid;font-size: 20px; }
+.cost .cost_l .nav-tabs a:hover{ border:none;border-bottom: 2px #3dc9a2 solid; background:none;}
+/*选项卡内容*/
+.cost .cost_l .tab-content{height:400px;overflow: auto;}
+.cost .cost_l .tab-content tr th {color: #5e5e5e;width:20%}
+.cost .cost_l .tab-content tr td {color: #5e5e5e;width:20%;height:34px;font-size: 14px;}
+.cost .cost_l .form-control{height:30px;background:none;outline: none;box-shadow: none;}
+
+/*右边明细部分*/
+.cost .cost_r{width:22%;margin-right:4%;}
+.cost .cost_r h3{font-size: 20px;margin: 15px 0px;color:#5b5c5c;text-align: center}
+.cost .cost_r h3:nth-child(1){margin-top:14px;margin-bottom:12px;}
+.cost .cost_r input{height:30px;width:100%;border:1px #c9c9c9 solid;outline: none;box-shadow: none;text-align: center}
+.cost .cost_r input:nth-last-child(1){color:#333;font-weight: 800}
+.cost .cost_r input:nth-last-child(3){color:#e54949;font-weight: 800}
+
+/*增删改查按钮*/
+.cost .bottom{margin-top:20px; display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;}
+.cost .bottom button{
+    width:85px;
+    height:28px;
+    background:#e6e6e6;
+    border-radius: 5px;
+    border:1px #c2c2c2 solid;
+    outline: none !important;
+}
+
+.cost .bottom button:hover{background:#8fcbdf;border:1px #379bca solid;color:#fff;}
+.cost .bottom button:focus{background:#379bca;color:#fff;}
+
+
+

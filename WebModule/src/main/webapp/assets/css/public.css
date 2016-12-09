@@ -17,7 +17,7 @@ a:focus{text-decoration: none;}
 
 
 /*主体部分*/
-.overall{position:relative;width:100%;height:100%;top:0px;left:0px;padding:2%;background-size:100%;min-width: 1440px;}
+.overall{position:relative;width:100%;height:100%;top:0px;left:0px;padding:2%;background-size:100% 100%;min-width: 1440px;min-height:800px;}
 
 /*路径导航*/
 .path{}
@@ -27,8 +27,9 @@ a:focus{text-decoration: none;}
 .path ul li a{color:#fff;font-size:14px;}
 .path ul li a:hover{color:#f8ff30;}
 
+
 /*查询导航*/
-.query{width:100%;height:60px;border:1px #656c7e solid; padding-right:10px;}
+.query{width:100%;height:60px;border:1px #858b91 solid; background: #091b31;padding-right:10px;}
 .query ul{}
 .query ul li{float: left;font-size: 16px;padding:20px;}
 .query ul li input{margin-left:5px;color:#333;}

@@ -1,0 +1,17 @@
+
+.chargeList{  width:100%;border:1px #858b91 solid; background: #091b31;margin-top: 14px;padding:0px 20px;}
+.chargeList .one{width:33%;}
+.chargeList .one h4{text-align:left;color:#fff;font-weight: 500;font-size: 18px;margin-top:25px;}
+.chargeList .one h4 span{margin-left:20px;}
+.chargeList .one h3{text-align:center;color:#fff;font-weight: 500;font-size: 22px;margin-top:15px;}
+.chargeList .one h3 span{font-size: 18px;display: block;}
+
+.chargeList .two{width:48%;}
+.chargeList .two .table-bordered{}
+.chargeList .two .table-bordered th{color:#f8ff30;text-decoration:underline}
+.chargeList .two .table-bordered td{color:#fff;max-width:120px;overflow: auto;text-align: center}
+
+.chargeList .three{width:48%;height:400px;overflow: auto;}
+.chargeList .three .table-bordered{}
+.chargeList .three .table-bordered th{color:#f8ff30;text-decoration:underline}
+.chargeList .three .table-bordered td{color:#fff;text-align: center}

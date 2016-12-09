@@ -1,0 +1,9 @@
+
+.oldman_tab{width:40%;height:400px;}
+.nav-tabs{border-bottom: 2px solid #3dc9a2;}
+/*选项卡标题*/
+.oldman_tab h2{text-align: center}
+.oldman_tab .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{ border-bottom: 0px;  }
+/*选项卡内容*/
+.oldman_tab .tab-content{padding-top:0px !important;border-bottom: 0px;height:350px}
+

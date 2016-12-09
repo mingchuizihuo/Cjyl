@@ -1,0 +1,15 @@
+
+.arrearageNote{width:100%;border:1px #858b91 solid; background: #091b31;margin-top: 14px;}
+.arrearageNote h2{text-align:center;color:#fff;font-weight: 500;font-size: 22px;margin-top:15px;}
+.arrearageNote h3{text-align:center;color:#fff;font-weight: 500;font-size: 18px;display: block;}
+
+
+.arrearageNote .aa{height:560px;overflow: auto;}
+.arrearageNote .table-bordered{ border:1px #656c7e solid;}
+.arrearageNote .table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td{
+    border:1px #656c7e solid;
+}
+.arrearageNote th{color:#fff;text-align: center;font-weight: 500;}
+.arrearageNote tbody td{color:#fff;text-align: center;font-weight: 500;height:39px;}
+.table-striped > tbody > tr:nth-of-type(even){background:#05101d;}
+.table-striped > tbody > tr:nth-of-type(odd){background:none;}

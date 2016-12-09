@@ -2,13 +2,17 @@
 /*信息表格*/
 .information{margin-top:15px;width:100%;}
 .information table th{color:#37bf97;font-size:16px;}
-.table > thead > tr > th{border-bottom:1px #656c7e solid;}
+.table > thead > tr > th{border-bottom:1px #656c7e solid;background: #091b31;
+}
 .table-bordered > tbody > tr > td{border:1px #656c7e solid !important;}
 .information table td{color:#fff;font-size:14px;}
-.table-striped > tbody > tr:nth-of-type(even){background:rgba(0,0,0,0.3);}
+.table-striped > tbody{background: #091b31}
+.table-striped > tbody > tr:nth-of-type(even){background:#05101d;}
 .table-striped > tbody > tr:nth-of-type(odd){background:none;}
-
+.information td .button{ background:linear-gradient(#465782,#1f2b45);border:none;width:50px;height:25px;margin: auto;}
+.information td .button:hover{background: linear-gradient(#6072a2,#313f62);}
+.information td .button:focus{background:#1172c9;}
 
 /*增删改查按钮*/
-.modify{width:100%;height:60px;padding:0px;}
-.modify .btn-ma{margin-left:50px;margin-right:100px;}
+.modify{width:50%;height:60px;padding:0px;position: absolute;bottom:2%;}
+.modify .btn-ma{margin-right:50px;}

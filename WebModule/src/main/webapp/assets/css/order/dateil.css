@@ -1,0 +1,13 @@
+
+.dateil{width:100%;border:1px #858b91 solid; background: #091b31;margin-top: 14px;}
+
+.dateil .aa{height:650px;overflow: auto;}
+.dateil .table-bordered{ border:1px #656c7e solid;}
+.dateil .table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td{
+    border:1px #656c7e solid;
+}
+
+.dateil th{color:#fff;text-align: center;font-weight: 500;}
+.dateil tbody td{color:#fff;text-align: center;font-weight: 500;height:39px;}
+.table-striped > tbody > tr:nth-of-type(even){background:#05101d;}
+.table-striped > tbody > tr:nth-of-type(odd){background:none;}

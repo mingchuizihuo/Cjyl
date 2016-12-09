@@ -1,0 +1,75 @@
+
+.floorDiv{
+    width: 100%; height: 100%; display: flex;
+}
+
+.floor{
+    width:14%; height:97%;margin-left:1%;margin-top:1%;border:1px #4a5b6d solid;background: #091b31;
+}
+#side-floor div{
+    width: 100%;
+    height: 50px;
+    margin-top: 2px;
+    cursor: pointer;
+    color: #ffffff;
+    font-size:16px;
+    line-height: 50px;
+    padding-left:20px;
+}
+#side-floor div img{margin-right:20px;}
+#side-floor div:hover{
+    color: #3dc9a2;
+}
+
+.room{
+    display: none;
+}
+
+.room li{
+    height: 30px;
+    margin-top: 1px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    transition: .5s;
+    color: #ffffff;
+    line-height: 30px;
+    font-size:16px;
+}
+.room li:hover{
+    color: #3dc9a2;
+}
+.room li img{
+    margin-right:15px;  }
+.roomTable{
+    width: 84%;
+    height: 97%;
+    margin-right:1%;
+    margin-top:1%;
+    border:1px #4a5b6d solid;
+    background: #091b31;
+    overflow: auto;
+}
+.roomTable .table > thead > tr > th{
+    color: #3dc9a2;
+   border-bottom: 1px solid #858b91;
+}
+
+.roomTable td{
+    color: #fff;
+    border-bottom: 1px solid #4a5b6d;
+}
+.roomTable td input{
+    background: #3dc9a2;
+    border:0px;
+    margin-right:10px;
+
+}
+
+.roomTable tbody tr:nth-of-type(odd)
+{
+    background: #05101d;
+}
+
+
+.publicModal{position: absolute;left:30%;}
