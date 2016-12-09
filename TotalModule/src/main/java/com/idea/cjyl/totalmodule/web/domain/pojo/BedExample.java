@@ -404,63 +404,63 @@ public class BedExample {
             return (Criteria) this;
         }
 
-        public Criteria andOldIdIsNull() {
-            addCriterion("old_id is null");
+        public Criteria andOlderIdIsNull() {
+            addCriterion("older_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andOldIdIsNotNull() {
-            addCriterion("old_id is not null");
+        public Criteria andOlderIdIsNotNull() {
+            addCriterion("older_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andOldIdEqualTo(Long value) {
-            addCriterion("old_id =", value, "oldId");
+        public Criteria andOlderIdEqualTo(Long value) {
+            addCriterion("older_id =", value, "olderId");
             return (Criteria) this;
         }
 
-        public Criteria andOldIdNotEqualTo(Long value) {
-            addCriterion("old_id <>", value, "oldId");
+        public Criteria andOlderIdNotEqualTo(Long value) {
+            addCriterion("older_id <>", value, "olderId");
             return (Criteria) this;
         }
 
-        public Criteria andOldIdGreaterThan(Long value) {
-            addCriterion("old_id >", value, "oldId");
+        public Criteria andOlderIdGreaterThan(Long value) {
+            addCriterion("older_id >", value, "olderId");
             return (Criteria) this;
         }
 
-        public Criteria andOldIdGreaterThanOrEqualTo(Long value) {
-            addCriterion("old_id >=", value, "oldId");
+        public Criteria andOlderIdGreaterThanOrEqualTo(Long value) {
+            addCriterion("older_id >=", value, "olderId");
             return (Criteria) this;
         }
 
-        public Criteria andOldIdLessThan(Long value) {
-            addCriterion("old_id <", value, "oldId");
+        public Criteria andOlderIdLessThan(Long value) {
+            addCriterion("older_id <", value, "olderId");
             return (Criteria) this;
         }
 
-        public Criteria andOldIdLessThanOrEqualTo(Long value) {
-            addCriterion("old_id <=", value, "oldId");
+        public Criteria andOlderIdLessThanOrEqualTo(Long value) {
+            addCriterion("older_id <=", value, "olderId");
             return (Criteria) this;
         }
 
-        public Criteria andOldIdIn(List<Long> values) {
-            addCriterion("old_id in", values, "oldId");
+        public Criteria andOlderIdIn(List<Long> values) {
+            addCriterion("older_id in", values, "olderId");
             return (Criteria) this;
         }
 
-        public Criteria andOldIdNotIn(List<Long> values) {
-            addCriterion("old_id not in", values, "oldId");
+        public Criteria andOlderIdNotIn(List<Long> values) {
+            addCriterion("older_id not in", values, "olderId");
             return (Criteria) this;
         }
 
-        public Criteria andOldIdBetween(Long value1, Long value2) {
-            addCriterion("old_id between", value1, value2, "oldId");
+        public Criteria andOlderIdBetween(Long value1, Long value2) {
+            addCriterion("older_id between", value1, value2, "olderId");
             return (Criteria) this;
         }
 
-        public Criteria andOldIdNotBetween(Long value1, Long value2) {
-            addCriterion("old_id not between", value1, value2, "oldId");
+        public Criteria andOlderIdNotBetween(Long value1, Long value2) {
+            addCriterion("older_id not between", value1, value2, "olderId");
             return (Criteria) this;
         }
     }

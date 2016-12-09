@@ -60,7 +60,7 @@ public class GenerateService {
 
 
         String[] fileNames = new String[]{
-                "OrganizationLogin",
+                /*"OrganizationLogin",
                 "DataDictionary,DataLevel,Tid",
                 "MonthCharge",
                 "CheckInInitCost",
@@ -76,8 +76,8 @@ public class GenerateService {
                 "OlderInitialFee",
                 "OlderNurseLog",
                 "OlderCost",
-
-
+*/
+                "OlderAdmissionAndDischargeLog"
 
 
         };

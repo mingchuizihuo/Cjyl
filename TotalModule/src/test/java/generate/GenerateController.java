@@ -103,7 +103,7 @@ public class GenerateController {
                 "OlderInitialFee,老人入住初始费用关系",
                 "OlderNurseLog,老人护理记录",
                 "OlderCost,老人特殊费用",
-
+                "OlderAdmissionAndDischargeLog,老人出入院日志表",
 
 
 

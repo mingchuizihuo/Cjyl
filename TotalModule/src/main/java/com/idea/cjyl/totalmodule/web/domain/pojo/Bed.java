@@ -11,7 +11,7 @@ public class Bed {
 
     private Byte bedState;
 
-    private Long oldId;
+    private Long olderId;
 
     public Long getId() {
         return id;
@@ -53,11 +53,11 @@ public class Bed {
         this.bedState = bedState;
     }
 
-    public Long getOldId() {
-        return oldId;
+    public Long getOlderId() {
+        return olderId;
     }
 
-    public void setOldId(Long oldId) {
-        this.oldId = oldId;
+    public void setOlderId(Long olderId) {
+        this.olderId = olderId;
     }
 }

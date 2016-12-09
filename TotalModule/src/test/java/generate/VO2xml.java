@@ -67,9 +67,9 @@ public class VO2xml {
         VO2xml.Generate(
                 "\\TotalModule\\src\\test\\java\\ftl",
                 "OlderMapperMyself.ftl",
-                "OlderKinsfolk",
+                "OlderNurseLog",
                 "\\TotalModule\\src\\main\\java\\com\\idea\\cjyl\\totalmodule\\web\\mapper\\myself",
-                "com.idea.cjyl.totalmodule.web.domain.vo.OlderKinsfolkVO",
+                "com.idea.cjyl.totalmodule.web.domain.vo.OlderNurseLogVO",
 
                 "com.idea.cjyl.totalmodule.web.dao.myself",
                 "\\TotalModule\\src\\main\\java\\com\\idea\\cjyl\\totalmodule\\web\\dao\\myself"
@@ -114,9 +114,10 @@ public class VO2xml {
 
             }
             leftInfo="from "+objectName+" ";
-            for (ResultMap resultMap:resultMaps) {
-                leftInfo+=resultMap.getLeftJoin();
+            for(int i=resultMaps.size()-1;i>=0;i--){
+                leftInfo+= resultMaps.get(i).getLeftJoin();
             }
+
         }
 
 
@@ -169,19 +170,26 @@ public class VO2xml {
 
 
                 }
-                if(methodName.indexOf("Date")!=-1){
-                    baseColumnList+="date_format("+objectName+"."+propertyNameHump+",'%Y年%m月%d日')"+" "+objectName+"_"+propertyNameHump+", ";
-                }
-                if(propertyNameHump.split("_")[propertyNameHump.split("_").length-1].equals("str")){
+
+                if(methodName.indexOf("DateStr")!=-1 ){
+                    baseColumnList+="date_format("+objectName+"."+propertyNameHump.substring(0,propertyNameHump.length()-4)+",'%Y年%m月%d日')"+" "+objectName+"_"+propertyNameHump+", ";
+                }else if(propertyNameHump.split("_")[propertyNameHump.split("_").length-1].equals("str")){
                     baseColumnList+="(select data_dictionary.data_name FROM data_dictionary where data_dictionary.id = "+objectName+"."+propertyNameHump.substring(0,propertyNameHump.length()-4)+") "+objectName+"_"+propertyNameHump+", ";
                 }else{
-                    baseColumnList+=objectName+"."+propertyNameHump+" "+objectName+"_"+propertyNameHump+", ";
+                    if (!(type.getTypeName().indexOf("lang") == -1
+                            && !type.getTypeName().equals("byte")
+                            && !type.getTypeName().equals("int")
+                            && !type.getTypeName().equals("long")
+                            && type.getTypeName().indexOf("Date")==-1)) {
+                        baseColumnList += objectName + "." + propertyNameHump + " " + objectName + "_" + propertyNameHump + ", ";
+                    }
                 }
 
                 if (type.getTypeName().indexOf("lang") == -1
                         && !type.getTypeName().equals("byte")
                         && !type.getTypeName().equals("int")
-                        && !type.getTypeName().equals("long")) {
+                        && !type.getTypeName().equals("long")
+                        && type.getTypeName().indexOf("Date")==-1) {
                     /**
                      * 获取类型名称
                      */

@@ -15,7 +15,7 @@ public class JDBCBeanTypeReturn {
             }else if(beanType.indexOf("Byte")!=-1){
                 JDBCType = "TINYINT";
             }else if(beanType.indexOf("Integer")!=-1){
-                JDBCType = "INT";
+                JDBCType = "INTEGER";
             }
         return JDBCType;
     }

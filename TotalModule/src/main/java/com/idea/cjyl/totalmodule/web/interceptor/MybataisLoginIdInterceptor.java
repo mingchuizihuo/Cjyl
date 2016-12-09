@@ -60,16 +60,21 @@ public class MybataisLoginIdInterceptor implements Interceptor {
         String suffix = null;
 
         if(sql.indexOf("SELECT")!=-1 || sql.indexOf("select")!=-1){
+
+
             if(sql.indexOf("count(*)")!=-1){
-                if(sql.indexOf("count(*) (")!=-1){
-                    prefix = sql.split("from")[0]+" from "+sql.split("from")[1];
-                    fromTable = sql.split("from")[2].split(" ")[1];
-                    suffix = sql.split("from")[2].substring(fromTable.length()+1);
-                }else{
-                    prefix = sql.split("FROM")[0];
-                    fromTable = sql.split("FROM")[1].split(" ")[1];
-                    suffix = sql.split("FROM")[1].substring(fromTable.length()+1);
-                }
+
+
+                    String[] sqlArray = sql.split(sql.substring(16,20));
+                    prefix = sqlArray[0];
+                    for(int i=1;i<sqlArray.length-1;i++){
+                        prefix+=" "+sql.substring(16,20)+" "+sqlArray[i];
+
+                    }
+                    fromTable = sqlArray[sqlArray.length-1].split(" ")[1];
+
+                    suffix = sqlArray[sqlArray.length-1].substring(fromTable.length()+1);
+
             }else{
 
                 prefix = sql.split("from")[0];

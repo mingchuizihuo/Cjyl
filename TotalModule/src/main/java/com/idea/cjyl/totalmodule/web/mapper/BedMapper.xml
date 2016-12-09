@@ -7,7 +7,7 @@
     <result column="room_id" property="roomId" jdbcType="BIGINT" />
     <result column="bed_num" property="bedNum" jdbcType="TINYINT" />
     <result column="bed_state" property="bedState" jdbcType="TINYINT" />
-    <result column="old_id" property="oldId" jdbcType="BIGINT" />
+    <result column="older_id" property="olderId" jdbcType="BIGINT" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -68,7 +68,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, organization_login_id, room_id, bed_num, bed_state, old_id
+    id, organization_login_id, room_id, bed_num, bed_state, older_id
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.idea.cjyl.totalmodule.web.domain.pojo.BedExample" >
     select
@@ -102,9 +102,9 @@
   </delete>
   <insert id="insert" parameterType="com.idea.cjyl.totalmodule.web.domain.pojo.Bed" useGeneratedKeys="true" keyProperty="id" >
     insert into bed (organization_login_id, room_id, bed_num, 
-      bed_state, old_id)
+      bed_state, older_id)
     values (#{organizationLoginId,jdbcType=BIGINT}, #{roomId,jdbcType=BIGINT}, #{bedNum,jdbcType=TINYINT}, 
-      #{bedState,jdbcType=TINYINT}, #{oldId,jdbcType=BIGINT})
+      #{bedState,jdbcType=TINYINT}, #{olderId,jdbcType=BIGINT})
   </insert>
   <insert id="insertSelective" parameterType="com.idea.cjyl.totalmodule.web.domain.pojo.Bed" useGeneratedKeys="true" keyProperty="id" >
     insert into bed
@@ -121,8 +121,8 @@
       <if test="bedState != null" >
         bed_state,
       </if>
-      <if test="oldId != null" >
-        old_id,
+      <if test="olderId != null" >
+        older_id,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -138,8 +138,8 @@
       <if test="bedState != null" >
         #{bedState,jdbcType=TINYINT},
       </if>
-      <if test="oldId != null" >
-        #{oldId,jdbcType=BIGINT},
+      <if test="olderId != null" >
+        #{olderId,jdbcType=BIGINT},
       </if>
     </trim>
   </insert>
@@ -167,8 +167,8 @@
       <if test="record.bedState != null" >
         bed_state = #{record.bedState,jdbcType=TINYINT},
       </if>
-      <if test="record.oldId != null" >
-        old_id = #{record.oldId,jdbcType=BIGINT},
+      <if test="record.olderId != null" >
+        older_id = #{record.olderId,jdbcType=BIGINT},
       </if>
     </set>
     <if test="_parameter != null" >
@@ -182,7 +182,7 @@
       room_id = #{record.roomId,jdbcType=BIGINT},
       bed_num = #{record.bedNum,jdbcType=TINYINT},
       bed_state = #{record.bedState,jdbcType=TINYINT},
-      old_id = #{record.oldId,jdbcType=BIGINT}
+      older_id = #{record.olderId,jdbcType=BIGINT}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -202,8 +202,8 @@
       <if test="bedState != null" >
         bed_state = #{bedState,jdbcType=TINYINT},
       </if>
-      <if test="oldId != null" >
-        old_id = #{oldId,jdbcType=BIGINT},
+      <if test="olderId != null" >
+        older_id = #{olderId,jdbcType=BIGINT},
       </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
@@ -214,7 +214,7 @@
       room_id = #{roomId,jdbcType=BIGINT},
       bed_num = #{bedNum,jdbcType=TINYINT},
       bed_state = #{bedState,jdbcType=TINYINT},
-      old_id = #{oldId,jdbcType=BIGINT}
+      older_id = #{olderId,jdbcType=BIGINT}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

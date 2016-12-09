@@ -38,13 +38,13 @@
         <result column="bed_room_id" property="roomId" jdbcType="BIGINT" />
         <result column="bed_bed_num" property="bedNum" jdbcType="TINYINT" />
         <result column="bed_bed_state" property="bedState" jdbcType="TINYINT" />
-        <result column="bed_old_id" property="oldId" jdbcType="BIGINT" />
+        <result column="bed_older_id" property="olderId" jdbcType="BIGINT" />
     </resultMap>
     <sql id="Base_Column_List" >
         mansion.id mansion_id , mansion.organization_login_id  mansion_organization_login_id, mansion.name mansion_name, mansion.account_for mansion_account_for,
         floor.id floor_id, floor.organization_login_id floor_organization_login_id, floor.mansion_id floor_mansion_id, floor.floor_tier floor_floor_tier, floor.account_for floor_account_for,
         room.id room_id, room.organization_login_id room_organization_login_id, room.floor_tier_id room_floor_tier_id, room.room_num room_room_num, room.room_type room_room_type,
-        bed.id bed_id, bed.organization_login_id  bed_organization_login_id, bed.room_id bed_room_id, bed.bed_num bed_bed_num, bed.bed_state bed_bed_state, bed.old_id bed_old_id
+        bed.id bed_id, bed.organization_login_id  bed_organization_login_id, bed.room_id bed_room_id, bed.bed_num bed_bed_num, bed.bed_state bed_bed_state, bed.older_id bed_older_id
 
     </sql>
     <select id="findAllVO" resultMap="BaseResultMap" >

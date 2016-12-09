@@ -465,63 +465,63 @@ public class OlderAdmissionAndDischargeLogExample {
             return (Criteria) this;
         }
 
-        public Criteria andCloseAnAccountIsNull() {
-            addCriterion("close_an_account is null");
+        public Criteria andCloseAnAccountDateIsNull() {
+            addCriterion("close_an_account_date is null");
             return (Criteria) this;
         }
 
-        public Criteria andCloseAnAccountIsNotNull() {
-            addCriterion("close_an_account is not null");
+        public Criteria andCloseAnAccountDateIsNotNull() {
+            addCriterion("close_an_account_date is not null");
             return (Criteria) this;
         }
 
-        public Criteria andCloseAnAccountEqualTo(Date value) {
-            addCriterion("close_an_account =", value, "closeAnAccount");
+        public Criteria andCloseAnAccountDateEqualTo(Date value) {
+            addCriterion("close_an_account_date =", value, "closeAnAccountDate");
             return (Criteria) this;
         }
 
-        public Criteria andCloseAnAccountNotEqualTo(Date value) {
-            addCriterion("close_an_account <>", value, "closeAnAccount");
+        public Criteria andCloseAnAccountDateNotEqualTo(Date value) {
+            addCriterion("close_an_account_date <>", value, "closeAnAccountDate");
             return (Criteria) this;
         }
 
-        public Criteria andCloseAnAccountGreaterThan(Date value) {
-            addCriterion("close_an_account >", value, "closeAnAccount");
+        public Criteria andCloseAnAccountDateGreaterThan(Date value) {
+            addCriterion("close_an_account_date >", value, "closeAnAccountDate");
             return (Criteria) this;
         }
 
-        public Criteria andCloseAnAccountGreaterThanOrEqualTo(Date value) {
-            addCriterion("close_an_account >=", value, "closeAnAccount");
+        public Criteria andCloseAnAccountDateGreaterThanOrEqualTo(Date value) {
+            addCriterion("close_an_account_date >=", value, "closeAnAccountDate");
             return (Criteria) this;
         }
 
-        public Criteria andCloseAnAccountLessThan(Date value) {
-            addCriterion("close_an_account <", value, "closeAnAccount");
+        public Criteria andCloseAnAccountDateLessThan(Date value) {
+            addCriterion("close_an_account_date <", value, "closeAnAccountDate");
             return (Criteria) this;
         }
 
-        public Criteria andCloseAnAccountLessThanOrEqualTo(Date value) {
-            addCriterion("close_an_account <=", value, "closeAnAccount");
+        public Criteria andCloseAnAccountDateLessThanOrEqualTo(Date value) {
+            addCriterion("close_an_account_date <=", value, "closeAnAccountDate");
             return (Criteria) this;
         }
 
-        public Criteria andCloseAnAccountIn(List<Date> values) {
-            addCriterion("close_an_account in", values, "closeAnAccount");
+        public Criteria andCloseAnAccountDateIn(List<Date> values) {
+            addCriterion("close_an_account_date in", values, "closeAnAccountDate");
             return (Criteria) this;
         }
 
-        public Criteria andCloseAnAccountNotIn(List<Date> values) {
-            addCriterion("close_an_account not in", values, "closeAnAccount");
+        public Criteria andCloseAnAccountDateNotIn(List<Date> values) {
+            addCriterion("close_an_account_date not in", values, "closeAnAccountDate");
             return (Criteria) this;
         }
 
-        public Criteria andCloseAnAccountBetween(Date value1, Date value2) {
-            addCriterion("close_an_account between", value1, value2, "closeAnAccount");
+        public Criteria andCloseAnAccountDateBetween(Date value1, Date value2) {
+            addCriterion("close_an_account_date between", value1, value2, "closeAnAccountDate");
             return (Criteria) this;
         }
 
-        public Criteria andCloseAnAccountNotBetween(Date value1, Date value2) {
-            addCriterion("close_an_account not between", value1, value2, "closeAnAccount");
+        public Criteria andCloseAnAccountDateNotBetween(Date value1, Date value2) {
+            addCriterion("close_an_account_date not between", value1, value2, "closeAnAccountDate");
             return (Criteria) this;
         }
     }

@@ -15,7 +15,7 @@ public class OlderInitialFee {
 
     private Date initialFeeDate;
 
-    private Date closeAnAccount;
+    private Date closeAnAccountDate;
 
     public Long getId() {
         return id;
@@ -65,11 +65,11 @@ public class OlderInitialFee {
         this.initialFeeDate = initialFeeDate;
     }
 
-    public Date getCloseAnAccount() {
-        return closeAnAccount;
+    public Date getCloseAnAccountDate() {
+        return closeAnAccountDate;
     }
 
-    public void setCloseAnAccount(Date closeAnAccount) {
-        this.closeAnAccount = closeAnAccount;
+    public void setCloseAnAccountDate(Date closeAnAccountDate) {
+        this.closeAnAccountDate = closeAnAccountDate;
     }
 }

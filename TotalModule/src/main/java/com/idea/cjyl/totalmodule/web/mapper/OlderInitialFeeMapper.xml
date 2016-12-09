@@ -8,7 +8,7 @@
     <result column="check_in_init_cost_id" property="checkInInitCostId" jdbcType="BIGINT" />
     <result column="check_in_init_cost_state" property="checkInInitCostState" jdbcType="BIGINT" />
     <result column="initial_fee_date" property="initialFeeDate" jdbcType="TIMESTAMP" />
-    <result column="close_an_account" property="closeAnAccount" jdbcType="TIMESTAMP" />
+    <result column="close_an_account_date" property="closeAnAccountDate" jdbcType="TIMESTAMP" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -70,7 +70,7 @@
   </sql>
   <sql id="Base_Column_List" >
     id, organization_login_id, older_id, check_in_init_cost_id, check_in_init_cost_state, 
-    initial_fee_date, close_an_account
+    initial_fee_date, close_an_account_date
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.idea.cjyl.totalmodule.web.domain.pojo.OlderInitialFeeExample" >
     select
@@ -105,10 +105,10 @@
   <insert id="insert" parameterType="com.idea.cjyl.totalmodule.web.domain.pojo.OlderInitialFee" useGeneratedKeys="true" keyProperty="id" >
     insert into older_initial_fee (organization_login_id, older_id, check_in_init_cost_id, 
       check_in_init_cost_state, initial_fee_date, 
-      close_an_account)
+      close_an_account_date)
     values (#{organizationLoginId,jdbcType=BIGINT}, #{olderId,jdbcType=BIGINT}, #{checkInInitCostId,jdbcType=BIGINT}, 
       #{checkInInitCostState,jdbcType=BIGINT}, #{initialFeeDate,jdbcType=TIMESTAMP}, 
-      #{closeAnAccount,jdbcType=TIMESTAMP})
+      #{closeAnAccountDate,jdbcType=TIMESTAMP})
   </insert>
   <insert id="insertSelective" parameterType="com.idea.cjyl.totalmodule.web.domain.pojo.OlderInitialFee" useGeneratedKeys="true" keyProperty="id" >
     insert into older_initial_fee
@@ -128,8 +128,8 @@
       <if test="initialFeeDate != null" >
         initial_fee_date,
       </if>
-      <if test="closeAnAccount != null" >
-        close_an_account,
+      <if test="closeAnAccountDate != null" >
+        close_an_account_date,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -148,8 +148,8 @@
       <if test="initialFeeDate != null" >
         #{initialFeeDate,jdbcType=TIMESTAMP},
       </if>
-      <if test="closeAnAccount != null" >
-        #{closeAnAccount,jdbcType=TIMESTAMP},
+      <if test="closeAnAccountDate != null" >
+        #{closeAnAccountDate,jdbcType=TIMESTAMP},
       </if>
     </trim>
   </insert>
@@ -180,8 +180,8 @@
       <if test="record.initialFeeDate != null" >
         initial_fee_date = #{record.initialFeeDate,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.closeAnAccount != null" >
-        close_an_account = #{record.closeAnAccount,jdbcType=TIMESTAMP},
+      <if test="record.closeAnAccountDate != null" >
+        close_an_account_date = #{record.closeAnAccountDate,jdbcType=TIMESTAMP},
       </if>
     </set>
     <if test="_parameter != null" >
@@ -196,7 +196,7 @@
       check_in_init_cost_id = #{record.checkInInitCostId,jdbcType=BIGINT},
       check_in_init_cost_state = #{record.checkInInitCostState,jdbcType=BIGINT},
       initial_fee_date = #{record.initialFeeDate,jdbcType=TIMESTAMP},
-      close_an_account = #{record.closeAnAccount,jdbcType=TIMESTAMP}
+      close_an_account_date = #{record.closeAnAccountDate,jdbcType=TIMESTAMP}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -219,8 +219,8 @@
       <if test="initialFeeDate != null" >
         initial_fee_date = #{initialFeeDate,jdbcType=TIMESTAMP},
       </if>
-      <if test="closeAnAccount != null" >
-        close_an_account = #{closeAnAccount,jdbcType=TIMESTAMP},
+      <if test="closeAnAccountDate != null" >
+        close_an_account_date = #{closeAnAccountDate,jdbcType=TIMESTAMP},
       </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
@@ -232,7 +232,7 @@
       check_in_init_cost_id = #{checkInInitCostId,jdbcType=BIGINT},
       check_in_init_cost_state = #{checkInInitCostState,jdbcType=BIGINT},
       initial_fee_date = #{initialFeeDate,jdbcType=TIMESTAMP},
-      close_an_account = #{closeAnAccount,jdbcType=TIMESTAMP}
+      close_an_account_date = #{closeAnAccountDate,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

@@ -2,8 +2,8 @@ package com.idea.cjyl.totalmodule.web.controller;
 
 import com.idea.cjyl.core.common.ResultData;
 import com.idea.cjyl.core.generic.GenericController;
-import com.idea.cjyl.totalmodule.web.domain.pojo.OlderInitialFee;
-import com.idea.cjyl.totalmodule.web.service.OlderInitialFeeService;
+import com.idea.cjyl.totalmodule.web.domain.pojo.OlderAdmissionAndDischargeLog;
+import com.idea.cjyl.totalmodule.web.service.OlderAdmissionAndDischargeLogService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,22 +15,22 @@ import org.springframework.web.bind.annotation.ResponseBody;
 * Created by 10238 on 2016/10/12.
 */
 @Controller
-@RequestMapping("serve/older_initial_fee")
-public class OlderInitialFeeController extends GenericController {
+@RequestMapping("serve/older_admission_and_discharge_log")
+public class OlderAdmissionAndDischargeLogController extends GenericController {
     @Autowired
-    private OlderInitialFeeService olderinitialfeeService;
+    private OlderAdmissionAndDischargeLogService olderadmissionanddischargelogService;
 
     /**
-        * 添加老人入住初始费用关系
-        * @param olderinitialfee
+        * 添加老人出入院日志表
+        * @param olderadmissionanddischargelog
         * @return
     */
     @ResponseBody
     @RequestMapping(value="add" ,method = RequestMethod.POST)
-    public ResultData add(OlderInitialFee olderinitialfee){
+    public ResultData add(OlderAdmissionAndDischargeLog olderadmissionanddischargelog){
 
         try {
-                    olderinitialfeeService.insert(olderinitialfee);
+                    olderadmissionanddischargelogService.insert(olderadmissionanddischargelog);
 
 
             }catch (Exception e){
@@ -41,7 +41,7 @@ public class OlderInitialFeeController extends GenericController {
     }
 
     /**
-    * 删除老人入住初始费用关系
+    * 删除老人出入院日志表
     * @param id
     * @return
     */
@@ -49,7 +49,7 @@ public class OlderInitialFeeController extends GenericController {
     @RequestMapping(value="del" ,method = RequestMethod.POST)
     public ResultData del(Long id) {
         try {
-                    olderinitialfeeService.delete(id);
+                    olderadmissionanddischargelogService.delete(id);
             } catch (Exception e) {
                 return ResultData.build().delError();
             }
@@ -57,7 +57,7 @@ public class OlderInitialFeeController extends GenericController {
 
     }
     /**
-    * 批量删除老人入住初始费用关系
+    * 批量删除老人出入院日志表
     *
     * @param ids
     * @return
@@ -68,7 +68,7 @@ public class OlderInitialFeeController extends GenericController {
         try {
             String[] idsArray = ids.split(",");
             for (String id : idsArray) {
-                olderinitialfeeService.delete(Long.parseLong(id));
+                olderadmissionanddischargelogService.delete(Long.parseLong(id));
             }
 
             } catch (Exception e) {
@@ -78,15 +78,15 @@ public class OlderInitialFeeController extends GenericController {
 
     }
     /**
-    * 修改老人入住初始费用关系
-    * @param olderinitialfee
+    * 修改老人出入院日志表
+    * @param olderadmissionanddischargelog
     * @return
     */
     @ResponseBody
     @RequestMapping(value="update",method = RequestMethod.POST)
-    public ResultData update(OlderInitialFee olderinitialfee){
+    public ResultData update(OlderAdmissionAndDischargeLog olderadmissionanddischargelog){
         try {
-            olderinitialfeeService.update(olderinitialfee);
+            olderadmissionanddischargelogService.update(olderadmissionanddischargelog);
 
         } catch (Exception e){
             return ResultData.build().upDateError();
@@ -95,7 +95,7 @@ public class OlderInitialFeeController extends GenericController {
     }
 
     /**
-    * 分页查询所有老人入住初始费用关系
+    * 分页查询所有老人出入院日志表
     * @param currentPage
     * @param limit
     * @return
@@ -104,20 +104,8 @@ public class OlderInitialFeeController extends GenericController {
     @RequestMapping(value="findAll",method = RequestMethod.GET)
     public ResultData findAll(Integer currentPage,Integer limit){
         return ResultData.build().
-        parsePageBean(olderinitialfeeService.findAll(currentPage,limit));
+        parsePageBean(olderadmissionanddischargelogService.findAll(currentPage,limit));
     }
 
-    /**
-     * 通过条件分页查询
-     * @param olderInitialFee
-     * @param currentPage
-     * @param limit
-     * @return
-     */
-    @ResponseBody
-    @RequestMapping(value="findByExample",method = RequestMethod.GET)
-    public ResultData findByExample(OlderInitialFee olderInitialFee,Integer currentPage,Integer limit){
-        return ResultData.build().
-                parsePageBean(olderinitialfeeService.findVOByExapmle(olderInitialFee,currentPage,limit));
-    }
+
 }

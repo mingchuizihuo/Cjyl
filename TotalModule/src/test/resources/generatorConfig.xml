@@ -110,20 +110,11 @@
 -->
 
 
-        <table tableName="older_admission_and_discharge_log" domainObjectName="OlderAdmissionAndDischargeLog">
+        <table tableName="bed" domainObjectName="Bed">
             <generatedKey column="id" sqlStatement="JDBC" identity="true" />
         </table>
 
-        <table tableName="older_initial_fee" domainObjectName="OlderInitialFee">
-            <generatedKey column="id" sqlStatement="JDBC" identity="true" />
-        </table>
 
-        <table tableName="older_nurse_log" domainObjectName="OlderNurseLog">
-            <generatedKey column="id" sqlStatement="JDBC" identity="true" />
-        </table>
 
-        <table tableName="older_cost" domainObjectName="OlderCost">
-            <generatedKey column="id" sqlStatement="JDBC" identity="true" />
-        </table>
     </context>
 </generatorConfiguration>

@@ -49,9 +49,7 @@ public class StaffVO {
     private String educationStr;
     private String majorStr;
 
-    public StaffVO() {
-        data2String(AnalysisConstant.dataDictionaryList);
-    }
+
 
     public void data2String(List<DataDictionary> dataDictionaryList){
         for (DataDictionary dataDictionary: dataDictionaryList

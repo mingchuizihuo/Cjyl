@@ -56,7 +56,7 @@ import java.util.List;
                    Bed bed = new Bed();
                    bed.setOrganizationLoginId(loginId);
                    bed.setBedNum((byte)(k+1));
-                   bed.setOldId(0l);
+                   bed.setOlderId(0l);
                    bed.setRoomId(room.getId());
                    bed.setBedState((byte)1);
                    bedMapper.insert(bed);

@@ -143,7 +143,7 @@
         </if>
     </select>
 
-    <select id="selectByPrimaryKey" parameterType="java.lang.Long">
+    <select id="selectVOByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
         select
         <include refid="Base_Column_List"/>
         from older LEFT JOIN month_charge monthcharge ON older.month_charge_id = monthcharge.id
