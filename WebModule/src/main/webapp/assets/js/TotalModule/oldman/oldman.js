@@ -10,24 +10,28 @@ $(function () {
 //查询
 var pageNp = 1;
 function findAll(currentPage) {
-    var urlFindAll = url + "findAll";
+    var urlFindAll = url + "findAllBriefVO";
     var getData = {
         currentPage: currentPage,
         limit: limit
     }
     getAjax(urlFindAll, false, getData, function (data) {
         console.log(JSON.stringify(data))
-        var num = data.iTotalRecords;
+        // var num = data.iTotalRecords;
         var pageList = Math.ceil(data.iTotalRecords / 9);
         var d;
-        var html = '<thead><tr><th><input type="checkbox" name="del" id="All" style="background:#f00;color:#0f0;border:#0ff;"></th> <th>ID</th> <th>姓名 </th> ' +
-            '<th>性别</th> <th>入住时间</th> <th>护理人员</th> <th>大厦</th> <th>房间</th> <th>床位</th> <th>月费用</th> <th>民族</th> ' +
-            '<th>出生日期</th> <th>自理情况</th> <th>护理级别</th> <th>身份证号</th> <th>状态</th> <th>出院日期</th> <th>操作</th></tr> </thead><tbody id="tbodyDelId">'
-        for (var i = 0; i < num; i++) {
+        var money = 0;
+        var html = '<thead><tr><th><input type="checkbox" name="del" id="All" style="background:#f00;color:#0f0;border:#0ff;"></th>  <th>姓名 </th> ' +
+            ' <th>入住时间</th> <th>护理人员</th> <th>大厦</th> <th>房间</th> <th>床位</th> <th>月费用</th> <th>民族</th> ' +
+            '<th>出生日期</th> <th>自理情况</th>  <th>身份证号</th> <th>状态</th> <th>出院日期</th> <th>操作</th></tr> </thead><tbody id="tbodyDelId">'
+        for (var i = 0; i < 1; i++) {
             d =  data.aaData[i];
-            html += ' <tr> <td><input type="checkbox" name="del"></td> <td>'+d.organizationLoginId+'</td> <td>'+d.name+'</td> <td>'+d.sex+'</td> <td>'+d.checkInDate+'</td> <td>李四</td>' +
-                ' <td>1号楼</td> <td>302</td> <td>2</td> <td>1000</td>  <td>汉</td> <td>1932年4月5日</td> <td>瘫痪</td> <td>二级</td>' +
-                ' <td>370605198236425648</td> <td>良好</td> <td>2016年12月1日</td><td><input type="button" value="修改" onclick="make('+d.id+')"></td> </tr>';
+            for(var j = 0; j<d.checkInInitCostList.length; j++){
+                 money += d.checkInInitCostList[j].money;
+            }
+                html += ' <tr> <td><input type="checkbox" name="del"></td><td>'+d.name+'</td>  <td>'+d.checkInDate.substring(0,11)+'</td> <td>'+d.staff.name+'</td>' +
+                ' <td>'+d.mansion+'</td> <td>'+d.room+'</td> <td>'+d.bed+'</td> <td>'+money+'</td>  <td>'+d.nation+'</td> <td>'+d.birthday+'</td> <td>'+d.takeCareOfOneselfStr+'</td>' +
+                ' <td>'+d.cardId+'</td> <td>'+d.olderStateStr+'</td> <td>'+d.olderLeaveDate+'</td><td><input type="button" value="修改" onclick="make('+d.id+')"></td> </tr>';
         }
         html += '</tbody>';
         $("#oldTable").html(html);
