@@ -27,7 +27,8 @@
             <table class="table table-striped table-bordered" id="oldTable">
                 <thead>
                 <tr>
-                    <th><input type="checkbox" style="background:#f00;color:#0f0;border:#0ff;" id="All"></th>
+                <#--<th><input type="checkbox" style="background:#f00;color:#0f0;border:#0ff;" id="All"></th>-->
+                    <th></th>
                     <th>服务</th>
                     <th>服务说明</th>
                     <th>费用状态</th>

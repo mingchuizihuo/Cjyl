@@ -12,6 +12,10 @@
 .information td .button:hover{background: linear-gradient(#6072a2,#313f62);}
 .information td .button:focus{background:#1172c9;}
 
+.information td input{ background:linear-gradient(#465782,#1f2b45);border:none;width:50px;height:25px;margin: auto;}
+.information td input:hover{background: linear-gradient(#6072a2,#313f62);}
+.information td input:focus{background:#1172c9;}
+
 
 /*增删改查按钮*/
 .modify{width:50%;height:60px;padding:0px;position: absolute;bottom:2%;}

@@ -40,7 +40,8 @@
             <table class="table table-striped table-bordered" id="oldTable">
                 <thead>
                 <tr>
-                    <th><input type="checkbox" style="background:#f00;color:#0f0;border:#0ff;" id="All"></th>
+                    <#--<th><input type="checkbox" style="background:#f00;color:#0f0;border:#0ff;" id="All"></th>-->
+                     <th></th>
                     <th>ID</th>
                     <th>姓名</th>
                     <th>性别</th>
@@ -64,12 +65,12 @@
                 <tr>
                     <td><input type="checkbox" name="del" value="del1"></td>
                     <td>15623</td>
-                    <td>张三</td>
+                    <td>李延亮</td>
                     <td>男</td>
                     <td>2016年11月1日</td>
                     <td>李四</td>
                     <td>1号楼</td>
-                    <td>302</td>
+                    <td>201</td>
                     <td>2</td>
                     <td>1000</td>
                     <td>汉</td>
@@ -78,8 +79,8 @@
                     <td>二级</td>
                     <td>370605198236425648</td>
                     <td>良好</td>
-                    <td>2016年12月1日</td>
-                    <td><input type="button" value="修改"></td>
+                    <td></td>
+                    <td><input type="button"  onclick="oldUrl(1)" value="修改"></td>
                 </tr>
                 <tr>
                     <td><input type="checkbox" name="del"value="del1"></td>
@@ -89,7 +90,7 @@
                     <td>2016年11月1日</td>
                     <td>李四</td>
                     <td>1号楼</td>
-                    <td>302</td>
+                    <td>202</td>
                     <td>2</td>
                     <td>1000</td>
                     <td>汉</td>
@@ -99,17 +100,17 @@
                     <td>370605198236425648</td>
                     <td>良好</td>
                     <td>2016年12月1日</td>
-                    <td><input type="button" value="修改"></td>
+                    <td><input type="button"  onclick="oldUrl(1)" value="修改"></td>
                 </tr>
                 <tr>
                     <td><input type="checkbox" name="del"value="del1"></td>
                     <td>15623</td>
-                    <td>张三</td>
+                    <td>张广 </td>
                     <td>男</td>
                     <td>2016年11月1日</td>
                     <td>李四</td>
                     <td>1号楼</td>
-                    <td>302</td>
+                    <td>203</td>
                     <td>2</td>
                     <td>1000</td>
                     <td>汉</td>
@@ -118,19 +119,19 @@
                     <td>二级</td>
                     <td>370605198236425648</td>
                     <td>良好</td>
-                    <td>2016年12月1日</td>
-                    <td><input type="button" value="修改"></td>
+                    <td></td>
+                    <td><input type="button"  onclick="oldUrl(1)" value="修改"></td>
 
                 </tr>
                 <tr>
                     <td><input type="checkbox" name="del"value="del1"></td>
                     <td>15623</td>
-                    <td>张三</td>
-                    <td>男</td>
+                    <td>张雅雯 </td>
+                    <td>女</td>
                     <td>2016年11月1日</td>
                     <td>李四</td>
                     <td>1号楼</td>
-                    <td>302</td>
+                    <td>204</td>
                     <td>2</td>
                     <td>1000</td>
                     <td>汉</td>
@@ -139,19 +140,19 @@
                     <td>二级</td>
                     <td>370605198236425648</td>
                     <td>良好</td>
-                    <td>2016年12月1日</td>
-                    <td><input type="button" value="修改"></td>
+                    <td></td>
+                    <td><input type="button"  onclick="oldUrl(1)" value="修改"></td>
 
                 </tr>
                 <tr>
                     <td><input type="checkbox" name="del"value="del1"></td>
                     <td>15623</td>
-                    <td>张三</td>
+                    <td>张铭峰</td>
                     <td>男</td>
                     <td>2016年11月1日</td>
                     <td>李四</td>
                     <td>1号楼</td>
-                    <td>302</td>
+                    <td>205</td>
                     <td>2</td>
                     <td>1000</td>
                     <td>汉</td>
@@ -161,18 +162,18 @@
                     <td>370605198236425648</td>
                     <td>良好</td>
                     <td>2016年12月1日</td>
-                    <td><input type="button" value="修改"></td>
+                    <td><input type="button"  onclick="oldUrl(1)" value="修改"></td>
 
                 </tr>
                 <tr>
                     <td><input type="checkbox" name="del"value="del1"></td>
                     <td>15623</td>
-                    <td>张三</td>
+                    <td>张雷 </td>
                     <td>男</td>
                     <td>2016年11月1日</td>
                     <td>李四</td>
                     <td>1号楼</td>
-                    <td>302</td>
+                    <td>206</td>
                     <td>2</td>
                     <td>1000</td>
                     <td>汉</td>
@@ -181,19 +182,19 @@
                     <td>二级</td>
                     <td>370605198236425648</td>
                     <td>良好</td>
-                    <td>2016年12月1日</td>
-                    <td><input type="button" value="修改"></td>
+                    <td></td>
+                    <td><input type="button"  onclick="oldUrl(1)" value="修改"></td>
 
                 </tr>
                 <tr>
                     <td><input type="checkbox" name="del"value="del1"></td>
                     <td>15623</td>
-                    <td>张三</td>
+                    <td>张广森 </td>
                     <td>男</td>
                     <td>2016年11月1日</td>
                     <td>李四</td>
                     <td>1号楼</td>
-                    <td>302</td>
+                    <td>207</td>
                     <td>2</td>
                     <td>1000</td>
                     <td>汉</td>
@@ -203,18 +204,18 @@
                     <td>370605198236425648</td>
                     <td>良好</td>
                     <td>2016年12月1日</td>
-                    <td><input type="button" value="修改"></td>
+                    <td><input type="button"  onclick="oldUrl(1)" value="修改"></td>
 
                 </tr>
                 <tr>
                     <td><input type="checkbox" name="del"value="del1"></td>
                     <td>15623</td>
-                    <td>张三</td>
-                    <td>男</td>
+                    <td>张琇淼</td>
+                    <td>女</td>
                     <td>2016年11月1日</td>
                     <td>李四</td>
                     <td>1号楼</td>
-                    <td>302</td>
+                    <td>208</td>
                     <td>2</td>
                     <td>1000</td>
                     <td>汉</td>
@@ -223,19 +224,19 @@
                     <td>二级</td>
                     <td>370605198236425648</td>
                     <td>良好</td>
-                    <td>2016年12月1日</td>
-                    <td><input type="button" value="修改"></td>
+                    <td></td>
+                    <td><input type="button"  onclick="oldUrl(1)" value="修改"></td>
 
                 </tr>
                 <tr>
                     <td><input type="checkbox" name="del"value="del2"></td>
                     <td>15623</td>
-                    <td>张三</td>
-                    <td>男</td>
+                    <td>张慧</td>
+                    <td>女</td>
                     <td>2016年11月1日</td>
                     <td>李四</td>
                     <td>1号楼</td>
-                    <td>302</td>
+                    <td>209</td>
                     <td>2</td>
                     <td>1000</td>
                     <td>汉</td>
@@ -244,8 +245,8 @@
                     <td>二级</td>
                     <td>370605198236425648</td>
                     <td>良好</td>
-                    <td>2016年12月1日</td>
-                    <td><input type="button" value="修改"></td>
+                    <td></td>
+                    <td><input type="button"  onclick="oldUrl(1)" value="修改"></td>
                 </tr>
                 </tbody>
             </table>

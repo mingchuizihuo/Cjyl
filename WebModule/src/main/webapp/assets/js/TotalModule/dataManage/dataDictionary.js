@@ -19,7 +19,7 @@ function findAll(currentPage) {
         var html = '';
         for (var i = 0; i < num; i++) {
             d =  data.aaData[0][i];
-            html += '<li onclick="dataSon('+d.id+')">'+d.dataName+'</li>';
+            html += '<li onclick="dataSon('+d.id+')">'+d.dataName+'<button class="del" onclick="del('+d.id+')">删除</button></li><div class="clearfix"></div>';
         }
         $("#dataFather").html(html);
     })
@@ -38,7 +38,7 @@ function dataSon(id) {
         for (var i = 0; i < num; i++) {
             d =  data.aaData[1][i];
             if(id == d.tid){
-                html += '<li>'+d.dataName+'</li>';
+                html += '<li>'+d.dataName+'<button class="del" onclick="del('+d.id+')">删除</button></li><div class="clearfix"></div>';
             }
         }
         $("#dataSon").html(html);

@@ -178,8 +178,8 @@
         <button onclick="update()" id="updateIs">保存修改</button>
         <button class="modalClose" >取消</button>
     </div>
-    <script src="${domainUrl}/assets/js/TotalModule/options/old.js"></script>
+    <#--<script src="${domainUrl}/assets/js/TotalModule/options/old.js"></script>-->
     <#--<script src="${domainUrl}/assets/js/TotalModule/options/oldCost.js"></script>-->
     <#--<script src="${domainUrl}/assets/js/TotalModule/options/oldNurse.js"></script>-->
-    <script src="${domainUrl}/assets/js/TotalModule/options/oldCheckIn.js"></script>
+    <#--<script src="${domainUrl}/assets/js/TotalModule/options/oldCheckIn.js"></script>-->
 </div>

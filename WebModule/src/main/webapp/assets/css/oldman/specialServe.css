@@ -11,6 +11,10 @@
 .specialServe .box ul li span{float: left;width:40%;}
 .specialServe .box ul li input{float:right;width:60%;height:28px;border:1px #858b91 solid;background: none;color:#c3c3c3}
 
+.specialServe .box ul button{ background:linear-gradient(#465782,#1f2b45);border:none;width:50px;height:25px;margin: auto;color: #fff;}
+.specialServe .box ul button:hover{background: linear-gradient(#6072a2,#313f62);}
+.specialServe .box ul button:focus{background:#1172c9;}
+
 /*增删改查按钮*/
 .modify{width:50%;height:60px;padding:0px;position: absolute;bottom:2%;}
 .modify .btn-ma{margin-right:50px;}

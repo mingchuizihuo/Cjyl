@@ -10,9 +10,16 @@
 .table-striped > tbody > tr:nth-of-type(even){background:#05101d;}
 .table-striped > tbody > tr:nth-of-type(odd){background:none;}
 
-.month td .button{ background:linear-gradient(#465782,#1f2b45);border:none;width:50px;height:25px;margin: auto;}
-.month td .button:hover{background: linear-gradient(#6072a2,#313f62);}
-.month td .button:focus{background:#1172c9;}
+.month td button{ background:linear-gradient(#465782,#1f2b45);border:none;width:50px;height:25px;margin: auto;}
+.month td button:hover{background: linear-gradient(#6072a2,#313f62);}
+.month td button:focus{background:#1172c9;}
+
+
+.month td input{ background:linear-gradient(#465782,#1f2b45);border:none;width:50px;height:25px;margin: auto;}
+.month td input:hover{background: linear-gradient(#6072a2,#313f62);}
+.month td input:focus{background:#1172c9;}
+
+
 
 /*增删改查按钮*/
 .modify{width:50%;height:60px;padding:0px;position: absolute;bottom:2%;}

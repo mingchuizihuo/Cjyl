@@ -41,7 +41,8 @@
             <table class="table table-striped table-bordered" id="oldTable">
                 <thead>
                 <tr>
-                    <th><input type="checkbox" style="background:#f00;color:#0f0;border:#0ff;" id="All"></th>
+                    <#--<th><input type="checkbox" style="background:#f00;color:#0f0;border:#0ff;" id="All"></th>-->
+                    <th></th>
                     <th>ID</th>
                     <th>姓名</th>
                     <th>性别</th>
@@ -80,7 +81,7 @@
                     <td>370605198236425648</td>
                     <td>良好</td>
                     <td>2016年12月1日</td>
-                    <td><input type="button" class="button" value="修改"></td>
+                    <td><input type="button" class="button"  onclick="tableUrl()" value="修改"></td>
                 </tr>
                 <tr>
                     <td><input type="checkbox" name="del"value="del1"></td>
@@ -100,7 +101,7 @@
                     <td>370605198236425648</td>
                     <td>良好</td>
                     <td>2016年12月1日</td>
-                    <td><input type="button" class="button" value="修改"></td>
+                    <td><input type="button" class="button"  onclick="tableUrl()" value="修改"></td>
                 </tr>
                 <tr>
                     <td><input type="checkbox" name="del"value="del1"></td>
@@ -120,7 +121,7 @@
                     <td>370605198236425648</td>
                     <td>良好</td>
                     <td>2016年12月1日</td>
-                    <td><input type="button" class="button" value="修改"></td>
+                    <td><input type="button" class="button"  onclick="tableUrl()" value="修改"></td>
 
                 </tr>
                 <tr>
@@ -141,7 +142,7 @@
                     <td>370605198236425648</td>
                     <td>良好</td>
                     <td>2016年12月1日</td>
-                    <td><input type="button" class="button" value="修改"></td>
+                    <td><input type="button" class="button"  onclick="tableUrl()" value="修改"></td>
 
                 </tr>
                 <tr>
@@ -162,7 +163,7 @@
                     <td>370605198236425648</td>
                     <td>良好</td>
                     <td>2016年12月1日</td>
-                    <td><input type="button" class="button" value="修改"></td>
+                    <td><input type="button" class="button"  onclick="tableUrl()" value="修改"></td>
 
                 </tr>
                 <tr>
@@ -183,7 +184,7 @@
                     <td>370605198236425648</td>
                     <td>良好</td>
                     <td>2016年12月1日</td>
-                    <td><input type="button" class="button" value="修改"></td>
+                    <td><input type="button" class="button"  onclick="tableUrl()" value="修改"></td>
 
                 </tr>
                 <tr>
@@ -204,7 +205,7 @@
                     <td>370605198236425648</td>
                     <td>良好</td>
                     <td>2016年12月1日</td>
-                    <td><input type="button" class="button" value="修改"></td>
+                    <td><input type="button" class="button"  onclick="tableUrl()" value="修改"></td>
 
                 </tr>
                 <tr>
@@ -225,7 +226,7 @@
                     <td>370605198236425648</td>
                     <td>良好</td>
                     <td>2016年12月1日</td>
-                    <td><input type="button" class="button" value="修改"></td>
+                    <td><input type="button" class="button"  onclick="tableUrl()" value="修改"></td>
 
                 </tr>
                 <tr>
@@ -246,7 +247,7 @@
                     <td>370605198236425648</td>
                     <td>良好</td>
                     <td>2016年12月1日</td>
-                    <td><input type="button" class="button" value="修改"></td>
+                    <td><input type="button" class="button"  onclick="tableUrl()" value="修改"></td>
                 </tr>
                 <tr>
                     <td><input type="checkbox" name="del"value="del2"></td>
@@ -266,7 +267,7 @@
                     <td>370605198236425648</td>
                     <td>良好</td>
                     <td>2016年12月1日</td>
-                    <td><input type="button" class="button" value="修改"></td>
+                    <td><input type="button" class="button"  onclick="tableUrl()" value="修改"></td>
                 </tr>
                 <tr>
                     <td><input type="checkbox" name="del"value="del2"></td>
@@ -286,7 +287,7 @@
                     <td>370605198236425648</td>
                     <td>良好</td>
                     <td>2016年12月1日</td>
-                    <td><input type="button" class="button" value="修改"></td>
+                    <td><input type="button" class="button"  onclick="tableUrl()" value="修改"></td>
                 </tr>
                 </tbody>
             </table>
