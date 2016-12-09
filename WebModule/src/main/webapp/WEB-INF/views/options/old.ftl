@@ -1,6 +1,3 @@
-
-
-
 <link href="${domainUrl}/assets/css/public.css" rel="stylesheet">
 <link href="${domainUrl}/assets/css/options/options.css" rel="stylesheet">
 
@@ -13,9 +10,8 @@
         $('#myTab a:first').tab('show') // Select first tab
         $('#myTab a:last').tab('show') // Select last tab
         $('#myTab li:eq(2) a').tab('show') // Select third tab (0-indexed)
-
-    })</script>
-
+    })
+</script>
 <div class="oldman_tab">
     <h2>老人档案</h2>
     <!-- 选项卡标题 -->
@@ -180,3 +176,4 @@
         <button class="modalClose" >取消</button>
     </div>
 </div>
+<script src="${domainUrl}/assets/js/TotalModule/filter.js"></script>
