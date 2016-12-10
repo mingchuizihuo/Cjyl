@@ -31,28 +31,20 @@
                 <li><span>姓名</span><input type="text" id="name"></li>
                 <li><span>性别</span>
                     <select class="form-control select" id="sex">
-                        <option>男</option>
-                        <option>女</option>
+
                     </select>
                 </li>
                 <li><span>入住时间</span><input type="text" id="checkInDate"></li>
                 <li><span>身份证号</span><input type="text" id="cardId"></li>
                 <li><span>出生日期</span><input type="text" id="birthday"></li>
                 <li><span>手机</span><input type="text" id="tel"></li>
-                <li><span>护理级别</span><select class="form-control select">
-                    <option>特级</option>
-                    <option>一级</option>
-                    <option>二级</option>
+                <li><span>护理级别</span><select class="form-control select" id="nurse">
+
                 </select></li>
                 <li><span>户籍</span><input type="text" id="censusRegister"></li>
                 <li><span>信仰</span>
-                    <select class="form-control select">
-                        <option>无</option>
-                        <option>基督教</option>
-                        <option>佛教</option>
-                        <option>天主教</option>
-                        <option>道教</option>
-                        <option>伊斯兰教</option>
+                    <select class="form-control select" id="faith">
+
                     </select>
                 </li>
                 <li><span>民族</span><input type="text" id="nation"></li>
