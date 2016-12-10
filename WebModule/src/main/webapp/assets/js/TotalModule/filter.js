@@ -2,9 +2,12 @@
  * Created by xiao on 2016/12/9.
  */
 $(function () {
-    findAll();
+    setTimeout(function () {
+        findAllDate();
+    }, 100);
+
 });
-function findAll() {
+function findAllDate() {
     var url  = domainUrl + "/serve/data_dictionary/findAll";
     var getData = {
         currentPage:1,
@@ -22,6 +25,7 @@ function findAll() {
         var mental='';
         var state='';
         var son='';
+        var aaa='';
 
 
 
@@ -64,9 +68,6 @@ function findAll() {
             if(d.tid == 103){
                 aaa += '<option value="'+d.id+'">'+d.dataName+'</option>'
             }
-
-
-
 
 
         }
