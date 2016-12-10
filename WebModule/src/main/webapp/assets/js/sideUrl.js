@@ -118,9 +118,9 @@ function specialUrl(is) {
     })
 }
 
-
 // 费用结算弹窗
-function tableUrl(olderId) {
+function tableUrl(id) {
+    costOldId = id;
     var urlGet = domainUrl + "/options/cost";
     $.ajax({
         type:"get",

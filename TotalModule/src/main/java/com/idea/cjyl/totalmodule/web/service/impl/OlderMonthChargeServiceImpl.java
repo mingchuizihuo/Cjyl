@@ -42,7 +42,9 @@ public class OlderMonthChargeServiceImpl extends GenericServiceVOImpl<OlderMonth
         OlderMonthChargeExample.Criteria criteria = olderMonthChargeExample.createCriteria();
         if (olderMonthCharge.getOlderId() != null) {
             criteria.andOlderIdEqualTo(olderMonthCharge.getOlderId());
-        }else if(olderMonthCharge.getOlderMonthChargeState()!=null){
+
+        }
+        if(olderMonthCharge.getOlderMonthChargeState()!=null){
             criteria.andOlderMonthChargeStateEqualTo(olderMonthCharge.getOlderMonthChargeState());
         }
         return olderMonthChargeExample;

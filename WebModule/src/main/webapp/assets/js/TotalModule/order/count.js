@@ -2,6 +2,7 @@
  * Created by xiao on 2016/12/10.
  */
 var url = domainUrl + "/serve/older/";
+var costOldId='';
 $(function () {
     findAll(1);
 })

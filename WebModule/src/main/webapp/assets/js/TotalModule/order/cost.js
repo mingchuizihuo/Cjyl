@@ -4,16 +4,16 @@
 var url = domainUrl + "/serve/older_month_charge/";
 var money=0;
 var moneyLog = [];
+var costsIds = [];
 $(function () {
     findAll(1);
-
 });
 //查询
 var pageNp = 1;
 function findAll(currentPage) {
     var urlFindAll = url + "findByExample";
     var getData = {
-        olderId: 1,
+        olderId: costOldId,
         olderMonthChargeState: 102,
         currentPage: currentPage,
         limit: limit
@@ -38,8 +38,9 @@ function findAll(currentPage) {
             }else{
                 totalMoney = d.aaData[i].monthCharge.total
             }
+            costsIds.push(d.aaData[i].id);
            html+= '<tr> ' +
-            '<td>'+d.aaData[i].id+'</td> ' +
+            '<td id="costTabletdid'+d.aaData[i].id+'">'+d.aaData[i].id+'</td> ' +
             '<td>'+d.aaData[i].olderMonthChargeStateStr+'</td> ' +
             '<td> ' +
             '<select class="form-control select aaa" onchange="costSelect('+d.aaData[i].id+','+totalMoney+')" id = "costSelect'+d.aaData[i].id+'"></select>' +
@@ -122,12 +123,26 @@ function costSelect(id,moneyM){
     $("#moneyXian").val(money)
 }
 function closeAnAccount(){
-    $("#costTable")
-}
-function update() {
-    var urlUpdate = url + "update";
-    var postData = {}
-    postAjax(urlUpdate, false, postData, function (data) {
 
+   for(var i=0; i<costsIds.length;i++){
+       var costId = $("#costTabletdid"+costsIds[i]).text();
+       var costSelectValue = $("#costSelect"+costsIds[i]).val();
+       var id = costId;
+       var olderMonthChargeState=101;
+       var olderMonthChargeEndType = costSelectValue;
+       var data = {
+           id:id,
+           olderMonthChargeState:olderMonthChargeState,
+           olderMonthChargeEndType:olderMonthChargeEndType,
+       }
+       update(data);
+   }
+
+}
+function update(data) {
+    var urlUpdate = url + "update";
+    var postData = data;
+    postAjax(urlUpdate, false, postData, function (data) {
+        console.log(JSON.stringify(data));
     })
 }

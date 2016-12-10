@@ -19,7 +19,8 @@ public class OlderMonthChargeServiceTest extends SupportTest {
     @Test
     public void testFindAllVO(){
         OlderMonthCharge olderMonthCharge = new OlderMonthCharge();
-        olderMonthCharge.setOlderId(1l);
+        olderMonthCharge.setOlderId(2l);
+        olderMonthCharge.setOlderMonthChargeState(102l);
         List<OlderMonthChargeVO> olderMonthChargeVOS = olderMonthChargeService.findVOByExapmle(olderMonthCharge,1,10);
         for(OlderMonthChargeVO olderMonthChargeVO:olderMonthChargeVOS){
             System.out.println(olderMonthChargeVO);
