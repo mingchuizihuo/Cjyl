@@ -121,7 +121,9 @@ function costSelect(id,moneyM){
     $("#moneyConut").val(money)
     $("#moneyXian").val(money)
 }
-
+function closeAnAccount(){
+    $("#costTable")
+}
 function update() {
     var urlUpdate = url + "update";
     var postData = {}
