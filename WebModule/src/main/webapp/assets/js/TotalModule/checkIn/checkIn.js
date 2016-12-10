@@ -4,7 +4,7 @@
 var url = domainUrl + "/serve/mansion/";
 $(function () {
     findAll(1);
-})
+});
 //查询
 var pageNp = 1;
 function findAll(currentPage) {
@@ -12,7 +12,7 @@ function findAll(currentPage) {
     var getData = {
         currentPage: currentPage,
         limit: limit
-    }
+    };
     getAjax(urlFindAll, false, getData, function (data) {
         // console.log(JSON.stringify(data))
         var num = data.aaData.length;
@@ -57,7 +57,7 @@ function table(num,num2,name,floor) {
             table+='<tr><td>'+name+'</td><td>'+floor+'</td><td>'+d[i].roomNum+'</td><td>'+d[i].roomType+'</td><td>';
             for(var j = 0; j < d[i].bedList.length;j++){
                 if(d[i].bedList[j].bedState == 1){
-                    button ='<input type="button" value="空闲" onclick="modalUrl(&quot;'+name+'&quot;,&quot;'+floor+'&quot;,&quot;'+d[i].roomNum+'&quot;)">';
+                    button ='<input type="button" value="空闲" onclick="oldUrl(&quot;'+name+'&quot;,&quot;'+floor+'&quot;,&quot;'+d[i].roomNum+'&quot;)">';
                 }else{
                     button ='<input type="button" value="使用">';
                 }

@@ -2,14 +2,6 @@
 <link href="${domainUrl}/assets/css/checkIn/checkIn.css" rel="stylesheet">
 <script src="${domainUrl}/assets/js/TotalModule/checkIn/checkIn.js"></script>
 
-
-
-<div class="overall" style="background-image: url(${domainUrl}/assets/images/backstage/bgg.jpg);"><link href="${domainUrl}/assets/css/public.css" rel="stylesheet">
-    <link href="${domainUrl}/assets/css/checkIn/checkIn.css" rel="stylesheet">
-    <script src="${domainUrl}/assets/js/TotalModule/checkIn/checkIn.js"></script>
-
-
-
     <div class="overall" style="background-image: url(${domainUrl}/assets/images/backstage/bgg.jpg);">
     <#--路径导航-->
         <div class="path">

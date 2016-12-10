@@ -57,14 +57,12 @@
                 </li>
                 <li><span>本人成分</span><input type="text" id="selfIngredient"></li>
                 <li><span>自理情况</span>
-                    <select class="form-control select">
-                        <option>自理</option>
-                        <option>半自理</option>
-                        <option>瘫痪</option>
+                    <select class="form-control select" id="takeCare">
+
                     </select>
                 </li>
                 <li><span>神志</span>
-                    <select class="form-control select">
+                    <select class="form-control select" id="mental">
                         <option>清醒</option>
                         <option>昏迷</option>
                         <option>半清醒</option>
@@ -84,7 +82,7 @@
                 <li><span>特殊要求</span><input type="text" id="specialRequirements"></li>
                 <li><span>异常表现</span><input type="text" id="abnormalPatterns"></li>
                 <li><span>老人状态</span>
-                    <select class="form-control select">
+                    <select class="form-control select" id="state">
                         <option>良好</option>
                         <option>一般</option>
                         <option>较差</option>
@@ -106,7 +104,7 @@
                     <li><span>姓名</span><input type="text"></li>
                     <li><span>联系电话</span><input type="text"></li>
                     <li><span>关系</span>
-                        <select class="form-control select">
+                        <select class="form-control select" id="son">
                             <option>儿子</option>
                             <option>女儿</option>
                             <option>亲戚</option>

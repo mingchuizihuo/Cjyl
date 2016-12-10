@@ -5,7 +5,7 @@ var url = domainUrl + "/serve/older/";
 var delId="";
 $(function () {
     findAll(1);
-})
+});
 
 //查询
 var pageNp = 1;
@@ -78,7 +78,9 @@ function add() {
     var urlAdd = url + "add";
     var postData = {
         organizationLoginId:1,
-        name:$("#name").val()
+        name:$("#name").val(),
+        sex:$("#sex").val(),
+        checkInDate
     };
     postAjax(urlAdd, false, postData, function (data) {
         console.log(JSON.stringify(data))
