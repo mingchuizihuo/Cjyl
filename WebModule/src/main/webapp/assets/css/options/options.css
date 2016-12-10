@@ -6,7 +6,7 @@
 /*选项卡标题*/
 .oldman_tab h2{font-size:18px;color:#5b5c5c;margin-bottom: 30px;}
 .oldman_tab .nav-tabs ul{width:100%;}
-.oldman_tab .nav-tabs > li{width:33%;}
+.oldman_tab .nav-tabs > li{width:20%;}
 
 .oldman_tab .nav-tabs > li a{ border-bottom: 1px #c3c3c3 solid;margin-right:0px;}
 .oldman_tab .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{ color: #5b5c5c;
@@ -15,6 +15,8 @@
     border-bottom: 2px #3dc9a2 solid;  }
 .oldman_tab .nav-tabs a{color:#5b5c5c;border:none;border-bottom: 2px #e7e7e7 solid; }
 .oldman_tab .nav-tabs a:hover{ border:none;border-bottom: 2px #3dc9a2 solid; background:none;}
+
+
 
 
 /*选项卡内容*/

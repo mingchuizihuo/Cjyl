@@ -26,12 +26,6 @@ $(function(){
             text : '老人月度欠费报表',
             color : '#3e576f'
         },
-        footnote : {
-            text : '',
-            color : '#909090',
-            fontsize : 11,
-            padding : '0 44'
-        },
         animation : true,//开启过渡动画
         animation_duration:800,//800ms完成动画
         width : 700,

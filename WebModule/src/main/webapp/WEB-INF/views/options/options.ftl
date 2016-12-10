@@ -1,6 +1,4 @@
 
-
-
 <link href="${domainUrl}/assets/css/public.css" rel="stylesheet">
 <link href="${domainUrl}/assets/css/options/options.css" rel="stylesheet">
 
@@ -19,9 +17,9 @@
 <div class="oldman_tab">
     <h2>老人档案</h2>
     <!-- 选项卡标题 -->
-    <ul class="nav nav-tabs" role="tablist">
+    <ul class="nav nav-tabs aa" role="tablist">
         <li role="presentation" class="active"><a href="#oldman" role="tab" data-toggle="tab">老人信息</a></li>
-        <li role="presentation" ><a href="#relatives" role="tab" data-toggle="tab">亲属信息</a></li>
+        <li role="presentation"><a href="#relatives" role="tab" data-toggle="tab">亲属信息</a></li>
         <li role="presentation" ><a href="#stayin" role="tab" data-toggle="tab">入住初始费</a></li>
         <li role="presentation" ><a href="#paycost" role="tab" data-toggle="tab">缴费情况</a></li>
         <li role="presentation" ><a href="#nursing" role="tab" data-toggle="tab">护理记录</a></li>
