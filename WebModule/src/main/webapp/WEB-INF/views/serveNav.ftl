@@ -5,6 +5,7 @@
     <link href="${domainUrl}/assets/css/mainBody.css" rel="stylesheet">
     <link href="${domainUrl}/assets/css/OutCss/page/page.css" rel="stylesheet">
     <link href="${domainUrl}/assets/css/OutCss/date/jquery.data_input.pack.css" rel="stylesheet">
+
     <meta charset="utf-8"/>
     <title>承嘉智慧养老中心</title>
 </head>

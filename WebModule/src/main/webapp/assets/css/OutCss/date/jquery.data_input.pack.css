@@ -21,4 +21,7 @@
 .date_selector td.unselected_month{color: #ccc;}
 .date_selector td.selectable_day{cursor: pointer;}
 .date_selector td.selected{background: #3dc9a2;color: #fff;font-weight: bold;}
-.date_selector td.selectable_day:hover, .date_selector
+.date_selector td.selectable_day:hover, .date_selector{}
+
+.date_selector .month_nav .prev{float: none !important;width:22px;}
+

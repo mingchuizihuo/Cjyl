@@ -1,4 +1,4 @@
-
+<link href="${domainUrl}/assets/css/OutCss/animate/animate.min.css" rel="stylesheet">
 <link href="${domainUrl}/assets/css/public.css" rel="stylesheet">
 <link href="${domainUrl}/assets/css/report/report.css" rel="stylesheet">
 <script src="${domainUrl}/assets/js/OutJs/ichart/ichart.1.2.min.js"></script>
@@ -22,17 +22,13 @@
     </div>
     <div class="report">
         <div class="pull-left re_l">
-            <div id='canvasDiv'></div>
+            <div class="animated pulse"><div id='canvasDiv'></div></div>
         </div>
         <div class="pull-right re_r">
-            <div id='canvasDiv1'></div>
+            <div class="animated pulse"><div id='canvasDiv1'></div></div>
         </div>
         <div class="clearfix"></div>
     </div>
-
-
-
-
 
 
 

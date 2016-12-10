@@ -33,10 +33,12 @@ public class OlderController extends GenericController {
     public ResultData add(Older older){
 
         try {
+            System.out.println(older);
                     olderService.insert(older);
 
 
             }catch (Exception e){
+            System.out.println(e);
                 return ResultData.build().addErroe();
             }
         return ResultData.build();

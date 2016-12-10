@@ -2,6 +2,7 @@
  * Created by Administrator on 2016/12/9.
  */
 
+
 //柱状图
 $(function(){
     var data = [
@@ -31,7 +32,9 @@ $(function(){
             fontsize : 11,
             padding : '0 44'
         },
-        width : 650,
+        animation : true,//开启过渡动画
+        animation_duration:800,//800ms完成动画
+        width : 700,
         height : 350,
         background_color : '#ffffff',
         legend:{
@@ -116,15 +119,17 @@ $(function(){
     var chart = iChart.create({
         render:"canvasDiv1",
         data: data1,//绑定数据
-        width:650,
+        width:700,
         height:350,
-        background_color:"#fefefe",
+
         gradient:false,
         color_factor:0.2,
         border:{
             color:"BCBCBC",
             width:1
         },
+        animation : true,//开启过渡动画
+        animation_duration:800,//800ms完成动画
         align:"center",
         offsetx:0,
         offsety:0,

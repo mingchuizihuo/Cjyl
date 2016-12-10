@@ -67,6 +67,44 @@ public class Older {
 
     private Long staffId;
 
+    @Override
+    public String toString() {
+        return "Older{" +
+                "id=" + id +
+                ", organizationLoginId=" + organizationLoginId +
+                ", name='" + name + '\'' +
+                ", sex=" + sex +
+                ", checkInDate=" + checkInDate +
+                ", cardId='" + cardId + '\'' +
+                ", birthday=" + birthday +
+                ", tel='" + tel + '\'' +
+                ", monthChargeId=" + monthChargeId +
+                ", censusRegister='" + censusRegister + '\'' +
+                ", belief=" + belief +
+                ", nation=" + nation +
+                ", politicsStatus=" + politicsStatus +
+                ", selfIngredient=" + selfIngredient +
+                ", takeCareOfOneself=" + takeCareOfOneself +
+                ", mind=" + mind +
+                ", pluse='" + pluse + '\'' +
+                ", bloodPressure='" + bloodPressure + '\'' +
+                ", allergicDrug='" + allergicDrug + '\'' +
+                ", indicationHospital='" + indicationHospital + '\'' +
+                ", indicationDoctor='" + indicationDoctor + '\'' +
+                ", principalDisease='" + principalDisease + '\'' +
+                ", diseasesHistory='" + diseasesHistory + '\'' +
+                ", hospitalTel='" + hospitalTel + '\'' +
+                ", dietCharacteristics='" + dietCharacteristics + '\'' +
+                ", disposition='" + disposition + '\'' +
+                ", hobby='" + hobby + '\'' +
+                ", specialRequirements='" + specialRequirements + '\'' +
+                ", abnormalPatterns='" + abnormalPatterns + '\'' +
+                ", olderState=" + olderState +
+                ", olderLeaveDate=" + olderLeaveDate +
+                ", staffId=" + staffId +
+                '}';
+    }
+
     public Long getId() {
         return id;
     }

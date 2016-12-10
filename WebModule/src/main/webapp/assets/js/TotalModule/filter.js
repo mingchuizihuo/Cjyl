@@ -22,11 +22,14 @@ function findAll() {
         var mental='';
         var state='';
         var son='';
+
+
+
         for(var i = 0 ; i < num ; i++){
             d=data.aaData[i];
             console.log(d)
             //性别
-            if(d.tid == 113){
+            if(d.tid == 13){
                 sex += '<option value="'+d.id+'">'+d.dataName+'</option>'
             }
             //护理
@@ -42,7 +45,7 @@ function findAll() {
                 politics += '<option value="'+d.id+'">'+d.dataName+'</option>'
             }
             //自理情况
-            if(d.tid == 122){
+            if(d.tid == 107){
                 takeCare += '<option value="'+d.id+'">'+d.dataName+'</option>'
             }
             //神志状况
@@ -50,14 +53,21 @@ function findAll() {
                 mental += '<option value="'+d.id+'">'+d.dataName+'</option>'
             }
             //老人状态
-            if(d.tid == 125){
+            if(d.tid == 110){
                 state += '<option value="'+d.id+'">'+d.dataName+'</option>'
             }
             //亲属关系
             if(d.tid == 8){
                 son += '<option value="'+d.id+'">'+d.dataName+'</option>'
             }
+
+
+
+
+
+
         }
+
         $("#sex").html(sex);
         $("#nurse").html(nurse);
         $("#faith").html(faith);

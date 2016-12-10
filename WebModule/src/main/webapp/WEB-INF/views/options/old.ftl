@@ -19,10 +19,15 @@
         <li role="presentation" class="active"><a href="#oldman" role="tab" data-toggle="tab">老人信息</a></li>
         <li role="presentation"><a href="#relatives" role="tab" data-toggle="tab">亲属信息</a></li>
         <li role="presentation"><a href="#stayin" role="tab" data-toggle="tab">入住初始费</a></li>
-        <li role="presentation"><a href="#paycost" role="tab" data-toggle="tab">缴费情况</a></li>
-        <li role="presentation"><a href="#nursing" role="tab" data-toggle="tab">护理记录</a></li>
+        <#--<li role="presentation"><a href="#paycost" role="tab" data-toggle="tab">缴费情况</a></li>-->
+        <#--<li role="presentation"><a href="#nursing" role="tab" data-toggle="tab">护理记录</a></li>-->
         <div class="clearfix"></div>
     </ul>
+    <script type="text/javascript">
+        $(function () {
+            $('.date_picker').date_input();
+        })
+    </script>
     <!-- 选项卡内容 -->
     <div class="tab-content">
     <#--老人信息-->
@@ -34,7 +39,7 @@
 
                     </select>
                 </li>
-                <li><span>入住时间</span><input type="text" id="checkInDate"></li>
+                <li><span>入住时间</span><input type="text" id="sdate" class="date_picker checkInDate"></li>
                 <li><span>身份证号</span><input type="text" id="cardId"></li>
                 <li><span>出生日期</span><input type="text" id="birthday"></li>
                 <li><span>手机</span><input type="text" id="tel"></li>
@@ -101,8 +106,8 @@
         <div role="tabpanel" class="tab-pane relatives" id="relatives">
             <div class="box">
                 <ul>
-                    <li><span>姓名</span><input type="text"></li>
-                    <li><span>联系电话</span><input type="text"></li>
+                    <li><span>姓名</span><input type="text" id="Sname"></li>
+                    <li><span>联系电话</span><input type="text" id="Stel"></li>
                     <li><span>关系</span>
                         <select class="form-control select" id="son">
                             <option>儿子</option>
@@ -110,9 +115,9 @@
                             <option>亲戚</option>
                         </select>
                     </li>
-                    <li><span>身份证号</span><input type="text"></li>
-                    <li><span>工作单位</span><input type="text" ></li>
-                    <li><span>住址</span><input type="text"></li>
+                    <li><span>身份证号</span><input  id="ScardId" type="text"></li>
+                    <li><span>工作单位</span><input  id="SjobName" type="text" ></li>
+                    <li><span>住址</span><input id="ShomeAddress" type="text"></li>
                     <div class="clearfix"></div>
                 </ul>
             </div>
@@ -122,43 +127,44 @@
         <div role="tabpanel" class="tab-pane stayin" id="stayin">
             <div class="box">
                 <ul>
-                    <li><span>项目</span><input type="text" ></li>
-                    <li><span>费用</span><input type="text"></li>
-                    <li><span>出院退款</span><input type="text"> </li>
-                    <li><span>是否可退款</span><input type="text"></li>
-
+                    <li><span>项目</span><select class="form-control select" id="CheckItem">
+                        <option>儿子</option>
+                        <option>女儿</option>
+                        <option>亲戚</option>
+                    </select></li>
+                    <li><span>费用</span><input type="text" id="checkCost" ></li>
                     <div class="clearfix"></div>
                 </ul>
             </div>
         </div>
 
     <#--缴费情况（月费用）-->
-        <div role="tabpanel" class="tab-pane paycost" id="paycost">
-            <div class="box">
-                <ul>
-                    <li><span>护理级别</span><div class="aa"></div></li>
-                    <li><span>管理费</span><div class="aa"></div></li>
-                    <li><span>服务费用</span><div class="aa"></div></li>
-                    <li><span>床位费用</span><div class="aa"></div></li>
-                    <li><span>伙食费用</span><div class="aa"></div></li>
-                    <li><span>总计</span><div class="aa"></div></li>
-                    <div class="clearfix"></div>
-                </ul>
-            </div>
+        <#--<div role="tabpanel" class="tab-pane paycost" id="paycost">-->
+            <#--<div class="box">-->
+                <#--<ul>-->
+                    <#--<li><span>护理级别</span><div class="aa"></div></li>-->
+                    <#--<li><span>管理费</span><div class="aa"></div></li>-->
+                    <#--<li><span>服务费用</span><div class="aa"></div></li>-->
+                    <#--<li><span>床位费用</span><div class="aa"></div></li>-->
+                    <#--<li><span>伙食费用</span><div class="aa"></div></li>-->
+                    <#--<li><span>总计</span><div class="aa"></div></li>-->
+                    <#--<div class="clearfix"></div>-->
+                <#--</ul>-->
+            <#--</div>-->
 
-        </div>
+        <#--</div>-->
     <#--护理记录（服务费用表）-->
-        <div role="tabpanel" class="tab-pane nursing" id="nursing">
-            <div class="box">
-                <ul>
-                    <li><span>服务项目</span><div class="aa"></div></li>
-                    <li><span>价格</span><div class="aa"></div></li>
-                    <li><span>健康状况</span><div class="aa"></div></li>
-                    <li><span>护理及用药情况</span><div class="aa"></div></li>
-                    <div class="clearfix"></div>
-                </ul>
-            </div>
-        </div>
+        <#--<div role="tabpanel" class="tab-pane nursing" id="nursing">-->
+            <#--<div class="box">-->
+                <#--<ul>-->
+                    <#--<li><span>服务项目</span><div class="aa"></div></li>-->
+                    <#--<li><span>价格</span><div class="aa"></div></li>-->
+                    <#--<li><span>健康状况</span><div class="aa"></div></li>-->
+                    <#--<li><span>护理及用药情况</span><div class="aa"></div></li>-->
+                    <#--<div class="clearfix"></div>-->
+                <#--</ul>-->
+            <#--</div>-->
+        <#--</div>-->
     </div>
     <div class="bottom">
         <button onclick="add()" id="addIs">确认添加</button>
@@ -167,3 +173,7 @@
     </div>
 </div>
 <script src="${domainUrl}/assets/js/TotalModule/filter.js"></script>
+<script src="${domainUrl}/assets/js/TotalModule/oldman/oldman.js"></script>
+<script src="${domainUrl}/assets/js/TotalModule/oldman/oldSon.js"></script>
+<script src="${domainUrl}/assets/js/TotalModule/oldman/stayIn.js"></script>
+

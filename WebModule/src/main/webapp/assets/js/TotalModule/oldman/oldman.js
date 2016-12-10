@@ -16,18 +16,20 @@ function findAll(currentPage) {
         limit: limit
     }
     getAjax(urlFindAll, false, getData, function (data) {
-        // console.log(JSON.stringify(data))
-        // var num = data.iTotalRecords;
+        console.log(JSON.stringify(data))
+        var num = data.aaData.length;
         var pageList = Math.ceil(data.iTotalRecords / 9);
         var d;
         var money = 0;
-        var html = '<thead><tr><th><input type="checkbox" name="del" id="All" style="background:#f00;color:#0f0;border:#0ff;"></th>  <th>姓名 </th> ' +
-            ' <th>入住时间</th> <th>护理人员</th> <th>大厦</th> <th>房间</th> <th>床位</th> <th>月费用</th> <th>民族</th> ' +
+        // <input type="checkbox" name="del" id="All" style="background:#f00;color:#0f0;border:#0ff;width:50px;">
+        var html = '<thead><tr><th></th>  <th>姓名 </th> <th>入住时间</th> <th>护理人员</th> <th>大厦</th> <th>房间</th> <th>床位</th> <th>月费用</th> <th>民族</th> ' +
             '<th>出生日期</th> <th>自理情况</th>  <th>身份证号</th> <th>状态</th> <th>出院日期</th> <th>操作</th></tr> </thead><tbody id="tbodyDelId">'
-        for (var i = 0; i < 1; i++) {
+        for (var i = 0; i < num; i++) {
             d =  data.aaData[i];
-            for(var j = 0; j<d.checkInInitCostList.length; j++){
-                 money += d.checkInInitCostList[j].money;
+            if(d.checkInInitCostList != undefined){
+                for(var j = 0; j<d.checkInInitCostList.length; j++){
+                    money += d.checkInInitCostList[j].money;
+                }
             }
                 html += ' <tr> <td><input type="checkbox" name="del"></td><td>'+d.name+'</td>  <td>'+d.checkInDate.substring(0,11)+'</td> <td>'+d.staff.name+'</td>' +
                 ' <td>'+d.mansion+'</td> <td>'+d.room+'</td> <td>'+d.bed+'</td> <td>'+money+'</td>  <td>'+d.nation+'</td> <td>'+d.birthday+'</td> <td>'+d.takeCareOfOneselfStr+'</td>' +
@@ -74,13 +76,41 @@ function findAll(currentPage) {
     })
 }
 //添加
-function add() {
+function addOld() {
     var urlAdd = url + "add";
     var postData = {
         organizationLoginId:1,
         name:$("#name").val(),
         sex:$("#sex").val(),
-        checkInDate
+        checkInDate:$(".checkInDate").val(),
+        cardId:$("#cardId").val(),
+        birthday:$("#birthday").val(),
+        tel:$("#tel").val(),
+        monthChargeId:1,
+        censusRegister:$("#censusRegister").val(),
+        belief:1,
+        nation:$("#nation").val(),
+        politicsStatus:1,
+        selfIngredient:$("#selfIngredient").val(),
+        takeCareOfOneself:1,
+        mind:1,
+        pluse:$("#pluse").val(),
+        bloodPressure:$("#bloodPressure").val(),
+        allergicDrug:$("#allergicDrug").val(),
+        indicationHospital:$("#indicationHospital").val(),
+        indicationDoctor:$("#indicationDoctor").val(),
+        principalDisease:$("#principalDisease").val(),
+        diseasesHistory:$("#diseasesHistory").val(),
+        hospitalTel:$("#hospitalTel").val(),
+        dietCharacteristics:$("#dietCharacteristics").val(),
+        disposition:$("#disposition").val(),
+        hobby:$("#hobby").val(),
+        specialRequirements:$("#specialRequirements").val(),
+        abnormalPatterns:$("#abnormalPatterns").val(),
+        olderState:1,
+        olderLeaveDate:$("#olderLeaveDate").val(),
+        staffId:1,
+
     };
     postAjax(urlAdd, false, postData, function (data) {
         console.log(JSON.stringify(data))
@@ -149,4 +179,8 @@ function del(id) {
         alert("删除成功");
         findAll(currentPage);
     })
+}
+function add() {
+    // addOld();
+    // addSon();
 }

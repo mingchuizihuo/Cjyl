@@ -6,7 +6,8 @@
 /*选项卡标题*/
 .oldman_tab h2{font-size:18px;color:#5b5c5c;margin-bottom: 30px;}
 .oldman_tab .nav-tabs ul{width:100%;}
-.oldman_tab .nav-tabs > li{width:20%;}
+.oldman_tab .nav-tabs > li{width:33%;}
+
 .oldman_tab .nav-tabs > li a{ border-bottom: 1px #c3c3c3 solid;margin-right:0px;}
 .oldman_tab .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{ color: #5b5c5c;
     background:none;
@@ -23,9 +24,8 @@
 .oldman_tab .tab-content .oldman{margin-top:36px;}
 .oldman_tab .tab-content .oldman ul li{float: left;color:#5b5c5c;margin-bottom: 10px;width: 30%;margin-right:3%;font-size: 14px;}
 .oldman_tab .tab-content .oldman ul li .select{font-size:12px; float:right;width:130px;height:28px;border:1px #c3c3c3 solid;border-radius: 0px;}
-.oldman_tab .tab-content .oldman ul li span{float: left;}
+.oldman_tab .tab-content .oldman ul li span{}
 .oldman_tab .tab-content .oldman ul li input{float:right;width:130px;height:28px;border:1px #c3c3c3 solid;}
-
 
 /*亲属信息*/
 .oldman_tab .tab-content .relatives{margin-top:36px;height:400px;overflow: auto;}

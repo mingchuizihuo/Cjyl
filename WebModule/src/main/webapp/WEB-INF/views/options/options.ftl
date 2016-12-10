@@ -21,10 +21,10 @@
     <!-- 选项卡标题 -->
     <ul class="nav nav-tabs" role="tablist">
         <li role="presentation" class="active"><a href="#oldman" role="tab" data-toggle="tab">老人信息</a></li>
-        <li role="presentation"><a href="#relatives" role="tab" data-toggle="tab">亲属信息</a></li>
-        <li role="presentation"><a href="#stayin" role="tab" data-toggle="tab">入住初始费</a></li>
-        <li role="presentation"><a href="#paycost" role="tab" data-toggle="tab">缴费情况</a></li>
-        <li role="presentation"><a href="#nursing" role="tab" data-toggle="tab">护理记录</a></li>
+        <li role="presentation" ><a href="#relatives" role="tab" data-toggle="tab">亲属信息</a></li>
+        <li role="presentation" ><a href="#stayin" role="tab" data-toggle="tab">入住初始费</a></li>
+        <li role="presentation" ><a href="#paycost" role="tab" data-toggle="tab">缴费情况</a></li>
+        <li role="presentation" ><a href="#nursing" role="tab" data-toggle="tab">护理记录</a></li>
         <div class="clearfix"></div>
     </ul>
     <!-- 选项卡内容 -->
