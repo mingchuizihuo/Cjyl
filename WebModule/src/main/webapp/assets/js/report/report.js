@@ -2,17 +2,16 @@
  * Created by Administrator on 2016/12/9.
  */
 
-
 //柱状图
 $(function(){
     var data = [
         {
-            name : '男',
+            name : '男士',
             value:[1,1,1,1],
             color:'#de9972'
         },
         {
-            name : '女',
+            name : '女士',
             value:[1,1,1,1],
             color:'#28847f'
         }
@@ -24,20 +23,23 @@ $(function(){
         labels:["第一周","第二周","第三周","第四周"],
         title : {
             text : '老人月度欠费报表',
-            color : '#3e576f'
+            color : '#ffffff'
         },
+        border:false,
         animation : true,//开启过渡动画
         animation_duration:800,//800ms完成动画
         width : 700,
         height : 350,
-        background_color : '#ffffff',
+        background_color : 'rgba(0,0,0,0)',
         legend:{
             enable:true,
             background_color : null,
             align : 'center',
             valign : 'bottom',
             row:1,
+            offsety:20,
             column:'max',
+            color:"#ffffff",
             border : {
                 enable : false
             }
@@ -47,7 +49,7 @@ $(function(){
         xAngle : 50,
         bottom_scale:1.1,
         label:{
-            color:'#4c4f48'
+            color:'#ffffff'
         },
         sub_option:{
             label :false
@@ -57,11 +59,12 @@ $(function(){
         },
         text_space : 16,//坐标系下方的label距离坐标系的距离。
         coordinate:{
-            background_color : '#d7d7d5',
-            grid_color : '#a4a4a2',
-            color_factor : 0.24,
+            background_color : 'rgba(0,0,0,0)',
+            grid_color : '#ffffff',
+            color_factor : 0,
             board_deep:10,
             offsety:-10,
+            title:{color:'#ffffff'},
             pedestal_height:10,
             left_board:false,//取消左侧面板
             width:620,
@@ -73,7 +76,7 @@ $(function(){
                 scale_space:1,
                 scale_enable : false,
                 label:{
-                    color:'#4c4f48'
+                    color:'#ffffff'
                 }
             }]
         }
@@ -90,7 +93,7 @@ $(function(){
             chart.target.textAlign('start')
                 .textBaseline('bottom')
                 .textFont('600 11px Verdana')
-                .fillText('人数（位）',x-40,y-28,false,'#6d869f');
+                .fillText('人数（位）',x-40,y-28,false,'#ffffff');
 
         }
     }));
@@ -115,12 +118,12 @@ $(function(){
         data: data1,//绑定数据
         width:700,
         height:350,
-
+        background_color : 'rgba(0,0,0,0)',
         gradient:false,
-        color_factor:0.2,
+        color_factor:0,
         border:{
             color:"BCBCBC",
-            width:1
+            width:0
         },
         animation : true,//开启过渡动画
         animation_duration:800,//800ms完成动画
@@ -154,7 +157,7 @@ $(function(){
         radius:"90%",
         title:{
             text:"入住老人比率",
-            color:"#111111",
+            color:"#ffffff",
             fontsize:20,
             font:"微软雅黑",
             textAlign:"center",
@@ -194,8 +197,8 @@ $(function(){
             column:1,
             align:"right",
             valign:"center",
-            offsetx:-20,
-            offsety:0
+            offsetx:0,
+            offsety:-70
         },
         coordinate:{
             width:"85%",
