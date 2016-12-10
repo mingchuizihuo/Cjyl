@@ -25,17 +25,18 @@
             <scope>compile</scope>
             <type>jar</type>
         </dependency>
-       <!-- <dependency>
+        <dependency>
             <groupId>com.idea</groupId>
             <artifactId>total_module</artifactId>
             <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+            <type>jar</type>
 
-
-        </dependency>-->
+        </dependency>
     </dependencies>
     <build>
 
-        <finalName>nursing</finalName>
+        <finalName>cjyl</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

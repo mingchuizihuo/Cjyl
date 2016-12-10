@@ -60,7 +60,10 @@ function findAll() {
             if(d.tid == 8){
                 son += '<option value="'+d.id+'">'+d.dataName+'</option>'
             }
-
+            //亲属关系
+            if(d.tid == 103){
+                aaa += '<option value="'+d.id+'">'+d.dataName+'</option>'
+            }
 
 
 
@@ -76,5 +79,6 @@ function findAll() {
         $("#mental").html(mental);
         $("#son").html(son);
         $("#state").html(state);
+        $(".aaa").html(aaa);
     })
 }

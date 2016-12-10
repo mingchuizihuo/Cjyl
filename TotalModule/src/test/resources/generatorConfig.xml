@@ -110,7 +110,7 @@
 -->
 
 
-        <table tableName="bed" domainObjectName="Bed">
+        <table tableName="older_month_charge" domainObjectName="OlderMonthCharge">
             <generatedKey column="id" sqlStatement="JDBC" identity="true" />
         </table>
 

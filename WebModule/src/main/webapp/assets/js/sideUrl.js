@@ -120,7 +120,7 @@ function specialUrl(is) {
 
 
 // 费用结算弹窗
-function tableUrl() {
+function tableUrl(olderId) {
     var urlGet = domainUrl + "/options/cost";
     $.ajax({
         type:"get",
@@ -128,6 +128,7 @@ function tableUrl() {
         success:function (data) {
             $(".publicModal").html(data);
             modalClose();
+
         }
     })
 }

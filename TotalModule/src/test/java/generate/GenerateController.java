@@ -87,24 +87,25 @@ public class GenerateController {
     }
     public static void main(String[] args) {
         String[] fileNames = new String[]{
-                "OrganizationLogin,登录",
-                "DataDictionary,数据字典,1",
-                "MonthCharge,月收费",
-                "CheckInInitCost,入住初始费用",
-                "ServiceCharge,服务费用",
-                "Mansion,大厦",
-                "FloorTier,楼层",
-                "Room,房间",
-                "Bed,床",
-                "Staff,员工",
-                "StaffLeaveLog,员工请假",
-                "Older,老人",
-                "OlderKinsfolk,老人亲属信息",
-                "OlderInitialFee,老人入住初始费用关系",
-                "OlderNurseLog,老人护理记录",
-                "OlderCost,老人特殊费用",
-                "OlderAdmissionAndDischargeLog,老人出入院日志表",
+//                "OrganizationLogin,登录",
+//                "DataDictionary,数据字典,1",
+//                "MonthCharge,月收费",
+//                "CheckInInitCost,入住初始费用",
+//                "ServiceCharge,服务费用",
+//                "Mansion,大厦",
+//                "FloorTier,楼层",
+//                "Room,房间",
+//                "Bed,床",
+//                "Staff,员工",
+//                "StaffLeaveLog,员工请假",
+//                "Older,老人",
+//                "OlderKinsfolk,老人亲属信息",
+//                "OlderInitialFee,老人入住初始费用关系",
+//                "OlderNurseLog,老人护理记录",
+//                "OlderCost,老人特殊费用",
+//                "OlderAdmissionAndDischargeLog,老人出入院日志表",
 
+                "OlderMonthCharge,老人月收费"
 
 
         };

@@ -67,9 +67,9 @@ public class VO2xml {
         VO2xml.Generate(
                 "\\TotalModule\\src\\test\\java\\ftl",
                 "OlderMapperMyself.ftl",
-                "OlderNurseLog",
+                "OlderMonthCharge",
                 "\\TotalModule\\src\\main\\java\\com\\idea\\cjyl\\totalmodule\\web\\mapper\\myself",
-                "com.idea.cjyl.totalmodule.web.domain.vo.OlderNurseLogVO",
+                "com.idea.cjyl.totalmodule.web.domain.vo.OlderMonthChargeVO",
 
                 "com.idea.cjyl.totalmodule.web.dao.myself",
                 "\\TotalModule\\src\\main\\java\\com\\idea\\cjyl\\totalmodule\\web\\dao\\myself"

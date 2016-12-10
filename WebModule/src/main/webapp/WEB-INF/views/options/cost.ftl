@@ -27,56 +27,20 @@
         <!-- Tab panes -->
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane active" id="detail">
-                <table class="table table-bordered">
-                    <thead>
-                    <tr>
-                        <th>编码</th>
-                        <th>类型</th>
-                        <th>状态</th>
-                        <th>金额</th>
-                        <th>说明</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>
-                            <select class="form-control select">
-                                <option>交款</option>
-                                <option>挂账</option>
-                                <option>免除</option>
-                            </select>
-                        </td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>
-                            <select class="form-control select">
-                                <option>交款</option>
-                                <option>挂账</option>
-                                <option>免除</option>
-                            </select>
-                        </td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    </tbody>
+                <table class="table table-bordered" id="costTable">
+
                 </table>
             </div>
 
             <div role="tabpanel" class="tab-pane" id="service">
-                <table class="table table-bordered">
+                <table class="table table-bordered" id="serviceChargeTable">
                     <thead>
                     <tr>
                         <th>编码</th>
                         <th>类型</th>
                         <th>状态</th>
                         <th>金额</th>
-                        <th>说明</th>
+
                     </tr>
                     </thead>
                     <tbody>
@@ -85,14 +49,14 @@
                         <td></td>
                         <td> </td>
                         <td></td>
-                        <td></td>
+
                     </tr>
                     <tr>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td></td>
+
                     </tr>
                     </tbody>
                 </table>
@@ -100,23 +64,21 @@
         </div>
     </div>
     <div class="pull-right cost_r">
-        <h3>老人明细</h3>
-        <input type="text">
-        <h3>上月清算到</h3>
-        <input type="text">
-        <h3>上次预缴到</h3>
-        <input type="text">
+        <h3>老人姓名</h3>
+        <input type="text" id = "costOlderName" >
         <h3>合计金额</h3>
-        <input type="text">
+        <input type="text" id="moneyConut">
         <h3>现金收款</h3>
-        <input type="text">
+        <input type="text" id="moneyXian">
     </div>
     <div class="clearfix"></div>
     <div class="bottom">
-        <button >缴费保存</button>
+        <button onclick="closeAnAccount()" id="addIs">结算</button>
+
         <button class="modalClose" >取消</button>
     </div>
 </div>
-
+<script src="${domainUrl}/assets/js/TotalModule/order/cost.js"></script>
+<script src="${domainUrl}/assets/js/TotalModule/filter.js"></script>
 
 
