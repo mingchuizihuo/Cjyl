@@ -19,22 +19,22 @@
         </ul>
     </div>
 <#--查询导航-->
-    <div class="query">
-        <ul>
-            <li>查询条件</li>
-            <li>姓名<input type="text"></li>
-            <script type="text/javascript">
-                $(function () {
-                    $('.date_picker').date_input();
-                })
-            </script>
-            <li>入住时间<input type="text" id="sdate" class="date_picker" style="text-align: center"></li>
-            <li>手机号<input type="text"></li>
-            <li>身份证号<input type="text"></li>
-            <button class="pull-right btn-style"><i class="glyphicon glyphicon-search"></i>查询</button>
-            <div class="clearfix"></div>
-        </ul>
-    </div>
+    <#--<div class="query">-->
+        <#--<ul>-->
+            <#--<li>查询条件</li>-->
+            <#--<li>姓名<input type="text"></li>-->
+            <#--<script type="text/javascript">-->
+                <#--$(function () {-->
+                    <#--$('.date_picker').date_input();-->
+                <#--})-->
+            <#--</script>-->
+            <#--<li>入住时间<input type="text" id="sdate" class="date_picker" style="text-align: center"></li>-->
+            <#--<li>手机号<input type="text"></li>-->
+            <#--<li>身份证号<input type="text"></li>-->
+            <#--<button class="pull-right btn-style"><i class="glyphicon glyphicon-search"></i>查询</button>-->
+            <#--<div class="clearfix"></div>-->
+        <#--</ul>-->
+    <#--</div>-->
 
 <div class="arrearageNote">
     <h2>老人欠费情况表</h2>

@@ -14,7 +14,6 @@ function findAll(currentPage) {
         limit: limit
     };
     getAjax(urlFindAll, false, getData, function (data) {
-        // console.log(JSON.stringify(data))
         var num = data.aaData.length;
         var pageList = Math.ceil(data.iTotalRecords / 9);
         var d;
@@ -56,10 +55,10 @@ function table(num,num2,name,floor) {
         for(var i =0 ; i < d.length ; i++){
             table+='<tr><td>'+name+'</td><td>'+floor+'</td><td>'+d[i].roomNum+'</td><td>'+d[i].roomType+'</td><td>';
             for(var j = 0; j < d[i].bedList.length;j++){
-                if(d[i].bedList[j].bedState == 1){
-                    button ='<input type="button" value="空闲" onclick="oldUrl(&quot;'+name+'&quot;,&quot;'+floor+'&quot;,&quot;'+d[i].roomNum+'&quot;)">';
+                if(d[i].bedList[j].bedState == 2){
+                    button ='<input type="button" value="空闲" onclick="oldUrl()">';
                 }else{
-                    button ='<input type="button" value="使用">';
+                    button ='<input type="button" value="使用" style="background: red" onclick="modalUrl(&quot;'+name+'&quot;,&quot;'+floor+'&quot;,&quot;'+d[i].roomNum+'&quot;)">';
                 }
                 table+=''+button+'';
             }

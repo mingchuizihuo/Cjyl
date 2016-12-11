@@ -25,8 +25,7 @@
             <table class="table table-striped table-bordered" id="oldTable">
                 <thead>
                 <tr>
-                <#--<th><input type="checkbox" style="background:#f00;color:#0f0;border:#0ff;" id="All"></th>-->
-                    <th></th>
+                <th><input type="checkbox" style="background:#f00;color:#0f0;border:#0ff;" id="All"></th>
                     <th>楼层</th>
                     <th>说明</th>
                     <th>操作</th>
@@ -46,6 +45,8 @@
 
 <#--楼层弹出信息弹窗-->
     <div class="publicModal">
+    </div>
+    <div class="tcdPageCode">
     </div>
 <#--增删改查按钮-->
     <div class="modify">

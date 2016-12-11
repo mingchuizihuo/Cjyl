@@ -87,7 +87,7 @@
                 <li><span>特殊要求</span><input type="text" id="specialRequirements"></li>
                 <li><span>异常表现</span><input type="text" id="abnormalPatterns"></li>
                 <li><span>老人状态</span>
-                    <select class="form-control select" id="state">
+                    <select class="form-control select" id="">
                         <option>良好</option>
                         <option>一般</option>
                         <option>较差</option>
@@ -109,7 +109,7 @@
                     <li><span>姓名</span><input type="text" id="Sname"></li>
                     <li><span>联系电话</span><input type="text" id="Stel"></li>
                     <li><span>关系</span>
-                        <select class="form-control select" id="son">
+                        <select class="form-control select">
                             <option>儿子</option>
                             <option>女儿</option>
                             <option>亲戚</option>

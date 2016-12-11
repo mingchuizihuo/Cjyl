@@ -31,7 +31,6 @@ function findAllDate() {
 
         for(var i = 0 ; i < num ; i++){
             d=data.aaData[i];
-            console.log(d)
             //性别
             if(d.tid == 13){
                 sex += '<option value="'+d.id+'">'+d.dataName+'</option>'

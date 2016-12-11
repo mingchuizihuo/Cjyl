@@ -181,6 +181,6 @@ function del(id) {
     })
 }
 function add() {
-    // addOld();
-    // addSon();
+    addOld();
+    addSon();
 }

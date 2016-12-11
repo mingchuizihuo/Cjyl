@@ -26,8 +26,7 @@
             <table class="table table-striped table-bordered" id="oldTable">
                 <thead>
                 <tr>
-                <#--<th><input type="checkbox" style="background:#f00;color:#0f0;border:#0ff;" id="All"></th>-->
-                    <th></th>
+                <th><input type="checkbox" style="background:#f00;color:#0f0;border:#0ff;" id="All"></th>
                     <th>护理级别</th>
                     <th>管理费</th>
                     <th>服务费用</th>

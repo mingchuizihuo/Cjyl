@@ -1,10 +1,9 @@
 /**
  * Created by horo on 2016/12/7.
  */
-var url = domainUrl + "/serve/older_cost/";
+var url = domainUrl + "/serve/older_initial_fee/";
 $(function () {
     findAll();
-    add();
 });
 function findAll() {
    var urlFindAll = url + "findAll";
@@ -14,20 +13,25 @@ function findAll() {
    };
    getAjax(urlFindAll,false,getData,function (data) {
        console.log(JSON.stringify(data));
+       var d = data.aaData[0];
+       $("#checkInInitCostId").val(d.checkInInitCostId);
+       $("#checkInInitCostState").val(d.checkInInitCostState);
+       $(".initialFeeDate").val(d.initialFeeDate);
+       $(".closeAnAccountDate").val(d.closeAnAccountDate);
    })
 }
-function add() {
-    var urlAdd = url +"add";
+function update3() {
+    var urlAdd = url +"update";
     var postData = {
+        id:1,
         organizationLoginId:1,
         oldId:1,
-        serviceCharge:1,
-        serviceChargeContext:1,
-        serviceChargeState:1,
-        serviceChargeDate:"2016-05-02",
-        closeAnAccountDate:"2014-05-23"
+        checkInInitCostId:$("#checkInInitCostId").val(),
+        checkInInitCostState:$("#checkInInitCostId").val(),
+        initialFeeDate:$(".initialFeeDate").val(),
+        closeAnAccountDate:$(".closeAnAccountDate").val(),
     };
     postAjax(urlAdd,false,postData,function (data) {
-        alert("添加成功");
+
     })
 }

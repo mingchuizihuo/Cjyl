@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 @RequestMapping
 public class RegisterPageController {
-
     @RequestMapping(value="/{url}/{url2}")
     public String register(@PathVariable String url ,@PathVariable String url2){
 

@@ -34,15 +34,10 @@ function findAll() {
         $("#hobby").val(data.hobby);
         $("#specialRequirements").val(data.specialRequirements);
         $("#abnormalPatterns").val(data.abnormalPatterns);
-        $("#olderLeaveDate").val(data.olderLeaveDate.substring(0,11))
+        $("#olderLeaveDate").val(data.olderLeaveDate)
     })
 }
-
-//修改
-function make(id) {
-
-}
-function update() {
+function update1() {
     var urlUpdate = url +"update";
     var postData = {
         id:1,
@@ -74,7 +69,14 @@ function update() {
     };
     postAjax(urlUpdate,false,postData,function (data) {
         alert("修改成功");
+        findAll(currentPage);
     })
+}
+function update() {
+    update1();
+    update2();
+    update3();
+    $(".publicModal").hide();
 }
 //删除
 function del(id) {

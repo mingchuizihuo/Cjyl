@@ -13,7 +13,38 @@
     var domainUrl = '${domainUrl}' + "/rest";
     var domainFile = '${domainUrl}';
 </script>
-<body>
+<script>
+    function panduan() {
+        var userAgent = navigator.userAgent,
+                rMsie = /(msie\s|trident.*rv:)([\w.]+)/,
+                rFirefox = /(firefox)\/([\w.]+)/,
+                rOpera = /(opera).+version\/([\w.]+)/,
+                rChrome = /(chrome)\/([\w.]+)/,
+                rSafari = /version\/([\w.]+).*(safari)/;
+        var browser;
+        var version;
+        var ua = userAgent.toLowerCase();
+        function uaMatch(ua){
+            var match = rMsie.exec(ua);
+            if(match != null){
+                return { browser : "IE", version : match[2] || "0" };
+            }
+            if (match != null) {
+                return { browser : "", version : "0" };
+            }
+        }
+        var browserMatch = uaMatch(userAgent.toLowerCase());
+        console.log(browserMatch.version)
+        if (browserMatch.browser){
+            browser = browserMatch.browser;
+            version = browserMatch.version;
+        }
+        if(browserMatch.version != 10.0 && browserMatch.version != 11.0){
+            document.write("请选择新版本浏览器进行使用，暂不支持IE10以下浏览器");
+        }
+    }
+</script>
+<body onload="panduan()">
 <#--页面整体布局（绝对定位不出现页面滚动）-->
 <div id="main-body" class="animated">
 <#--页面头部-->
@@ -25,7 +56,7 @@
             <img src="${domainUrl}/assets/images/backstage/pingtai.png" class="two">
         </div>
         <div id="user-status">
-            <tui><a href="${domainUrl}">[ 退出 ]</a></tui>
+            <tui><a href="#"  onclick="loginOut()">[ 退出 ]</a></tui>
             欢迎您：<b>${(userBean.loginName)!}</b>
         </div>
         </div>
@@ -54,7 +85,7 @@
                     <div class="link">订单管理<xialaimg class="xialaImg"><img src="${domainUrl}/assets/images/backstage/xiala.png" ></xialaimg></div>
                     <ul class="submenu">
                         <li><a onclick="sideUrl('/order/costCount')"><img src="${domainUrl}/assets/images/backstage/dian.png" >费用结算</a></li>
-                        <li><a onclick="sideUrl('/order/dateil')"><img src="${domainUrl}/assets/images/backstage/dian.png" >明细查询</a></li>
+                        <#--<li><a onclick="sideUrl('/order/dateil')"><img src="${domainUrl}/assets/images/backstage/dian.png" >明细查询</a></li>-->
                     </ul>
                 </li>
                 <li>
@@ -84,12 +115,12 @@
                         <li><a onclick="sideUrl('/report/report')"><img src="${domainUrl}/assets/images/backstage/dian.png" >其他报表</a></li>
                     </ul>
                 </li>
-                <#--<li>-->
-                    <#--<div class="link">系统管理<xialaimg class="xialaImg"><img src="${domainUrl}/assets/images/backstage/xiala.png" ></xialaimg></div>-->
-                    <#--<ul class="submenu">-->
-                        <#--<li><a onclick="sideUrl('/system/updatePass')"><img src="${domainUrl}/assets/images/backstage/dian.png" >修改密码</a></li>-->
-                    <#--</ul>-->
-                <#--</li>-->
+                <li>
+                    <div class="link">系统管理<xialaimg class="xialaImg"><img src="${domainUrl}/assets/images/backstage/xiala.png" ></xialaimg></div>
+                    <ul class="submenu">
+                        <li><a onclick="sideUrl('/system/sonStaff')"><img src="${domainUrl}/assets/images/backstage/dian.png" >添加子员工</a></li>
+                    </ul>
+                </li>
             </ul>
             <#--功能弹出-->
 
@@ -116,8 +147,16 @@
 <script src="${domainUrl}/assets/js/OutJs/page/page.js"></script>
 <script src="${domainUrl}/assets/js/OutJs/date/jquery.date_input.pack.js"></script>
 <script src="${domainUrl}/assets/js/OutJs/date/Week.js"></script>
-<!--功能按钮效果弹出-->
-
-
+<script>
+function loginOut() {
+    var url = domainUrl + "/serve/login/loginOut";
+    var getData = {
+        
+    };
+    getAjax(url,false,getData,function (data) {
+            location.href = ""+domainFile+"";
+    })
+}
+</script>
 </body>
 </html>

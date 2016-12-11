@@ -12,6 +12,11 @@ public class IndexPageController {
 
     @RequestMapping("/index")
     public String index(){
+        return "/login";
+
+    }
+    @RequestMapping("/background")
+    public String background(){
         return "/serveNav";
 
     }

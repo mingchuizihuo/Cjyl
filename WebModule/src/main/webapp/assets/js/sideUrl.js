@@ -61,19 +61,22 @@ function modalUrl(floor,room,bed) {
             $(".publicModal").html(data);
             $("#floor").val(floor);
             $("#room").val(room);
-            $("#bed").val(bed)
+            $("#bed").val(bed);
             modalClose();
         }
     })
 }
 //老人信息弹窗
-function oldUrl(is) {
+function oldUrl(is,floor,room,bed) {
     var urlGet = domainUrl + "/options/old";
     $.ajax({
         type:"get",
         url:urlGet,
         success:function (data) {
             $(".publicModal").html(data);
+            $("#floor").val(floor);
+            $("#room").val(room);
+            $("#bed").val(bed);
             modalClose();
             if(is == 1){
                 $("#updateIs").hide();

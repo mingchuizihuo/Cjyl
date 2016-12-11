@@ -2,7 +2,6 @@ package com.idea.cjyl.totalmodule.web.domain.vo;
 
 import com.idea.cjyl.totalmodule.web.domain.pojo.MonthCharge;
 import com.idea.cjyl.totalmodule.web.domain.pojo.Older;
-import com.idea.cjyl.totalmodule.web.domain.pojo.OlderMonthCharge;
 
 import java.util.Date;
 
