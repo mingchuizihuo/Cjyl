@@ -37,6 +37,13 @@
         padding-left: 10px;
         border: 1px solid #D7DADD;
     }
+    #loginDiv input[type="password"]{
+        width: 340px;
+        height:40px;
+        font-size: 16px;
+        padding-left: 10px;
+        border: 1px solid #D7DADD;
+    }
     #loginDiv input[type="button"]{
         width: 340px;
         height:40px;
@@ -72,6 +79,7 @@
                 for(var i = 0; i <num ;i++){
                     if(Oname == data.aaData[i].name){
                         Oid = data.aaData[i].id;
+                        sessionStorage.setItem("OStaffId", Oid);
                     }
                 }
             });
@@ -89,6 +97,7 @@
                 for(var i = 0; i <num ;i++){
                     if(Oname == data.aaData[i].name){
                         Oid = data.aaData[i].id;
+                        sessionStorage.setItem("OStaffId", Oid);
                     }
                 }
             });
@@ -110,15 +119,20 @@
     }
     function login() {
         var url  = domainUrl + "/serve/login/login";
-        var getData = {
-            organizationLoginId:Oid,
-            loginName:$("#loginName").val(),
-            loginPassword:$("#loginPass").val()
-        };
-        getAjax(url,false,getData,function (data) {
-            console.log(JSON.stringify(data))
-            location.href = domainUrl+"/page/background"
-        })
+        if(Oid == ""){
+            alert("请清楚浏览器缓存重新登录");
+        }else{
+            var getData = {
+                organizationLoginId:Oid,
+                loginName:$("#loginName").val(),
+                loginPassword:$("#loginPass").val()
+            };
+            getAjax(url,false,getData,function (data) {
+                console.log(JSON.stringify(data))
+                location.href = domainUrl+"/page/background"
+            })
+        }
+
     }
 </script>
 <body>
@@ -129,7 +143,7 @@
                 <li style="font-size: 22px; font-weight: 600;color: #7F8080">账户登录</li>
                 <li><input type="text" placeholder="机构"  id="q1" class="quickQuery$focus"></li>
                 <li><input type="text" placeholder="用户名" id="loginName"></li>
-                <li><input type="text" placeholder="密码" id="loginPass"></li>
+                <li><input type="password" placeholder="密码" id="loginPass"></li>
                 <li><input type="button" value="登录" onclick="login()" id="login"></li>
             </ul>
         </div>

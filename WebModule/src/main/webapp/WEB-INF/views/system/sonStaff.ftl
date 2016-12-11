@@ -37,46 +37,50 @@
 <#--员工信息列表-->
     <div class="information">
         <div class="bs-example">
-            <table class="table table-striped table-bordered" id="oldTable">
-                <thead>
-                <tr>
-                <th><input type="checkbox" style="background:#f00;color:#0f0;border:#0ff;" id="All"></th>
-                    <th></th>
-                    <th>员工帐号</th>
-                    <th>员工权限</th>
-                </tr>
-                </thead>
-                <tbody id="tbodyDelId">
-                <tr>
-                    <td><input type="checkbox" name="del" value="del1"></td>
-                    <td>白晓辉</td>
-                    <td>男</td>
-                    <td>1986-05-5-05</td>
-                    <td>2016-10-05</td>
-                    <td>护理部</td>
-                    <td>职员</td>
-                    <td>良好</td>
-                    <td>14862579835</td>
-                    <td>未婚</td>
-                    <td>本科</td>
-                    <td>烹饪</td>
-                    <td>3000</td>
-                    <td><input type="button" class="button" onclick="staffInUrl()" value="修改"></td>
-                </tr>
-                </tbody>
-            </table>
+            <div style="width: 300px;height: 300px; margin: 10% auto;">
+                    <ul id="loginDiv">
+                        <li><input type="text" placeholder="员工帐号" id="staffName"></li>
+                        <li><input type="password" placeholder="员工密码" id="staffPass"></li>
+                        <li><input type="button" value="添加" onclick="add()"></li>
+                    </ul>
+                <style>
+                    #loginDiv{
+                        padding-top: 50px;
+                    }
+                    #loginDiv li{
+                        margin-top: 20px;
+                        margin-left: 30px;
+                    }
+                    #loginDiv input[type="text"]{
+                        width: 240px;
+                        height:30px;
+                        font-size: 16px;
+                        padding-left: 10px;
+                        border: 1px solid #D7DADD;
+                        color: #000;
+                    }
+                    #loginDiv input[type="password"]{
+                        width: 240px;
+                        height:30px;
+                        font-size: 16px;
+                        padding-left: 10px;
+                        border: 1px solid #D7DADD;color: #000;
+                    }
+                    #loginDiv input[type="button"]{
+                        width: 240px;
+                        height:30px;
+                        font-size: 16px;
+                        background-color: #00A1E9;
+                        color: #fff;
+                        border: 0;
+                        cursor: pointer;
+                    }
+                </style>
+            </div>
         </div>
-    </div>
-<#--弹出老人信息弹窗-->
-    <div class="tcdPageCode">
-
-    </div>
-    <div class="publicModal">
     </div>
 <#--增删改查按钮-->
     <div class="modify">
-        <button class="pull-left btn-style btn-ma" onclick="staffInUrl(1)"><img src="${domainUrl}/assets/images/backstage/jia.png">增加</button>
-        <button class="pull-left btn-style btn-ma" onclick="dels()"><img src="${domainUrl}/assets/images/backstage/del.png">删除</button>
         <div class="clearfix"></div>
     </div>
 

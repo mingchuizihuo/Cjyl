@@ -37,6 +37,8 @@ public class LoginController {
      * @param login
      * @return
      */
+    @ResponseBody
+    @RequestMapping(value = "add", method = RequestMethod.POST)
     public ResultData add(Login login) {
         try {
             loginService.insert(login);
@@ -56,6 +58,8 @@ public class LoginController {
      * @param limit
      * @return
      */
+    @ResponseBody
+    @RequestMapping(value = "findAll", method = RequestMethod.GET)
     public ResultData findAll(Integer currentPage, Integer limit) {
         AnalysisConstant.selectState = 2;
         Page<Login> logins = loginService.findAll(currentPage, limit);

@@ -91,3 +91,4 @@ $(function() {
 
     var sideList = new Accordion($('#sideList'), false);
 });
+var OStaffId =  sessionStorage.getItem("OStaffId");

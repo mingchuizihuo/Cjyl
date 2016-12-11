@@ -5,7 +5,6 @@
     <link href="${domainUrl}/assets/css/mainBody.css" rel="stylesheet">
     <link href="${domainUrl}/assets/css/OutCss/page/page.css" rel="stylesheet">
     <link href="${domainUrl}/assets/css/OutCss/date/jquery.data_input.pack.css" rel="stylesheet">
-
     <meta charset="utf-8"/>
     <title>承嘉智慧养老中心</title>
 </head>
@@ -57,7 +56,7 @@
         </div>
         <div id="user-status">
             <tui><a href="#"  onclick="loginOut()">[ 退出 ]</a></tui>
-            欢迎您：<b>${(userBean.loginName)!}</b>
+            欢迎您：<b>${(loginInfo.loginName)!}</b>
         </div>
         </div>
     </div>
