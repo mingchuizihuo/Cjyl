@@ -20,13 +20,6 @@ public class LoginTest extends SupportTest {
 
     @Test
     public void testLogin(){
-        Login login = new Login();
-        login.setLoginName("admin");
-        login.setLoginPassword("123456");
-        login.setOrganizationLoginId(1l);
-
-        login = loginService.login(login);
-        System.out.println(login);
-        System.out.println(AnalysisConstant.login.getId());
+        organizationLoginService.findAll(1,1000);
     }
 }
