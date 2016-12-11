@@ -30,7 +30,9 @@ import java.util.List;
    public Login login(Login login) {
 
           LoginExample loginExample = new LoginExample();
-          loginExample.createCriteria().andOrganizationLoginIdEqualTo(login.getOrganizationLoginId()).andLoginNameEqualTo(login.getLoginName())
+          loginExample.createCriteria().
+                  andOrganizationLoginIdEqualTo(login.getOrganizationLoginId()).
+                  andLoginNameEqualTo(login.getLoginName())
                   .andLoginPasswordEqualTo(login.getLoginPassword());
 
           List<Login> logins =  loginDao.selectByExample(loginExample);

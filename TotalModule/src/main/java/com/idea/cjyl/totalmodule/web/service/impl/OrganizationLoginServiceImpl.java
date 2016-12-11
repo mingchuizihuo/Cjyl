@@ -11,17 +11,27 @@ import com.idea.cjyl.totalmodule.web.service.OrganizationLoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 
 
 @Service
-    public class OrganizationLoginServiceImpl extends GenericServiceImpl<OrganizationLogin, Long,OrganizationLoginExample> implements OrganizationLoginService {
+public class OrganizationLoginServiceImpl extends GenericServiceImpl<OrganizationLogin, Long, OrganizationLoginExample> implements OrganizationLoginService {
 
-       @Autowired
-       private OrganizationLoginMapper organizationloginDao;
-       @Override
-       public GenericDao<OrganizationLogin, Long,OrganizationLoginExample> getDao() {
-       return organizationloginDao;
-       }
+    @Autowired
+    private OrganizationLoginMapper organizationloginDao;
+
+    @Override
+    public GenericDao<OrganizationLogin, Long, OrganizationLoginExample> getDao() {
+        return organizationloginDao;
+    }
 
 
+    @Override
+    public List<OrganizationLogin> likeGetOrganizationName(String organizationName) {
+        OrganizationLoginExample organizationLoginExample = new OrganizationLoginExample();
+        organizationLoginExample.createCriteria().andNameLike(organizationName);
+        List<OrganizationLogin> organizationLogins = organizationloginDao.selectByExample(organizationLoginExample);
+
+        return organizationLogins;
+    }
 }
