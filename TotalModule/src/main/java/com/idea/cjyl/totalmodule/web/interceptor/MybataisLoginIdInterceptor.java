@@ -60,8 +60,8 @@ public class MybataisLoginIdInterceptor implements Interceptor {
         String prefix=null;
         String fromTable=null;
         String suffix = null;
-
-        if(sql.indexOf("SELECT")!=-1 || sql.indexOf("select")!=-1){
+        System.out.println(sql);
+        if((sql.indexOf("SELECT")!=-1 || sql.indexOf("select")!=-1) && sql.indexOf("login")==-1){
 
 
             if(sql.indexOf("count(*)")!=-1){

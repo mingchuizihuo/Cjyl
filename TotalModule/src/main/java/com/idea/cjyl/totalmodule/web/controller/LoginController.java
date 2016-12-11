@@ -28,6 +28,24 @@ public class LoginController {
 
     @Autowired
     private OrganizationLoginService organizationLoginService;
+
+    /**
+     * 添加子账号
+     * @param login
+     * @return
+     */
+    public ResultData add(Login login){
+        try {
+            loginService.insert(login);
+
+
+        }catch (Exception e){
+            return ResultData.build().addErroe();
+        }
+        return ResultData.build();
+
+    }
+
     /**
      * 登陆
      * @param login
