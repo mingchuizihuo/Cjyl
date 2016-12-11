@@ -1,6 +1,8 @@
 package com.idea.cjyl.totalmodule.web.interceptor;
 
 import com.github.pagehelper.Page;
+import com.idea.cjyl.totalmodule.web.domain.pojo.Login;
+import com.idea.cjyl.totalmodule.web.globals.AnalysisConstant;
 import net.sf.json.JSON;
 import org.apache.commons.lang3.reflect.FieldUtils;
 import org.apache.ibatis.executor.Executor;
@@ -83,8 +85,9 @@ public class MybataisLoginIdInterceptor implements Interceptor {
             }
 
 
-
-            fromTable = "from (select * from "+fromTable+" where organization_login_id = 1) "+fromTable+" ";
+            Login login = AnalysisConstant.login;
+            System.out.println(login.getId()+"=====================");
+            fromTable = "from (select * from "+fromTable+" where organization_login_id = "+login.getId()+") "+fromTable+" ";
             return prefix+fromTable+suffix;
         }else{
             return sql;

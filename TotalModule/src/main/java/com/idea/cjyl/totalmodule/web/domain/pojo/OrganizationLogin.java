@@ -5,8 +5,6 @@ public class OrganizationLogin {
 
     private String name;
 
-    private String loginPassword;
-
     public Long getId() {
         return id;
     }
@@ -21,13 +19,5 @@ public class OrganizationLogin {
 
     public void setName(String name) {
         this.name = name == null ? null : name.trim();
-    }
-
-    public String getLoginPassword() {
-        return loginPassword;
-    }
-
-    public void setLoginPassword(String loginPassword) {
-        this.loginPassword = loginPassword == null ? null : loginPassword.trim();
     }
 }

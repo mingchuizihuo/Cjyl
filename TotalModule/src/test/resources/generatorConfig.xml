@@ -110,10 +110,13 @@
 -->
 
 
-        <table tableName="older_month_charge" domainObjectName="OlderMonthCharge">
+        <table tableName="organization_login" domainObjectName="OrganizationLogin">
             <generatedKey column="id" sqlStatement="JDBC" identity="true" />
         </table>
 
+        <table tableName="login" domainObjectName="Login">
+            <generatedKey column="id" sqlStatement="JDBC" identity="true" />
+        </table>
 
 
     </context>

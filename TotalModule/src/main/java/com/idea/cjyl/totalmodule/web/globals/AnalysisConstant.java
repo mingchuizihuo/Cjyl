@@ -1,6 +1,7 @@
 package com.idea.cjyl.totalmodule.web.globals;
 
 import com.idea.cjyl.totalmodule.web.domain.pojo.DataDictionary;
+import com.idea.cjyl.totalmodule.web.domain.pojo.Login;
 
 import java.util.List;
 
@@ -10,4 +11,5 @@ import java.util.List;
 public class AnalysisConstant {
 
     public static List<DataDictionary> dataDictionaryList;
+    public static Login login;
 }
