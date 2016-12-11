@@ -11,5 +11,6 @@ import java.util.List;
 public class AnalysisConstant {
 
     public static List<DataDictionary> dataDictionaryList;
-    public static Login login;
+    public static  Login login = new Login();
+    public static int selectState = 3;
 }

@@ -20,6 +20,7 @@ public class LoginTest extends SupportTest {
 
     @Test
     public void testLogin(){
-        organizationLoginService.findAll(1,1000);
+        System.out.println(organizationLoginService.likeGetOrganizationName("爱"));
+
     }
 }

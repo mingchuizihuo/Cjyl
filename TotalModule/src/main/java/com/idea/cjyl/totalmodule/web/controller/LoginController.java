@@ -1,5 +1,6 @@
 package com.idea.cjyl.totalmodule.web.controller;
 
+import com.github.pagehelper.Page;
 import com.idea.cjyl.core.common.ResultData;
 import com.idea.cjyl.totalmodule.web.domain.pojo.Login;
 import com.idea.cjyl.totalmodule.web.domain.pojo.OrganizationLogin;
@@ -15,6 +16,7 @@ import sun.misc.Contended;
 import sun.rmi.log.LogInputStream;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 /**
  * Created by xiao on 2016/12/11.
@@ -31,15 +33,16 @@ public class LoginController {
 
     /**
      * 添加子账号
+     *
      * @param login
      * @return
      */
-    public ResultData add(Login login){
+    public ResultData add(Login login) {
         try {
             loginService.insert(login);
 
 
-        }catch (Exception e){
+        } catch (Exception e) {
             return ResultData.build().addErroe();
         }
         return ResultData.build();
@@ -47,18 +50,39 @@ public class LoginController {
     }
 
     /**
+     * 查询子账号
+     *
+     * @param currentPage
+     * @param limit
+     * @return
+     */
+    public ResultData findAll(Integer currentPage, Integer limit) {
+        AnalysisConstant.selectState = 2;
+        Page<Login> logins = loginService.findAll(currentPage, limit);
+        AnalysisConstant.selectState = 3;
+        return ResultData.build().
+                parsePageBean(logins);
+    }
+
+    /**
      * 登陆
+     *
      * @param login
      * @return
      */
     @ResponseBody
-    @RequestMapping(value = "login",method = RequestMethod.GET)
-    public ResultData login(Login login,HttpSession session){
-        if(loginService.login(login).getId()==null){
-           return  ResultData.build().put("result",false);
-        }else{
+    @RequestMapping(value = "login", method = RequestMethod.GET)
+    public ResultData login(Login login, HttpSession session) {
+        AnalysisConstant.selectState = 1;
+        if (loginService.login(login).getId() == null) {
+            AnalysisConstant.selectState = 3;
+            return ResultData.build().put("result", false);
+        } else {
+
             login = loginService.login(login);
-            session.setAttribute("loginInfo",login);
+            AnalysisConstant.login = login;
+            AnalysisConstant.selectState = 3;
+            session.setAttribute("loginInfo", login);
             return ResultData.build().parseBean(login);
 
         }
@@ -68,37 +92,45 @@ public class LoginController {
 
     /**
      * 登出
+     *
      * @param session
      * @return
      */
     @ResponseBody
-    @RequestMapping(value = "loginOut",method = RequestMethod.GET)
-    public ResultData loginOut(HttpSession session){
+    @RequestMapping(value = "loginOut", method = RequestMethod.GET)
+    public ResultData loginOut(HttpSession session) {
         session.removeAttribute("loginInfo");
         AnalysisConstant.login = null;
-        return ResultData.build().put("result",true);
+        AnalysisConstant.selectState = 3;
+        return ResultData.build().put("result", true);
     }
 
     /**
      * 模糊查询机构名
+     *
      * @param organizationName
      * @return
      */
     @ResponseBody
-    @RequestMapping(value = "likeGetOrganizationName",method = RequestMethod.GET)
-    public ResultData likeGetOrganizationName(String organizationName){
+    @RequestMapping(value = "likeGetOrganizationName", method = RequestMethod.GET)
+    public ResultData likeGetOrganizationName(String organizationName) {
 
+        AnalysisConstant.selectState = 2;
+        List<OrganizationLogin> organizationLogins = organizationLoginService.likeGetOrganizationName(organizationName);
 
-        return ResultData.build().parseList(organizationLoginService.likeGetOrganizationName(organizationName));
+        AnalysisConstant.selectState = 3;
+        return ResultData.build().parseList(organizationLogins);
     }
 
     /**
      * 查询所有
      */
     @ResponseBody
-    @RequestMapping(value = "findAllOrganizationName",method = RequestMethod.GET)
-    public ResultData findAllOrganizationName(){
-
-        return ResultData.build().parsePageBean(organizationLoginService.findAll(1,1000000));
+    @RequestMapping(value = "findAllOrganizationName", method = RequestMethod.GET)
+    public ResultData findAllOrganizationName() {
+        AnalysisConstant.selectState = 2;
+        Page<OrganizationLogin> organizationLogins = organizationLoginService.findAll(1, 1000000);
+        AnalysisConstant.selectState = 3;
+        return ResultData.build().parsePageBean(organizationLogins);
     }
 }
