@@ -6,7 +6,7 @@
     <div class="feiyong">
         <div class="box">
             <ul>
-                <li><span>护理级别</span><input type="text" id="nursingGrades"></li>
+                <li><span>护理级别</span><select name="" id="nursingGrades"></select></li>
                 <li><span class="ma">管理费</span><input type="text" id="administrativeFee"></li>
                 <li><span>服务费用</span><input type="text" id="serviceCharge"> </li>
                 <li><span class="ma">床位费用</span><input type="text" id="bedCost"></li>
@@ -24,3 +24,4 @@
         <button class="modalClose" >取消</button>
     </div>
 </div>
+<script src="${domainUrl}/assets/js/TotalModule/filter.js"></script>

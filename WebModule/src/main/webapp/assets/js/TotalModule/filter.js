@@ -7,6 +7,7 @@ $(function () {
     }, 100);
 
 });
+
 function findAllDate() {
     var url  = domainUrl + "/serve/data_dictionary/findAll";
     var getData = {
@@ -19,6 +20,7 @@ function findAllDate() {
         var num = data.iTotalRecords;
         var sex='';
         var nurse='';
+        var nurseLeave = '';
         var faith='';
         var politics='';
         var takeCare='';
@@ -27,10 +29,9 @@ function findAllDate() {
         var son='';
         var aaa='';
 
-
-
         for(var i = 0 ; i < num ; i++){
             d=data.aaData[i];
+            console.log(d)
             //性别
             if(d.tid == 13){
                 sex += '<option value="'+d.id+'">'+d.dataName+'</option>'
@@ -67,12 +68,15 @@ function findAllDate() {
             if(d.tid == 103){
                 aaa += '<option value="'+d.id+'">'+d.dataName+'</option>'
             }
-
+            //护理级别
+            if(d.tid == 114){
+                nurseLeave += '<option value="'+d.id+'">'+d.dataName+'</option>'
+            }
 
         }
-
         $("#sex").html(sex);
         $("#nurse").html(nurse);
+        $("#nursingGrades").html(nurseLeave);
         $("#faith").html(faith);
         $("#politics").html(politics);
         $("#takeCare").html(takeCare);

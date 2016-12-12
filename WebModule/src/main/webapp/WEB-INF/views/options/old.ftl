@@ -16,11 +16,11 @@
     <h2>老人档案</h2>
     <!-- 选项卡标题 -->
     <ul class="nav nav-tabs" role="tablist">
-        <li role="presentation" style="width:33%" class="active"><a href="#oldman" role="tab" data-toggle="tab">老人信息</a></li>
-        <li role="presentation" style="width:33%" ><a href="#relatives" role="tab" data-toggle="tab">亲属信息</a></li>
-        <li role="presentation" style="width:33%" ><a href="#stayin" role="tab" data-toggle="tab">入住初始费</a></li>
-        <#--<li role="presentation"><a href="#paycost" role="tab" data-toggle="tab">缴费情况</a></li>-->
-        <#--<li role="presentation"><a href="#nursing" role="tab" data-toggle="tab">护理记录</a></li>-->
+        <li role="presentation"  class="active"><a href="#oldman" role="tab" data-toggle="tab">老人信息</a></li>
+        <li role="presentation"  ><a href="#relatives" role="tab" data-toggle="tab">亲属信息</a></li>
+        <li role="presentation" ><a href="#stayin" role="tab" data-toggle="tab">入住初始费</a></li>
+        <li role="presentation"><a href="#paycost" role="tab" data-toggle="tab">缴费情况</a></li>
+        <li role="presentation"><a href="#nursing" role="tab" data-toggle="tab">护理记录</a></li>
         <div class="clearfix"></div>
     </ul>
     <script type="text/javascript">
@@ -139,32 +139,32 @@
         </div>
 
     <#--缴费情况（月费用）-->
-        <#--<div role="tabpanel" class="tab-pane paycost" id="paycost">-->
-            <#--<div class="box">-->
-                <#--<ul>-->
-                    <#--<li><span>护理级别</span><div class="aa"></div></li>-->
-                    <#--<li><span>管理费</span><div class="aa"></div></li>-->
-                    <#--<li><span>服务费用</span><div class="aa"></div></li>-->
-                    <#--<li><span>床位费用</span><div class="aa"></div></li>-->
-                    <#--<li><span>伙食费用</span><div class="aa"></div></li>-->
-                    <#--<li><span>总计</span><div class="aa"></div></li>-->
-                    <#--<div class="clearfix"></div>-->
-                <#--</ul>-->
-            <#--</div>-->
+        <div role="tabpanel" class="tab-pane paycost" id="paycost">
+            <div class="box">
+                <ul>
+                    <li><span>护理级别</span><select name="" id="nursingGrades"></select></li>
+                    <li><span>管理费</span><input type="text"></li>
+                    <li><span>服务费用</span><input type="text"></li>
+                    <li><span>床位费用</span><input type="text"></li>
+                    <li><span>伙食费用</span><input type="text"></li>
+                    <li><span>总计</span><input type="text"></li>
+                    <div class="clearfix"></div>
+                </ul>
+            </div>
 
-        <#--</div>-->
+        </div>
     <#--护理记录（服务费用表）-->
-        <#--<div role="tabpanel" class="tab-pane nursing" id="nursing">-->
-            <#--<div class="box">-->
-                <#--<ul>-->
-                    <#--<li><span>服务项目</span><div class="aa"></div></li>-->
-                    <#--<li><span>价格</span><div class="aa"></div></li>-->
-                    <#--<li><span>健康状况</span><div class="aa"></div></li>-->
-                    <#--<li><span>护理及用药情况</span><div class="aa"></div></li>-->
-                    <#--<div class="clearfix"></div>-->
-                <#--</ul>-->
-            <#--</div>-->
-        <#--</div>-->
+        <div role="tabpanel" class="tab-pane nursing" id="nursing">
+            <div class="box">
+                <ul>
+                    <li><span>服务项目</span><input type="text"></li>
+                    <li><span>价格</span><input type="text"></li>
+                    <li><span>健康状况</span><input type="text"></li>
+                    <li><span>护理及用药情况</span><input type="text"></li>
+                    <div class="clearfix"></div>
+                </ul>
+            </div>
+        </div>
     </div>
     <div class="bottom">
         <button onclick="add()" id="addIs">确认添加</button>

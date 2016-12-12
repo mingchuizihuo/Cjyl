@@ -118,46 +118,49 @@ function addOld() {
 //修改
 function make(id) {
     oldUrl();
-    var urlFindAll = url + "findAll";
-    var getData = {
-        currentPage: currentPage,
-        limit: limit
-    };
-    getAjax(urlFindAll,false,getData,function (data) {
-        var num = data.iTotalRecords;
-        var d;
-        for(var i = 0; i < num ; i++){
-            d =  data.aaData[i];
-            if(d.id == id){
-                $("#id").val(id);
-                $("#name").val(d.name);
-                $("#checkInDate").val(d.checkInDate);
-                $("#cardId").val(d.cardId);
-                $("#birthday").val(d.birthday);
-                $("#tel").val(d.tel);
-                $("#censusRegister").val(d.censusRegister);
-                $("#nation").val(d.nation);
-                $("#selfIngredient").val(d.selfIngredient);
-                $("#pluse").val(d.pluse);
-                $("#bloodPressure").val(d.bloodPressure);
-                $("#allergicDrug").val(d.allergicDrug);
-                $("#indicationHospital").val(d.indicationHospital);
-                $("#indicationDoctor").val(d.indicationDoctor);
-                $("#principalDisease").val(d.principalDisease);
-                $("#diseasesHistory").val(d.diseasesHistory);
-                $("#hospitalTel").val(d.hospitalTel);
-                $("#dietCharacteristics").val(d.dietCharacteristics);
-                $("#disposition").val(d.disposition);
-                $("#hobby").val(d.hobby);
-                $("#specialRequirements").val(d.specialRequirements);
-                $("#abnormalPatterns").val(d.abnormalPatterns);
-                $("#olderLeaveDate").val(d.olderLeaveDate);
-                $("#floor").val(d.floor);
-                $("#room").val(d.room);
-                $("#bed").val(d.bed);
+    setTimeout(function () {
+        var urlFindAll = url + "findAll";
+        var getData = {
+            currentPage: currentPage,
+            limit: limit
+        };
+        getAjax(urlFindAll,false,getData,function (data) {
+            var num = data.iTotalRecords;
+            var d;
+            for(var i = 0; i < num ; i++){
+                d =  data.aaData[i];
+                if(d.id == id){
+                    $("#id").val(id);
+                    $("#name").val(d.name);
+                    $("#checkInDate").val(d.checkInDate);
+                    $("#cardId").val(d.cardId);
+                    $("#birthday").val(d.birthday);
+                    $("#tel").val(d.tel);
+                    $("#censusRegister").val(d.censusRegister);
+                    $("#nation").val(d.nation);
+                    $("#selfIngredient").val(d.selfIngredient);
+                    $("#pluse").val(d.pluse);
+                    $("#bloodPressure").val(d.bloodPressure);
+                    $("#allergicDrug").val(d.allergicDrug);
+                    $("#indicationHospital").val(d.indicationHospital);
+                    $("#indicationDoctor").val(d.indicationDoctor);
+                    $("#principalDisease").val(d.principalDisease);
+                    $("#diseasesHistory").val(d.diseasesHistory);
+                    $("#hospitalTel").val(d.hospitalTel);
+                    $("#dietCharacteristics").val(d.dietCharacteristics);
+                    $("#disposition").val(d.disposition);
+                    $("#hobby").val(d.hobby);
+                    $("#specialRequirements").val(d.specialRequirements);
+                    $("#abnormalPatterns").val(d.abnormalPatterns);
+                    $("#olderLeaveDate").val(d.olderLeaveDate);
+                    $("#floor").val(d.floor);
+                    $("#room").val(d.room);
+                    $("#bed").val(d.bed);
+                }
             }
-        }
-    })
+        })
+    }, 100);
+
 }
 function update() {
     var urlUpdate = url +"update";
