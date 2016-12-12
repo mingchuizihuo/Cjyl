@@ -102,68 +102,153 @@
                 <div class="clearfix"></div>
             </ul>
         </div>
+
+
     <#--亲属信息-->
         <div role="tabpanel" class="tab-pane relatives" id="relatives">
-            <div class="box">
-                <ul>
-                    <li><span>姓名</span><input type="text" id="Sname"></li>
-                    <li><span>联系电话</span><input type="text" id="Stel"></li>
-                    <li><span>关系</span>
-                        <select class="form-control select">
-                            <option>儿子</option>
-                            <option>女儿</option>
-                            <option>亲戚</option>
-                        </select>
-                    </li>
-                    <li><span>身份证号</span><input  id="ScardId" type="text"></li>
-                    <li><span>工作单位</span><input  id="SjobName" type="text" ></li>
-                    <li><span>住址</span><input id="ShomeAddress" type="text"></li>
-                    <div class="clearfix"></div>
-                </ul>
+            <div class="box box1">
+                <table class="table table-bordered">
+                    <thead class="ceshi1">
+                    <tr>
+                        <th class="aa">姓名</th>
+                        <th class="aa">联系电话</th>
+                        <th class="aa">关系</th>
+                        <th class="aa">身份证号</th>
+                        <th class="aa">工作单位</th>
+                        <th class="aa">住址</th>
+                    </tr>
+                    </thead>
+                    <tbody class="ceshi2">
+                    <tr>
+                        <td><input type="text" id="Sname"></td>
+                        <td><input type="text" id="Stel"></td>
+                        <td><input type="text" id="Stel"></td>
+                        <td><input  id="ScardId" type="text"></td>
+                        <td><input  id="SjobName" type="text" ></td>
+                        <td><input id="ShomeAddress" type="text"></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <#--<ul>-->
+                    <#--<li><span>姓名</span><input type="text" id="Sname"></li>-->
+                    <#--<li><span>联系电话</span><input type="text" id="Stel"></li>-->
+                    <#--<li><span>关系</span>-->
+                        <#--<select class="form-control select">-->
+                            <#--<option>儿子</option>-->
+                            <#--<option>女儿</option>-->
+                            <#--<option>亲戚</option>-->
+                        <#--</select>-->
+                    <#--</li>-->
+                    <#--<li><span>身份证号</span><input  id="ScardId" type="text"></li>-->
+                    <#--<li><span>工作单位</span><input  id="SjobName" type="text" ></li>-->
+                    <#--<li><span>住址</span><input id="ShomeAddress" type="text"></li>-->
+                    <#--<div class="clearfix"></div>-->
+                <#--</ul>-->
+
             </div>
         </div>
 
     <#--入住初始费-->
         <div role="tabpanel" class="tab-pane stayin" id="stayin">
-            <div class="box">
-                <ul>
-                    <li><span>项目</span><select class="form-control select" id="CheckItem">
-                        <option>儿子</option>
-                        <option>女儿</option>
-                        <option>亲戚</option>
-                    </select></li>
-                    <li><span>费用</span><input type="text" id="checkCost" ></li>
-                    <div class="clearfix"></div>
-                </ul>
+            <div class="box box1">
+                <table class="table table-bordered">
+                    <thead class="ceshi1">
+                    <tr>
+                        <th class="aa">项目</th>
+                        <th class="aa">费用</th>
+                    </tr>
+                    </thead>
+                    <tbody class="ceshi2">
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="text" id="checkCost"></td>
+                    </tr>
+
+
+
+                    </tbody>
+                </table>
+
+                <#--<ul>-->
+                    <#--<li><span>项目</span><select class="form-control select" id="CheckItem">-->
+                        <#--<option>儿子</option>-->
+                        <#--<option>女儿</option>-->
+                        <#--<option>亲戚</option>-->
+                    <#--</select></li>-->
+                    <#--<li><span>费用</span><input type="text" id="checkCost" ></li>-->
+                    <#--<div class="clearfix"></div>-->
+                <#--</ul>-->
+
             </div>
         </div>
 
     <#--缴费情况（月费用）-->
-        <div role="tabpanel" class="tab-pane paycost" id="paycost">
-            <div class="box">
-                <ul>
-                    <li><span>护理级别</span><select name="" id="nursingGrades"></select></li>
-                    <li><span>管理费</span><input type="text"></li>
-                    <li><span>服务费用</span><input type="text"></li>
-                    <li><span>床位费用</span><input type="text"></li>
-                    <li><span>伙食费用</span><input type="text"></li>
-                    <li><span>总计</span><input type="text"></li>
-                    <div class="clearfix"></div>
-                </ul>
-            </div>
 
+        <div role="tabpanel" class="tab-pane paycost" id="paycost">
+            <table class="table table-bordered">
+                <thead class="ceshi1">
+                <tr>
+                    <th class="aa">护理级别</th>
+                    <th class="aa">管理费</th>
+                    <th class="aa">服务费用</th>
+                    <th class="aa">床位费用</th>
+                    <th class="aa">伙食费用</th>
+                    <th class="aa">总计</th>
+                </tr>
+                </thead>
+                <tbody class="ceshi2">
+                <tr>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                </tr>
+
+                </tbody>
+            </table>
+        <#--<div class="box">-->
+                <#--<ul>-->
+                    <#--<li><span>护理级别</span><select name="" id="nursingGrades"></select></li>-->
+                    <#--<li><span>管理费</span><input type="text"></li>-->
+                    <#--<li><span>服务费用</span><input type="text"></li>-->
+                    <#--<li><span>床位费用</span><input type="text"></li>-->
+                    <#--<li><span>伙食费用</span><input type="text"></li>-->
+                    <#--<li><span>总计</span><input type="text"></li>-->
+                    <#--<div class="clearfix"></div>-->
+                <#--</ul>-->
+            <#--</div>-->
         </div>
     <#--护理记录（服务费用表）-->
         <div role="tabpanel" class="tab-pane nursing" id="nursing">
-            <div class="box">
-                <ul>
-                    <li><span>服务项目</span><input type="text"></li>
-                    <li><span>价格</span><input type="text"></li>
-                    <li><span>健康状况</span><input type="text"></li>
-                    <li><span>护理及用药情况</span><input type="text"></li>
-                    <div class="clearfix"></div>
-                </ul>
-            </div>
+            <table class="table table-bordered">
+                <thead class="ceshi1">
+                <tr>
+                    <th class="aa">服务项目</th>
+                    <th class="aa">价格</th>
+                    <th class="aa">健康状况</th>
+                    <th class="aa">护理及用药情况</th>
+                </tr>
+                </thead>
+                <tbody class="ceshi2">
+                <tr>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                </tr>
+                </tbody>
+            </table>
+            <#--<div class="box">-->
+                <#--<ul>-->
+                    <#--<li><span>服务项目</span><input type="text"></li>-->
+                    <#--<li><span>价格</span><input type="text"></li>-->
+                    <#--<li><span>健康状况</span><input type="text"></li>-->
+                    <#--<li><span>护理及用药情况</span><input type="text"></li>-->
+                    <#--<div class="clearfix"></div>-->
+                <#--</ul>-->
+            <#--</div>-->
         </div>
     </div>
     <div class="bottom">

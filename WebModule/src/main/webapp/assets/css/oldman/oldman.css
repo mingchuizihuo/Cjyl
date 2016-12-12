@@ -4,6 +4,18 @@
 .information table th{color:#37bf97;font-size:16px;}
 .table > thead > tr > th{border-bottom:1px #656c7e solid;background: #091b31;
 }
+.table > thead > tr > .aa{background: none;font-size:14px;color:#5b5c5c;border:0px;}
+
+
+.box1{padding:0px !important; border: 0px !important;}
+.ceshi1 tr th{border:1px #656c7e solid !important;}
+.ceshi2 td{height:36px;color:#5b5c5c;border:1px #656c7e solid !important;}
+.ceshi2 select{background: none;}
+.ceshi2 input{width:100%;background:none;border:none;}
+
+
+
+
 .table-bordered > tbody > tr > td{border:1px #656c7e solid !important;}
 .information table td{color:#fff;font-size:14px;}
 .table-striped > tbody{background: #091b31}
@@ -13,7 +25,6 @@
 .information td input{ background:linear-gradient(#465782,#1f2b45);border:none;width:50px;height:25px;margin: auto;}
 .information td input:hover{background: linear-gradient(#6072a2,#313f62);}
 .information td input:focus{background:#1172c9;}
-
 .information td button{ background:linear-gradient(#465782,#1f2b45);border:none;width:50px;height:25px;margin: auto;}
 .information td button:hover{background: linear-gradient(#6072a2,#313f62);}
 .information td button:focus{background:#1172c9;}
