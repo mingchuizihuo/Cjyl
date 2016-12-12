@@ -37,16 +37,16 @@
         <#--</ul>-->
     <#--</div>-->
     <div class="specialServe">
-        <div class="box">
-            <ul>
-                <li><span>编号</span><input type="text"></li>
-                <li><span>健康状况</span><input type="text"></li>
-                <li><span>用药情况</span><input type="text"> </li>
-                <li><span>护理时间</span><input type="text"></li>
-                <li><span>护理人员</span><input type="text"></li>
-                <div class="clearfix"></div>
-            </ul>
-        </div>
+        <#--<div class="box">-->
+            <#--<ul>-->
+                <#--<li><span>编号</span><input type="text"></li>-->
+                <#--<li><span>健康状况</span><input type="text"></li>-->
+                <#--<li><span>用药情况</span><input type="text"> </li>-->
+                <#--<li><span>护理时间</span><input type="text"></li>-->
+                <#--<li><span>护理人员</span><input type="text"></li>-->
+                <#--<div class="clearfix"></div>-->
+            <#--</ul>-->
+        <#--</div>-->
         <div class="clearfix"></div>
     </div>
 

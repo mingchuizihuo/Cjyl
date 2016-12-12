@@ -62,7 +62,6 @@
                 </tr>
                 </thead>
                 <tbody id="tbodyDelId">
-
                 </tbody>
             </table>
         </div>

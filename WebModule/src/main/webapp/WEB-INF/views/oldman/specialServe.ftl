@@ -38,32 +38,32 @@
     <#--</div>-->
 
     <div class="specialServe">
-        <div class="box">
-            <h2>编码：</h2>
-            <ul>
-                <li><span>服务日期</span><input type="text"></li>
-                <li><span>老人</span><input type="text"></li>
-                <li><span>状态</span><input type="text"> </li>
-                <li><span>服务项目</span><input type="text"></li>
-                <li><span>金额</span><input type="text"></li>
-                <li><span>说明</span><input type="text"> </li>
-                <li><span>操作日期</span><input type="text"></li>
-                <li><span>缴款金额</span><input type="text"></li>
-                <li><span>缴款日期</span><input type="text"></li>
-                <div class="clearfix"></div>
-            </ul>
-        </div>
-        <div class="box">
-            <ul>
-                <li><span>老人</span><input type="text"></li>
-                <li><span>特殊服务</span><input type="text"></li>
-                <li><span>说明</span><input type="text"> </li>
-                <li><span>费用状态</span><input type="text"></li>
-                <li><span>产生时间</span><input type="text"></li>
-                <li><span>结算时间</span><input type="text"> </li>
-                <div class="clearfix"></div>
-            </ul>
-        </div>
+        <#--<div class="box">-->
+            <#--<h2>编码：</h2>-->
+            <#--<ul>-->
+                <#--<li><span>服务日期</span><input type="text"></li>-->
+                <#--<li><span>老人</span><input type="text"></li>-->
+                <#--<li><span>状态</span><input type="text"> </li>-->
+                <#--<li><span>服务项目</span><input type="text"></li>-->
+                <#--<li><span>金额</span><input type="text"></li>-->
+                <#--<li><span>说明</span><input type="text"> </li>-->
+                <#--<li><span>操作日期</span><input type="text"></li>-->
+                <#--<li><span>缴款金额</span><input type="text"></li>-->
+                <#--<li><span>缴款日期</span><input type="text"></li>-->
+                <#--<div class="clearfix"></div>-->
+            <#--</ul>-->
+        <#--</div>-->
+        <#--<div class="box">-->
+            <#--<ul>-->
+                <#--<li><span>老人</span><input type="text"></li>-->
+                <#--<li><span>特殊服务</span><input type="text"></li>-->
+                <#--<li><span>说明</span><input type="text"> </li>-->
+                <#--<li><span>费用状态</span><input type="text"></li>-->
+                <#--<li><span>产生时间</span><input type="text"></li>-->
+                <#--<li><span>结算时间</span><input type="text"> </li>-->
+                <#--<div class="clearfix"></div>-->
+            <#--</ul>-->
+        <#--</div>-->
         <div class="clearfix"></div>
     </div>
 
