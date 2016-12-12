@@ -74,7 +74,7 @@
                 limit:100000
             };
             getAjax(url,false,getData,function (data) {
-                var num = data.iTotalRecords;
+                var num = data.aaData.length;
                 for(var i = 0; i <num ;i++){
                     if(Oname == data.aaData[i].name){
                         Oid = data.aaData[i].id;
@@ -94,7 +94,7 @@
         };
         getAjax(url,false,getData,function (data) {
             console.log(JSON.stringify(data))
-            var num = data.iTotalRecords;
+            var num = data.aaData.length;
             for(var i = 0; i <num ;i++){
                 arriveCityArray[i] = new Array("", ""+data.aaData[i].name+"", "");
             }

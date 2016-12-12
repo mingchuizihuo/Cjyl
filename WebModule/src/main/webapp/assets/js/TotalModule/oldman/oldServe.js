@@ -7,7 +7,15 @@ var delId='';
 $(function () {
     findAll();
     $("#oldSelect").html(oldOption);
-    $("#serviceCharge").html(serveOption)
+    $("#serviceCharge").html(serveOption);
+    $("#openOldAdd").click(function () {
+        $("#add").show();
+        $("#update").hide();
+        $(".tally").show();
+    })
+    $("#close").click(function () {
+        $(".tally").hide();
+    })
 });
 function add() {
     var urlAdd = url+"add";
@@ -21,6 +29,7 @@ function add() {
         closeAnAccountDate:$(".closeAnAccountDate").val(),
     };
     postAjax(urlAdd,false,postData,function (data) {
+        $(".tally").hide();
         alert("添加成功");
         findAll();
     })
@@ -63,6 +72,9 @@ function findAll() {
     })
 }
 function make(id) {
+    $("#add").hide();
+    $("#update").show();
+    $(".tally").show();
     $("#id").val(id);
     var urlFindAll = url+"findAll";
     var getData = {
@@ -97,6 +109,7 @@ function update() {
         closeAnAccountDate:$("#closeAnAccountDate").val(),
     };
     postAjax(urlAdd,false,postData,function (data) {
+        $(".tally").hide();
         alert("修改成功");
         findAll();
     })

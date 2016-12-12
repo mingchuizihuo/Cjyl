@@ -89,7 +89,9 @@ function addStaffName() {
 function findStaffName(id) {
     var num = staffName.length;
     for(var i = 0 ; i < num ; i++){
+        console.log(staffName[i].id +"..."+id)
         if(id == staffName[i].id){
+            console.log(staffName[i].name)
             return staffName[i].name;
             break;
         }

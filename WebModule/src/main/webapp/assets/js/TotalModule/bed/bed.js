@@ -16,7 +16,7 @@ function findAll(currentPage) {
     }
     getAjax(urlFindAll, false, getData, function (data) {
         console.log(JSON.stringify(data))
-        var num = data.iTotalRecords;
+        var num = data.aaData.length;
         var pageList = Math.ceil(data.iTotalRecords / 9);
         var d;
         var html = '';

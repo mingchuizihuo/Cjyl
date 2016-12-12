@@ -6,7 +6,6 @@ var delId="";
 $(function () {
     findAll(1);
 });
-
 //查询
 var pageNp = 1;
 function findAll(currentPage) {
@@ -14,7 +13,7 @@ function findAll(currentPage) {
     var getData = {
         currentPage: currentPage,
         limit: limit
-    }
+    };
     getAjax(urlFindAll, false, getData, function (data) {
         console.log(JSON.stringify(data))
         var num = data.aaData.length;
@@ -22,9 +21,14 @@ function findAll(currentPage) {
         var d;
         var money = 0;
         var html = '<thead><tr><th><input type="checkbox" name="del" id="All" ></th> <th>姓名 </th> <th>入住时间</th> <th>护理人员</th> <th>大厦</th> <th>房间</th> <th>床位</th> <th>月费用</th> <th>民族</th> ' +
-            '<th>出生日期</th> <th>自理情况</th>  <th>身份证号</th> <th>状态</th> <th>出院日期</th> <th>操作</th></tr> </thead><tbody id="tbodyDelId">'
-        for (var i = 0; i < num; i++) {
+            '<th>出生日期</th> <th>自理情况</th>  <th>身份证号</th> <th>状态</th> <th>出院日期</th> <th>操作</th></tr> </thead><tbody id="tbodyDelId">';
+        for (var i = 0; i < 1; i++) {
             d =  data.aaData[i];
+            if(d.staff == null){
+                d.staff = {
+                    name:"正在指派"
+                };
+            }
             if(d.checkInInitCostList != undefined){
                 for(var j = 0; j<d.checkInInitCostList.length; j++){
                     money += d.checkInInitCostList[j].money;
@@ -94,13 +98,15 @@ function addOld() {
 function make(id) {
     oldUrl();
     setTimeout(function () {
+        $(".hideLi").show();
+        findAllOldMess(id);
         var urlFindAll = url + "findAll";
         var getData = {
             currentPage: currentPage,
             limit: limit
         };
         getAjax(urlFindAll,false,getData,function (data) {
-            var num = data.iTotalRecords;
+            var num = data.aaData.length;
             var d;
             for(var i = 0; i < num ; i++){
                 d =  data.aaData[i];

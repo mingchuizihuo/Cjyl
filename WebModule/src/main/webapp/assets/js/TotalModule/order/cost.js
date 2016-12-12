@@ -20,7 +20,7 @@ function findAll(currentPage) {
     }
     getAjax(urlFindAll, false, getData, function (data) {
 
-        var num = data.iTotalRecords;
+        var num = data.aaData.length;
 
         var pageList = Math.ceil(num / 9);
         var d = data;

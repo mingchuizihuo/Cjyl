@@ -62,6 +62,7 @@
         <div class="bottom bottom1">
             <button style="margin:auto" onclick="add()" id="add">添加</button>
             <button  onclick="update()" id="update" style="display: none;margin: auto">修改</button>
+            <button  id="close" style="margin: auto">关闭</button>
             <div class="clearfix"></div>
         </div>
     </div>
@@ -70,7 +71,7 @@
     </div>
 <#--增删改查按钮-->
     <div class="modify">
-        <button class="pull-left btn-style btn-ma"  ><img src="${domainUrl}/assets/images/backstage/jia.png">增加</button>
+        <button class="pull-left btn-style btn-ma" id="openOldAdd"  ><img src="${domainUrl}/assets/images/backstage/jia.png">增加</button>
         <button class="pull-left btn-style btn-ma" onclick="del()"><img src="${domainUrl}/assets/images/backstage/del.png">删除</button>
         <div class="clearfix"></div>
     </div>

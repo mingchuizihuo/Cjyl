@@ -17,10 +17,10 @@
     <!-- 选项卡标题 -->
     <ul class="nav nav-tabs" role="tablist">
         <li role="presentation"  class="active"><a href="#oldman" role="tab" data-toggle="tab">老人信息</a></li>
-        <li role="presentation"  ><a href="#relatives" role="tab" data-toggle="tab">亲属信息</a></li>
-        <li role="presentation" ><a href="#stayin" role="tab" data-toggle="tab">入住初始费</a></li>
-        <li role="presentation"><a href="#paycost" role="tab" data-toggle="tab">缴费情况</a></li>
-        <li role="presentation"><a href="#nursing" role="tab" data-toggle="tab">护理记录</a></li>
+        <li role="presentation"  class="hideLi" ><a href="#relatives" role="tab" data-toggle="tab">亲属信息</a></li>
+        <li role="presentation"class="hideLi" ><a href="#stayin" role="tab" data-toggle="tab">入住初始费</a></li>
+        <li role="presentation"class="hideLi"><a href="#paycost" role="tab" data-toggle="tab">缴费情况</a></li>
+        <li role="presentation"class="hideLi"><a href="#nursing" role="tab" data-toggle="tab">护理记录</a></li>
         <div class="clearfix"></div>
     </ul>
     <script type="text/javascript">
@@ -118,14 +118,14 @@
                         <th class="aa">住址</th>
                     </tr>
                     </thead>
-                    <tbody class="ceshi2">
+                    <tbody class="ceshi2" id="sonFind">
                     <tr>
-                        <td><input type="text" id="Sname"></td>
-                        <td><input type="text" id="Stel"></td>
-                        <td><input type="text" id="Stel"></td>
-                        <td><input  id="ScardId" type="text"></td>
-                        <td><input  id="SjobName" type="text" ></td>
-                        <td><input id="ShomeAddress" type="text"></td>
+                        <td><input type="text" ></td>
+                        <td><input type="text" ></td>
+                        <td><input type="text" ></td>
+                        <td><input  type="text"></td>
+                        <td><input  type="text" ></td>
+                        <td><input  type="text"></td>
                     </tr>
                     </tbody>
                 </table>
@@ -144,6 +144,7 @@
                     <#--<li><span>住址</span><input id="ShomeAddress" type="text"></li>-->
                     <#--<div class="clearfix"></div>-->
                 <#--</ul>-->
+
             </div>
         </div>
 
@@ -157,11 +158,13 @@
                         <th class="aa">费用</th>
                     </tr>
                     </thead>
-                    <tbody class="ceshi2">
+                    <tbody class="ceshi2" id="checkInCostTable">
                     <tr>
                         <td><input type="text"></td>
-                        <td><input type="text" id="checkCost"></td>
+                        <td><input type="text"></td>
                     </tr>
+
+
 
                     </tbody>
                 </table>
@@ -185,15 +188,12 @@
             <table class="table table-bordered">
                 <thead class="ceshi1">
                 <tr>
-                    <th class="aa">护理级别</th>
-                    <th class="aa">管理费</th>
-                    <th class="aa">服务费用</th>
-                    <th class="aa">床位费用</th>
-                    <th class="aa">伙食费用</th>
-                    <th class="aa">总计</th>
+                    <th class="aa">服务项目</th>
+                    <th class="aa">服务说明</th>
+                    <th class="aa">产生时间</th>
                 </tr>
                 </thead>
-                <tbody class="ceshi2">
+                <tbody class="ceshi2" id="findAllServe">
                 <tr>
                     <td><input type="text"></td>
                     <td><input type="text"></td>
@@ -222,13 +222,13 @@
             <table class="table table-bordered">
                 <thead class="ceshi1">
                 <tr>
-                    <th class="aa">服务项目</th>
-                    <th class="aa">价格</th>
-                    <th class="aa">健康状况</th>
-                    <th class="aa">护理及用药情况</th>
+                    <th class="aa">老人健康状况</th>
+                    <th class="aa">护理用药情况</th>
+                    <th class="aa">护理时间</th>
+                    <th class="aa">护理人员</th>
                 </tr>
                 </thead>
-                <tbody class="ceshi2">
+                <tbody class="ceshi2" id="findNurse">
                 <tr>
                     <td><input type="text"></td>
                     <td><input type="text"></td>
@@ -255,7 +255,3 @@
     </div>
 </div>
 <script src="${domainUrl}/assets/js/TotalModule/filter.js"></script>
-<script src="${domainUrl}/assets/js/TotalModule/oldman/oldman.js"></script>
-<script src="${domainUrl}/assets/js/TotalModule/oldman/oldSon.js"></script>
-<script src="${domainUrl}/assets/js/TotalModule/oldman/stayIn.js"></script>
-

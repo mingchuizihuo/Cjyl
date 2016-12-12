@@ -8,6 +8,14 @@ $(function () {
     findAll();
     $("#oldSelect").html(oldOption);
     $("#staffId").html(staffOption);
+    $("#openOldAdd").click(function () {
+        $("#add").show();
+        $("#update").hide();
+        $(".tally").show();
+    })
+    $("#close").click(function () {
+        $(".tally").hide();
+    })
 });
 function add() {
     var urlAdd = url+"add";
@@ -20,6 +28,7 @@ function add() {
         staffId:$("#staffId").val(),
     };
     postAjax(urlAdd,false,postData,function (data) {
+        $(".tally").hide();
         alert("添加成功");
         findAll();
     })
@@ -42,7 +51,7 @@ function findAll() {
         for(var i = 0; i < num ; i ++){
             d = data.aaData[i];
             name = findOldName(d.olderId);
-            staffName = findStaffName(d.olderId)
+            staffName = findStaffName(d.staffId)
             html += '<tr><td><input type="checkbox" name="del" value="'+d.id+'"></td><td>'+name+'</td><td>'+d.physicalCondition+'</td><td>'+d.nurseInfo+'</td><td>'+d.nurseDate+'</td><td>'+staffName+'</td>' +
                 '<td><button onclick="make('+d.id+')">修改</button></td></tr>';
 
@@ -62,6 +71,9 @@ function findAll() {
     })
 }
 function make(id) {
+    $("#add").hide();
+    $("#update").show();
+    $(".tally").show();
     $("#id").val(id);
     var urlFindAll = url+"findAll";
     var getData = {
@@ -95,6 +107,7 @@ function update() {
         staffId:$("#staffId").val(),
     };
     postAjax(urlAdd,false,postData,function (data) {
+        $(".tally").hide();
         alert("修改成功");
         findAll();
     })

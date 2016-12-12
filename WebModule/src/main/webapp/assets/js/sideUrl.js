@@ -20,6 +20,7 @@ $(function () {
         $("#sideList div").parents("li").children(".link").children(".xialaImg").hide();
         $(this).children(".xialaImg").show();
     });
+
 });
 function modalClose() {
     //弹窗关闭
@@ -77,6 +78,7 @@ function oldUrl(is,floor,room,bed) {
             $("#floor").val(floor);
             $("#room").val(room);
             $("#bed").val(bed);
+            $(".hideLi").hide();
             modalClose();
             if(is == 1){
                 $("#updateIs").hide();
