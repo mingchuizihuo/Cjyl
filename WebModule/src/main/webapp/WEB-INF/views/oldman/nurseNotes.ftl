@@ -49,16 +49,13 @@
         <#--</div>-->
         <div class="clearfix"></div>
     </div>
-
 <#--增删改查按钮-->
     <div class="modify">
         <button class="pull-left btn-style btn-ma"  onclick="nurseUrl(1)"><img src="${domainUrl}/assets/images/backstage/jia.png">增加</button>
         <div class="clearfix"></div>
     </div>
-
 <#--弹出界面-->
     <div class="publicModal">
-
     </div>
     <div class="tcdPageCode">
     </div>

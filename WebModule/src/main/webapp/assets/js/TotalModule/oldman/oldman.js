@@ -21,7 +21,7 @@ function findAll(currentPage) {
         var pageList = Math.ceil(data.iTotalRecords / 9);
         var d;
         var money = 0;
-        var html = '<thead><tr><th><input type="checkbox" name="del" id="All" style="background:#f00;color:#0f0;border:#0ff;width:50px;"></th> <th>姓名 </th> <th>入住时间</th> <th>护理人员</th> <th>大厦</th> <th>房间</th> <th>床位</th> <th>月费用</th> <th>民族</th> ' +
+        var html = '<thead><tr><th><input type="checkbox" name="del" id="All" ></th> <th>姓名 </th> <th>入住时间</th> <th>护理人员</th> <th>大厦</th> <th>房间</th> <th>床位</th> <th>月费用</th> <th>民族</th> ' +
             '<th>出生日期</th> <th>自理情况</th>  <th>身份证号</th> <th>状态</th> <th>出院日期</th> <th>操作</th></tr> </thead><tbody id="tbodyDelId">'
         for (var i = 0; i < num; i++) {
             d =  data.aaData[i];
