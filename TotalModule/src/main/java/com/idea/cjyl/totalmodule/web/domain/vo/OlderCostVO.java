@@ -1,8 +1,11 @@
-package com.idea.cjyl.totalmodule.web.domain.pojo;
+package com.idea.cjyl.totalmodule.web.domain.vo;
+
+import com.idea.cjyl.totalmodule.web.domain.pojo.Older;
+import com.idea.cjyl.totalmodule.web.domain.pojo.ServiceCharge;
 
 import java.util.Date;
 
-public class OlderCost {
+public class OlderCostVO {
     private Long id;
 
     private Long organizationLoginId;
@@ -18,6 +21,41 @@ public class OlderCost {
     private Date serviceChargeDate;
 
     private Date closeAnAccountDate;
+    private Older older;
+    private ServiceCharge serviceCharge;
+
+
+    @Override
+    public String toString() {
+        return "OlderCostVO{" +
+                "id=" + id +
+                ", organizationLoginId=" + organizationLoginId +
+                ", olderId=" + olderId +
+                ", serviceChargeId=" + serviceChargeId +
+                ", serviceChargeContext='" + serviceChargeContext + '\'' +
+                ", serviceChargeState=" + serviceChargeState +
+                ", serviceChargeDate=" + serviceChargeDate +
+                ", closeAnAccountDate=" + closeAnAccountDate +
+                ", older=" + older +
+                ", serviceCharge=" + serviceCharge +
+                '}';
+    }
+
+    public Older getOlder() {
+        return older;
+    }
+
+    public void setOlder(Older older) {
+        this.older = older;
+    }
+
+    public ServiceCharge getServiceCharge() {
+        return serviceCharge;
+    }
+
+    public void setServiceCharge(ServiceCharge serviceCharge) {
+        this.serviceCharge = serviceCharge;
+    }
 
     public Long getId() {
         return id;

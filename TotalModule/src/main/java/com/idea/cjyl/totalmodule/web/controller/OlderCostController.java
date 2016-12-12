@@ -3,6 +3,7 @@ package com.idea.cjyl.totalmodule.web.controller;
 import com.idea.cjyl.core.common.ResultData;
 import com.idea.cjyl.core.generic.GenericController;
 import com.idea.cjyl.totalmodule.web.domain.pojo.OlderCost;
+import com.idea.cjyl.totalmodule.web.domain.pojo.OlderKinsfolk;
 import com.idea.cjyl.totalmodule.web.service.OlderCostService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -106,6 +107,18 @@ public class OlderCostController extends GenericController {
         return ResultData.build().
         parsePageBean(oldercostService.findAll(currentPage,limit));
     }
-
+    /**
+     * 通过条件分页查询
+     * @param olderCost
+     * @param currentPage
+     * @param limit
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value="findByExample",method = RequestMethod.GET)
+    public ResultData findByExample(OlderCost olderCost, Integer currentPage, Integer limit){
+        return ResultData.build().
+                parsePageBean(oldercostService.findVOByExapmle(olderCost,currentPage,limit));
+    }
 
 }

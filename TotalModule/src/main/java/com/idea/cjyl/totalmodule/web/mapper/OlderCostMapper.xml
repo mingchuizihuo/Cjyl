@@ -5,7 +5,7 @@
     <id column="id" property="id" jdbcType="BIGINT" />
     <result column="organization_login_id" property="organizationLoginId" jdbcType="BIGINT" />
     <result column="older_id" property="olderId" jdbcType="BIGINT" />
-    <result column="service_charge" property="serviceCharge" jdbcType="BIGINT" />
+    <result column="service_charge_id" property="serviceChargeId" jdbcType="BIGINT" />
     <result column="service_charge_context" property="serviceChargeContext" jdbcType="VARCHAR" />
     <result column="service_charge_state" property="serviceChargeState" jdbcType="BIGINT" />
     <result column="service_charge_date" property="serviceChargeDate" jdbcType="TIMESTAMP" />
@@ -70,7 +70,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, organization_login_id, older_id, service_charge, service_charge_context, service_charge_state, 
+    id, organization_login_id, older_id, service_charge_id, service_charge_context, service_charge_state, 
     service_charge_date, close_an_account_date
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.idea.cjyl.totalmodule.web.domain.pojo.OlderCostExample" >
@@ -104,11 +104,11 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.idea.cjyl.totalmodule.web.domain.pojo.OlderCost" useGeneratedKeys="true" keyProperty="id" >
-    insert into older_cost (organization_login_id, older_id, service_charge, 
+    insert into older_cost (organization_login_id, older_id, service_charge_id, 
       service_charge_context, service_charge_state, 
       service_charge_date, close_an_account_date
       )
-    values (#{organizationLoginId,jdbcType=BIGINT}, #{olderId,jdbcType=BIGINT}, #{serviceCharge,jdbcType=BIGINT}, 
+    values (#{organizationLoginId,jdbcType=BIGINT}, #{olderId,jdbcType=BIGINT}, #{serviceChargeId,jdbcType=BIGINT}, 
       #{serviceChargeContext,jdbcType=VARCHAR}, #{serviceChargeState,jdbcType=BIGINT}, 
       #{serviceChargeDate,jdbcType=TIMESTAMP}, #{closeAnAccountDate,jdbcType=TIMESTAMP}
       )
@@ -122,8 +122,8 @@
       <if test="olderId != null" >
         older_id,
       </if>
-      <if test="serviceCharge != null" >
-        service_charge,
+      <if test="serviceChargeId != null" >
+        service_charge_id,
       </if>
       <if test="serviceChargeContext != null" >
         service_charge_context,
@@ -145,8 +145,8 @@
       <if test="olderId != null" >
         #{olderId,jdbcType=BIGINT},
       </if>
-      <if test="serviceCharge != null" >
-        #{serviceCharge,jdbcType=BIGINT},
+      <if test="serviceChargeId != null" >
+        #{serviceChargeId,jdbcType=BIGINT},
       </if>
       <if test="serviceChargeContext != null" >
         #{serviceChargeContext,jdbcType=VARCHAR},
@@ -180,8 +180,8 @@
       <if test="record.olderId != null" >
         older_id = #{record.olderId,jdbcType=BIGINT},
       </if>
-      <if test="record.serviceCharge != null" >
-        service_charge = #{record.serviceCharge,jdbcType=BIGINT},
+      <if test="record.serviceChargeId != null" >
+        service_charge_id = #{record.serviceChargeId,jdbcType=BIGINT},
       </if>
       <if test="record.serviceChargeContext != null" >
         service_charge_context = #{record.serviceChargeContext,jdbcType=VARCHAR},
@@ -205,7 +205,7 @@
     set id = #{record.id,jdbcType=BIGINT},
       organization_login_id = #{record.organizationLoginId,jdbcType=BIGINT},
       older_id = #{record.olderId,jdbcType=BIGINT},
-      service_charge = #{record.serviceCharge,jdbcType=BIGINT},
+      service_charge_id = #{record.serviceChargeId,jdbcType=BIGINT},
       service_charge_context = #{record.serviceChargeContext,jdbcType=VARCHAR},
       service_charge_state = #{record.serviceChargeState,jdbcType=BIGINT},
       service_charge_date = #{record.serviceChargeDate,jdbcType=TIMESTAMP},
@@ -223,8 +223,8 @@
       <if test="olderId != null" >
         older_id = #{olderId,jdbcType=BIGINT},
       </if>
-      <if test="serviceCharge != null" >
-        service_charge = #{serviceCharge,jdbcType=BIGINT},
+      <if test="serviceChargeId != null" >
+        service_charge_id = #{serviceChargeId,jdbcType=BIGINT},
       </if>
       <if test="serviceChargeContext != null" >
         service_charge_context = #{serviceChargeContext,jdbcType=VARCHAR},
@@ -245,7 +245,7 @@
     update older_cost
     set organization_login_id = #{organizationLoginId,jdbcType=BIGINT},
       older_id = #{olderId,jdbcType=BIGINT},
-      service_charge = #{serviceCharge,jdbcType=BIGINT},
+      service_charge_id = #{serviceChargeId,jdbcType=BIGINT},
       service_charge_context = #{serviceChargeContext,jdbcType=VARCHAR},
       service_charge_state = #{serviceChargeState,jdbcType=BIGINT},
       service_charge_date = #{serviceChargeDate,jdbcType=TIMESTAMP},

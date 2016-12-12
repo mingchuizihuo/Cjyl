@@ -1,15 +1,20 @@
 package com.idea.cjyl.totalmodule.web.controller;
 
+import com.github.pagehelper.Page;
 import com.idea.cjyl.core.common.ResultData;
 import com.idea.cjyl.core.generic.GenericController;
 import com.idea.cjyl.totalmodule.web.domain.pojo.DataDictionary;
 import com.idea.cjyl.totalmodule.web.service.DataDictionaryService;
 
+import org.apache.shiro.session.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import javax.servlet.http.HttpSession;
+import java.util.List;
 
 /**
 * Created by 10238 on 2016/10/12.
@@ -102,9 +107,12 @@ public class DataDictionaryController extends GenericController {
     */
     @ResponseBody
     @RequestMapping(value="findAll",method = RequestMethod.GET)
-    public ResultData findAll(Integer currentPage,Integer limit){
+    public ResultData findAll(Integer currentPage, Integer limit, HttpSession session){
+       Page<DataDictionary> dataDictionaries =  datadictionaryService.findAll(currentPage,limit);
+        session.setAttribute("dataDictionarys",dataDictionaries.getResult());
+
         return ResultData.build().
-        parsePageBean(datadictionaryService.findAll(currentPage,limit));
+        parsePageBean(dataDictionaries);
     }
 
 

@@ -39,6 +39,7 @@
         <result column="bed_bed_num" property="bedNum" jdbcType="TINYINT" />
         <result column="bed_bed_state" property="bedState" jdbcType="TINYINT" />
         <result column="bed_older_id" property="olderId" jdbcType="BIGINT" />
+
     </resultMap>
     <sql id="Base_Column_List" >
         mansion.id mansion_id , mansion.organization_login_id  mansion_organization_login_id, mansion.name mansion_name, mansion.account_for mansion_account_for,

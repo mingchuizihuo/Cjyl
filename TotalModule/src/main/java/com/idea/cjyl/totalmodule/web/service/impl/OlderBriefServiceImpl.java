@@ -43,11 +43,11 @@ public class OlderBriefServiceImpl extends GenericServiceVOImpl<OlderBriefVO,Old
         OlderExample.Criteria criteria = olderExample.createCriteria();
         if (older.getName() != null) {
             criteria.andNameLike(older.getName());
-        } else if (older.getTel() != null) {
+        }  if (older.getTel() != null) {
             criteria.andTelLike(older.getTel());
-        } else if (older.getCardId() != null) {
+        }  if (older.getCardId() != null) {
             criteria.andCardIdLike(older.getCardId());
-        } else if (older.getCheckInDate() != null) {
+        }  if (older.getCheckInDate() != null) {
             criteria.andCheckInDateEqualTo(older.getCheckInDate());
         }
         return olderExample;

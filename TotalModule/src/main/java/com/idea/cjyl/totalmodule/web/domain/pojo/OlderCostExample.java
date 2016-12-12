@@ -285,63 +285,63 @@ public class OlderCostExample {
             return (Criteria) this;
         }
 
-        public Criteria andServiceChargeIsNull() {
-            addCriterion("service_charge is null");
+        public Criteria andServiceChargeIdIsNull() {
+            addCriterion("service_charge_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andServiceChargeIsNotNull() {
-            addCriterion("service_charge is not null");
+        public Criteria andServiceChargeIdIsNotNull() {
+            addCriterion("service_charge_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andServiceChargeEqualTo(Long value) {
-            addCriterion("service_charge =", value, "serviceCharge");
+        public Criteria andServiceChargeIdEqualTo(Long value) {
+            addCriterion("service_charge_id =", value, "serviceChargeId");
             return (Criteria) this;
         }
 
-        public Criteria andServiceChargeNotEqualTo(Long value) {
-            addCriterion("service_charge <>", value, "serviceCharge");
+        public Criteria andServiceChargeIdNotEqualTo(Long value) {
+            addCriterion("service_charge_id <>", value, "serviceChargeId");
             return (Criteria) this;
         }
 
-        public Criteria andServiceChargeGreaterThan(Long value) {
-            addCriterion("service_charge >", value, "serviceCharge");
+        public Criteria andServiceChargeIdGreaterThan(Long value) {
+            addCriterion("service_charge_id >", value, "serviceChargeId");
             return (Criteria) this;
         }
 
-        public Criteria andServiceChargeGreaterThanOrEqualTo(Long value) {
-            addCriterion("service_charge >=", value, "serviceCharge");
+        public Criteria andServiceChargeIdGreaterThanOrEqualTo(Long value) {
+            addCriterion("service_charge_id >=", value, "serviceChargeId");
             return (Criteria) this;
         }
 
-        public Criteria andServiceChargeLessThan(Long value) {
-            addCriterion("service_charge <", value, "serviceCharge");
+        public Criteria andServiceChargeIdLessThan(Long value) {
+            addCriterion("service_charge_id <", value, "serviceChargeId");
             return (Criteria) this;
         }
 
-        public Criteria andServiceChargeLessThanOrEqualTo(Long value) {
-            addCriterion("service_charge <=", value, "serviceCharge");
+        public Criteria andServiceChargeIdLessThanOrEqualTo(Long value) {
+            addCriterion("service_charge_id <=", value, "serviceChargeId");
             return (Criteria) this;
         }
 
-        public Criteria andServiceChargeIn(List<Long> values) {
-            addCriterion("service_charge in", values, "serviceCharge");
+        public Criteria andServiceChargeIdIn(List<Long> values) {
+            addCriterion("service_charge_id in", values, "serviceChargeId");
             return (Criteria) this;
         }
 
-        public Criteria andServiceChargeNotIn(List<Long> values) {
-            addCriterion("service_charge not in", values, "serviceCharge");
+        public Criteria andServiceChargeIdNotIn(List<Long> values) {
+            addCriterion("service_charge_id not in", values, "serviceChargeId");
             return (Criteria) this;
         }
 
-        public Criteria andServiceChargeBetween(Long value1, Long value2) {
-            addCriterion("service_charge between", value1, value2, "serviceCharge");
+        public Criteria andServiceChargeIdBetween(Long value1, Long value2) {
+            addCriterion("service_charge_id between", value1, value2, "serviceChargeId");
             return (Criteria) this;
         }
 
-        public Criteria andServiceChargeNotBetween(Long value1, Long value2) {
-            addCriterion("service_charge not between", value1, value2, "serviceCharge");
+        public Criteria andServiceChargeIdNotBetween(Long value1, Long value2) {
+            addCriterion("service_charge_id not between", value1, value2, "serviceChargeId");
             return (Criteria) this;
         }
 
