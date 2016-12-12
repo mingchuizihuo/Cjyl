@@ -1,5 +1,6 @@
 <link href="${domainUrl}/assets/css/public.css" rel="stylesheet">
 <link href="${domainUrl}/assets/css/oldman/oldman.css" rel="stylesheet">
+<link href="${domainUrl}/assets/css/options/nurse.css" rel="stylesheet">
 <script src="${domainUrl}/assets/js/TotalModule/oldman/oldServe.js"></script>
 <!--页面背景-->
 <script type="text/javascript">
@@ -17,7 +18,7 @@
             <li><img src="${domainUrl}/assets/images/backstage/jiantou.png"></li>
             <li><a href="##">老人管理</a></li>
             <li><img src="${domainUrl}/assets/images/backstage/jiantou.png"></li>
-            <li class="txt_color">老人信息</li>
+            <li class="txt_color">特殊服务</li>
             <div class="clearfix"></div>
         </ul>
     </div>
@@ -31,7 +32,7 @@
                     <th>老人姓名</th>
                     <th>服务项目</th>
                     <th>服务说明</th>
-                    <th>服用状态</th>
+                    <th>费用状态</th>
                     <th>产生时间</th>
                     <th>结算时间</th>
                     <th>操作</th>
@@ -43,24 +44,30 @@
         </div>
     </div>
 <#--弹出老人信息弹窗-->
-    <style>
-        input[type="text"],select{
-            color: #000000;
-        }
-    </style>
-    <div style="width: 400px; height: 400px; background-color: #1b6d85; position: absolute; left: 30%; top: 20%;">
-        <ul>
-            <li><select name="" id="oldSelect"></select></li>
-            <li><select name="" id="serviceCharge"></select></li>
-            <li><input type="text" id="serviceChargeContext"></li>
-            <li><input type="text" id="serviceChargeState"></li>
-            <li><input type="text" class="serviceChargeDate date_picker" id="sdate"></li>
-            <li><input type="text" class="closeAnAccountDate date_picker" id="sdate"></li>
-            <li style="display: none;"><input type="text" id="id"></li>
-            <li><button onclick="add()" id="add">添加</button></li>
-            <li><button onclick="update()" id="update">修改</button></li>
-        </ul>
+    <div class="tally">
+        <h2>护理记录</h2>
+        <div class="feiyong">
+            <div class="box">
+                <ul>
+                    <li><span>老人姓名</span><select name="" id="oldSelect" ></select></li>
+                    <li><span>服务项目</span><select name="" id="serviceCharge"></select></li>
+                    <li><span>费用状态</span><input type="text" id="serviceChargeState"></li>
+                    <li><span>服务说明</span><input type="text" id="serviceChargeContext"></li>
+                    <li><span>产生时间</span><input type="text" class="serviceChargeDate date_picker" id="sdate"></li>
+                    <li><span>结算时间</span><input type="text" class="closeAnAccountDate date_picker" id="sdate"></li>
+                    <li style="display: none"><input type="text" id="id"></li>
+                    <div class="clearfix"></div>
+                </ul>
+            </div>
+        </div>
+    <#--增删改查按钮-->
+        <div class="bottom bottom1">
+            <button style="margin:auto" onclick="add()" id="add">添加</button>
+            <button  onclick="update()" id="update" style="display: none;margin: auto">修改</button>
+            <div class="clearfix"></div>
+        </div>
     </div>
+
     <div class="tcdPageCode">
     </div>
 <#--增删改查按钮-->

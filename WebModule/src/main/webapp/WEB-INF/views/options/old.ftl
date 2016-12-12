@@ -144,7 +144,6 @@
                     <#--<li><span>住址</span><input id="ShomeAddress" type="text"></li>-->
                     <#--<div class="clearfix"></div>-->
                 <#--</ul>-->
-
             </div>
         </div>
 
@@ -163,8 +162,6 @@
                         <td><input type="text"></td>
                         <td><input type="text" id="checkCost"></td>
                     </tr>
-
-
 
                     </tbody>
                 </table>

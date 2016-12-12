@@ -3,6 +3,7 @@
         $('.date_picker').date_input();
     })
 </script>
+
 <div class="tally">
     <h2>护理费用记账</h2>
     <div class="feiyong">

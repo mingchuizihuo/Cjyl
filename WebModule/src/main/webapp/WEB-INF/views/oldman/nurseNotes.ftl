@@ -1,5 +1,6 @@
 <link href="${domainUrl}/assets/css/public.css" rel="stylesheet">
 <link href="${domainUrl}/assets/css/oldman/oldman.css" rel="stylesheet">
+<link href="${domainUrl}/assets/css/options/nurse.css" rel="stylesheet">
 <script src="${domainUrl}/assets/js/TotalModule/oldman/oldNurse.js"></script>
 <!--页面背景-->
 <script type="text/javascript">
@@ -17,7 +18,7 @@
             <li><img src="${domainUrl}/assets/images/backstage/jiantou.png"></li>
             <li><a href="##">老人管理</a></li>
             <li><img src="${domainUrl}/assets/images/backstage/jiantou.png"></li>
-            <li class="txt_color">老人信息</li>
+            <li class="txt_color">护理记录</li>
             <div class="clearfix"></div>
         </ul>
     </div>
@@ -42,23 +43,29 @@
         </div>
     </div>
 <#--弹出老人信息弹窗-->
-    <style>
-        input[type="text"],select{
-            color: #000000;
-        }
-    </style>
-    <div style="width: 400px; height: 400px; background-color: #1b6d85; position: absolute; left: 30%; top: 20%;">
-        <ul>
-            <li><select name="" id="oldSelect"></select></li>
-            <li><input type="text" id="physicalCondition"></li>
-            <li><input type="text" id="nurseInfo"></li>
-            <li><input type="text" class="nurseDate date_picker" id="sdate"></li>
-            <li><select name="" id="staffId"></select></li>
-            <li style="display: none;"><input type="text" id="id"></li>
-            <li><button onclick="add()" id="add">添加</button></li>
-            <li><button onclick="update()" id="update">修改</button></li>
-        </ul>
+    <div class="tally">
+        <h2>护理记录</h2>
+        <div class="feiyong">
+            <div class="box">
+                <ul>
+                    <li><span>老人姓名</span><select name="" id="oldSelect" ></select></li>
+                    <li><span>老人健康状况</span><input type="text" id="physicalCondition"></li>
+                    <li><span>护理时间</span><input type="text" class="nurseDate date_picker" id="sdate"></li>
+                    <li><span>护理用药情况</span><input type="text" id="nurseInfo"></li>
+                    <li><span>护理人员</span><select name="" id="staffId"></select></li>
+                    <li style="display: none"><input type="text" id="id"></li>
+                    <div class="clearfix"></div>
+                </ul>
+            </div>
+        </div>
+    <#--增删改查按钮-->
+        <div class="bottom bottom1">
+            <button style="margin:auto" onclick="add()" id="add">添加</button>
+            <button  onclick="update()" id="update" style="display: none;margin: auto">修改</button>
+            <div class="clearfix"></div>
+        </div>
     </div>
+
     <div class="tcdPageCode">
     </div>
 <#--增删改查按钮-->

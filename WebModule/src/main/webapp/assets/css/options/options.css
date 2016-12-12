@@ -70,7 +70,6 @@
 
 
 
-
 /*护理记录*/
 .oldman_tab .tab-content .nursing{margin-top:36px;height:400px;overflow: auto;}
 .oldman_tab .tab-content .nursing .box{width:100%;border:1px #c3c3c3 solid;border-radius:5px;padding:15px 25px;margin-bottom: 10px;}
@@ -100,5 +99,4 @@
    }
 .oldman_tab .bottom button:hover{background:#8fcbdf;border:1px #379bca solid;color:#fff;}
 .oldman_tab .bottom button:focus{background:#379bca;color:#fff;}
-
 

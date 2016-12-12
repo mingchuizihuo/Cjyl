@@ -5,13 +5,12 @@
 .table > thead > tr > th{border-bottom:1px #656c7e solid;background: #091b31;
 }
 .table > thead > tr > .aa{background: none;font-size:14px;color:#5b5c5c;border:0px;}
-
-
 .box1{padding:0px !important; border: 0px !important;}
 .ceshi1 tr th{border:1px #656c7e solid !important;}
 .ceshi2 td{height:36px;color:#5b5c5c;border:1px #656c7e solid !important;}
 .ceshi2 select{background: none;}
 .ceshi2 input{width:100%;background:none;border:none;}
+
 
 
 
