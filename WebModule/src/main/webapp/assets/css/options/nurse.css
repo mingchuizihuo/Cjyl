@@ -22,7 +22,8 @@
 .tally .box ul li span{float: left;width:40%;}
 .tally .box ul li input{float:left;width:60%;height:28px;border:1px #c3c3c3 solid;background: none;color:#333;}
 
-/*增删改查按钮*/
+
+    /*增删改查按钮*/
 .tally .bottom{padding-top:20px; display: flex;
     -webkit-justify-content: space-around;
     justify-content: space-around;
@@ -35,7 +36,6 @@
     border:1px #c2c2c2 solid;
     outline: none !important;
 }
-
 .tally .bottom button:hover{background:#8fcbdf;border:1px #379bca solid;color:#fff;}
 .tally .bottom button:focus{background:#379bca;color:#fff;}
 

@@ -40,7 +40,7 @@
             <table class="table table-striped table-bordered" id="oldTable">
                 <thead>
                 <tr>
-                    <th><input type="checkbox" style="background:#f00;color:#0f0;border:#0ff;" id="All"></th>
+                    <th><input type="checkbox"  id="All"></th>
                      <#--<th></th>-->
                     <th>ID</th>
                     <th>姓名</th>
@@ -62,46 +62,6 @@
                 </tr>
                 </thead>
                 <tbody id="tbodyDelId">
-                <tr>
-                    <td><input type="checkbox" name="del" value="del1"></td>
-                    <td>15623</td>
-                    <td>李延亮</td>
-                    <td>男</td>
-                    <td>2016年11月1日</td>
-                    <td>李四</td>
-                    <td>1号楼</td>
-                    <td>201</td>
-                    <td>2</td>
-                    <td>1000</td>
-                    <td>汉</td>
-                    <td>1932年4月5日</td>
-                    <td>瘫痪</td>
-                    <td>二级</td>
-                    <td>370605198236425648</td>
-                    <td>良好</td>
-                    <td></td>
-                    <td><input type="button"  onclick="oldUrl(1)" value="修改"></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="del"value="del1"></td>
-                    <td>15623</td>
-                    <td>张三</td>
-                    <td>男</td>
-                    <td>2016年11月1日</td>
-                    <td>李四</td>
-                    <td>1号楼</td>
-                    <td>202</td>
-                    <td>2</td>
-                    <td>1000</td>
-                    <td>汉</td>
-                    <td>1932年4月5日</td>
-                    <td>瘫痪</td>
-                    <td>二级</td>
-                    <td>370605198236425648</td>
-                    <td>良好</td>
-                    <td>2016年12月1日</td>
-                    <td><input type="button"  onclick="oldUrl(1)" value="修改"></td>
-                </tr>
 
                 </tbody>
             </table>

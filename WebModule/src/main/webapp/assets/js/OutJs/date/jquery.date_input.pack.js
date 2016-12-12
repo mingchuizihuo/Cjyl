@@ -16,7 +16,7 @@ DateInput = (function($) {
 	};
 	DateInput.prototype = {
 		build: function() {
-			var monthNav = $('<p class="month_nav">' + '<span class="button prev" title="[Page-Up]">&#171;</span>' + ' <span class="month_name"></span> ' + '<span class="button next" title="[Page-Down]">&#187;</span>' + '</p>');
+			var monthNav = $('<p class="month_nav">' + '<span class="button prev"  style="float:none;width:20%;" title="[Page-Up]">&#171;</span>' + ' <span class="month_name"  style="float:none;width:10%;"></span> ' + '<span class="button next"  style="float:none;width:20%;" title="[Page-Down]">&#187;</span>' + '</p>');
 			this.monthNameSpan = $(".month_name", monthNav);
 			$(".prev", monthNav).click(this.bindToObj(function() {
 				this.moveMonthBy( - 1)
@@ -24,7 +24,7 @@ DateInput = (function($) {
 			$(".next", monthNav).click(this.bindToObj(function() {
 				this.moveMonthBy(1)
 			}));
-			var yearNav = $('<p class="year_nav">' + '<span class="button prev" title="[Ctrl+Page-Up]">&#171;</span>' + ' <span class="year_name"></span> ' + '<span class="button next" title="[Ctrl+Page-Down]">&#187;</span>' + '</p>');
+			var yearNav = $('<p class="year_nav">' + '<span class="button prev"  style="float:none;width:20%;"  title="[Ctrl+Page-Up]">&#171;</span>' + ' <span class="year_name"  style="float:none;width:10%;"></span> ' + '<span class="button next"  style="float:none;width:20%;" title="[Ctrl+Page-Down]">&#187;</span>' + '</p>');
 			this.yearNameSpan = $(".year_name", yearNav);
 			$(".prev", yearNav).click(this.bindToObj(function() {
 				this.moveMonthBy( - 12)

@@ -10,8 +10,8 @@
             <ul>
                 <li><span>编码</span><input type="text" id="olderId"></li>
                 <li><span>健康状况</span><input type="text" id="physicalCondition"> </li>
-                <li><span>用药情况</span><input type="text" id="nurseInfo"></li>
                 <li><span>护理时间</span><input type="text" class="nurseDate date_picker" id="sdate"></li>
+                <li><span>用药情况</span><input type="text" id="nurseInfo"></li>
                 <li><span>护理人员</span><input type="text" id="staffId"></li>
                 <li style="display: none"><input type="text" id="id"></li>
                 <div class="clearfix"></div>

@@ -10,8 +10,10 @@
 .date_selector .month_name, .date_selector .year_name{font-weight: bold;line-height: 22px;}
 .date_selector .button{display: block;position: absolute;top: 0;width:22px;height:22px;line-height:20px;font-weight:bold;color: #3dc9a2;text-align: center;font-size:12px;overflow:hidden;border: 1px solid #ccc;border-radius:2px;}
 .date_selector .button:hover, .date_selector .button.hover{background: #3dc9a2;color: #fff;cursor: pointer;border-color:#3a930d;}
-.date_selector .prev{left: 0;}
-.date_selector .next{right: 0;}
+
+.date_selector .prev{left: 0;float: none !important; width: 10%}
+.date_selector .next{right: 0;float: none !important; width: 10%}
+
 .date_selector table{border-spacing: 0;border-collapse: collapse;clear: both;margin: 0; width: 220px;}
 .date_selector th, .date_selector td{width: 2.5em;height: 2em;padding: 0 !important;text-align: center !important;color: #666;font-weight: normal;}
 .date_selector th{font-size: 12px;}
