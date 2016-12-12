@@ -34,7 +34,7 @@ function findAll() {
         limit:limit
     };
     var html = '';
-    var name ;
+    var name ='';
     getAjax(urlFindAll,false,getData,function (data) {
         console.log(JSON.stringify(data))
         var pageList = Math.ceil(data.iTotalRecords / 9);

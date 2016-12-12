@@ -55,7 +55,7 @@
             <li><input type="text" class="closeAnAccount date_picker" id="sdate"></li>
             <li style="display: none;"><input type="text" id="id"></li>
             <li><button onclick="add()" id="add">添加</button></li>
-            <li><button onclick="update()" id="update" style="display: none">修改</button></li>
+            <li><button onclick="update()" id="update">修改</button></li>
         </ul>
     </div>
     <div class="tcdPageCode">

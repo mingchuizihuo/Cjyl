@@ -1,31 +1,55 @@
 /**
- * Created by Administrator on 2016/12/5.
+ * Created by lgengjiajun on 2016/12/10.
  */
 var url = domainUrl + "/serve/older_cost/";
+var delId='';
+//特殊服务
 $(function () {
-    findAll(1);
+    findAll();
+    $("#oldSelect").html(oldOption);
+    $("#serviceCharge").html(serveOption)
 });
-//查询
-var pageNp = 1;
-function findAll(currentPage) {
-    var urlFindAll = url + "findAll";
-    var getData = {
-        currentPage: currentPage,
-        limit: limit
+function add() {
+    var urlAdd = url+"add";
+    var postData = {
+        organizationLoginId:1,
+        olderId:$("#oldSelect").val(),
+        serviceChargeId:$("#serviceCharge").val(),
+        serviceChargeContext:$("#serviceChargeContext").val(),
+        serviceChargeState:$("#serviceChargeState").val(),
+        serviceChargeDate:$(".serviceChargeDate").val(),
+        closeAnAccountDate:$(".closeAnAccountDate").val(),
     };
-    getAjax(urlFindAll, false, getData, function (data) {
+    postAjax(urlAdd,false,postData,function (data) {
+        alert("添加成功");
+        findAll();
+    })
+}
+var pageNp=1;
+function findAll() {
+    var urlFindAll = url+"findAll";
+    var getData = {
+        currentPage:currentPage,
+        limit:limit
+    };
+    var html = '';
+    var name ='';
+    var serve = '';
+    getAjax(urlFindAll,false,getData,function (data) {
         console.log(JSON.stringify(data))
-        var num = data.iTotalRecords;
         var pageList = Math.ceil(data.iTotalRecords / 9);
+        var num = data.aaData.length;
         var d;
-        var html = '';
-        for (var i = 0; i < num; i++) {
-            d =  data.aaData[i];
-            html +='<div class="box"> <ul> <li><span>老人</span><input type="text" value="'+d.olderId+'"></li> <li><span>特殊服务</span><input type="text" value="'+d.serviceCharge+'"></li>' +
-                ' <li><span>说明</span><input type="text" value="'+d.serviceChargeContext+'"> </li> <li><span>费用状态</span><input type="text" value="'+d.serviceChargeState+'"></li> <li><span>产生时间</span>' +
-                '<input type="text" value="'+d.serviceChargeDate+'"></li> <li><span>结算时间</span><input type="text" value="'+d.closeAnAccountDate+'"> </li> <button onclick="del('+d.id+')">删除</button><div class="clearfix"></div> </ul> </div>';
+        for(var i = 0; i < num ; i ++){
+            d = data.aaData[i];
+            name = findOldName(d.olderId);
+             serve  = findServeName(d.serviceChargeId)
+            html += '<tr><td><input type="checkbox" name="del" value="'+d.id+'"></td><td>'+name+'</td><td>'+serve+'</td><td>'+d.serviceChargeContext+'</td><td>'+d.serviceChargeState+'</td><td>'+d.serviceChargeDate+'</td>' +
+                '<td>'+d.closeAnAccountDate+'</td><td><button onclick="make('+d.id+')">修改</button></td></tr>';
+
         }
-        $(".specialServe").html(html);
+        $("#tbodyDelId").html(html)
+        many();
         if (pageNp == 1) {
             pageNp = 2;
             $(".tcdPageCode").createPage({
@@ -38,74 +62,52 @@ function findAll(currentPage) {
         }
     })
 }
-//添加
-function add() {
-    var urlAdd = url + "add";
-    var postData = {
-        organizationLoginId:1,
-        olderId:$("#olderId").val(),
-        serviceCharge:$("#serviceCharge").val(),
-        serviceChargeContext:$("#serviceChargeContext").val(),
-        serviceChargeState:$("#serviceChargeState").val(),
-        serviceChargeDate:$(".serviceChargeDate").val(),
-        closeAnAccountDate:$(".closeAnAccountDate").val()
-    };
-    postAjax(urlAdd, false, postData, function (data) {
-        alert("添加成功");
-        $(".publicModal").hide();
-        findAll(currentPage);
-    })
-}
-//修改
 function make(id) {
-    specialServeUrl();
-    var urlFindAll = url + "findAll";
+    $("#id").val(id);
+    var urlFindAll = url+"findAll";
     var getData = {
-        currentPage: currentPage,
-        limit: limit
+        currentPage:currentPage,
+        limit:limit
     };
     getAjax(urlFindAll,false,getData,function (data) {
-        var num = data.iTotalRecords;
+        console.log(JSON.stringify(data))
+        var num = data.aaData.length;
         var d;
-        for(var i = 0; i < num ; i++){
-            d =  data.aaData[i];
-            if(d.id == id){
-                $("#id").val(id);
-                $("#serviceCharge").val(d.serviceCharge);
+        for(var i = 0; i < num ; i ++){
+            d = data.aaData[i];
+            if(id == d.id){
                 $("#serviceChargeContext").val(d.serviceChargeContext);
                 $("#serviceChargeState").val(d.serviceChargeState);
-                $("#serviceChargeDate").val(d.serviceChargeDate);
-                $("closeAnAccountDate").val(d.closeAnAccountDate);
+                $(".serviceChargeDate").val(d.serviceChargeDate);
+                $(".closeAnAccountDate").val(d.closeAnAccountDate);
             }
         }
     })
 }
 function update() {
-    var urlUpdate = url +"update";
+    var urlAdd = url+"update";
     var postData = {
         id:$("#id").val(),
         organizationLoginId:1,
-        olderId:1,
+        olderId:$("#oldSelect").val(),
         serviceCharge:$("#serviceCharge").val(),
         serviceChargeContext:$("#serviceChargeContext").val(),
         serviceChargeState:$("#serviceChargeState").val(),
         serviceChargeDate:$("#serviceChargeDate").val(),
-        closeAnAccountDate:$("#closeAnAccountDate").val()
+        closeAnAccountDate:$("#closeAnAccountDate").val(),
     };
-    postAjax(urlUpdate,false,postData,function (data) {
+    postAjax(urlAdd,false,postData,function (data) {
         alert("修改成功");
-        $(".publicModal").hide();
-        findAll(currentPage);
+        findAll();
     })
 }
-//删除
-function del(id) {
-    var urlDel = url + "del";
-    var postData = {
-        id:id
+function del() {
+    var urlDel  = url + "dels";
+    var postData  = {
+        ids:delId,
     };
     postAjax(urlDel,false,postData,function (data) {
         alert("删除成功");
-        findAll(currentPage);
+        findAll();
     })
 }

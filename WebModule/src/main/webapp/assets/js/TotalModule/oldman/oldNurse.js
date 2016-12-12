@@ -1,31 +1,54 @@
 /**
- * Created by Administrator on 2016/12/5.
+ * Created by lgengjiajun on 2016/12/10.
  */
 var url = domainUrl + "/serve/older_nurse_log/";
+var delId='';
+//护理记录
 $(function () {
-    findAll(1);
+    findAll();
+    $("#oldSelect").html(oldOption);
+    $("#staffId").html(staffOption);
 });
-//查询
-var pageNp = 1;
-function findAll(currentPage) {
-    var urlFindAll = url + "findAll";
-    var getData = {
-        currentPage: currentPage,
-        limit: 8
+function add() {
+    var urlAdd = url+"add";
+    var postData = {
+        organizationLoginId:1,
+        olderId:$("#oldSelect").val(),
+        physicalCondition:$("#physicalCondition").val(),
+        nurseInfo:$("#nurseInfo").val(),
+        nurseDate:$("#nurseDate").val(),
+        staffId:$("#staffId").val(),
     };
-    getAjax(urlFindAll, false, getData, function (data) {
-        console.log(JSON.stringify(data));
-        var num = data.aaData.length;
+    postAjax(urlAdd,false,postData,function (data) {
+        alert("添加成功");
+        findAll();
+    })
+}
+var pageNp=1;
+function findAll() {
+    var urlFindAll = url+"findAll";
+    var getData = {
+        currentPage:currentPage,
+        limit:limit
+    };
+    var html = '';
+    var name='' ;
+    var staffName='';
+    getAjax(urlFindAll,false,getData,function (data) {
+        console.log(JSON.stringify(data))
         var pageList = Math.ceil(data.iTotalRecords / 9);
+        var num = data.aaData.length;
         var d;
-        var html = '';
-        for (var i = 0; i < num; i++) {
-            d =  data.aaData[i];
-            html += ' <div class="box"> <ul> <li><span>编号</span><input type="text" value="'+d.olderId+'"></li> <li><span>健康状况</span><input type="text" value="'+d.physicalCondition+'"></li> ' +
-                '<li><span>用药情况</span><input type="text" value="'+d.nurseInfo+'"> </li> <li><span>护理时间</span><input type="text" value="'+d.nurseDate.substring(0,11)+'"></li> <li><span>护理人员</span><input type="text" value="'+d.staffId+'"></li> ' +
-                '<div class="clearfix"></div> <button onclick="del('+d.id+')">删除</button></ul> </div>';
+        for(var i = 0; i < num ; i ++){
+            d = data.aaData[i];
+            name = findOldName(d.olderId);
+            staffName = findStaffName(d.olderId)
+            html += '<tr><td><input type="checkbox" name="del" value="'+d.id+'"></td><td>'+name+'</td><td>'+d.physicalCondition+'</td><td>'+d.nurseInfo+'</td><td>'+d.nurseDate+'</td><td>'+staffName+'</td>' +
+                '<td><button onclick="make('+d.id+')">修改</button></td></tr>';
+
         }
-        $(".specialServe").html(html);
+        $("#tbodyDelId").html(html)
+        many();
         if (pageNp == 1) {
             pageNp = 2;
             $(".tcdPageCode").createPage({
@@ -38,59 +61,51 @@ function findAll(currentPage) {
         }
     })
 }
-//添加
-function add() {
-    var urlAdd = url + "add";
-    var postData = {
-        organizationLoginId:1,
-        olderId:1,
-        physicalCondition:$("#physicalCondition").val(),
-        nurseInfo:$("#nurseInfo").val(),
-        nurseDate:$(".nurseDate").val(),
-        staffId:$("#staffId").val()
-    };
-    postAjax(urlAdd, false, postData, function (data) {
-        alert("添加成功");
-        $(".publicModal").hide();
-        findAll(currentPage);
-    })
-}
-//修改
 function make(id) {
-    oldUrl();
-    var urlFindAll = url + "findAll";
+    $("#id").val(id);
+    var urlFindAll = url+"findAll";
     var getData = {
-        currentPage: currentPage,
-        limit: limit
+        currentPage:currentPage,
+        limit:limit
     };
     getAjax(urlFindAll,false,getData,function (data) {
-        var num = data.iTotalRecords;
+        console.log(JSON.stringify(data))
+        var pageList = Math.ceil(data.iTotalRecords / 9);
+        var num = data.aaData.length;
         var d;
-        for(var i = 0; i < num ; i++){
-            d =  data.aaData[i];
-            if(d.id == id){
-
+        for(var i = 0; i < num ; i ++){
+            d = data.aaData[i];
+            if(id == d.id){
+                $("#physicalCondition").val(d.physicalCondition);
+                $("#nurseInfo").val(d.nurseInfo);
+                $(".nurseDate").val(d.nurseDate);
             }
         }
     })
 }
 function update() {
-    var urlUpdate = url +"update";
+    var urlAdd = url+"update";
     var postData = {
-
-    }
-    postAjax(urlUpdate,false,postData,function (data) {
-
+        id:$("#id").val(),
+        organizationLoginId:1,
+        olderId:$("#oldSelect").val(),
+        physicalCondition:$("#physicalCondition").val(),
+        nurseInfo:$("#nurseInfo").val(),
+        nurseDate:$("#nurseDate").val(),
+        staffId:$("#staffId").val(),
+    };
+    postAjax(urlAdd,false,postData,function (data) {
+        alert("修改成功");
+        findAll();
     })
 }
-//删除
-function del(id) {
-    var urlDel = url + "del";
-    var postData = {
-        id:id
-    }
+function del() {
+    var urlDel  = url + "dels";
+    var postData  = {
+        ids:delId,
+    };
     postAjax(urlDel,false,postData,function (data) {
         alert("删除成功");
-        findAll(currentPage);
+        findAll();
     })
 }

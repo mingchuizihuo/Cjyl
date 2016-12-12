@@ -1,10 +1,12 @@
-
 <link href="${domainUrl}/assets/css/public.css" rel="stylesheet">
-<link href="${domainUrl}/assets/css/oldman/nurseNotes.css" rel="stylesheet">
-<link href="${domainUrl}/assets/css/options/nurse.css" rel="stylesheet">
-
+<link href="${domainUrl}/assets/css/oldman/oldman.css" rel="stylesheet">
+<script src="${domainUrl}/assets/js/TotalModule/oldman/oldNurse.js"></script>
 <!--页面背景-->
-
+<script type="text/javascript">
+    $(function () {
+        $('.date_picker').date_input();
+    })
+</script>
 <!---页面主体-->
 <div class="overall" style="background-image: url(${domainUrl}/assets/images/backstage/bgg.jpg);">
 <#--路径导航-->
@@ -15,49 +17,55 @@
             <li><img src="${domainUrl}/assets/images/backstage/jiantou.png"></li>
             <li><a href="##">老人管理</a></li>
             <li><img src="${domainUrl}/assets/images/backstage/jiantou.png"></li>
-            <li class="txt_color">护理记录</li>
+            <li class="txt_color">老人信息</li>
             <div class="clearfix"></div>
         </ul>
     </div>
-<#--查询导航-->
-    <#--<div class="query">-->
-        <#--<ul>-->
-            <#--<li>查询条件</li>-->
-            <#--<li>姓名<input type="text"></li>-->
-            <#--<script type="text/javascript">-->
-                <#--$(function () {-->
-                    <#--$('.date_picker').date_input();-->
-                <#--})-->
-            <#--</script>-->
-            <#--<li>入住时间<input type="text" id="sdate" class="date_picker" style="text-align: center"></li>-->
-            <#--<li>手机号<input type="text"></li>-->
-            <#--<li>身份证号<input type="text"></li>-->
-            <#--<button class="pull-right btn-style"><i class="glyphicon glyphicon-search"></i>查询</button>-->
-            <#--<div class="clearfix"></div>-->
-        <#--</ul>-->
-    <#--</div>-->
-    <div class="specialServe">
-        <#--<div class="box">-->
-            <#--<ul>-->
-                <#--<li><span>编号</span><input type="text"></li>-->
-                <#--<li><span>健康状况</span><input type="text"></li>-->
-                <#--<li><span>用药情况</span><input type="text"> </li>-->
-                <#--<li><span>护理时间</span><input type="text"></li>-->
-                <#--<li><span>护理人员</span><input type="text"></li>-->
-                <#--<div class="clearfix"></div>-->
-            <#--</ul>-->
-        <#--</div>-->
-        <div class="clearfix"></div>
+<#--老人信息列表-->
+    <div class="information">
+        <div class="bs-example">
+            <table class="table table-striped table-bordered" id="oldTable">
+                <thead>
+                <tr>
+                    <th><input type="checkbox"  id="All"></th>
+                    <th>老人姓名</th>
+                    <th>老人健康状况</th>
+                    <th>护理用药情况</th>
+                    <th>护理时间</th>
+                    <th>护理人员</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody id="tbodyDelId">
+                </tbody>
+            </table>
+        </div>
     </div>
-<#--增删改查按钮-->
-    <div class="modify">
-        <button class="pull-left btn-style btn-ma"  onclick="nurseUrl(1)"><img src="${domainUrl}/assets/images/backstage/jia.png">增加</button>
-        <div class="clearfix"></div>
-    </div>
-<#--弹出界面-->
-    <div class="publicModal">
+<#--弹出老人信息弹窗-->
+    <style>
+        input[type="text"],select{
+            color: #000000;
+        }
+    </style>
+    <div style="width: 400px; height: 400px; background-color: #1b6d85; position: absolute; left: 30%; top: 20%;">
+        <ul>
+            <li><select name="" id="oldSelect"></select></li>
+            <li><input type="text" id="physicalCondition"></li>
+            <li><input type="text" id="nurseInfo"></li>
+            <li><input type="text" class="nurseDate date_picker" id="sdate"></li>
+            <li><select name="" id="staffId"></select></li>
+            <li style="display: none;"><input type="text" id="id"></li>
+            <li><button onclick="add()" id="add">添加</button></li>
+            <li><button onclick="update()" id="update">修改</button></li>
+        </ul>
     </div>
     <div class="tcdPageCode">
     </div>
+<#--增删改查按钮-->
+    <div class="modify">
+        <button class="pull-left btn-style btn-ma"  ><img src="${domainUrl}/assets/images/backstage/jia.png">增加</button>
+        <button class="pull-left btn-style btn-ma" onclick="del()"><img src="${domainUrl}/assets/images/backstage/del.png">删除</button>
+        <div class="clearfix"></div>
+    </div>
 </div>
-<script src="${domainUrl}/assets/js/TotalModule/oldman/oldNurse.js"></script>
+<script src="${domainUrl}/assets/js/TotalModule/filter.js"></script>
