@@ -45,7 +45,7 @@
     </div>
 <#--弹出老人信息弹窗-->
     <div class="tally">
-        <h2>护理记录</h2>
+        <h2>特殊服务</h2>
         <div class="feiyong">
             <div class="box">
                 <ul>
