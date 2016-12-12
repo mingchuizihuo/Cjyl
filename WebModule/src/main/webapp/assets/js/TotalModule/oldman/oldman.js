@@ -36,32 +36,7 @@ function findAll(currentPage) {
         }
         html += '</tbody>';
         $("#oldTable").html(html);
-        //全选反选
-        var CheckAll = document.getElementById('All');
-        var tbodyDelId = document.getElementById('tbodyDelId');
-        var CheckBox = tbodyDelId.getElementsByTagName('input');
-        CheckAll.onclick = function () {
-            if ($("#All").is(':checked') == true) {
-                for (i = 0; i < CheckBox.length; i++) {
-                    CheckBox[i].checked = true;
-                    delId += CheckBox[i].value +",";
-                }
-            } else {
-                for (i = 0; i < CheckBox.length; i++) {
-                    CheckBox[i].checked = false;
-                    delId ="";
-                }
-            };
-        };
-        //多选单选
-        var obj = document.getElementsByName('del');
-        tbodyDelId.onclick = function () {
-            for(var i=0; i<obj.length; i++){
-                if(obj[i].checked == true){
-                    delId+=obj[i].value+','; //如果选中，将value添加到变量s中
-                }
-            }
-        };
+        many();
         if (pageNp == 1) {
             pageNp = 2;
             $(".tcdPageCode").createPage({

@@ -1,48 +1,117 @@
 /**
  * Created by lgengjiajun on 2016/12/10.
  */
+var url = domainUrl + "/serve/older_initial_fee/";
+var delId='';
+//初始费信息
 $(function () {
-    findAllSelect()
+    findAll();
+    $("#oldSelect").html(oldOption);
+    $("#checkInInitCostId").html(checkOption)
 });
-//入住初始费
-
-function  stayIn(){
-    var url = domainUrl+"/serve/older_initial_fee/add";
+function add() {
+    var urlAdd = url+"add";
     var postData = {
-
+        organizationLoginId:1,
+        olderId:$("#oldSelect").val(),
+        checkInInitCostId:$("#checkInInitCostId").val(),
+        checkInInitCostState:$("#checkInInitCostState").val(),
+        initialFeeDate:$(".initialFeeDate").val(),
+        closeAnAccount:$(".closeAnAccount").val(),
     };
-    postAjax(url,false,postData,function (data) {
-
+    postAjax(urlAdd,false,postData,function (data) {
+        alert("添加成功");
+        findAll();
     })
-
 }
-
-function findAllSelect() {
-    var url = domainUrl + "/serve/check_in_init_cost/findAll";
+var pageNp=1;
+function findAll() {
+    var urlFindAll = url+"findAll";
     var getData = {
         currentPage:currentPage,
         limit:limit
-    }
-    getAjax(url,false,getData,function (data) {
+    };
+    var html = '';
+    var name ='' ;
+    var money='';
+    getAjax(urlFindAll,false,getData,function (data) {
         console.log(JSON.stringify(data))
-        var num = data.iTotalRecords;
-        var html='<option>请选择</option>';
-        var d='';
-        for(var i=0;i<num;i++)
-        {
-            d=data.aaData[i];
-            html+='<option value="'+d.id+'">'+d.item+'</option>';
-        }
-        $("#CheckItem").html(html);
-        $("#CheckItem").click(function () {
-            var id = $(this).val();
-            for(var j = 0; j <num; j++){
-                d=data.aaData[j];
-                if(id == d.id){
-                    $("#checkCost").val(d.money)
-                }
+        var pageList = Math.ceil(data.iTotalRecords / 9);
+        var num = data.aaData.length;
+        var d;
+        for(var i = 0; i < num ; i ++){
+            d = data.aaData[i];
+            name = findOldName(d.olderId);
+            money = findCheckIn(d.checkInInitCostId);
+            if(d.checkInInitCostState == 101){
+                d.checkInInitCostState = "已交"
+            }else if(d.checkInInitCostState == 102){
+                d.checkInInitCostState = "未交"
             }
-        })
-    })
+            html += '<tr><td><input type="checkbox" name="del" value="'+d.id+'"></td><td>'+name+'</td><td>'+money+'</td><td>'+d.checkInInitCostState+'</td><td>'+d.initialFeeDate+'</td><td>'+d.closeAnAccountDate+'</td>' +
+                '<td><button onclick="make('+d.id+')">修改</button></td></tr>';
 
+        }
+        $("#tbodyDelId").html(html)
+        many();
+        if (pageNp == 1) {
+            pageNp = 2;
+            $(".tcdPageCode").createPage({
+                pageCount: pageList,
+                current: currentPage,
+                backFn: function (p) {
+                    findAll(p)
+                }
+            });
+        }
+    })
+}
+function make(id) {
+    $("#id").val(id);
+    var urlFindAll = url+"findAll";
+    var getData = {
+        currentPage:currentPage,
+        limit:limit
+    };
+    getAjax(urlFindAll,false,getData,function (data) {
+        console.log(JSON.stringify(data))
+        var pageList = Math.ceil(data.iTotalRecords / 9);
+        var num = data.aaData.length;
+        var d;
+        for(var i = 0; i < num ; i ++){
+            d = data.aaData[i];
+            if(id == d.id){
+                $("#checkInInitCostId").val(d.checkInInitCostId);
+                $("#checkInInitCostState").val(d.checkInInitCostState);
+                $(".initialFeeDate").val(d.initialFeeDate);
+                $(".closeAnAccount").val(d.closeAnAccount);
+            }
+        }
+    })
+}
+function update() {
+    var urlAdd = url+"update";
+    var postData = {
+        id:$("#id").val(),
+        organizationLoginId:1,
+        olderId:$("#oldSelect").val(),
+        checkInInitCostId:$("#checkInInitCostId").val(),
+        checkInInitCostState:$("#checkInInitCostState").val(),
+        initialFeeDate:$(".initialFeeDate").val(),
+        closeAnAccount:$(".closeAnAccount").val(),
+    };
+    postAjax(urlAdd,false,postData,function (data) {
+        alert("修改成功");
+        findAll();
+    })
+}
+function del() {
+    var urlDel  = url + "dels";
+    var postData  = {
+        ids:delId,
+    };
+    postAjax(urlDel,false,postData,function (data) {
+        alert("删除成功");
+        findAll();
+    })
 }

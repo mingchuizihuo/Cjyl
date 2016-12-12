@@ -78,6 +78,8 @@
                         <li><a onclick="sideUrl('/oldman/oldman')"><img src="${domainUrl}/assets/images/backstage/dian.png" >老人信息</a></li>
                         <li><a onclick="sideUrl('/oldman/specialServe')"><img src="${domainUrl}/assets/images/backstage/dian.png" >特殊服务</a></li>
                         <li><a onclick="sideUrl('/oldman/nurseNotes')"><img src="${domainUrl}/assets/images/backstage/dian.png" >护理记录</a></li>
+                        <li><a onclick="sideUrl('/oldman/kinsfolk')"><img src="${domainUrl}/assets/images/backstage/dian.png" >亲属信息</a></li>
+                        <li><a onclick="sideUrl('/oldman/checkInCost')"><img src="${domainUrl}/assets/images/backstage/dian.png" >入住初始费</a></li>
                     </ul>
                 </li>
                 <li>
@@ -148,10 +150,10 @@
 <script src="${domainUrl}/assets/js/bootstrap/bootstrap.min.js"></script>
 <script src="${domainUrl}/assets/js/common.js"></script>
 <script src="${domainUrl}/assets/js/sideUrl.js"></script>
+<script src="${domainUrl}/assets/js/dataName.js"></script>
 <script src="${domainUrl}/assets/js/OutJs/page/page.js"></script>
 <script src="${domainUrl}/assets/js/OutJs/date/jquery.date_input.pack.js"></script>
-<script src="${domainUrl}/assets/js/OutJs/date/Week.js"></script>
-<script>
+<script src="${domainUrl}/assets/js/OutJs/date/Week.js"></script><script>
 function loginOut() {
     var url = domainUrl + "/serve/login/loginOut";
     var getData = {
