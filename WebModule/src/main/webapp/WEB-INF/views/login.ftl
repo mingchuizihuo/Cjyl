@@ -66,7 +66,7 @@
     };
     $(function () {
         OfindAll();
-        $("#loginPass").click(function () {
+        $("#login").mouseover(function () {
             Oname = $("#q1").val();
             var url  = domainUrl + "/serve/login/findAllOrganizationName";
             var getData = {
@@ -74,7 +74,6 @@
                 limit:100000
             };
             getAjax(url,false,getData,function (data) {
-                console.log(JSON.stringify(data))
                 var num = data.iTotalRecords;
                 for(var i = 0; i <num ;i++){
                     if(Oname == data.aaData[i].name){
@@ -82,24 +81,8 @@
                         sessionStorage.setItem("OStaffId", Oid);
                     }
                 }
-            });
-        })
-        $("#loginName").click(function () {
-            Oname = $("#q1").val();
-            var url  = domainUrl + "/serve/login/findAllOrganizationName";
-            var getData = {
-                currentPage:1,
-                limit:100000
-            };
-            getAjax(url,false,getData,function (data) {
-                console.log(JSON.stringify(data))
-                var num = data.iTotalRecords;
-                for(var i = 0; i <num ;i++){
-                    if(Oname == data.aaData[i].name){
-                        Oid = data.aaData[i].id;
-                        sessionStorage.setItem("OStaffId", Oid);
-                    }
-                }
+                console.log(Oid)
+
             });
         })
     });
@@ -128,8 +111,11 @@
                 loginPassword:$("#loginPass").val()
             };
             getAjax(url,false,getData,function (data) {
-                console.log(JSON.stringify(data))
-                location.href = domainUrl+"/page/background"
+                if(data.result != null){
+                    alert("帐号或密码错误，请重新输入");
+                }else{
+                    location.href = domainUrl+"/page/background";
+                }
             })
         }
 

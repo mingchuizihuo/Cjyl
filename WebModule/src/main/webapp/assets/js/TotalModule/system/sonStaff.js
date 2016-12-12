@@ -3,7 +3,8 @@ function add() {
     var postData = {
         organizationLoginId:OStaffId,
         loginName:$("#staffName").val(),
-        loginPassword:$("#staffPass").val()
+        loginPassword:$("#staffPass").val(),
+        loginType:$("#staffType").val()
     };
     console.log(postData)
     postAjax(url,false,postData,function (data) {

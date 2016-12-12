@@ -21,8 +21,7 @@ function findAll(currentPage) {
         var pageList = Math.ceil(data.iTotalRecords / 9);
         var d;
         var money = 0;
-        // <input type="checkbox" name="del" id="All" style="background:#f00;color:#0f0;border:#0ff;width:50px;">
-        var html = '<thead><tr><th></th>  <th>姓名 </th> <th>入住时间</th> <th>护理人员</th> <th>大厦</th> <th>房间</th> <th>床位</th> <th>月费用</th> <th>民族</th> ' +
+        var html = '<thead><tr><th><input type="checkbox" name="del" id="All" style="background:#f00;color:#0f0;border:#0ff;width:50px;"></th> <th>姓名 </th> <th>入住时间</th> <th>护理人员</th> <th>大厦</th> <th>房间</th> <th>床位</th> <th>月费用</th> <th>民族</th> ' +
             '<th>出生日期</th> <th>自理情况</th>  <th>身份证号</th> <th>状态</th> <th>出院日期</th> <th>操作</th></tr> </thead><tbody id="tbodyDelId">'
         for (var i = 0; i < num; i++) {
             d =  data.aaData[i];
@@ -31,9 +30,9 @@ function findAll(currentPage) {
                     money += d.checkInInitCostList[j].money;
                 }
             }
-                html += ' <tr> <td><input type="checkbox" name="del"></td><td>'+d.name+'</td>  <td>'+d.checkInDate.substring(0,11)+'</td> <td>'+d.staff.name+'</td>' +
+                html += ' <tr> <td><input type="checkbox" name="del" value="'+d.id+'"></td><td>'+d.name+'</td>  <td>'+d.checkInDate.substring(0,11)+'</td> <td>'+d.staff.name+'</td>' +
                 ' <td>'+d.mansion+'</td> <td>'+d.room+'</td> <td>'+d.bed+'</td> <td>'+money+'</td>  <td>'+d.nation+'</td> <td>'+d.birthday+'</td> <td>'+d.takeCareOfOneselfStr+'</td>' +
-                ' <td>'+d.cardId+'</td> <td>'+d.olderStateStr+'</td> <td>'+d.olderLeaveDate+'</td><td><input type="button" value="修改" onclick="make('+d.id+')"></td> </tr>';
+                ' <td>'+d.cardId+'</td> <td>'+d.olderStateStr+'</td> <td>'+d.olderLeaveDate+'</td><td><button onclick="make('+d.id+')">修改</button></td> </tr>';
         }
         html += '</tbody>';
         $("#oldTable").html(html);
@@ -170,11 +169,12 @@ function update() {
     })
 }
 //删除
-function del(id) {
-    var urlDel = url + "del";
+function dels() {
+    var urlDel = url + "dels";
     var postData = {
-        id:id
-    }
+        ids:delId
+    };
+    console.log(postData)
     postAjax(urlDel,false,postData,function (data) {
         alert("删除成功");
         findAll(currentPage);

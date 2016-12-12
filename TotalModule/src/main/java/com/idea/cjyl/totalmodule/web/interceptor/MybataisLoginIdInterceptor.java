@@ -61,6 +61,9 @@ public class MybataisLoginIdInterceptor implements Interceptor {
         String fromTable=null;
         String suffix = null;
 
+        if(sql.indexOf("insert into")!=-1 || sql.indexOf("INSERT INTO")!=-1 ){
+            return sql;
+        }
         if(AnalysisConstant.selectState != 3){
             return sql;
         }

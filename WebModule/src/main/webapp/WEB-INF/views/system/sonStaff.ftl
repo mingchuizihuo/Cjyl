@@ -41,6 +41,11 @@
                     <ul id="loginDiv">
                         <li><input type="text" placeholder="员工帐号" id="staffName"></li>
                         <li><input type="password" placeholder="员工密码" id="staffPass"></li>
+                        <li><select name="" id="staffType">
+                            <option value="125">管理员</option>
+                            <option value="126">普通用户</option>
+                            <option value="127">游客</option>
+                        </select></li>
                         <li><input type="button" value="添加" onclick="add()"></li>
                     </ul>
                 <style>
@@ -50,6 +55,14 @@
                     #loginDiv li{
                         margin-top: 20px;
                         margin-left: 30px;
+                    }
+                    #loginDiv select{
+                        width: 240px;
+                        height:30px;
+                        font-size: 16px;
+                        padding-left: 10px;
+                        border: 1px solid #D7DADD;
+                        color: #000;
                     }
                     #loginDiv input[type="text"]{
                         width: 240px;

@@ -114,12 +114,17 @@
                         <li><a onclick="sideUrl('/report/report')"><img src="${domainUrl}/assets/images/backstage/dian.png" >其他报表</a></li>
                     </ul>
                 </li>
-                <li>
-                    <div class="link">系统管理<xialaimg class="xialaImg"><img src="${domainUrl}/assets/images/backstage/xiala.png" ></xialaimg></div>
-                    <ul class="submenu">
-                        <li><a onclick="sideUrl('/system/sonStaff')"><img src="${domainUrl}/assets/images/backstage/dian.png" >添加子员工</a></li>
-                    </ul>
-                </li>
+                <#if loginInfo.loginType==125>
+                    <li id="type">
+                        <div class="link">系统管理<xialaimg class="xialaImg"><img src="${domainUrl}/assets/images/backstage/xiala.png" ></xialaimg></div>
+                        <ul class="submenu">
+                            <li><a onclick="sideUrl('/system/sonStaff')"><img src="${domainUrl}/assets/images/backstage/dian.png" >添加子员工</a></li>
+                        </ul>
+                    </li>
+
+
+                </#if>
+
             </ul>
             <#--功能弹出-->
 

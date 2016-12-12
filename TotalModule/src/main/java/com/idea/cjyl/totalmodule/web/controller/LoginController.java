@@ -45,6 +45,7 @@ public class LoginController {
 
 
         } catch (Exception e) {
+            System.out.println(e);
             return ResultData.build().addErroe();
         }
         return ResultData.build();

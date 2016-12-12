@@ -28,11 +28,9 @@
                 <thead>
                 <tr>
                 <th><input type="checkbox" style="background:#f00;color:#0f0;border:#0ff;" id="All"></th>
-                    <th>服务</th>
-                    <th>服务说明</th>
-                    <th>费用状态</th>
-                    <th>产生时间</th>
-                    <th>结算时间</th>
+                    <th>服务项目</th>
+                    <th>价格</th>
+                    <th>说明</th>
                     <th>操作</th>
                 </tr>
                 </thead>

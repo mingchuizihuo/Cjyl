@@ -15,7 +15,7 @@ function findAll(currentPage) {
     };
     getAjax(urlFindAll, false, getData, function (data) {
         var num = data.aaData.length;
-        console.log(JSON.stringify(data))
+        console.log(JSON.stringify(data));
         var pageList = Math.ceil(data.iTotalRecords / 9);
         var d;
         var html = '';
@@ -54,7 +54,7 @@ function table(num,num2,name,floor) {
         var table='';
         var button='';
         for(var i =0 ; i < d.length ; i++){
-            table+='<tr><td>'+name+'</td><td>'+floor+'</td><td>'+d[i].roomNum+'</td><td>'+d[i].roomType+'</td><td>';
+            table+='<tr><td>'+name+'</td><td>'+floor+'</td><td>'+d[i].roomNum+'</td><td>';
             for(var j = 0; j < d[i].bedList.length;j++){
                 if(d[i].bedList[j].bedState == 2){
                     button ='<input type="button" value="空闲" onclick="oldUrl()">';

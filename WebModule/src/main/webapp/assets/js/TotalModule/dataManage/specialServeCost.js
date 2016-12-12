@@ -1,7 +1,7 @@
 /**
  * Created by Administrator on 2016/12/5.
  */
-var url = domainUrl + "/serve/older_cost/";
+var url = domainUrl + "/serve/service_charge/";
 var delId='';
 $(function () {
     findAll(1);
@@ -15,14 +15,14 @@ function findAll(currentPage) {
         limit: limit
     };
     getAjax(urlFindAll, false, getData, function (data) {
-        console.log(JSON.stringify(data))
+        console.log(JSON.stringify(data));
         var num = data.iTotalRecords;
         var pageList = Math.ceil(data.iTotalRecords / 9);
         var d;
         var html = '';
         for (var i = 0; i < num; i++) {
             d =  data.aaData[i];
-            html += '<tr> <td><input type="checkbox" name="del" value="'+d.id+'"></td> <td>'+d.serviceCharge+'</td><td>'+d.serviceChargeContext+'</td> <td>'+d.serviceChargeState+'</td> <td>'+d.serviceChargeDate+'</td><td>'+d.closeAnAccountDate+'</td> <td><button onclick="make('+d.id+')">修改</button></td> </tr>';
+            html += '<tr> <td><input type="checkbox" name="del" value="'+d.id+'"></td><td>'+d.item+'</td> <td>'+d.money+'</td><td>'+d.accountFor+'</td> <td><button onclick="make('+d.id+')">修改</button></td> </tr>';
         }
         $("#tbodyDelId").html(html);
         many();
@@ -43,12 +43,9 @@ function add() {
     var urlAdd = url + "add";
     var postData = {
         organizationLoginId:1,
-        olderId:1,
-        serviceCharge:$("#serviceCharge").val(),
-        serviceChargeContext:$("#serviceChargeContext").val(),
-        serviceChargeState:$("#serviceChargeState").val(),
-        serviceChargeDate:$("#serviceChargeDate").val(),
-        closeAnAccountDate:$("#closeAnAccountDate").val()
+        item:$("#item").val(),
+        money:$("#money").val(),
+        accountFor:$("#accountFor").val(),
     };
     postAjax(urlAdd, false, postData, function (data) {
         alert("添加成功");
@@ -59,38 +56,36 @@ function add() {
 //修改
 function make(id) {
     specialServeUrl();
-    var urlFindAll = url + "findAll";
-    var getData = {
-        currentPage: currentPage,
-        limit: limit
-    };
-    getAjax(urlFindAll,false,getData,function (data) {
-        var num = data.iTotalRecords;
-        var d;
-        for(var i = 0; i < num ; i++){
-            d =  data.aaData[i];
-            if(d.id == id){
-                $("#id").val(id);
-                $("#serviceCharge").val(d.serviceCharge);
-                $("#serviceChargeContext").val(d.serviceChargeContext);
-                $("#serviceChargeState").val(d.serviceChargeState);
-                $("#serviceChargeDate").val(d.serviceChargeDate);
-                $("closeAnAccountDate").val(d.closeAnAccountDate);
+    setTimeout(function () {
+        var urlFindAll = url + "findAll";
+        var getData = {
+            currentPage: currentPage,
+            limit: limit
+        };
+        getAjax(urlFindAll,false,getData,function (data) {
+            var num = data.iTotalRecords;
+            var d;
+            for(var i = 0; i < num ; i++){
+                d =  data.aaData[i];
+                if(d.id == id){
+                    $("#id").val(id);
+                    $("#item").val(d.item);
+                    $("#money").val(d.money);
+                    $("#accountFor").val(d.accountFor);
+                }
             }
-        }
-    })
+        })
+    }, 100);
+
 }
 function update() {
     var urlUpdate = url +"update";
     var postData = {
         id:$("#id").val(),
         organizationLoginId:1,
-        olderId:1,
-        serviceCharge:$("#serviceCharge").val(),
-        serviceChargeContext:$("#serviceChargeContext").val(),
-        serviceChargeState:$("#serviceChargeState").val(),
-        serviceChargeDate:$("#serviceChargeDate").val(),
-        closeAnAccountDate:$("#closeAnAccountDate").val()
+        item:$("#item").val(),
+        money:$("#money").val(),
+        accountFor:$("#accountFor").val(),
     };
     postAjax(urlUpdate,false,postData,function (data) {
         alert("修改成功");

@@ -6,11 +6,9 @@
     <div class="feiyong">
         <div class="box">
             <ul>
-                <li><span>服务项目</span><input type="text" id="serviceCharge"></li>
-                <li><span class="ma">状态</span><input type="text" id="serviceChargeContext"></li>
-                <li class="wi"><span>说明</span><input type="text" id="serviceChargeState"> </li>
-                <li><span>产生时间</span><input type="text" id="serviceChargeDate"></li>
-                <li><span>结算时间</span><input type="text" id="closeAnAccountDate"></li>
+                <li><span>服务项目</span><input type="text" id="item"></li>
+                <li><span class="ma">价格</span><input type="text" id="money"></li>
+                <li class="wi"><span>说明</span><input type="text" id="accountFor"> </li>
                 <li style="display: none;"><input type="text" id="id"></li>
                 <div class="clearfix"></div>
             </ul>
