@@ -2,7 +2,9 @@ package com.idea.cjyl.totalmodule.web.controller;
 
 import com.idea.cjyl.core.common.ResultData;
 import com.idea.cjyl.core.generic.GenericController;
+import com.idea.cjyl.totalmodule.web.domain.pojo.Bed;
 import com.idea.cjyl.totalmodule.web.domain.pojo.Older;
+import com.idea.cjyl.totalmodule.web.service.BedService;
 import com.idea.cjyl.totalmodule.web.service.OlderBriefService;
 import com.idea.cjyl.totalmodule.web.service.OlderService;
 
@@ -21,6 +23,8 @@ public class OlderController extends GenericController {
     @Autowired
     private OlderService olderService;
     @Autowired
+    private BedService bedService;
+    @Autowired
     private OlderBriefService olderBriefService;
 
     /**
@@ -30,11 +34,18 @@ public class OlderController extends GenericController {
     */
     @ResponseBody
     @RequestMapping(value="add" ,method = RequestMethod.POST)
-    public ResultData add(Older older){
+    public ResultData add(Older older,Long bedId){
 
         try {
-            System.out.println(older);
-                    olderService.insert(older);
+
+            older = olderService.insert(older);
+            if(bedId!=null){
+                Bed bed = new Bed();
+                bed.setId(bedId);
+                bed.setBedState((byte)2);
+                bed.setOlderId(older.getId());
+                bedService.update(bed);
+            }
 
 
             }catch (Exception e){
