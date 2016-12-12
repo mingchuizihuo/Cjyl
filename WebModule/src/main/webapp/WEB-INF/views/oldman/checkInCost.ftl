@@ -49,6 +49,13 @@
         <div class="feiyong">
             <div class="box">
                 <ul>
+                    <#--<li><span>老人姓名</span>-->
+                        <#--<input type="text" list="oldSelect">-->
+                        <#--<datalist id="oldSelect">-->
+                            <#--<option value="">-->
+                            <#--<option value="">-->
+                        <#--</datalist>-->
+                     <#--</li>-->
                     <li><span>老人姓名</span><select name="" id="oldSelect"></select></li>
                     <li><span>初始费</span><select name="" id="checkInInitCostId"></select></li>
                     <li><span>费用状态</span><input type="text"  id="checkInInitCostState" ></li>

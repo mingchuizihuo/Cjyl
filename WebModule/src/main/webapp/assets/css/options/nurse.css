@@ -21,23 +21,29 @@
 .tally .box ul li:nth-child(8) input{width:80%;}
 .tally .box ul li span{float: left;width:40%;}
 .tally .box ul li input{float:left;width:60%;height:28px;border:1px #c3c3c3 solid;background: none;color:#333;}
-.tally .box ul li select{ width: 60%;height: 28px;background: none;}
+.tally .box ul li datalist{background: #e7e7e7 !important;}
+.tally .box ul li #browsers option{background: #e7e7e7 !important;}
+
+.tally .box ul li select{ width: 60%;height: 28px;background: none;box-shadow: none;;border:1px #c3c3c3 solid;}
 .tally .box ul li select option{background:#e7e7e7 !important;}
 .tally .box ul li #oldSelect{width:30% !important;}
 
-    /*增删改查按钮*/
+
+/*增删改查按钮*/
 .tally .bottom{padding-top:20px; display: flex;
     -webkit-justify-content: space-around;
     justify-content: space-around;
     border-top: 1px #c3c3c3 solid;}
-.tally .bottom button{
-    width:85px;
-    height:28px;
-    background:#e6e6e6;
+.tally .bottom button {
+    width: 85px;
+    height: 28px;
+    background: #e6e6e6;
     border-radius: 5px;
-    border:1px #c2c2c2 solid;
+    border: 1px #c2c2c2 solid;
     outline: none !important;
 }
+
+
 .tally .bottom button:hover{background:#8fcbdf;border:1px #379bca solid;color:#fff;}
 .tally .bottom button:focus{background:#379bca;color:#fff;}
 
