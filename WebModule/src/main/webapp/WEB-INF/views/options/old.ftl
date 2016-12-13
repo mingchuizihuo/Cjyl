@@ -33,6 +33,7 @@
     <#--老人信息-->
         <div role="tabpanel" class="tab-pane active oldman" id="oldman">
             <ul>
+                <li style="display: none"><input type="text" id="bedId"></li>
                 <li><span>姓名</span><input type="text" id="name"></li>
                 <li><span>性别</span>
                     <select class="form-control select" id="sex">
@@ -41,7 +42,7 @@
                 </li>
                 <li><span>入住时间</span><input type="text" id="sdate" class="date_picker checkInDate"></li>
                 <li><span>身份证号</span><input type="text" id="cardId"></li>
-                <li><span>出生日期</span><input type="text" id="birthday"></li>
+                <li><span>出生日期</span><input type="text" id="sdate" class="date_picker birthday"></li>
                 <li><span>手机</span><input type="text" id="tel"></li>
                 <li><span>护理级别</span><select class="form-control select" id="nurse">
 
@@ -93,7 +94,7 @@
                         <option>较差</option>
                     </select>
                 </li>
-                <li><span>出院时间</span><input type="text" id="olderLeaveDate"></li>
+                <li><span>出院时间</span><input type="text" id="sdate" class="date_picker olderLeaveDate"></li>
                 <div class="clearfix"></div>
                 <li><span>大厦</span><input type="text" id="floor"></li>
                 <li><span>房间</span><input type="text" id="room"></li>
@@ -255,3 +256,46 @@
     </div>
 </div>
 <script src="${domainUrl}/assets/js/TotalModule/filter.js"></script>
+<script>
+    function add() {
+        var urlAdd = domainUrl + "/serve/older/add";
+        var postData = {
+            organizationLoginId:1,
+            name:$("#name").val(),
+            sex:$("#sex").val(),
+            checkInDate:$(".checkInDate").val(),
+            cardId:$("#cardId").val(),
+            birthday:$(".birthday").val(),
+            tel:$("#tel").val(),
+            monthChargeId:1,
+            censusRegister:$("#censusRegister").val(),
+            belief:1,
+            nation:$("#nation").val(),
+            politicsStatus:1,
+            selfIngredient:$("#selfIngredient").val(),
+            takeCareOfOneself:1,
+            mind:1,
+            pluse:$("#pluse").val(),
+            bloodPressure:$("#bloodPressure").val(),
+            allergicDrug:$("#allergicDrug").val(),
+            indicationHospital:$("#indicationHospital").val(),
+            indicationDoctor:$("#indicationDoctor").val(),
+            principalDisease:$("#principalDisease").val(),
+            diseasesHistory:$("#diseasesHistory").val(),
+            hospitalTel:$("#hospitalTel").val(),
+            dietCharacteristics:$("#dietCharacteristics").val(),
+            disposition:$("#disposition").val(),
+            hobby:$("#hobby").val(),
+            specialRequirements:$("#specialRequirements").val(),
+            abnormalPatterns:$("#abnormalPatterns").val(),
+            olderState:1,
+            olderLeaveDate:$(".olderLeaveDate").val(),
+            staffId:1,
+            bedId:$("#bedId").val()
+        };
+        postAjax(urlAdd, false, postData, function (data) {
+            alert("添加成功");
+            $(".publicModal").hide();
+        })
+    }
+</script>

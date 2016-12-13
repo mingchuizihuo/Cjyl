@@ -42,7 +42,7 @@ public class OlderController extends GenericController {
             if(bedId!=null){
                 Bed bed = new Bed();
                 bed.setId(bedId);
-                bed.setBedState((byte)2);
+                bed.setBedState((byte)1 );
                 bed.setOlderId(older.getId());
                 bedService.update(bed);
             }

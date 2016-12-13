@@ -68,17 +68,15 @@ function modalUrl(floor,room,bed) {
     })
 }
 //老人信息弹窗
-function oldUrl(is,floor,room,bed) {
+function oldUrl(is,bedId) {
     var urlGet = domainUrl + "/options/old";
     $.ajax({
         type:"get",
         url:urlGet,
         success:function (data) {
             $(".publicModal").html(data);
-            $("#floor").val(floor);
-            $("#room").val(room);
-            $("#bed").val(bed);
             $(".hideLi").hide();
+            $("#bedId").val(bedId);
             modalClose();
             if(is == 1){
                 $("#updateIs").hide();

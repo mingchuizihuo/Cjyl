@@ -57,7 +57,7 @@ function table(num,num2,name,floor) {
             table+='<tr><td>'+name+'</td><td>'+floor+'</td><td>'+d[i].roomNum+'</td><td>';
             for(var j = 0; j < d[i].bedList.length;j++){
                 if(d[i].bedList[j].bedState == 2){
-                    button ='<input type="button" value="空闲" onclick="oldUrl()">';
+                    button ='<input type="button" value="空闲" onclick="oldUrl(1,'+d[i].bedList[j].id+')">';
                 }else{
                     button ='<input type="button" value="使用" style="background: red" onclick="modalUrl(&quot;'+name+'&quot;,&quot;'+floor+'&quot;,&quot;'+d[i].roomNum+'&quot;)">';
                 }

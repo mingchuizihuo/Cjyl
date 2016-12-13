@@ -22,7 +22,7 @@ function findAll(currentPage) {
         var money = 0;
         var html = '<thead><tr><th><input type="checkbox" name="del" id="All" ></th> <th>姓名 </th> <th>入住时间</th> <th>护理人员</th> <th>大厦</th> <th>房间</th> <th>床位</th> <th>月费用</th> <th>民族</th> ' +
             '<th>出生日期</th> <th>自理情况</th>  <th>身份证号</th> <th>状态</th> <th>出院日期</th> <th>操作</th></tr> </thead><tbody id="tbodyDelId">';
-        for (var i = 0; i < 1; i++) {
+        for (var i = 0; i < num; i++) {
             d =  data.aaData[i];
             if(d.staff == null){
                 d.staff = {
@@ -53,16 +53,65 @@ function findAll(currentPage) {
         }
     })
 }
-//添加
-function addOld() {
-    var urlAdd = url + "add";
+//修改
+function make(id) {
+    oldUrl();
+    setTimeout(function () {
+        $(".hideLi").show();
+        findAllOldMess(id);
+        var urlFindAll = url + "findAll";
+        var getData = {
+            currentPage: currentPage,
+            limit: limit
+        };
+        getAjax(urlFindAll,false,getData,function (data) {
+            var num = data.aaData.length;
+            var d;
+            for(var i = 0; i < num ; i++){
+                d =  data.aaData[i];
+                if(d.id == id){
+                    $("#id").val(id);
+                    $("#name").val(d.name);
+                    $("#checkInDate").val(d.checkInDate);
+                    $("#cardId").val(d.cardId);
+                    $(".birthday").val(d.birthday);
+                    $("#tel").val(d.tel);
+                    $("#censusRegister").val(d.censusRegister);
+                    $("#nation").val(d.nation);
+                    $("#selfIngredient").val(d.selfIngredient);
+                    $("#pluse").val(d.pluse);
+                    $("#bloodPressure").val(d.bloodPressure);
+                    $("#allergicDrug").val(d.allergicDrug);
+                    $("#indicationHospital").val(d.indicationHospital);
+                    $("#indicationDoctor").val(d.indicationDoctor);
+                    $("#principalDisease").val(d.principalDisease);
+                    $("#diseasesHistory").val(d.diseasesHistory);
+                    $("#hospitalTel").val(d.hospitalTel);
+                    $("#dietCharacteristics").val(d.dietCharacteristics);
+                    $("#disposition").val(d.disposition);
+                    $("#hobby").val(d.hobby);
+                    $("#specialRequirements").val(d.specialRequirements);
+                    $("#abnormalPatterns").val(d.abnormalPatterns);
+                    $(".olderLeaveDate").val(d.olderLeaveDate);
+                    $("#floor").val(d.floor);
+                    $("#room").val(d.room);
+                    $("#bed").val(d.bed);
+                }
+            }
+        })
+    }, 100);
+
+}
+function update() {
+    var urlUpdate = url +"update";
     var postData = {
+        id:$("#id").val(),
         organizationLoginId:1,
         name:$("#name").val(),
         sex:$("#sex").val(),
         checkInDate:$(".checkInDate").val(),
         cardId:$("#cardId").val(),
-        birthday:$("#birthday").val(),
+        birthday:$(".birthday").val(),
         tel:$("#tel").val(),
         monthChargeId:1,
         censusRegister:$("#censusRegister").val(),
@@ -86,70 +135,14 @@ function addOld() {
         specialRequirements:$("#specialRequirements").val(),
         abnormalPatterns:$("#abnormalPatterns").val(),
         olderState:1,
-        olderLeaveDate:$("#olderLeaveDate").val(),
+        olderLeaveDate:$(".olderLeaveDate").val(),
         staffId:1,
-
-    };
-    postAjax(urlAdd, false, postData, function (data) {
-        console.log(JSON.stringify(data))
-    })
-}
-//修改
-function make(id) {
-    oldUrl();
-    setTimeout(function () {
-        $(".hideLi").show();
-        findAllOldMess(id);
-        var urlFindAll = url + "findAll";
-        var getData = {
-            currentPage: currentPage,
-            limit: limit
-        };
-        getAjax(urlFindAll,false,getData,function (data) {
-            var num = data.aaData.length;
-            var d;
-            for(var i = 0; i < num ; i++){
-                d =  data.aaData[i];
-                if(d.id == id){
-                    $("#id").val(id);
-                    $("#name").val(d.name);
-                    $("#checkInDate").val(d.checkInDate);
-                    $("#cardId").val(d.cardId);
-                    $("#birthday").val(d.birthday);
-                    $("#tel").val(d.tel);
-                    $("#censusRegister").val(d.censusRegister);
-                    $("#nation").val(d.nation);
-                    $("#selfIngredient").val(d.selfIngredient);
-                    $("#pluse").val(d.pluse);
-                    $("#bloodPressure").val(d.bloodPressure);
-                    $("#allergicDrug").val(d.allergicDrug);
-                    $("#indicationHospital").val(d.indicationHospital);
-                    $("#indicationDoctor").val(d.indicationDoctor);
-                    $("#principalDisease").val(d.principalDisease);
-                    $("#diseasesHistory").val(d.diseasesHistory);
-                    $("#hospitalTel").val(d.hospitalTel);
-                    $("#dietCharacteristics").val(d.dietCharacteristics);
-                    $("#disposition").val(d.disposition);
-                    $("#hobby").val(d.hobby);
-                    $("#specialRequirements").val(d.specialRequirements);
-                    $("#abnormalPatterns").val(d.abnormalPatterns);
-                    $("#olderLeaveDate").val(d.olderLeaveDate);
-                    $("#floor").val(d.floor);
-                    $("#room").val(d.room);
-                    $("#bed").val(d.bed);
-                }
-            }
-        })
-    }, 100);
-
-}
-function update() {
-    var urlUpdate = url +"update";
-    var postData = {
 
     }
     postAjax(urlUpdate,false,postData,function (data) {
-
+        alert("修改成功");
+        $(".publicModal").hide();
+        findAll();
     })
 }
 //删除
@@ -163,8 +156,4 @@ function dels() {
         alert("删除成功");
         findAll(currentPage);
     })
-}
-function add() {
-    addOld();
-    addSon();
 }
