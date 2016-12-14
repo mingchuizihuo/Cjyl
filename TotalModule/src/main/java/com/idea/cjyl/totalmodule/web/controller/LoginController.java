@@ -52,6 +52,24 @@ public class LoginController {
 
     }
 
+
+    /**
+     * 批量删除
+     * @param dels 多个删除id（1，2）
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "dels", method = RequestMethod.POST)
+    public ResultData dels(String dels){
+        try{
+                loginService.dels(dels);
+
+        }catch(Exception e){
+            return ResultData.build().delError();
+        }
+        return ResultData.build();
+    }
+
     /**
      * 查询子账号
      *
@@ -62,9 +80,9 @@ public class LoginController {
     @ResponseBody
     @RequestMapping(value = "findAll", method = RequestMethod.GET)
     public ResultData findAll(Integer currentPage, Integer limit) {
-        AnalysisConstant.selectState = 2;
+
         Page<Login> logins = loginService.findAll(currentPage, limit);
-        AnalysisConstant.selectState = 3;
+
         return ResultData.build().
                 parsePageBean(logins);
     }

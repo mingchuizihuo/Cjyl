@@ -34,8 +34,9 @@ public class OlderController extends GenericController {
      * @return
      */
     @ResponseBody
-    @RequestMapping(value="getIntoInfo" ,method = RequestMethod.POST)
+    @RequestMapping(value="getIntoInfo" ,method = RequestMethod.GET)
     public ResultData getIntoInfo(){
+        System.out.println("aaa");
         return ResultData.build().parseaDateBean(olderService.getIntoInfo());
 
     }

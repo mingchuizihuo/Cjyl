@@ -2,6 +2,10 @@
  * Created by Administrator on 2016/12/5.
  */
 var url = domainUrl + "/serve/mansion/";
+var floorTableNUm1 = '';
+var floorTableNUm2 = '';
+var floorTableName = '';
+var floorTableFloor = '';
 $(function () {
     findAll(1);
 });
@@ -44,11 +48,15 @@ function findAll(currentPage) {
     })
 }
 function table(num,num2,name,floor) {
+    floorTableNUm1 = num;
+    floorTableNUm2 = num2;
+    floorTableName = name;
+        floorTableFloor = floor;
     var urlFindAll = url + "findAllVO";
     var getData = {
         currentPage: currentPage,
         limit: limit
-    }
+    };
     getAjax(urlFindAll,false,getData,function (data) {
         var d = data.aaData[num].floorTierierList[num2].roomList;
         var table='';
@@ -87,7 +95,7 @@ function update() {
     var urlUpdate = url +"update";
     var postData = {
 
-    }
+    };
     postAjax(urlUpdate,false,postData,function (data) {
 
     })
@@ -97,7 +105,7 @@ function del(id) {
     var urlDel = url + "del";
     var postData = {
         id:id
-    }
+    };
     postAjax(urlDel,false,postData,function (data) {
         alert("删除成功");
         findAll(currentPage);

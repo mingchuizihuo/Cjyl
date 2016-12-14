@@ -296,6 +296,8 @@
         postAjax(urlAdd, false, postData, function (data) {
             alert("添加成功");
             $(".publicModal").hide();
+            console.log(floorTableNUm1,floorTableNUm2,floorTableName,floorTableFloor)
+            table(floorTableNUm1,floorTableNUm2,floorTableName,floorTableFloor)
         })
     }
 </script>

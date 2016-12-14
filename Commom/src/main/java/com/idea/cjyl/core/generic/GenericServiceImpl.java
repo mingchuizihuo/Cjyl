@@ -148,5 +148,15 @@ public abstract class GenericServiceImpl<Model, PK,ModelExample> implements Gene
     }
 
 
-
+    @Override
+    public Integer dels(String dels) {
+        String[] idsArray = dels.split(",");
+        Long[] delIdLong = new Long[idsArray.length];
+        Integer result = null;
+        for (int i=0;i<idsArray.length;i++) {
+            delIdLong[i] = Long.parseLong(idsArray[i]);
+            result = getDao().deleteByPrimaryKey((PK)delIdLong[i]);
+        }
+        return result;
+    }
 }

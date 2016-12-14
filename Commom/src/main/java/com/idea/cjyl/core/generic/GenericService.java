@@ -72,6 +72,13 @@ public interface GenericService<Model, PK,ModelExample> {
      */
     Page<Model> findAll(Integer currentPage, Integer limit);
 
+    /**
+     * 批量删除
+     * @param dels
+     * @return
+     */
+    Integer dels(String dels);
+
 
 
 }

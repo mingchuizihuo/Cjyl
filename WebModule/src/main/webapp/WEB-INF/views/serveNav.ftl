@@ -111,8 +111,8 @@
                 <li>
                     <div class="link">报表管理<xialaimg class="xialaImg"><img src="${domainUrl}/assets/images/backstage/xiala.png" ></xialaimg></div>
                     <ul class="submenu">
-                        <li><a onclick="sideUrl('/report/chargeList')"><img src="${domainUrl}/assets/images/backstage/dian.png" >收费清单</a></li>
-                        <li><a onclick="sideUrl('/report/arrearageNote')"><img src="${domainUrl}/assets/images/backstage/dian.png" >欠费记录</a></li>
+                        <#--<li><a onclick="sideUrl('/report/chargeList')"><img src="${domainUrl}/assets/images/backstage/dian.png" >收费清单</a></li>-->
+                        <li><a onclick="sideUrl('/statement/page/arrearageNote')"><img src="${domainUrl}/assets/images/backstage/dian.png" >欠费记录</a></li>
                         <li><a onclick="sideUrl('/report/report')"><img src="${domainUrl}/assets/images/backstage/dian.png" >其他报表</a></li>
                     </ul>
                 </li>
@@ -123,10 +123,7 @@
                             <li><a onclick="sideUrl('/system/sonStaff')"><img src="${domainUrl}/assets/images/backstage/dian.png" >添加子员工</a></li>
                         </ul>
                     </li>
-
-
                 </#if>
-
             </ul>
             <#--功能弹出-->
         </div>
