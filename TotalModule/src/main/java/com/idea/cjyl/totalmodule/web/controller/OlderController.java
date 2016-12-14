@@ -27,6 +27,21 @@ public class OlderController extends GenericController {
     @Autowired
     private OlderBriefService olderBriefService;
 
+
+
+    /**
+     * 获取入住情况
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value="getIntoInfo" ,method = RequestMethod.POST)
+    public ResultData getIntoInfo(){
+        return ResultData.build().parseaDateBean(olderService.getIntoInfo());
+
+    }
+
+
+
     /**
         * 添加老人
         * @param older

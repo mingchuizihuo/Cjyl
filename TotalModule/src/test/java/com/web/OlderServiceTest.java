@@ -4,6 +4,7 @@ import SupportTest.SupportTest;
 import com.idea.cjyl.totalmodule.web.domain.pojo.DataDictionary;
 import com.idea.cjyl.totalmodule.web.domain.pojo.Older;
 import com.idea.cjyl.totalmodule.web.domain.vo.OlderBriefVO;
+import com.idea.cjyl.totalmodule.web.domain.vo.OlderIntoInfoVO;
 import com.idea.cjyl.totalmodule.web.domain.vo.OlderVO;
 import com.idea.cjyl.totalmodule.web.globals.AnalysisConstant;
 import com.idea.cjyl.totalmodule.web.service.OlderBriefService;
@@ -27,6 +28,12 @@ public class OlderServiceTest extends AbstractJUnit4SpringContextTests {
     private OlderService olderService;
     @Autowired
     private OlderBriefService olderBriefService;
+
+    @Test
+    public void testgetIntoInfo(){
+        OlderIntoInfoVO o = olderService.getIntoInfo();
+        System.out.println(o);
+    }
 
     @Test
     public void testFindAllVO() {
