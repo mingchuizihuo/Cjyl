@@ -18,13 +18,13 @@
         <skipTests>true</skipTests>
     </properties>
     <dependencies>
-        <dependency>
+       <!-- <dependency>
             <groupId>com.idea</groupId>
             <artifactId>common</artifactId>
             <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
+            <scope>provided</scope>
             <type>jar</type>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>com.idea</groupId>
             <artifactId>total_module</artifactId>

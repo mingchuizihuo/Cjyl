@@ -20,4 +20,6 @@ public class IndexPageController {
         return "/serveNav";
 
     }
+
+
 }

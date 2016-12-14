@@ -93,7 +93,9 @@ public class MybataisLoginIdInterceptor implements Interceptor {
 
             Login login = AnalysisConstant.login;
 
-            fromTable = "from (select * from "+fromTable+" where organization_login_id = "+login.getOrganizationLoginId()+") "+fromTable+" ";
+            //fromTable = "from (select * from "+fromTable+" where organization_login_id = "+login.getOrganizationLoginId()+") "+fromTable+" ";
+            fromTable = "from (select * from "+fromTable+" where organization_login_id = "+1+") "+fromTable+" ";
+
             return prefix+fromTable+suffix;
         }else{
             return sql;

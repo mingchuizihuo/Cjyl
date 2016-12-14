@@ -39,6 +39,9 @@ public class OlderInitialFeeServiceImpl extends GenericServiceVOImpl<OlderInitia
         if (olderInitialFee.getOlderId() != null) {
             criteria.andOlderIdEqualTo(olderInitialFee.getOlderId());
         }
+        if(olderInitialFee.getCheckInInitCostState()!=null){
+            criteria.andCheckInInitCostStateEqualTo(olderInitialFee.getCheckInInitCostState());
+        }
         return olderInitialFeeExample;
     }
 }

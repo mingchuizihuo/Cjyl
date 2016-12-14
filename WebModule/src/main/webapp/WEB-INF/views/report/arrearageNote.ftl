@@ -48,26 +48,21 @@
                 <th>房间</th>
                 <th>床号</th>
                 <th>欠费金额</th>
-                <th>说明</th>
+
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
+            <#list arrearageNote as arrearageNoteVOOne>
+                <tr>
+                    <td>${arrearageNoteVOOne.olderName}</td>
+                    <td>${arrearageNoteVOOne.sex}</td>
+                    <td>${arrearageNoteVOOne.floorNum}</td>
+                    <td>${arrearageNoteVOOne.bedNum}</td>
+                    <td>${arrearageNoteVOOne.money}</td>
+
+                </tr>
+            </#list>
+
 
             </tbody>
         </table>
