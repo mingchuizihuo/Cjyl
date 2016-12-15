@@ -34,71 +34,40 @@
         <div role="tabpanel" class="tab-pane active oldman" id="oldman">
             <ul>
                 <li style="display: none"><input type="text" id="bedId"></li>
-                <li><span>姓名</span><input type="text" id="name"></li>
-                <li><span>性别</span>
-                    <select class="form-control select" id="sex">
+                <li><span>姓名</span><i id="name"></i></li>
+                <li><span>性别</span><i id="sex"></i></li>
+                <li><span>入住时间</span><i id="sdate"></i></li>
+                <li><span>身份证号</span><i id="cardId"></i></li>
+                <li><span>出生日期</span><i id="sdate"></i></li>
+                <li><span>手机</span><i id="tel"></i></li>
+                <li><span>护理级别</span><i id="nurse"></i></li>
+                <li><span>户籍</span><i id="censusRegister"></i></li>
+                <li><span>信仰</span><i id="faith"></i></li>
+                <li><span>民族</span><i id="nation"></i></li>
+                <li><span>政治面貌</span><i id=""> </i> </li>
+                <li><span>本人成分</span><i id="selfIngredient"></i></li>
+                <li><span>自理情况</span><i id="takeCare"></i></li>
+                <li><span>神志</span><i id="mental"></i></li>
 
-                    </select>
-                </li>
-                <li><span>入住时间</span><input type="text" id="sdate" class="date_picker checkInDate"></li>
-                <li><span>身份证号</span><input type="text" id="cardId"></li>
-                <li><span>出生日期</span><input type="text" id="sdate" class="date_picker birthday"></li>
-                <li><span>手机</span><input type="text" id="tel"></li>
-                <li><span>护理级别</span><select class="form-control select" id="nurse">
-
-                </select></li>
-                <li><span>户籍</span><input type="text" id="censusRegister"></li>
-                <li><span>信仰</span>
-                    <select class="form-control select" id="faith">
-
-                    </select>
-                </li>
-                <li><span>民族</span><input type="text" id="nation"></li>
-                <li><span>政治面貌</span>
-                    <select class="form-control select">
-                        <option>群众</option>
-                        <option>团员</option>
-                        <option>党员</option>
-                    </select>
-                </li>
-                <li><span>本人成分</span><input type="text" id="selfIngredient"></li>
-                <li><span>自理情况</span>
-                    <select class="form-control select" id="takeCare">
-
-                    </select>
-                </li>
-                <li><span>神志</span>
-                    <select class="form-control select" id="mental">
-                        <option>清醒</option>
-                        <option>昏迷</option>
-                        <option>半清醒</option>
-                    </select>
-                </li>
-                <li><span>脉搏</span><input type="text" id="pluse"></li>
-                <li><span>血压</span><input type="text" id="bloodPressure"></li>
-                <li><span>过敏药物</span><input type="text" id="allergicDrug"></li>
-                <li><span>主治医院</span><input type="text" id="indicationHospital"></li>
-                <li><span>主治医生</span><input type="text" id="indicationDoctor" ></li>
-                <li><span>主要疾病</span><input type="text" id="principalDisease"></li>
-                <li><span>疾病史</span><input type="text" id="diseasesHistory"></li>
-                <li><span>医院电话</span><input type="text" id="hospitalTel"></li>
-                <li><span>饮食特点</span><input type="text" id="dietCharacteristics"></li>
-                <li><span>性格</span><input type="text" id="disposition"></li>
-                <li><span>爱好</span><input type="text" id="hobby"></li>
-                <li><span>特殊要求</span><input type="text" id="specialRequirements"></li>
-                <li><span>异常表现</span><input type="text" id="abnormalPatterns"></li>
-                <li><span>老人状态</span>
-                    <select class="form-control select" id="">
-                        <option>良好</option>
-                        <option>一般</option>
-                        <option>较差</option>
-                    </select>
-                </li>
-                <li><span>出院时间</span><input type="text" id="sdate" class="date_picker olderLeaveDate"></li>
+                <li><span>脉搏</span><i id="pluse"></i></li>
+                <li><span>血压</span><i id="bloodPressure"></i></li>
+                <li><span>过敏药物</span><i id="allergicDrug"></i></li>
+                <li><span>主治医院</span><i id="indicationHospital"></i></li>
+                <li><span>主治医生</span><i id="indicationDoctor"></i></li>
+                <li><span>主要疾病</span><i id="principalDisease"></i></li>
+                <li><span>疾病史</span><i id="diseasesHistory"></i></li>
+                <li><span>医院电话</span><i id="hospitalTel"></i></li>
+                <li><span>饮食特点</span><i id="dietCharacteristics"></i></li>
+                <li><span>性格</span><i id="disposition"></i></li>
+                <li><span>爱好</span><i id="hobby"></i></li>
+                <li><span>特殊要求</span><i id="specialRequirements"></i></li>
+                <li><span>异常表现</span><i id="abnormalPatterns"></i></li>
+                <li><span>老人状态</span><i id=""></i></li>
+                <li><span>出院时间</span><i id="sdate"></i></li>
                 <div class="clearfix"></div>
-                <li><span>大厦</span><input type="text" id="floor"></li>
-                <li><span>房间</span><input type="text" id="room"></li>
-                <li><span>床位</span><input type="text" id="bed"></li>
+                <li><span>大厦</span><i id="floor"></i></li>
+                <li><span>房间</span><i id="room"></i></li>
+                <li><span>床位</span><i id="bed"></i></li>
                 <li style="display: none;"><input type="text" id="id"></li>
                 <div class="clearfix"></div>
             </ul>
@@ -121,12 +90,12 @@
                     </thead>
                     <tbody class="ceshi2" id="sonFind">
                     <tr>
-                        <td><input type="text" ></td>
-                        <td><input type="text" ></td>
-                        <td><input type="text" ></td>
-                        <td><input  type="text"></td>
-                        <td><input  type="text" ></td>
-                        <td><input  type="text"></td>
+                        <td><i id=""></i></td>
+                        <td><i id=""></i></td>
+                        <td><i id=""></i></td>
+                        <td><i id=""></i></td>
+                        <td><i id=""></i></td>
+                        <td><i id=""></i></td>
                     </tr>
                     </tbody>
                 </table>
@@ -145,7 +114,6 @@
             <#--<li><span>住址</span><input id="ShomeAddress" type="text"></li>-->
             <#--<div class="clearfix"></div>-->
             <#--</ul>-->
-
             </div>
         </div>
 
@@ -161,8 +129,8 @@
                     </thead>
                     <tbody class="ceshi2" id="checkInCostTable">
                     <tr>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
+                        <td><i id=""></i></td>
+                        <td><i id=""></i></td>
                     </tr>
                     </tbody>
                 </table>
@@ -180,14 +148,10 @@
                 </thead>
                 <tbody class="ceshi2" id="findAllServe">
                 <tr>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
+                    <td><i id=""></i></td>
+                    <td><i id=""></i></td>
+                    <td><i id=""></i></td>
                 </tr>
-
                 </tbody>
             </table>
         </div>
@@ -204,10 +168,10 @@
                 </thead>
                 <tbody class="ceshi2" id="findNurse">
                 <tr>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
+                    <td><i id=""></i></td>
+                    <td><i id=""></i></td>
+                    <td><i id=""></i></td>
+                    <td><i id=""></i></td>
                 </tr>
                 </tbody>
             </table>

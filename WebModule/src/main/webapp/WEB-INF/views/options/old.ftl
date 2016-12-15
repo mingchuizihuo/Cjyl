@@ -115,7 +115,7 @@
                         <th class="aa">住址</th>
                     </tr>
                     </thead>
-                    <tbody class="ceshi2" id="sonFind">
+                    <tbody class="ceshi2 ceshi3" id="">
                     <tr>
                         <td><input type="text" ></td>
                         <td><input type="text" ></td>
@@ -155,7 +155,7 @@
                         <th class="aa">费用</th>
                     </tr>
                     </thead>
-                    <tbody class="ceshi2" id="checkInCostTable">
+                    <tbody class="ceshi2 ceshi3" id="">
                     <tr>
                         <td><input type="text"></td>
                         <td><input type="text"></td>
@@ -174,14 +174,12 @@
                     <th class="aa">产生时间</th>
                 </tr>
                 </thead>
-                <tbody class="ceshi2" id="findAllServe">
+                <tbody class="ceshi2 ceshi3 id="">
                 <tr>
                     <td><input type="text"></td>
                     <td><input type="text"></td>
                     <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
+
                 </tr>
 
                 </tbody>
@@ -198,7 +196,7 @@
                     <th class="aa">护理人员</th>
                 </tr>
                 </thead>
-                <tbody class="ceshi2" id="findNurse">
+                <tbody class="ceshi2 ceshi3" id="">
                 <tr>
                     <td><input type="text"></td>
                     <td><input type="text"></td>

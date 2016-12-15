@@ -10,7 +10,8 @@
 .ceshi2 td{height:36px;color:#5b5c5c;border:1px #656c7e solid !important;}
 .ceshi2 select{background: none;}
 .ceshi2 input{width:100%;background:none;border:none;}
-
+.ceshi3 td{padding:0px !important;height:100% !important;}
+.ceshi3 input{height:28px;background:#fff !important;}
 
 .table-bordered > tbody > tr > td{border:1px #656c7e solid !important;}
 .information table td{color:#fff;font-size:14px;}

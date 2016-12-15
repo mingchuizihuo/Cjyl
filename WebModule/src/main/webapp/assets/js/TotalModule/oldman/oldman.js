@@ -36,7 +36,7 @@ function findAll(currentPage) {
             }
                 html += ' <tr> <td><input type="checkbox" name="del" value="'+d.id+'"></td><td>'+d.name+'</td>  <td>'+d.checkInDate.substring(0,11)+'</td> <td>'+d.staff.name+'</td>' +
                 ' <td>'+d.mansion+'</td> <td>'+d.room+'</td> <td>'+d.bed+'</td> <td>'+money+'</td>  <td>'+d.nation+'</td> <td>'+d.birthday+'</td> <td>'+d.takeCareOfOneselfStr+'</td>' +
-                ' <td>'+d.cardId+'</td> <td>'+d.olderStateStr+'</td> <td>'+d.olderLeaveDate+'</td><td><button onclick="make('+d.id+')">修改</button><button onclick="look('+d.id+')">查看</button></td> </tr>';
+                ' <td>'+d.cardId+'</td> <td>'+d.olderStateStr+'</td> <td>'+d.olderLeaveDate+'</td><td><button class="pull-left" onclick="make('+d.id+')">修改</button><button class="pull-right" onclick="look('+d.id+')">查看</button></td> </tr>';
         }
         html += '</tbody>';
         $("#oldTable").html(html);
