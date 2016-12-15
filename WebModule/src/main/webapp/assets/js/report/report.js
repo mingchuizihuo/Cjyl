@@ -46,7 +46,7 @@ $(function () {
             height: 350,
             background_color: 'rgba(0,0,0,0)',
             legend: {
-                enable: true,
+                enable: false,
                 background_color: null,
                 align: 'center',
                 valign: 'bottom',
@@ -238,3 +238,6 @@ $(function () {
         chart.draw();
     })
 });
+
+
+// 条形图

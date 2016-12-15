@@ -3,9 +3,11 @@
 <link href="${domainUrl}/assets/css/report/report.css" rel="stylesheet">
 <script src="${domainUrl}/assets/js/OutJs/ichart/ichart.1.2.min.js"></script>
 <script src="${domainUrl}/assets/js/report/report.js"></script>
+<!--d3图表插件-->
+<script src="${domainUrl}/assets/js/OutJs/histogram/d3.min.js"></script>
+<script src="${domainUrl}/assets/js/OutJs/histogram/histogram.js"></script>
 
 <!--页面背景-->
-
 <!---页面主体-->
 <div class="overall" style="background-image: url(${domainUrl}/assets/images/backstage/bgg.jpg);">
 <#--路径导航-->
@@ -28,8 +30,18 @@
             <div class="animated pulse"><div id='canvasDiv1'></div></div>
         </div>
         <div class="clearfix"></div>
+        <div class="pull-left re_l">
+            <div class="animated pulse">
+                <div class="histogram" >
+                    <div id="chart_buttons"></div>
+                    <div id="chart" style="width:700;margin: auto"></div>
+                </div>
+            </div>
+        </div>
+        <div class="pull-right re_r">
+            <div class="animated pulse">
+                <div id='canvasDiv2'></div>
+            </div>
+        </div>
     </div>
-
-
-
 </div>
