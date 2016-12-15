@@ -22,7 +22,7 @@
 }
 
 .room{
-    display: none;
+    /*display: none;*/
 }
 
 .room li{
@@ -63,7 +63,6 @@
     background: #3dc9a2;
     border:0px;
     margin-right:10px;
-
 }
 
 .roomTable tbody tr:nth-of-type(odd)

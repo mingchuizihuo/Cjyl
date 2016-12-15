@@ -89,6 +89,7 @@
     function OfindAll() {
         var url  = domainUrl + "/serve/login/findAllOrganizationName";
         var getData = {
+
             currentPage:1,
             limit:100000
         };
@@ -102,26 +103,38 @@
     }
     function login() {
         var url  = domainUrl + "/serve/login/login";
-        if(Oid == ""){
-            alert("请清楚浏览器缓存重新登录");
-        }else{
             var getData = {
                 organizationLoginId:Oid,
                 loginName:$("#loginName").val(),
                 loginPassword:$("#loginPass").val()
             };
             getAjax(url,false,getData,function (data) {
+                console.log(JSON.stringify(data));
                 if(data.result != null){
                     alert("帐号或密码错误，请重新输入");
                 }else{
                     location.href = domainUrl+"/page/background";
                 }
             })
-        }
+    }
+    function _login() {
+        var url  = domainUrl + "/serve/login/login";
+        var getData = {
+            organizationLoginId:Oid,
+            loginName:$("#loginName").val(),
+            loginPassword:$("#loginPass").val()
+        };
+        getAjax(url,false,getData,function (data) {
+            console.log(JSON.stringify(data));
+            if(data.result != null){
 
+            }else{
+                location.href = domainUrl+"/page/background";
+            }
+        })
     }
 </script>
-<body>
+<body onload="_login()">
     <div id="main">
         <img src="${domainUrl}/assets/images/login/loginBack.png" style="width: 100%;height: 100%;position: absolute">
         <div id="loginDiv">

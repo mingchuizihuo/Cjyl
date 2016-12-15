@@ -86,6 +86,24 @@ function oldUrl(is,bedId) {
         }
     })
 }
+function oldUrlLook(is,bedId) {
+    var urlGet = domainUrl + "/options/oldLook";
+    $.ajax({
+        type:"get",
+        url:urlGet,
+        success:function (data) {
+            $(".publicModal").html(data);
+            $(".hideLi").hide();
+            $("#bedId").val(bedId);
+            modalClose();
+            if(is == 1){
+                $("#updateIs").hide();
+            }else{
+                $("#addIs").hide();
+            }
+        }
+    })
+}
 //护理记录弹窗
 function nurseUrl(is) {
     var urlGet = domainUrl + "/options/nurse";

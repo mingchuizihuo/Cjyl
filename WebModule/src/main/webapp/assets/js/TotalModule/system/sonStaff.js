@@ -13,7 +13,9 @@ function add() {
     };
     console.log(postData)
     postAjax(urlAdd,false,postData,function (data) {
-        alert("添加成功")
+        alert("添加成功");
+        $("#addLoginStaff").hide();
+        findAll();
     })
 }
 function findAll() {
@@ -72,7 +74,7 @@ function hide(id) {
 function del() {
     var urlDel = url + "dels";
     var postData = {
-        id:delId
+        dels:delId
     };
     console.log(postData)
     postAjax(urlDel,false,postData,function (data) {

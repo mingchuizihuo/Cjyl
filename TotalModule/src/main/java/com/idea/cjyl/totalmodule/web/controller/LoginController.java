@@ -96,19 +96,27 @@ public class LoginController {
     @ResponseBody
     @RequestMapping(value = "login", method = RequestMethod.GET)
     public ResultData login(Login login, HttpSession session) {
-        AnalysisConstant.selectState = 1;
-        if (loginService.login(login).getId() == null) {
-            AnalysisConstant.selectState = 3;
-            return ResultData.build().put("result", false);
-        } else {
+        Login login1 = (Login) session.getAttribute("loginInfo");
+        if(login1==null){
+            AnalysisConstant.selectState = 1;
+            if (loginService.login(login).getId() == null) {
+                AnalysisConstant.selectState = 3;
+                return ResultData.build().put("result", false);
+            } else {
 
-            login = loginService.login(login);
-            AnalysisConstant.login = login;
-            AnalysisConstant.selectState = 3;
-            session.setAttribute("loginInfo", login);
-            return ResultData.build().parseBean(login);
+                login = loginService.login(login);
+                AnalysisConstant.login = login;
+                AnalysisConstant.selectState = 3;
+                session.setAttribute("loginInfo", login);
+                return ResultData.build().parseBean(login);
 
+            }
+
+        }else{
+            return ResultData.build().parseBean(login1);
         }
+
+
 
 
     }
