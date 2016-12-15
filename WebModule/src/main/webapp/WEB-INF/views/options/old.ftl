@@ -16,6 +16,10 @@
     <!-- 选项卡标题 -->
     <ul class="nav nav-tabs" role="tablist">
         <li role="presentation"  class="active"><a href="#oldman" role="tab" data-toggle="tab">老人信息</a></li>
+        <li role="presentation"  class="hideLi" ><a href="#relatives" role="tab" data-toggle="tab">亲属信息</a></li>
+        <li role="presentation"class="hideLi" ><a href="#stayin" role="tab" data-toggle="tab">入住初始费</a></li>
+        <li role="presentation"class="hideLi"><a href="#paycost" role="tab" data-toggle="tab">缴费情况</a></li>
+        <li role="presentation"class="hideLi"><a href="#nursing" role="tab" data-toggle="tab">护理记录</a></li>
         <div class="clearfix"></div>
     </ul>
     <script type="text/javascript">
@@ -96,6 +100,113 @@
                 <li style="display: none;"><input type="text" id="id"></li>
                 <div class="clearfix"></div>
             </ul>
+        </div>
+    <#--亲属信息-->
+        <div role="tabpanel" class="tab-pane relatives" id="relatives">
+            <div class="box box1">
+                <table class="table table-bordered">
+                    <thead class="ceshi1">
+                    <tr>
+                        <th class="aa">姓名</th>
+                        <th class="aa">联系电话</th>
+                        <th class="aa">关系</th>
+                        <th class="aa">身份证号</th>
+                        <th class="aa">工作单位</th>
+                        <th class="aa">住址</th>
+                    </tr>
+                    </thead>
+                    <tbody class="ceshi2" id="sonFind">
+                    <tr>
+                        <td><input type="text" ></td>
+                        <td><input type="text" ></td>
+                        <td><input type="text" ></td>
+                        <td><input  type="text"></td>
+                        <td><input  type="text" ></td>
+                        <td><input  type="text"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            <#--<ul>-->
+            <#--<li><span>姓名</span><input type="text" id="Sname"></li>-->
+            <#--<li><span>联系电话</span><input type="text" id="Stel"></li>-->
+            <#--<li><span>关系</span>-->
+            <#--<select class="form-control select">-->
+            <#--<option>儿子</option>-->
+            <#--<option>女儿</option>-->
+            <#--<option>亲戚</option>-->
+            <#--</select>-->
+            <#--</li>-->
+            <#--<li><span>身份证号</span><input  id="ScardId" type="text"></li>-->
+            <#--<li><span>工作单位</span><input  id="SjobName" type="text" ></li>-->
+            <#--<li><span>住址</span><input id="ShomeAddress" type="text"></li>-->
+            <#--<div class="clearfix"></div>-->
+            <#--</ul>-->
+
+            </div>
+        </div>
+
+    <#--入住初始费-->
+        <div role="tabpanel" class="tab-pane stayin" id="stayin">
+            <div class="box box1">
+                <table class="table table-bordered">
+                    <thead class="ceshi1">
+                    <tr>
+                        <th class="aa">项目</th>
+                        <th class="aa">费用</th>
+                    </tr>
+                    </thead>
+                    <tbody class="ceshi2" id="checkInCostTable">
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    <#--缴费情况（月费用）-->
+        <div role="tabpanel" class="tab-pane paycost" id="paycost">
+            <table class="table table-bordered">
+                <thead class="ceshi1">
+                <tr>
+                    <th class="aa">服务项目</th>
+                    <th class="aa">服务说明</th>
+                    <th class="aa">产生时间</th>
+                </tr>
+                </thead>
+                <tbody class="ceshi2" id="findAllServe">
+                <tr>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    <#--护理记录（服务费用表）-->
+        <div role="tabpanel" class="tab-pane nursing" id="nursing">
+            <table class="table table-bordered">
+                <thead class="ceshi1">
+                <tr>
+                    <th class="aa">老人健康状况</th>
+                    <th class="aa">护理用药情况</th>
+                    <th class="aa">护理时间</th>
+                    <th class="aa">护理人员</th>
+                </tr>
+                </thead>
+                <tbody class="ceshi2" id="findNurse">
+                <tr>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     </div>
     <div class="bottom">
