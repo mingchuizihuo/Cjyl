@@ -34,7 +34,7 @@
             <div class="animated pulse">
                 <div class="histogram" >
                     <div id="chart_buttons"></div>
-                    <div id="chart" style="width:700;margin: auto"></div>
+                    <div id="chart" style="width:700px;margin: auto"></div>
                 </div>
             </div>
         </div>

@@ -241,3 +241,48 @@ $(function () {
 
 
 // 条形图
+
+$(function(){
+    var data = [
+        {name : '特级护理',value : 35.75,color:'#a5c2d5'},
+        {name : '一级护理',value : 29.84,color:'#cbab4f'},
+        {name : '二级护理',value : 24.88,color:'#76a871'},
+        {name : '基础护理',value : 6.77,color:'#9f7961'},
+    ];
+    new iChart.Bar2D({
+        render : 'canvasDiv2',
+        data: data,
+        title: {
+            text: '老人护理级别比例',
+            color: '#ffffff'
+        },
+        border: {
+            color: "BCBCBC",
+            width: 0
+        },
+        animation: true,//开启过渡动画
+        animation_duration: 800,//800ms完成动画
+        background_color: 'rgba(0,0,0,0)',
+        showpercent:true,
+        decimalsnum:2,
+        width : 700,
+        height : 320,
+        coordinate:{
+            title: {color: '#ffffff'},
+            scale:[{
+                label: {
+                    color: '#ffffff'
+                },
+                position:'bottom',
+                start_scale:0,
+                end_scale:40,
+                scale_space:8,
+                listeners:{
+                    parseText:function(t,x,y){
+                        return {text:t+""}
+                    }
+                }
+            }]
+        }
+    }).draw();
+});

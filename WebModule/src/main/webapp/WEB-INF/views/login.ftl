@@ -2,61 +2,15 @@
 <meta charset="utf-8"/>
 <title>承嘉智能养老管理系统</title>
 <head></head>
+<link href="${domainUrl}/assets/css/bootstrap/css/bootstrap.css" rel="stylesheet">
 <link href="${domainUrl}/assets/css/OutCss/chaxun/quickQuery.css" rel="stylesheet">
+<link href="${domainUrl}/assets/css/login.css" rel="stylesheet">
 <script src="${domainUrl}/assets/js/jQuery-2.1.4/jquery-2.1.4.min.js"></script>
 <script src="${domainUrl}/assets/js/common.js"></script>
 <script src="${domainUrl}/assets/js/OutJs/chaxun/quickQuery-packer.js"></script>
 <script>
     var domainUrl = '${domainUrl}' + "/rest";
 </script>
-<style>
-    *{
-        margin: 0;
-        padding: 0;
-        font-family: "微软雅黑";
-    }
-    ul li{
-        list-style: none;
-        margin-left: 30px;
-        margin-top: 30px;
-    }
-    #main{
-        width: 100%;
-        height: 100%;
-        min-width: 1400px;
-        min-height: 600px;
-        position: absolute;
-    }
-    #loginDiv{
-        width: 400px; height: 400px; background-color: #EDF9FF;position: absolute; top: 30%; right: 15%
-    }
-    #loginDiv input[type="text"]{
-        width: 340px;
-        height:40px;
-        font-size: 16px;
-        padding-left: 10px;
-        border: 1px solid #D7DADD;
-    }
-    #loginDiv input[type="password"]{
-        width: 340px;
-        height:40px;
-        font-size: 16px;
-        padding-left: 10px;
-        border: 1px solid #D7DADD;
-    }
-    #loginDiv input[type="button"]{
-        width: 340px;
-        height:40px;
-        font-size: 16px;
-        background-color: #00A1E9;
-        color: #fff;
-        border: 0;
-        cursor: pointer;
-    }
-    #quickQuery_resultNum_box{
-        display: none!important;
-    }
-</style>
 <script type="text/javascript">
     var Oid='';
     var Oname='';
@@ -140,10 +94,27 @@
         <div id="loginDiv">
             <ul>
                 <li style="font-size: 22px; font-weight: 600;color: #7F8080">账户登录</li>
-                <li><input type="text" placeholder="机构"  id="q1" class="quickQuery$focus"></li>
-                <li><input type="text" placeholder="用户名" id="loginName"></li>
-                <li><input type="password" placeholder="密码" id="loginPass"></li>
-                <li><input type="button" value="登录" onclick="login()" id="login"></li>
+                <li>
+                    <div class="input-group">
+                        <span class="input-group-addon" style="color:#fff;">@</span>
+                        <input type="text" class="quickQuery$focus form-control"  id="q1"  placeholder="机构">
+                    </div>
+                </li>
+                <li>
+                    <div class="input-group">
+                        <span class="input-group-addon glyphicon glyphicon-user" style="color:#fff;"></span>
+                        <input type="text" class="form-control"  id="loginName"  placeholder="用户名">
+                    </div>
+                </li>
+                <li>
+                    <div class="input-group">
+                        <span class="input-group-addon glyphicon glyphicon-lock" style="color:#fff;"></span>
+                        <input type="password" class="form-control"  id="loginPass"  placeholder="密码">
+                    </div>
+                </li>
+                <li>
+                    <button onclick="login()" id="login"><span>登</span>陆</button>
+                </li>
             </ul>
         </div>
     </div>
