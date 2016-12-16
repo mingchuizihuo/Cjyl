@@ -20,7 +20,6 @@ $(function () {
 function add() {
     var urlAdd = url+"add";
     var postData = {
-        organizationLoginId:1,
         olderId:$("#oldSelect").val(),
         checkInInitCostId:$("#checkInInitCostId").val(),
         checkInInitCostState:$("#checkInInitCostState").val(),
@@ -45,7 +44,6 @@ function findAll() {
     var name ='' ;
     var money='';
     getAjax(urlFindAll,false,getData,function (data) {
-        console.log(JSON.stringify(data))
         var pageList = Math.ceil(data.iTotalRecords / 9);
         var num = data.aaData.length;
         var d;
@@ -87,7 +85,6 @@ function make(id) {
         limit:limit
     };
     getAjax(urlFindAll,false,getData,function (data) {
-        console.log(JSON.stringify(data))
         var pageList = Math.ceil(data.iTotalRecords / 9);
         var num = data.aaData.length;
         var d;
@@ -106,7 +103,6 @@ function update() {
     var urlAdd = url+"update";
     var postData = {
         id:$("#id").val(),
-        organizationLoginId:1,
         olderId:$("#oldSelect").val(),
         checkInInitCostId:$("#checkInInitCostId").val(),
         checkInInitCostState:$("#checkInInitCostState").val(),

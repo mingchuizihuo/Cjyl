@@ -6,6 +6,50 @@ function findAllOldMess(id) {
     findAllCost(id);
     findAllServe(id);
     findAllNurse(id);
+    findAllOld(id);
+}
+function findAllOld(id) {
+    var urlFindAll = domainUrl + "/serve/older/findAll";
+    var getData = {
+        currentPage: currentPage,
+        limit: limit
+    };
+    getAjax(urlFindAll,false,getData,function (data) {
+        console.log(JSON.stringify(data))
+        var num = data.aaData.length;
+        var d;
+        for(var i = 0; i < num ; i++){
+            d =  data.aaData[i];
+            if(d.id == id){
+                $("#id").val(id);
+                $("#name").val(d.name);
+                $(".checkInDate").val(d.checkInDate);
+                $("#cardId").val(d.cardId);
+                $(".birthday").val(d.birthday);
+                $("#tel").val(d.tel);
+                $("#censusRegister").val(d.censusRegister);
+                $("#nation").val(d.nation);
+                $("#selfIngredient").val(d.selfIngredient);
+                $("#pluse").val(d.pluse);
+                $("#bloodPressure").val(d.bloodPressure);
+                $("#allergicDrug").val(d.allergicDrug);
+                $("#indicationHospital").val(d.indicationHospital);
+                $("#indicationDoctor").val(d.indicationDoctor);
+                $("#principalDisease").val(d.principalDisease);
+                $("#diseasesHistory").val(d.diseasesHistory);
+                $("#hospitalTel").val(d.hospitalTel);
+                $("#dietCharacteristics").val(d.dietCharacteristics);
+                $("#disposition").val(d.disposition);
+                $("#hobby").val(d.hobby);
+                $("#specialRequirements").val(d.specialRequirements);
+                $("#abnormalPatterns").val(d.abnormalPatterns);
+                $(".olderLeaveDate").val(d.olderLeaveDate);
+                $("#floor").val(d.floor);
+                $("#room").val(d.room);
+                $("#bed").val(d.bed);
+            }
+        }
+    })
 }
 function findAllSon(id) {
     var url = domainUrl + "/serve/older_kinsfolk/findAll";
@@ -16,7 +60,6 @@ function findAllSon(id) {
     var html = '';
     var name = '';
     getAjax(url,false,getData,function (data) {
-        console.log(JSON.stringify(data))
         var num = data.aaData.length;
         var d;
         for(var i = 0; i < num ; i ++){
@@ -40,7 +83,6 @@ function findAllCost(id) {
     var name ='' ;
     var money='';
     getAjax(urlFindAll,false,getData,function (data) {
-        console.log(JSON.stringify(data))
         var num = data.aaData.length;
         var d;
         for (var i = 0; i < num; i++) {
@@ -69,7 +111,6 @@ function findAllServe(id) {
     var name ='';
     var serve = '';
     getAjax(urlFindAll,false,getData,function (data) {
-        console.log(JSON.stringify(data))
         var num = data.aaData.length;
         var d;
         for(var i = 0; i < num ; i ++){
@@ -94,7 +135,6 @@ function findAllNurse(id) {
     var name='' ;
     var nurseName='';
     getAjax(urlFindAll,false,getData,function (data) {
-        console.log(JSON.stringify(data))
         var num = data.aaData.length;
         var d;
         for(var i = 0; i < num ; i ++){

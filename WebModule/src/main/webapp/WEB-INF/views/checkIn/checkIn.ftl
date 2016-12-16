@@ -29,6 +29,8 @@
                     </tbody>
                 </table>
             </div>
+            <div style="position: absolute; color: #fff; position: absolute; right: 4.5%; bottom:5%;">*添加老人请点击入住按钮</div>
+
             <div class="publicModal ">
 
             </div>

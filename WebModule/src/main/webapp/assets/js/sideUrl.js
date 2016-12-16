@@ -53,7 +53,8 @@ function sideUrl(url) {
 }
 
 // 入住弹窗
-function modalUrl(floor,room,bed) {
+function modalUrl(floor,room,bed,olderId) {
+    sessionStorage.setItem("olderId",olderId);
     var urlGet = domainUrl + "/options/options";
     $.ajax({
         type:"get",
@@ -306,4 +307,11 @@ function many() {
             }
         }
     };
+}
+function replaceDate(str) {
+    if(str != null){
+        str = str.replace(/年/,'-');
+        str = str.replace(/月/,'-');
+        return str;
+    }
 }

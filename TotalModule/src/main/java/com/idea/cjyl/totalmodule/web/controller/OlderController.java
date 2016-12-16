@@ -4,6 +4,7 @@ import com.idea.cjyl.core.common.ResultData;
 import com.idea.cjyl.core.generic.GenericController;
 import com.idea.cjyl.totalmodule.web.domain.pojo.Bed;
 import com.idea.cjyl.totalmodule.web.domain.pojo.Older;
+import com.idea.cjyl.totalmodule.web.domain.vo.OlderVO;
 import com.idea.cjyl.totalmodule.web.service.BedService;
 import com.idea.cjyl.totalmodule.web.service.OlderBriefService;
 import com.idea.cjyl.totalmodule.web.service.OlderService;
@@ -119,8 +120,8 @@ public class OlderController extends GenericController {
     public ResultData update(Older older){
         try {
             olderService.update(older);
-
         } catch (Exception e){
+            System.out.println("aa");
             return ResultData.build().upDateError();
         }
         return ResultData.build();
@@ -177,8 +178,13 @@ public class OlderController extends GenericController {
     @ResponseBody
     @RequestMapping(value="findVOById",method = RequestMethod.GET)
     public ResultData findVOById(Long olderId){
-        return ResultData.build().
-                parseBean(olderService.selectVOByPrimaryKey(olderId));
+        OlderVO olderVO = olderService.selectVOByPrimaryKey(olderId);
+        if(olderVO==null){
+            return ResultData.build().parseBean(new OlderVO());
+        }else{
+            return ResultData.build().parseBean(olderVO);
+        }
+
     }
 
 

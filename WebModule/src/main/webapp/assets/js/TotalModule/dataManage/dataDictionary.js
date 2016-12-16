@@ -13,7 +13,6 @@ function findAll(currentPage) {
         limit: limit
     };
     getAjax(urlFindAll, false, getData, function (data) {
-        // console.log(JSON.stringify(data))
         var num = data.aaData[0].length;
         var d;
         var html = '';
@@ -48,7 +47,6 @@ function dataSon(id) {
 function add() {
     var urlAdd = url + "add";
     var postData = {
-        organizationLoginId:1,
         dataName:$("#dataName").val(),
         dataLevel:0
     };
@@ -61,7 +59,6 @@ function add() {
 function addSon() {
     var urlAdd = url + "add";
     var postData = {
-        organizationLoginId:1,
         dataName:$("#dataNameSon").val(),
         dataLevel:1,
         tid:$("#leaveSon").val()

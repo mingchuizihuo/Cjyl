@@ -1,18 +1,17 @@
 /**
  * Created by horo on 2016/12/7.
  */
-var url = domainUrl + "/serve/older_kinsfolk/";
+var urlKin = domainUrl + "/serve/older_kinsfolk/";
 $(function () {
     findAll();
 });
 function findAll() {
-    var urlFindAll = url + "findAll";
+    var urlFindAll = urlKin + "findAll";
     var getData = {
         currentPage:currentPage,
         limit:limit
     };
     getAjax(urlFindAll,false,getData,function (data) {
-        console.log(JSON.stringify(data));
         var d = data.aaData[0];
         $("#Kname").val(d.name);
         $("#Ktel").val(d.tel);
@@ -23,10 +22,10 @@ function findAll() {
     })
 }
 function update2() {
-    var urlAdd = url +"update";
+    var olderId = parseInt(sessionStorage.getItem("olderId"));
+    var urlAdd = urlKin +"update";
     var postData = {
-        organizationLoginId:1,
-        oldId:1,
+        oldId:olderId,
         name:$("#Kname").val(),
         relation:$("#Ktel").val(),
         tel:$("#Krelation").val(),

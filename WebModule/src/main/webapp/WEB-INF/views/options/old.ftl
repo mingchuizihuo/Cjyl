@@ -15,11 +15,11 @@
     <h2>老人档案</h2>
     <!-- 选项卡标题 -->
     <ul class="nav nav-tabs" role="tablist">
-        <li role="presentation"  class="active"><a href="#oldman" role="tab" data-toggle="tab">老人信息</a></li>
-        <li role="presentation"  class="hideLi" ><a href="#relatives" role="tab" data-toggle="tab">亲属信息</a></li>
-        <li role="presentation"class="hideLi" ><a href="#stayin" role="tab" data-toggle="tab">入住初始费</a></li>
-        <li role="presentation"class="hideLi"><a href="#paycost" role="tab" data-toggle="tab">缴费情况</a></li>
-        <li role="presentation"class="hideLi"><a href="#nursing" role="tab" data-toggle="tab">护理记录</a></li>
+        <li role="presentation"  class="active foucsTishi"><a href="#oldman" role="tab" data-toggle="tab" onclick="updateFun(1)">老人信息</a></li>
+        <li role="presentation"  class="hideLi foucsTishi"  ><a href="#relatives" role="tab" data-toggle="tab" onclick="updateFun(2)">亲属信息</a></li>
+        <li role="presentation" class="hideLi foucsTishi" ><a href="#stayin" role="tab" data-toggle="tab" onclick="updateFun(3)">入住初始费</a></li>
+        <li role="presentation" class="hideLi foucsTishi"><a href="#paycost" role="tab" data-toggle="tab" onclick="updateFun(4)">特殊服务</a></li>
+        <li role="presentation" class="hideLi foucsTishi"><a href="#nursing" role="tab" data-toggle="tab" onclick="updateFun(5)">护理记录</a></li>
         <div class="clearfix"></div>
     </ul>
     <script type="text/javascript">
@@ -33,12 +33,12 @@
         <div role="tabpanel" class="tab-pane active oldman" id="oldman">
             <ul>
                 <li style="display: none"><input type="text" id="bedId"></li>
-                <li><span>姓名</span><input type="text" id="name"></li>
+                <li><span>姓名</span><input type="text" id="name" lass="foucsClick"></li>
                 <li><span>性别</span>
                     <select class="form-control select" id="sex">
                     </select>
                 </li>
-                <li><span>入住时间</span><input type="text" id="sdate" class="date_picker checkInDate"></li>
+                <li><span>入住时间</span><input type="text"  id="sdate" class="date_picker checkInDate"></li>
                 <li><span>身份证号</span><input type="text" id="cardId"></li>
                 <li><span>出生日期</span><input type="text" id="sdate" class="date_picker birthday"></li>
                 <li><span>手机</span><input type="text" id="tel"></li>
@@ -102,7 +102,7 @@
             </ul>
         </div>
     <#--亲属信息-->
-        <div role="tabpanel" class="tab-pane relatives" id="relatives">
+        <div role="tabpanel" class="tab-pane relatives " id="relatives">
             <div class="box box1">
                 <table class="table table-bordered">
                     <thead class="ceshi1">
@@ -117,12 +117,12 @@
                     </thead>
                     <tbody class="ceshi2 ceshi3" id="">
                     <tr>
-                        <td><input type="text" ></td>
-                        <td><input type="text" ></td>
-                        <td><input type="text" ></td>
-                        <td><input  type="text"></td>
-                        <td><input  type="text" ></td>
-                        <td><input  type="text"></td>
+                        <td><input type="text" id="Sname"  class="foucsClick"></td>
+                        <td><input type="text" id="Sson"></td>
+                        <td><input type="text"  id="Stel"></td>
+                        <td><input  type="text" id="ScardId"></td>
+                        <td><input  type="text"  id="Sjobname"></td>
+                        <td><input  type="text" id="ShomeAddress"></td>
                     </tr>
                     </tbody>
                 </table>
@@ -153,12 +153,16 @@
                     <tr>
                         <th class="aa">项目</th>
                         <th class="aa">费用</th>
+                        <th class="aa">入住时间</th>
+                        <th class="aa">结算时间</th>
                     </tr>
                     </thead>
                     <tbody class="ceshi2 ceshi3" id="">
                     <tr>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
+                        <td><input type="text" id="checkInInitCostId"  class="foucsClick"></td>
+                        <td><input type="text" id="checkInInitCostState"></td>
+                        <td><input type="text" class=" initialFeeDate"></td>
+                        <td><input type="text" class="closeAnAccount"></td>
                     </tr>
                     </tbody>
                 </table>
@@ -176,9 +180,9 @@
                 </thead>
                 <tbody class="ceshi2 ceshi3 id="">
                 <tr>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
+                    <td><input type="text" id="serviceCharge"  class="foucsClick"></td>
+                    <td><input type="text" id="serviceChargeContext"></td>
+                    <td><input type="text" id="serviceChargeState"></td>
 
                 </tr>
 
@@ -198,10 +202,10 @@
                 </thead>
                 <tbody class="ceshi2 ceshi3" id="">
                 <tr>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
+                    <td><input type="text" id="physicalCondition"  class="foucsClick"></td>
+                    <td><input type="text" id="nurseInfo"></td>
+                    <td><input type="text" id="sdate" class="date_picker nurseDate"></td>
+                    <td><input type="text" id="staffId"></td>
                 </tr>
                 </tbody>
             </table>
@@ -209,12 +213,29 @@
     </div>
     <div class="bottom">
         <button onclick="add()" id="addIs">确认添加</button>
-        <button onclick="update()" id="updateIs">保存修改</button>
-        <button class="modalClose" >取消</button>
+        <span id="updateHtml"><button onclick="update1()" id="updateIs">保存修改</button></span>
+        <button class="modalClose" >关闭窗口</button>
     </div>
 </div>
 <script src="${domainUrl}/assets/js/TotalModule/filter.js"></script>
 <script>
+    var foucsNum=0;
+    $(function () {
+        $(".foucsClick").click(function () {
+            foucsNum = 1;
+        });
+        $(".foucsTishi").mouseover(function () {
+            if(foucsNum == 1){
+                alert("本页已修改，请先保存在进行操作");
+                foucsNum = 0;
+            }
+        })
+    });
+    function updateFun(num) {
+                var updateIs = 'update'+num;
+                var html ='<button onclick="update'+num+'()" id="updateIs">保存修改</button>';
+                $("#updateHtml").html(html)
+    }
     function add() {
         var urlAdd = domainUrl + "/serve/older/add";
         var postData = {

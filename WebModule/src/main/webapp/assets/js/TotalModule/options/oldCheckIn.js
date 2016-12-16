@@ -1,18 +1,17 @@
 /**
  * Created by horo on 2016/12/7.
  */
-var url = domainUrl + "/serve/month_charge/";
+var urlCheck = domainUrl + "/serve/month_charge/";
 $(function () {
     findAll();
 });
 function findAll() {
-    var urlFindAll = url + "findAll";
+    var urlFindAll = urlCheck + "findAll";
     var getData = {
         currentPage:currentPage,
         limit:limit
     };
     getAjax(urlFindAll,false,getData,function (data) {
-        console.log(JSON.stringify(data));
         var d = data.aaData[0];
         $("#MnursingGrades").text(d.nursingGrades);
         $("#MadministrativeFee").text(d.administrativeFee);

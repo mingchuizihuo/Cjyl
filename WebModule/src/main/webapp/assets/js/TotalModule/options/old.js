@@ -8,15 +8,16 @@ $(function () {
 //查询
 //老人信息
 function findAll() {
+    var olderId = parseInt(sessionStorage.getItem("olderId"));
     var urlFindAll = url + "findVOById";
     var getData = {
-        olderId:1
+        olderId:olderId
     };
     getAjax(urlFindAll, false, getData, function (data) {
         $("#name").val(data.name);
-        $("#checkInDate").val(data.checkInDate.substring(0,11));
+        $("#checkInDate").val(replaceDate(data.checkInDate));
         $("#cardId").val(data.cardId);
-        $("#birthday").val(data.birthday.substring(0,11));
+        $("#birthday").val(replaceDate(data.birthday));
         $("#tel").val(data.tel);
         $("#censusRegister").val(data.censusRegister);
         $("#nation").val(data.nation);
@@ -34,14 +35,13 @@ function findAll() {
         $("#hobby").val(data.hobby);
         $("#specialRequirements").val(data.specialRequirements);
         $("#abnormalPatterns").val(data.abnormalPatterns);
-        $("#olderLeaveDate").val(data.olderLeaveDate)
+        $(".olderLeaveDate").val(replaceDate(data.olderLeaveDate))
     })
 }
-function update1() {
+function update() {
     var urlUpdate = url +"update";
     var postData = {
         id:1,
-        organizationLoginId:1,
         name:$("#name").val(),
         sex:$("#sex").val(),
         checkIndate:$("#checkInDate").val(),
@@ -67,16 +67,11 @@ function update1() {
         olderLeaveDate:$("#olderLeaveDate").val()
 
     };
+    console.log(postData);
     postAjax(urlUpdate,false,postData,function (data) {
         alert("修改成功");
         findAll(currentPage);
     })
-}
-function update() {
-    update1();
-    update2();
-    update3();
-    $(".publicModal").hide();
 }
 //删除
 function del(id) {

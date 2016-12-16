@@ -16,7 +16,6 @@ function findAllDate() {
     };
     var d='';
     getAjax(url,false,getData,function (data) {
-        // console.log(JSON.stringify(data))
         var num = data.aaData.length;
         var sex='';
         var nurse='';

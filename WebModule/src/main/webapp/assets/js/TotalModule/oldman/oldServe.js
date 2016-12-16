@@ -20,7 +20,6 @@ $(function () {
 function add() {
     var urlAdd = url+"add";
     var postData = {
-        organizationLoginId:1,
         olderId:$("#oldSelect").val(),
         serviceChargeId:$("#serviceCharge").val(),
         serviceChargeContext:$("#serviceChargeContext").val(),
@@ -45,7 +44,6 @@ function findAll() {
     var name ='';
     var serve = '';
     getAjax(urlFindAll,false,getData,function (data) {
-        console.log(JSON.stringify(data))
         var pageList = Math.ceil(data.iTotalRecords / 9);
         var num = data.aaData.length;
         var d;
@@ -82,7 +80,6 @@ function make(id) {
         limit:limit
     };
     getAjax(urlFindAll,false,getData,function (data) {
-        console.log(JSON.stringify(data))
         var num = data.aaData.length;
         var d;
         for(var i = 0; i < num ; i ++){
@@ -100,7 +97,6 @@ function update() {
     var urlAdd = url+"update";
     var postData = {
         id:$("#id").val(),
-        organizationLoginId:1,
         olderId:$("#oldSelect").val(),
         serviceCharge:$("#serviceCharge").val(),
         serviceChargeContext:$("#serviceChargeContext").val(),

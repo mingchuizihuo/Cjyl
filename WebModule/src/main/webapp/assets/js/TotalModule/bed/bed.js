@@ -15,7 +15,6 @@ function findAll(currentPage) {
         limit: limit
     }
     getAjax(urlFindAll, false, getData, function (data) {
-        console.log(JSON.stringify(data))
         var num = data.aaData.length;
         var pageList = Math.ceil(data.iTotalRecords / 9);
         var d;
@@ -42,14 +41,12 @@ function add() {
     var urlAdd = url + "add";
     var postData = {
         id:1,
-        organizationLoginId:1,
         roomId:1,
         bedNum:2,
         bedState:1,
         oldId:1
     }
     postAjax(urlAdd, false, postData, function (data) {
-        console.log(JSON.stringify(data));
         alert("添加成功");
     })
 }

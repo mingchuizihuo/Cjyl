@@ -15,7 +15,6 @@ function findAll(currentPage) {
         limit: limit
     };
     getAjax(urlFindAll, false, getData, function (data) {
-        console.log(JSON.stringify(data))
         var num = data.aaData.length;
         var pageList = Math.ceil(data.iTotalRecords / 9);
         var d;
@@ -65,6 +64,7 @@ function make(id) {
             limit: limit
         };
         getAjax(urlFindAll,false,getData,function (data) {
+            console.log(JSON.stringify(data))
             var num = data.aaData.length;
             var d;
             for(var i = 0; i < num ; i++){
@@ -72,7 +72,7 @@ function make(id) {
                 if(d.id == id){
                     $("#id").val(id);
                     $("#name").val(d.name);
-                    $("#checkInDate").val(d.checkInDate);
+                    $(".checkInDate").val(d.checkInDate);
                     $("#cardId").val(d.cardId);
                     $(".birthday").val(d.birthday);
                     $("#tel").val(d.tel);
@@ -148,11 +148,11 @@ function look(id) {
         })
     }, 100);
 }
-function update() {
+function update1() {
+    foucsNum =  0;
     var urlUpdate = url +"update";
     var postData = {
         id:$("#id").val(),
-        organizationLoginId:1,
         name:$("#name").val(),
         sex:$("#sex").val(),
         checkInDate:$(".checkInDate").val(),
@@ -184,20 +184,89 @@ function update() {
         olderLeaveDate:$(".olderLeaveDate").val(),
         staffId:1,
 
-    }
+    };
     postAjax(urlUpdate,false,postData,function (data) {
         alert("修改成功");
-        $(".publicModal").hide();
-        findAll();
+
     })
 }
+function update2() {
+    foucsNum =  0;
+
+    var urlAdd = domainUrl + "/serve/older_kinsfolk/update";
+    var postData = {
+        id:$("#id").val(),
+        olderId:$("#oldSelect").val(),
+        name:$("#Sname").val(),
+        relation:$("#Sson").val(),
+        tel:$("#Stel").val(),
+        cardId:$("#ScardId").val(),
+        jobName:$("#SjobName").val(),
+        homeAddress:$("#ShomeAddress").val(),
+        accountFor:1,
+    };
+    postAjax(urlAdd,false,postData,function (data) {
+        alert("修改成功");
+
+    })
+}
+function update3() {
+    foucsNum =  0;
+
+    var urlAdd = domainUrl + "/serve/older_initial_fee/update";
+    var postData = {
+        id:$("#id").val(),
+        olderId:$("#oldSelect").val(),
+        checkInInitCostId:$("#checkInInitCostId").val(),
+        checkInInitCostState:$("#checkInInitCostState").val(),
+        initialFeeDate:"2016-12-16",
+        closeAnAccount:"2016-12-16"
+    };
+    postAjax(urlAdd,false,postData,function (data) {
+        alert("修改成功");
+    })
+}
+function update4() {
+    foucsNum =  0;
+
+    var urlAdd = domainUrl + "/serve/older_cost/update";
+    var postData = {
+        id:$("#id").val(),
+        olderId:$("#oldSelect").val(),
+        serviceCharge:$("#serviceCharge").val(),
+        serviceChargeContext:$("#serviceChargeContext").val(),
+        serviceChargeState:$("#serviceChargeState").val(),
+        serviceChargeDate:$("#serviceChargeDate").val(),
+        closeAnAccountDate:$("#closeAnAccountDate").val(),
+    };
+    postAjax(urlAdd,false,postData,function (data) {
+        alert("修改成功");
+    })
+}
+function update5() {
+    foucsNum =  0;
+
+    var urlAdd = domainUrl + "/serve/older_nurse_log/update";
+    var postData = {
+        id:$("#id").val(),
+        olderId:$("#oldSelect").val(),
+        physicalCondition:$("#physicalCondition").val(),
+        nurseInfo:$("#nurseInfo").val(),
+        nurseDate:$(".nurseDate").val(),
+        staffId:$("#staffId").val(),
+    };
+    postAjax(urlAdd,false,postData,function (data) {
+        alert("修改成功");
+    })
+}
+
 //删除
 function dels() {
     var urlDel = url + "dels";
     var postData = {
         ids:delId
     };
-    console.log(postData)
+    console.log(postData);
     postAjax(urlDel,false,postData,function (data) {
         alert("删除成功");
         findAll(currentPage);

@@ -1,18 +1,17 @@
 /**
  * Created by horo on 2016/12/7.
  */
-var url = domainUrl + "/serve/older_initial_fee/";
+var urlInit = domainUrl + "/serve/older_initial_fee/";
 $(function () {
     findAll();
 });
 function findAll() {
-   var urlFindAll = url + "findAll";
+   var urlFindAll = urlInit + "findAll";
    var getData = {
        currentPage:currentPage,
        limit:limit
    };
    getAjax(urlFindAll,false,getData,function (data) {
-       console.log(JSON.stringify(data));
        var d = data.aaData[0];
        $("#checkInInitCostId").val(d.checkInInitCostId);
        $("#checkInInitCostState").val(d.checkInInitCostState);
@@ -21,11 +20,11 @@ function findAll() {
    })
 }
 function update3() {
-    var urlAdd = url +"update";
+    var olderId = parseInt(sessionStorage.getItem("olderId"));
+    var urlAdd = urlInit +"update";
     var postData = {
         id:1,
-        organizationLoginId:1,
-        oldId:1,
+        oldId:olderId,
         checkInInitCostId:$("#checkInInitCostId").val(),
         checkInInitCostState:$("#checkInInitCostId").val(),
         initialFeeDate:$(".initialFeeDate").val(),

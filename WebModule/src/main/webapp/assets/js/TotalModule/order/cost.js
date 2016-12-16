@@ -143,6 +143,6 @@ function update(data) {
     var urlUpdate = url + "update";
     var postData = data;
     postAjax(urlUpdate, false, postData, function (data) {
-        console.log(JSON.stringify(data));
+
     })
 }

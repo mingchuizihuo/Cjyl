@@ -15,7 +15,6 @@ function findAll(currentPage) {
         limit: limit
     };
     getAjax(urlFindAll, false, getData, function (data) {
-        console.log(JSON.stringify(data))
         var num = data.aaData.length;
         var pageList = Math.ceil(data.iTotalRecords / 9);
         var d;
@@ -42,7 +41,6 @@ function findAll(currentPage) {
 function add() {
     var urlAdd = url + "add";
     var postData = {
-        organizationLoginId:1,
         mansionId:1,
         floorTier:$("#floorTier").val(),
         accountFor:$("#accountFor").val()
@@ -78,7 +76,6 @@ function update() {
     var urlUpdate = url +"update";
     var postData = {
         id:$("#id").val(),
-        organizationLoginId:1,
         mansionId:1,
         floorTier:$("#floorTier").val(),
         accountFor:$("#accountFor").val()

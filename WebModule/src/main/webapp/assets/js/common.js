@@ -64,6 +64,14 @@ function success(data,fun) {
         alert(msg);
     }
 }
+// 替换年月日
+function replaceDate(str) {
+    if(str != null){
+        str = str.replace(/年/,'-');
+        str = str.replace(/月/,'-');
+        return str;
+    }
+}
 /*手风琴侧边栏*/
 $(function() {
     var Accordion = function(el, multiple) {

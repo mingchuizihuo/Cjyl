@@ -48,7 +48,6 @@
             limit:100000
         };
         getAjax(url,false,getData,function (data) {
-            console.log(JSON.stringify(data))
             var num = data.aaData.length;
             for(var i = 0; i <num ;i++){
                 arriveCityArray[i] = new Array("", ""+data.aaData[i].name+"", "");
@@ -63,7 +62,6 @@
                 loginPassword:$("#loginPass").val()
             };
             getAjax(url,false,getData,function (data) {
-                console.log(JSON.stringify(data));
                 if(data.result != null){
                     alert("帐号或密码错误，请重新输入");
                 }else{
@@ -79,7 +77,6 @@
             loginPassword:$("#loginPass").val()
         };
         getAjax(url,false,getData,function (data) {
-            console.log(JSON.stringify(data));
             if(data.result != null){
 
             }else{

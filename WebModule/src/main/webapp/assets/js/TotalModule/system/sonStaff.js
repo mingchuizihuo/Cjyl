@@ -25,7 +25,6 @@ function findAll() {
         limit:limit
     } ;
     getAjax(urlFindAll,false,getData,function (data) {
-        console.log(JSON.stringify(data))
         var num = data.aaData.length;
         var html ='';
         var d='';

@@ -64,9 +64,7 @@
             </table>
         </div>
     </div>
-<#--弹出老人信息弹窗-->
-    <div class="publicModal">
-    </div>
+
 <#--增删改查按钮-->
     <div class="modify">
         <button class="pull-left btn-style btn-ma" onclick="staffReUrl(1)"><img src="${domainUrl}/assets/images/backstage/jia.png">增加</button>
@@ -77,5 +75,8 @@
 <#--页码-->
 <div class="tcdPageCode">
 </div>
+<#--弹出老人信息弹窗-->
+    <div class="publicModal">
+    </div>
 </div>
 <script src="${domainUrl}/assets/js/TotalModule/staff/staffRecess.js"></script>

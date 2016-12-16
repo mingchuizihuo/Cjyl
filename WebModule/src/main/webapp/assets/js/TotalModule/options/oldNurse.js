@@ -1,18 +1,17 @@
 /**
  * Created by horo on 2016/12/7.
  */
-var url = domainUrl + "/serve/older_nurse_log/";
+var urlNur = domainUrl + "/serve/older_nurse_log/";
 $(function () {
     findAll();
 });
 function findAll() {
-    var urlFindAll = url + "findAll";
+    var urlFindAll = urlNur + "findAll";
     var getData = {
         currentPage:currentPage,
         limit:limit
     };
     getAjax(urlFindAll,false,getData,function (data) {
-        console.log(JSON.stringify(data));
         var d = data.aaData[0];
         $("#NphysicalCondition").text(d.physicalCondition);
         $("#NnurseInfo").text(d.nurseInfo);

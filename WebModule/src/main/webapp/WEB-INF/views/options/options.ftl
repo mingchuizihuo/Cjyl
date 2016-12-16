@@ -35,6 +35,7 @@
     <#--老人信息-->
         <div role="tabpanel" class="tab-pane active oldman" id="oldman">
             <ul>
+                <li style="display: none;"><input type="text" id="olderIdFindAll"></li>
                 <li><span>姓名</span><input type="text" id="name"></li>
                 <li><span>性别</span>
                     <select class="form-control select" id="sex">
@@ -43,10 +44,9 @@
                 </li>
                 <li><span>入住时间</span><input type="text" id="sdate" class="date_picker checkInDate"></li>
                 <li><span>身份证号</span><input type="text" id="cardId"></li>
-                <li><span>出生日期</span><input type="text" id="birthday"></li>
+                <li><span>出生日期</span><input type="text" id="sdate" class="date_picker birthday"></li>
                 <li><span>手机</span><input type="text" id="tel"></li>
                 <li><span>护理级别</span><select class="form-control select" id="nurse">
-
                 </select></li>
                 <li><span>户籍</span><input type="text" id="censusRegister"></li>
                 <li><span>信仰</span>
@@ -95,7 +95,7 @@
                         <option>较差</option>
                     </select>
                 </li>
-                <li><span>出院时间</span><input type="text" id="olderLeaveDate"></li>
+                <li><span>出院时间</span><input type="text" id="sdate" class="date_picker olderLeaveDate"></li>
                 <div class="clearfix"></div>
                 <li><span>大厦</span><input type="text" id="floor"></li>
                 <li><span>房间</span><input type="text" id="room"></li>
@@ -118,8 +118,6 @@
                 </ul>
             </div>
         </div>
-
-
     <#--入住初始费-->
             <div role="tabpanel" class="tab-pane stayin" id="stayin">
                 <div class="box">
@@ -128,7 +126,6 @@
                         <li><span>费用状态</span><input type="text" id="checkInInitCostState"></li>
                         <li><span>产生时间</span><input type="text" id="sdate" class="date_picker initialFeeDate"> </li>
                         <li><span>结算时间</span><input type="text" id="sdate" class="date_picker closeAnAccountDate"> </li>
-
                         <div class="clearfix"></div>
                     </ul>
                 </div>
