@@ -1,12 +1,12 @@
 
-.overall{background:none;}
+.overall{background:none;min-width:1680px !important;}
 .report{  width:100%;margin-top: 14px;padding:0 20px;padding-top:10px;min-width: 1440px;}
-.report .re_l{width:50%;padding:10px;height:350px;min-width:700px;border:1px #858b91 solid; background: #091b31;margin-bottom: 12px;}
-.report .re_r{width:49%;padding:10px;height:350px;min-width:700px;border:1px #858b91 solid; background: #091b31;margin-bottom: 12px;}
+.report .re_l{width:50%;padding:10px;height:350px;min-width:700px;border:1px #858b91 solid; background:rgba(9,27,49,.8);margin-bottom: 12px;border-radius:10px;}
+.report .re_r{width:49%;padding:10px;height:350px;min-width:700px;border:1px #858b91 solid; background:rgba(9,27,49,.8);margin-bottom: 12px;border-radius:10px;}
+
 #canvasDiv1{ float: right;}
 
 /*左下图表*/
-
 /*柱状表*/
 .report .histogram {
     width: 100%;
@@ -18,7 +18,7 @@
 }
 .report .label {
     font-size: 10px;
-    font-family: "Times New Roman";
+
 }
 .report .chart-title {
     margin-left: 0px;

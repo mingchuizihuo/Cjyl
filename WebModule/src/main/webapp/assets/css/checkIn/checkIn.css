@@ -6,6 +6,8 @@
 .floor{
     width:14%; height:97%;margin-left:1%;margin-top:1%;border:1px #4a5b6d solid;background: #091b31;
 }
+
+
 #side-floor div{
     width: 100%;
     height: 50px;
@@ -16,7 +18,7 @@
     line-height: 50px;
     padding-left:20px;
 }
-#side-floor div img{margin-right:20px;}
+#side-floor div img{margin-right:36px;}
 #side-floor div:hover{
     color: #3dc9a2;
 }
@@ -33,14 +35,28 @@
     text-align: center;
     transition: .5s;
     color: #ffffff;
-    line-height: 30px;
     font-size:16px;
+    display: flex;
 }
 .room li:hover{
     color: #3dc9a2;
 }
+.room li span{
+    width:20px;
+    height:100%;
+    display: block;
+    border-bottom:2px #fff dashed;
+    border-left:2px #fff dashed;
+    margin:0px 10px 0px 40px;
+
+}
+
 .room li img{
-    margin-right:15px;  }
+    margin-right:15px;width:24px;height:24px;margin-top: 10px;}
+.room li i{
+    margin-top: 10px;font-size:16px;
+}
+
 .roomTable{
     width: 84%;
     height: 97%;
@@ -53,17 +69,30 @@
 .roomTable .table > thead > tr > th{
     color: #3dc9a2;
    border-bottom: 1px solid #858b91;
+    text-align: center;
+    border-right:1px #858b91 solid;
 }
+
 
 .roomTable td{
     color: #fff;
     border-bottom: 1px solid #4a5b6d;
+    text-align: center;
+    border-right:1px #858b91 solid;
 }
 .roomTable td input{
     background: #3dc9a2;
-    border:0px;
+    border-left:1px #fff solid;
+    border-bottom:1px #fff solid;
     margin-right:10px;
+    font-size:16px;
+    color:#fff;
+    padding:2px;
+    outline: none;
+    box-shadow: none;
+
 }
+
 
 .roomTable tbody tr:nth-of-type(odd)
 {

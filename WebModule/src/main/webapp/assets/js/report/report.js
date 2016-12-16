@@ -244,10 +244,10 @@ $(function () {
 
 $(function(){
     var data = [
-        {name : '特级护理',value : 35.75,color:'#a5c2d5'},
-        {name : '一级护理',value : 29.84,color:'#cbab4f'},
-        {name : '二级护理',value : 24.88,color:'#76a871'},
-        {name : '基础护理',value : 6.77,color:'#9f7961'},
+        {name : '特级护理',value : 10,color:'#a5c2d5'},
+        {name : '一级护理',value : 20,color:'#cbab4f'},
+        {name : '二级护理',value : 30,color:'#76a871'},
+        {name : '基础护理',value : 20,color:'#9f7961'},
     ];
     new iChart.Bar2D({
         render : 'canvasDiv2',
@@ -259,6 +259,9 @@ $(function(){
         border: {
             color: "BCBCBC",
             width: 0
+        },
+        label: {
+            color: '#ffffff'
         },
         animation: true,//开启过渡动画
         animation_duration: 800,//800ms完成动画

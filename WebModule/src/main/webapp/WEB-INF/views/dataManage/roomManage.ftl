@@ -25,10 +25,9 @@
         <div class="roomTable">
             <table class="table" id="roomTable">
                 <thead>
-                <th>大厦</th><th>楼层</th><th>房间</th><th>类型</th><th>床位</th>
+                <th>大厦</th><th>楼层</th><th>房间</th><th>床位</th>
                 </thead>
                 <tbody>
-
                 </tbody>
             </table>
         </div>

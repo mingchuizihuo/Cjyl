@@ -9,12 +9,14 @@
 .tally .box ul{width:100%;}
 .tally .box ul li{float: left;width: 50%;color: #5b5c5c;margin-bottom: 10px;font-size: 14px;}
 .tally .box ul li span{float: left;width:40%;}
-.tally .box ul li input{float:left;width:60%;height:28px;border:1px #c3c3c3 solid;background: none;color:#333;}
+.tally .box ul li input{float:left;width:60%;height:28px;border:1px #c3c3c3 solid;background: none;color:#333;padding-left:15px;}
+.tally .box ul li select{float:left;width:60%;height:28px;border:1px #c3c3c3 solid;background: none;color:#333;padding-left:15px;}
 .tally .box ul li .ma{padding-left:10%;}
 .tally .box ul li .select{font-size:12px; float:right;width:60%;height:28px;border:1px #c3c3c3 solid;border-radius: 0px;background:none;}
 .tally .box ul .wi{width:100%;}
 .tally .box ul .wi span{width:20%}
 .tally .box ul .wi input{width:80%;}
+
 
 
 /*增删改查按钮*/

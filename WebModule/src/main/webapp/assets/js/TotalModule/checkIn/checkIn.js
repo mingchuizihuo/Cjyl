@@ -28,7 +28,7 @@ function findAll(currentPage) {
             d =  data.aaData[i];
             html += ' <li><div><img src="'+domainFile+'/assets/images/jianzhu.png">'+d.name+'</div> <ul class="room">';
             for(var j = 0 ; j < d.floorTierierList.length; j++){
-                html+=' <li onclick="table('+i+','+j+',&quot;'+d.name+'&quot;,&quot;'+d.floorTierierList[j].floorTier+'&quot;)">'+'<img src="'+domainFile+'/assets/images/floor.png">'+d.floorTierierList[j].floorTier+'</li> ';
+                html+=' <li onclick="table('+i+','+j+',&quot;'+d.name+'&quot;,&quot;'+d.floorTierierList[j].floorTier+'&quot;)">'+'<span class="loucengxian"></span><img src="'+domainFile+'/assets/images/floor.png"><i>'+d.floorTierierList[j].floorTier+'</i></li> ';
             }
             html+='</ul> </li>';
         }
@@ -68,7 +68,7 @@ function table(num,num2,name,floor) {
                 if(d[i].bedList[j].bedState == 2){
                     button ='<input type="button" value="入住" onclick="oldUrl(1,'+d[i].bedList[j].id+')">';
                 }else{
-                    button ='<input type="button" value="使用" style="background: red" onclick="modalUrl(&quot;'+name+'&quot;,&quot;'+floor+'&quot;,&quot;'+d[i].roomNum+'&quot;)">';
+                    button ='<input type="button" value="使用" style="background: red;border:0px;" onclick="modalUrl(&quot;'+name+'&quot;,&quot;'+floor+'&quot;,&quot;'+d[i].roomNum+'&quot;)">';
                 }
                 table+=''+button+'';
             }

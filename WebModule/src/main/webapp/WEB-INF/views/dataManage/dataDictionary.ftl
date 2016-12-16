@@ -25,8 +25,8 @@
             <div id="dataLeft">
                 <ul id="dataFather">
                 </ul>
-                <input type="text" id="dataName" class="pull-left">
-                <button onclick="add()" class="pull-left">添加</button>
+                <#--<input type="text" id="dataName" class="pull-left">-->
+                <#--<button onclick="add()" class="pull-left">添加</button>-->
                 <div class="clearfix"></div>
             </div>
             <div id="dataRight">

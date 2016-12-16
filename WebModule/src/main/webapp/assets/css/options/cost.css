@@ -21,10 +21,10 @@
 .cost .cost_l .form-control{height:30px;background:none;outline: none;box-shadow: none;}
 
 /*右边明细部分*/
-.cost .cost_r{width:22%;margin-right:4%;}
+.cost .cost_r{width:22%;margin-right:2%;}
 .cost .cost_r h3{font-size: 20px;margin: 15px 0px;color:#5b5c5c;text-align: center}
 .cost .cost_r h3:nth-child(1){margin-top:14px;margin-bottom:12px;}
-.cost .cost_r input{height:30px;width:100%;border:1px #c9c9c9 solid;outline: none;box-shadow: none;text-align: center}
+.cost .cost_r input{height:30px;width:100%;border:1px #c9c9c9 solid;outline: none;box-shadow: none;text-align: center;}
 .cost .cost_r input:nth-last-child(1){color:#333;font-weight: 800}
 .cost .cost_r input:nth-last-child(3){color:#e54949;font-weight: 800}
 
